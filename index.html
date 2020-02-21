@@ -1,292 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <!-- Importing google fonts. You may use any other webfonts that you like! -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Didact+Gothic|Kosugi|Oxygen|Raleway|Roboto|Roboto+Mono|Ubuntu&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/toggle.css">
-  <link rel="stylesheet" type="text/css" href="css/side-drawer.css">
-  <link rel="stylesheet" type="text/css" href="css/app-header.css">
-  <link rel="stylesheet" type="text/css" href="css/typewriter.css">
-  <!-- Do change the title as you wish. -->
-  <title>My Portfolio</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Setting default margins, padding, height and width for html and body elements. */
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      background: #272f35;
-    }
-
-    .separator {
-      flex: 1;
-    }
-
-    .top-spacer {
-      width: 100%;
-      height: 60px;
-    }
-
-    .twoelements {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 16px 16px;
-    }
-
-    .work-description {
-      font-size: 130%;
-      margin: auto;
-    }
-
-    .home-section {
-      background-image: url("me.jpg");
-      background-size: auto 700px;
-      height: 700px;
-      font-family: Oxygen;
-      font-size: 7rem;
-      font-weight: bolder;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .home-text {
-      padding-right: 50px;
-      width: 100%;
-      text-align: right;
-    }
-
-    .left {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      width: 50%;
-      height: inherit;
-      background-image: linear-gradient(#ff6a3d, #ff3d6a);
-      overflow: hidden;
-    }
-
-    .right {
-      width: 50vw;
-      height: inherit;
-      overflow: hidden;
-      background: url("anothermeow.PNG") no-repeat center center;
-      background-size: cover;
-    }
-
-    .page {
-      height: 60vh;
-      display: flex;
-      overflow: hidden;
-    }
-
-    .me-circle {
-      width: 50vw;
-      max-width: 400px;
-      margin-top: 5vh;
-    }
-
-    .company-logo {
-      width: 60vmin;
-      max-width: 200px;
-      height: 60vmin;
-      max-height: 200px;
-      object-fit: contain;
-      margin: auto;
-    }
-
-    .pictures-with-company {
-      width: 85vw;
-    }
-
-    .work-box {
-      width: 85vw;
-      margin: auto;
-    }
-
-    .twoelements {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      padding: 16px 16px;
-    }
-
-    #home-section,
-    #about {
-      animation: fade-in 1s ease-in-out;
-    }
-
-    @keyframes fade-in {
-      0% {
-        opacity: 0;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Importing google fonts. You may use any other webfonts that you like! -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Didact+Gothic|Kosugi|Oxygen|Raleway|Roboto|Roboto+Mono|Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/toggle.css" />
+    <link rel="stylesheet" type="text/css" href="css/side-drawer.css" />
+    <link rel="stylesheet" type="text/css" href="css/app-header.css" />
+    <link rel="stylesheet" type="text/css" href="css/typewriter.css" />
+    <!-- Do change the title as you wish. -->
+    <title>My Portfolio</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
       }
 
-      100% {
-        opacity: 1;
+      /* Setting default margins, padding, height and width for html and body elements. */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #272f35;
       }
 
-    }
-
-    @media (orientation: portrait) {
-      .left {
+      .top-spacer {
         width: 100%;
+        height: 60px;
+      }
+
+      .twoelements {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 16px 16px;
+      }
+
+      .work-description {
+        font-size: 130%;
+        margin: auto;
+      }
+
+      .home-section {
+        background-image: url("me.jpg");
+        background-size: auto 700px;
+        height: 700px;
+        font-family: Oxygen;
+        font-size: 7rem;
+        font-weight: bolder;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .home-text {
+        padding-right: 50px;
+        width: 100%;
+        text-align: right;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 50%;
+        height: inherit;
+        background-image: linear-gradient(#ff6a3d, #ff3d6a);
+        overflow: hidden;
       }
 
       .right {
-        display: none;
+        width: 50vw;
+        height: inherit;
+        overflow: hidden;
+        background: url("anothermeow.PNG") no-repeat center center;
+        background-size: cover;
       }
-    }
 
-    @media (orientation: landscape) {
+      .page {
+        height: 60vh;
+        display: flex;
+        overflow: hidden;
+      }
+
       .me-circle {
-        display: none;
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 1023px) {
-      .home-section {
-        height: 500px;
-        background-size: auto 500px;
-        align-items: baseline;
+        width: 50vw;
+        max-width: 400px;
+        margin-top: 5vh;
       }
 
-      .home-text {
-        font-size: 5.5rem;
-        padding: 0;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .home-section {
-        height: 500px;
-        background-size: auto 500px;
-        align-items: baseline;
+      #home-section,
+      #about {
+        animation: fade-in 1s ease-in-out;
       }
 
-      .home-text {
-        font-size: 4rem;
-        padding: 0;
-        text-align: center;
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
       }
-    }
 
-  </style>
-</head>
+      @media (orientation: portrait) {
+        .left {
+          width: 100%;
+        }
 
-<body>
-  <header class="app-header" id="app-header">
-    <nav class="navigation">
-      <a class="logo" href="#"> <strong>FOO</strong> YONG QI</a>
-      
-      <ul>
-        <li>
-          <a href="#about" class="links">
+        .right {
+          display: none;
+        }
+      }
+
+      @media (orientation: landscape) {
+        .me-circle {
+          display: none;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .home-section {
+          height: 500px;
+          background-size: auto 500px;
+          align-items: baseline;
+        }
+
+        .home-text {
+          font-size: 5.5rem;
+          padding: 0;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .home-section {
+          height: 500px;
+          background-size: auto 500px;
+          align-items: baseline;
+        }
+
+        .home-text {
+          font-size: 4rem;
+          padding: 0;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="app-header" id="app-header">
+      <nav class="navigation">
+        <a class="logo" href="#"> <strong>FOO</strong> YONG QI</a>
+
+        <ul>
+          <li>
+            <a href="#about" class="links">
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a href="#experience" class="links">
+              EXPERIENCE
+            </a>
+          </li>
+        </ul>
+        <button class="toggle" id="toggle" onclick="toggle()">
+          <div class="toggle-line line-top"></div>
+          <div class="toggle-line line-center"></div>
+          <div class="toggle-line line-bottom"></div>
+        </button>
+      </nav>
+
+      <div class="side-drawer" id="side-drawer">
+        <div>
+          <a href="#about" class="side-drawer-card links">
             ABOUT
           </a>
-        </li>
-        <li>
-          <a href="#experience" class="links">
+          <a href="#experience" class="side-drawer-card links">
             EXPERIENCE
           </a>
-        </li>
-      </ul>
-      <button class="toggle" id="toggle" onclick="toggle()">
-        <div class="toggle-line line-top"></div>
-        <div class="toggle-line line-center"></div>
-        <div class="toggle-line line-bottom"></div>
-      </button>
-    </nav>
-
-    <div class="side-drawer" id="side-drawer">
-      <div>
-        <a href="#about" class="side-drawer-card links">
-          ABOUT
-        </a>
-        <a href="#experience" class="side-drawer-card links">
-          EXPERIENCE
-        </a>
+        </div>
       </div>
+    </header>
+    <div class="top-spacer" id="#"></div>
+    <div class="home-section" id="home-section">
+      <div class="home-text">HI, I'M YONG QI</div>
     </div>
-  </header>
-  <div class="top-spacer" id="#"></div>
-  <div class="home-section" id="home-section">
-    <div class="home-text">HI, I'M YONG QI</div>
-  </div>
 
-  <!-- ABOUT Section -->
-  <div class="page" id="about">
-    <div class="left">
-      <img src="mecircle.PNG" class="me-circle" />
-      <div id="typewriter" class="typewriter"></div>
-    </div>
-    <div class="right"></div>
-  </div>
-
-  <!-- EXPERIENCE SECTION -->
-  <div id="experience">
-    <div class="twoelements">
-      <img src="uncage.png" alt="uncage" class="company-logo">
-      <div class="work-description">
-        <h3 style="color: #305f72">
-          Uncage
-        </h3>
-        <h4>
-          <em>Co-Founder, President</em>
-        </h4>
-        <p>
-          May 2018 - <em>Present</em>
-        </p>
+    <!-- ABOUT Section -->
+    <div class="page" id="about">
+      <div class="left">
+        <img src="mecircle.PNG" class="me-circle" />
+        <div id="typewriter" class="typewriter"></div>
       </div>
+      <div class="right"></div>
     </div>
-  </div>
-  <div v-scroll-reveal class="page-paragraph">
-    I co-founded a for youths, by youths non-profit organization dedicated to
-    reducing drug recidivism in Singapore by harnessing the power of community.
-  </div>
-  <img v-scroll-reveal src="SACA.jpg" class="pictures-with-company">
-  <div v-scroll-reveal class="imgcaption">
-    My team attending the basic prison training conducted by the Singapore
-    Aftercare Association (SACA).
-  </div>
-  <div v-scroll-reveal class="page-paragraph">
-    In my time thus far as the Vice-President of External Relations, I've pitched our
-    idea to, and forged partnerships with various established organizations in the field
-    for approval.
-  </div>
-  <div v-scroll-reveal class="page-paragraph">
-    I am now leading my team in starting a pilot test together with the Singapore
-    Prison Service.
-  </div>
-  <div v-scroll-reveal class="page-paragraph">
-    I have learned much from starting up a non-profit organisation such as this. None of my team had and prior
-    experience
-    with such things and did not have anyone we could depend on. We had to learn and experience first-hand the
-    difficulty
-    of what we set out to do. As Vice-President, I was tasked with pitching our idea to established organizations to see
-    if
-    what we proposed was viable and for their approval. This allowed me to really improve my communication and
-    management skills.
-  </div>
-
-
-
-  </div>
-</body>
-<script src="js/app-header.js"></script>
-<script src="js/typewriter.js"></script>
-
+  </body>
+  <script src="js/app-header.js"></script>
+  <script src="js/typewriter.js"></script>
 </html>
