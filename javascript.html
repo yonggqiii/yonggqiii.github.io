@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Exercise</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Didact+Gothic|Kosugi|Oxygen|Raleway|Roboto|Roboto+Mono|Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      button {
+        font-size: 20px;
+        height: 40px;
+        width: 150px;
+        background: greenyellow;
+        font-family: Roboto Mono;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <div
+      style="width: 100vw; height: 100vh; background: black; font-family: Roboto Mono; color: white; display: flex; flex-direction: column; align-items: center; justify-content: center;"
+    >
+      <div
+        style="display: flex; justify-content: space-evenly; width: 80vw; align-items: center;"
+      >
+        <h1>Your input:</h1>
+        <input
+          type="text"
+          style="border: 3px white solid; border-radius: 10px; color: black; font-family: Roboto Mono; font-size: 30px;"
+          id="input"
+        />
+        <button style="background: greenyellow" onclick="run()">
+          Run
+        </button>
+      </div>
+      <div
+        id="demo"
+        style="margin-top: 10vh; display: flex; flex-direction: column; justify-content: center;"
+      >
+        <div style="font-size: 20px; margin-bottom: 30px;">
+          Click the button to do stuff with the element below:
+        </div>
+        <button style="background: orange;" id="click-me">
+          Click Me!
+        </button>
+        <div
+          id="target"
+          style="width: 50vw; margin: 10px; padding: 10px; border: 3px white solid;"
+        >
+          Hello, I am simply a regular element in the document. I'm not exactly
+          sure what you want me to do. Perhaps you should click on the button
+          when you're ready to amend me with JavaScript?
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/index.js"></script>
+</html>
