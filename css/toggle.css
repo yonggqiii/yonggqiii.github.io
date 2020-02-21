@@ -1,0 +1,51 @@
+.toggle {
+  height: calc(30px + 1vw);
+  width: calc(30px + 1vw);
+  background: transparent;
+  border-style: solid;
+  box-sizing: border-box;
+  border-color: white;
+  border-width: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: 0.2s border-color ease-in-out, 0.2s border-radius ease-in-out;
+  z-index: 2;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.toggle-line {
+  width: 20px;
+  height: 2px;
+  margin: 3px 0;
+  background: white;
+  transition: 0.2s background ease-in-out, 0.2s opacity ease-in-out,
+    0.2s transform ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+.toggle-line.line-center.active {
+  opacity: 0;
+}
+
+.toggle-line.line-top.active {
+  transform: translate(0, 8px) rotate(225deg);
+}
+
+.toggle-line.line-bottom.active {
+  transform: translate(0, -8px) rotate(-225deg);
+}
+.toggle.active {
+  border-color: #aeeff0;
+  border-radius: 100%;
+}
+
+.toggle-line.active {
+  background: #aeeff0;
+}

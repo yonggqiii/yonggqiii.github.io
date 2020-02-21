@@ -1,569 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Importing google fonts. You may use any other webfonts that you like! -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Didact+Gothic|Kosugi|Oxygen|Raleway|Roboto|Roboto+Mono|Ubuntu&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Do change the title as you wish. -->
-    <title>My Portfolio</title>
-    <style>
-      html {
-        scroll-behavior: smooth;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Importing google fonts. You may use any other webfonts that you like! -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Didact+Gothic|Kosugi|Oxygen|Raleway|Roboto|Roboto+Mono|Ubuntu&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/toggle.css">
+  <link rel="stylesheet" type="text/css" href="css/side-drawer.css">
+  <link rel="stylesheet" type="text/css" href="css/app-header.css">
+  <link rel="stylesheet" type="text/css" href="css/typewriter.css">
+  <!-- Do change the title as you wish. -->
+  <title>My Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Setting default margins, padding, height and width for html and body elements. */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: #272f35;
+    }
+
+    .separator {
+      flex: 1;
+    }
+
+    .top-spacer {
+      width: 100%;
+      height: 60px;
+    }
+
+    .twoelements {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 16px 16px;
+    }
+
+    .work-description {
+      font-size: 130%;
+      margin: auto;
+    }
+
+    .home-section {
+      background-image: url("me.jpg");
+      background-size: auto 700px;
+      height: 700px;
+      font-family: Oxygen;
+      font-size: 7rem;
+      font-weight: bolder;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .home-text {
+      padding-right: 50px;
+      width: 100%;
+      text-align: right;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 50%;
+      height: inherit;
+      background-image: linear-gradient(#ff6a3d, #ff3d6a);
+      overflow: hidden;
+    }
+
+    .right {
+      width: 50vw;
+      height: inherit;
+      overflow: hidden;
+      background: url("anothermeow.PNG") no-repeat center center;
+      background-size: cover;
+    }
+
+    .page {
+      height: 60vh;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .me-circle {
+      width: 50vw;
+      max-width: 400px;
+      margin-top: 5vh;
+    }
+
+    .company-logo {
+      width: 60vmin;
+      max-width: 200px;
+      height: 60vmin;
+      max-height: 200px;
+      object-fit: contain;
+      margin: auto;
+    }
+
+    .pictures-with-company {
+      width: 85vw;
+    }
+
+    .work-box {
+      width: 85vw;
+      margin: auto;
+    }
+
+    .twoelements {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 16px 16px;
+    }
+
+    #home-section,
+    #about {
+      animation: fade-in 1s ease-in-out;
+    }
+
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
       }
 
-      /* Setting default margins, padding, height and width for html and body elements. */
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        background: #272f35;
-      }
-      .links {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-family: Raleway;
-      }
-      .app-header {
-        position: fixed;
-        transform: translate3d(0, -2px, 0);
+      100% {
         opacity: 1;
-        top: 0;
-        left: 0;
-        height: 60px;
-        width: 100%;
-        -webkit-transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-        -moz-transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-        -o-transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-      }
-      .app-header.hidden {
-        opacity: 0;
-        transform: translate3d(0, -60px, 0);
-      }
-      .logo {
-        font-family: Raleway;
-        font-size: 30px;
-        color: white;
-        margin-left: 0px;
-        text-decoration: none;
-        color: #aeeff0;
-      }
-      .separator {
-        flex: 1;
-      }
-      .navigation {
-        position: relative;
-        z-index: 3;
-        display: flex;
-        align-items: center;
-        padding: 0 1rem;
-        background: #272f35;
-        left: 0;
-        height: 60px;
-      }
-      .navigation ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-      }
-      .navigation li {
-        padding: 0 1rem;
-      }
-      .navigation ul li a {
-        text-decoration: none;
-        font-size: 20px;
-        transition: color 0.3s ease-in-out;
-      }
-      .navigation ul li a:hover {
-        color: #aeeff0;
-      }
-      .toggle {
-        height: calc(30px + 1vw);
-        width: calc(30px + 1vw);
-        background: transparent;
-        border-style: solid;
-        box-sizing: border-box;
-        border-color: white;
-        border-width: 2px;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        transition: 0.2s border-color ease-in-out,
-          0.2s border-radius ease-in-out;
-        z-index: 2;
-      }
-      .toggle:focus {
-        outline: none;
-      }
-      .toggle-line {
-        width: 20px;
-        height: 2px;
-        margin: 3px 0;
-        background: white;
-        transition: 0.2s background ease-in-out, 0.2s opacity ease-in-out,
-          0.2s transform ease-in-out;
-        transform-origin: 50% 50%;
-      }
-      .toggle-line.line-center.active {
-        opacity: 0;
-      }
-      .toggle-line.line-top.active {
-        transform: translate(0, 8px) rotate(225deg);
-      }
-      .toggle-line.line-bottom.active {
-        transform: translate(0, -8px) rotate(-225deg);
-      }
-      .top-spacer {
-        width: 100%;
-        height: 60px;
-      }
-      .toggle.active {
-        border-color: #aeeff0;
-        border-radius: 100%;
-      }
-      .toggle-line.active {
-        background: #aeeff0;
-      }
-      .side-drawer {
-        position: fixed;
-        top: 0px;
-        right: 0;
-        width: 100vw;
-        transform: translateY(-50vh);
-        height: 50vh;
-        background: rgb(8, 12, 17);
-        opacity: 0;
-        transition: 0.2s transform ease-out, 0.2s opacity ease-out;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-      }
-      .side-drawer-card {
-        width: 80vw;
-        height: 13vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-      }
-      .side-drawer-card a {
-        text-decoration: none;
-      }
-      .side-drawer.show {
-        transform: translateY(60px);
-        opacity: 0.9;
       }
 
-      .contact-and-resume-box h3 {
-        animation: color-pulse 4s infinite linear;
-      }
+    }
 
-      .twoelements {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 16px 16px;
-      }
-      .typewriter {
-        border-right: 0.15em solid #fcf9ea; /* The typwriter cursor */
-        animation: blink-caret 0.75s step-end infinite;
-        padding-right: calc(5px + 2vw);
-        white-space: nowrap;
-      }
-      .vertcenter {
-        min-height: 90vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
-      .work-box {
-        width: 85vw;
-        margin: auto;
-      }
-      .new-box {
-        width: 30vw;
-      }
-      progress {
-        background-color: white;
-        height: 20px;
-        width: 70%;
-      }
-      progress::-webkit-progress-bar {
-        background-color: white;
-        height: 20px;
-        border-radius: 5px;
-      }
-      progress::-webkit-progress-value {
-        background-color: olivedrab;
-        height: 20px;
-        border-radius: 5px;
-      }
-      .work-description {
-        font-size: 130%;
-        margin: auto;
-      }
-
-      .home-section {
-        background-image: url("me.jpg");
-        background-size: auto 700px;
-        height: 700px;
-        font-family: Oxygen;
-        font-size: 7rem;
-        font-weight: bolder;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-
-      .home-text {
-        padding-right: 50px;
-        width: 100%;
-        text-align: right;
-      }
-
+    @media (orientation: portrait) {
       .left {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 50%;
-        height: inherit;
-        background-image: linear-gradient(#ff6a3d, #ff3d6a);
-        overflow: hidden;
-        font-family: Kosugi;
-        font-size: 3vw;
+        width: 100%;
       }
 
       .right {
-        width: 50vw;
-        height: inherit;
-        overflow: hidden;
-        background: url("anothermeow.PNG") no-repeat center center;
-        background-size: cover;
+        display: none;
       }
+    }
 
-      .page {
-        height: 60vh;
-        display: flex;
-        overflow: hidden;
-      }
-
-      .typewriter {
-        padding: 10px;
-      }
-
+    @media (orientation: landscape) {
       .me-circle {
-        width: 50vw;
-        max-width: 400px;
-        margin-top: 5vh;
+        display: none;
       }
-      .company-logo {
-  width: 60vmin;
-  max-width: 200px;
-  height: 60vmin;
-  max-height: 200px;
-  object-fit: contain;
-  margin: auto;
-}
-.pictures-with-company {
-  width: 85vw;
-}
+    }
 
-.work-box {
-  width: 85vw;
-  margin: auto;
-}
-
-.twoelements {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 16px 16px;
-}
-
-      @media (orientation: portrait) {
-        .left {
-          width: 100%;
-        }
-        .right {
-          display: none;
-        }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .home-section {
+        height: 500px;
+        background-size: auto 500px;
+        align-items: baseline;
       }
 
-      @media (orientation: landscape) {
-        .me-circle {
-          display: none;
-        }
+      .home-text {
+        font-size: 5.5rem;
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .home-section {
+        height: 500px;
+        background-size: auto 500px;
+        align-items: baseline;
       }
 
-      @media (min-width: 768px) and (max-width: 1023px) {
-        .home-section {
-          height: 500px;
-          background-size: auto 500px;
-          align-items: baseline;
-        }
-
-        .home-text {
-          font-size: 5.5rem;
-          padding: 0;
-          text-align: center;
-        }
+      .home-text {
+        font-size: 4rem;
+        padding: 0;
+        text-align: center;
       }
+    }
 
-      @media (max-width: 767px) {
-        .home-section {
-          height: 500px;
-          background-size: auto 500px;
-          align-items: baseline;
-        }
+  </style>
+</head>
 
-        .home-text {
-          font-size: 4rem;
-          padding: 0;
-          text-align: center;
-        }
-
-        .left {
-          font-size: 4vw;
-        }
-      }
-
-      @media (max-width: 1080px) {
-        li {
-          display: none;
-        }
-      }
-      @media (min-width: 1081px) {
-        .toggle {
-          display: none;
-        }
-        .side-drawer {
-          display: none;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="app-header" id="app-header">
-      <nav class="navigation">
-        <a class="logo" href="#"> <strong>FOO</strong> YONG QI</a>
-        <div class="separator"></div>
-        <ul>
-          <li>
-            <a href="#about" class="links">
-              ABOUT
-            </a>
-          </li>
-          <li>
-            <a href="#experience" class="links">
-              EXPERIENCE
-            </a>
-          </li>
-        </ul>
-        <button class="toggle" id="toggle" onclick="toggle()">
-          <div class="toggle-line line-top"></div>
-          <div class="toggle-line line-center"></div>
-          <div class="toggle-line line-bottom"></div>
-        </button>
-      </nav>
-
-      <div class="side-drawer" id="side-drawer">
-        <div>
-          <a href="#about" class="side-drawer-card links">
+<body>
+  <header class="app-header" id="app-header">
+    <nav class="navigation">
+      <a class="logo" href="#"> <strong>FOO</strong> YONG QI</a>
+      <div class="separator"></div>
+      <ul>
+        <li>
+          <a href="#about" class="links">
             ABOUT
           </a>
-          <a href="#experience" class="side-drawer-card links">
+        </li>
+        <li>
+          <a href="#experience" class="links">
             EXPERIENCE
           </a>
-        </div>
-      </div>
-    </header>
-    <div class="top-spacer" id="#"></div>
-    <div class="home-section" id="home-section">
-      <div class="home-text">HI, I'M YONG QI</div>
-    </div>
+        </li>
+      </ul>
+      <button class="toggle" id="toggle" onclick="toggle()">
+        <div class="toggle-line line-top"></div>
+        <div class="toggle-line line-center"></div>
+        <div class="toggle-line line-bottom"></div>
+      </button>
+    </nav>
 
-    <!-- ABOUT Section -->
-    <div class="page" id="about">
-      <div class="left">
-        <img src="mecircle.PNG" class="me-circle" />
-        <div id="typewriter" style="padding: 20px;"></div>
-      </div>
-      <div class="right"></div>
-    </div>
-
-    <!-- EXPERIENCE SECTION -->
-    <div id="experience">
-      <div class="twoelements">
-        <img src="uncage.png" alt="uncage" class="company-logo">
-        <div class="work-description">
-          <h3 style="color: #305f72">
-            Uncage
-          </h3>
-          <h4>
-            <em>Co-Founder, President</em>
-          </h4>
-          <p>
-            May 2018 - <em>Present</em>
-          </p>
-        </div>
+    <div class="side-drawer" id="side-drawer">
+      <div>
+        <a href="#about" class="side-drawer-card links">
+          ABOUT
+        </a>
+        <a href="#experience" class="side-drawer-card links">
+          EXPERIENCE
+        </a>
       </div>
     </div>
-    <div v-scroll-reveal class="page-paragraph">
-      I co-founded a for youths, by youths non-profit organization dedicated to
-      reducing drug recidivism in Singapore by harnessing the power of community.
+  </header>
+  <div class="top-spacer" id="#"></div>
+  <div class="home-section" id="home-section">
+    <div class="home-text">HI, I'M YONG QI</div>
+  </div>
+
+  <!-- ABOUT Section -->
+  <div class="page" id="about">
+    <div class="left">
+      <img src="mecircle.PNG" class="me-circle" />
+      <div id="typewriter" class="typewriter"></div>
     </div>
-    <img v-scroll-reveal src="SACA.jpg" class="pictures-with-company">
-    <div v-scroll-reveal class="imgcaption">
-      My team attending the basic prison training conducted by the Singapore
-      Aftercare Association (SACA).
+    <div class="right"></div>
+  </div>
+
+  <!-- EXPERIENCE SECTION -->
+  <div id="experience">
+    <div class="twoelements">
+      <img src="uncage.png" alt="uncage" class="company-logo">
+      <div class="work-description">
+        <h3 style="color: #305f72">
+          Uncage
+        </h3>
+        <h4>
+          <em>Co-Founder, President</em>
+        </h4>
+        <p>
+          May 2018 - <em>Present</em>
+        </p>
+      </div>
     </div>
-    <div v-scroll-reveal class="page-paragraph">
-      In my time thus far as the Vice-President of External Relations, I've pitched our
-      idea to, and forged partnerships with various established organizations in the field
-      for approval.
-    </div>
-    <div v-scroll-reveal class="page-paragraph">
-      I am now leading my team in starting a pilot test together with the Singapore
-      Prison Service.
-    </div>
-    <div v-scroll-reveal class="page-paragraph">
-      I have learned much from starting up a non-profit organisation such as this. None of my team had and prior experience
-      with such things and did not have anyone we could depend on. We had to learn and experience first-hand the difficulty
-      of what we set out to do. As Vice-President, I was tasked with pitching our idea to established organizations to see if
-      what we proposed was viable and for their approval. This allowed me to really improve my communication and management skills.
-    </div>
+  </div>
+  <div v-scroll-reveal class="page-paragraph">
+    I co-founded a for youths, by youths non-profit organization dedicated to
+    reducing drug recidivism in Singapore by harnessing the power of community.
+  </div>
+  <img v-scroll-reveal src="SACA.jpg" class="pictures-with-company">
+  <div v-scroll-reveal class="imgcaption">
+    My team attending the basic prison training conducted by the Singapore
+    Aftercare Association (SACA).
+  </div>
+  <div v-scroll-reveal class="page-paragraph">
+    In my time thus far as the Vice-President of External Relations, I've pitched our
+    idea to, and forged partnerships with various established organizations in the field
+    for approval.
+  </div>
+  <div v-scroll-reveal class="page-paragraph">
+    I am now leading my team in starting a pilot test together with the Singapore
+    Prison Service.
+  </div>
+  <div v-scroll-reveal class="page-paragraph">
+    I have learned much from starting up a non-profit organisation such as this. None of my team had and prior
+    experience
+    with such things and did not have anyone we could depend on. We had to learn and experience first-hand the
+    difficulty
+    of what we set out to do. As Vice-President, I was tasked with pitching our idea to established organizations to see
+    if
+    what we proposed was viable and for their approval. This allowed me to really improve my communication and
+    management skills.
+  </div>
 
 
 
-    </div>
-  </body>
-  <script>
-    // Show and hide app header.
-    var APP_HEADER = document.getElementById("app-header");
-    var SIDE_DRAWER = document.getElementById("side-drawer");
-    var TOGGLE = document.getElementById("toggle");
-    var TOGGLE_LINES = document.getElementsByClassName("toggle-line");
-    var TYPEWRITER = document.getElementById("typewriter");
-    var TYPEWRITER_TEXTS = [
-      "I am Yong Qi",
-      "I like ducks",
-      "I'm pursuing Industrial &amp; Systems Engineering and a second major in Computer Science",
-      "I also work in Business Development at Sqkii",
-      "I teach Programming Methodologies at the National University of Singapore",
-      "I'm not a very good programmer...",
-      "Relationship r = i.love(you);",
-      "hehe I tried"
-    ];
-    var TIME_TO_TYPE_EACH_CHAR = 100;
-    var TIME_TO_DELETE_EACH_CHAR = 50;
-    var TIME_TEXT_IS_SHOWN = 1000;
-    var TIME_TO_PUSH_ADDITIONAL_MESSAGES = 30000;
-    var TIME_BEFORE_NEXT_MESSAGE_IS_SHOWN = 500;
-    var typewriterText = "";
-    var typewriterIndex = 0;
-    var lastScrollPosition = 0;
-    window.addEventListener("scroll", e => {
-      var SCROLL_OFFSET = 60;
-      var currentScrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScrollPosition < 0) {
-        return;
-      }
-      if (
-        Math.abs(currentScrollPosition - this.lastScrollPosition) <
-        SCROLL_OFFSET
-      ) {
-        return;
-      }
-      if (currentScrollPosition < lastScrollPosition) {
-        // Show Header
-        APP_HEADER.className = "app-header";
-      } else {
-        // Hide Header
-        APP_HEADER.className = "app-header hidden";
-      }
-      toggleInactive(true);
-      lastScrollPosition = currentScrollPosition;
-    });
+  </div>
+</body>
+<script src="js/app-header.js"></script>
+<script src="js/typewriter.js"></script>
 
-    // Show and hide side drawer
-    function toggleInactive(e) {
-      SIDE_DRAWER.className = "side-drawer";
-      TOGGLE.className = "toggle";
-      for (let i = 0; i < TOGGLE_LINES.length; ++i) {
-        toggleLine = TOGGLE_LINES[i];
-        var classList = toggleLine.className.split(" ");
-        toggleLine.className = toggleLine.className
-          .split(" ")
-          .slice(0, 2)
-          .join(" ");
-      }
-    }
-
-    function toggleActive(e) {
-      SIDE_DRAWER.className = "side-drawer show";
-      TOGGLE.className = "toggle active";
-      for (let i = 0; i < TOGGLE_LINES.length; ++i) {
-        toggleLine = TOGGLE_LINES[i];
-        toggleLine.className += " active";
-      }
-    }
-
-    function toggle(e) {
-      if (SIDE_DRAWER.className.split(" ").length == 1) {
-        toggleActive(e);
-      } else {
-        toggleInactive(e);
-      }
-    }
-
-    function prompter() {
-      if (typewriterText.length < TYPEWRITER_TEXTS[typewriterIndex].length) {
-        typewriterText = TYPEWRITER_TEXTS[typewriterIndex].substring(
-          0,
-          typewriterText.length + 1
-        );
-        TYPEWRITER.innerHTML = typewriterText;
-        setTimeout(prompter, TIME_TO_TYPE_EACH_CHAR);
-        return;
-      }
-      setTimeout(unprompt, TIME_TEXT_IS_SHOWN);
-    }
-    /**
-     * Removing the last letter of the typewriter.
-     */
-    function unprompt() {
-      if (typewriterText.length === 0) {
-        typewriterIndex++;
-        if (typewriterIndex >= TYPEWRITER_TEXTS.length) {
-          typewriterIndex = 0;
-        }
-        setTimeout(prompter, TIME_BEFORE_NEXT_MESSAGE_IS_SHOWN);
-        return;
-      }
-      typewriterText = typewriterText.substring(0, typewriterText.length - 1);
-      TYPEWRITER.innerHTML = typewriterText;
-      setTimeout(unprompt, TIME_TO_DELETE_EACH_CHAR);
-    }
-
-    window.addEventListener("resize", toggleInactive);
-    prompter();
-  </script>
 </html>

@@ -1,0 +1,35 @@
+.side-drawer {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  width: 100vw;
+  transform: translateY(-50vh);
+  height: 50vh;
+  background: rgb(8, 12, 17);
+  opacity: 0;
+  transition: 0.2s transform ease-out, 0.2s opacity ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.side-drawer-card {
+  width: 80vw;
+  height: 13vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.side-drawer-card a {
+  text-decoration: none;
+}
+
+.side-drawer.show {
+  transform: translateY(60px);
+  opacity: 0.9;
+}
