@@ -1,0 +1,18 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/entry-server.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import {\n  createHandler,\n  renderAsync,\n  StartServer,\n} from \"solid-start/entry-server\";\n\nexport default createHandler(\n  renderAsync((event) => <StartServer event={event} />)\n);\n",
+      "start": 1687248446541,
+      "end": 1687248446543
+    },
+    {
+      "name": "solid",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"solid-start/entry-server\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
+      "start": 1687248446543,
+      "end": 1687248446546,
+      "order": "pre"
+    }
+  ]
+}

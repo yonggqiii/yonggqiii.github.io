@@ -1,0 +1,15 @@
+{
+  "src/entry-server.tsx": {
+    "assets": [
+      "assets/iosevka-regular-1138ebac.ttf",
+      "assets/iosevka-bold-0012635c.ttf",
+      "assets/iosevka-italic-57836225.ttf"
+    ],
+    "css": [
+      "assets/entry-server-fda143d2.css"
+    ],
+    "file": "entry-server.js",
+    "isEntry": true,
+    "src": "src/entry-server.tsx"
+  }
+}
