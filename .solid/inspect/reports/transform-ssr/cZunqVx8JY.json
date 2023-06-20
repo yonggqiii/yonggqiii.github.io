@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/CV.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": ".cv-item {\n  padding: 10px 0;\n  /* border-top: 1px solid #9399b2; */\n  border-bottom: 1px solid #9399b2;\n}\n\n.cv-item-header {\n  font-size: 1.1em;\n  display: flex;\n  flex-direction: column;\n}\np.description {\n  margin: 0;\n}\n\ndiv.cv-item-name {\n  text-align: center;\n  font-weight: bold;\n}\n\ndiv.cv-item-date {\n  text-align: center;\n}\ndiv.cv-item-place {\n  font-style: italic;\n}\n\n@media (min-width: 480px) {\n  .cv-item-header {\n    font-size: 1.1em;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n  }\n\n  div.cv-item-name {\n    text-align: left;\n  }\n\n  div.cv-item-date {\n    text-align: right;\n  }\n\n  p.description {\n    text-align: left;\n  }\n  div.cv-item-place {\n    text-align: left;\n  }\n}\n",
+      "start": 1687247938900,
+      "end": 1687247938940
+    },
+    {
+      "name": "vite:css",
+      "result": ".cv-item {\n  padding: 10px 0;\n  /* border-top: 1px solid #9399b2; */\n  border-bottom: 1px solid #9399b2;\n}\n\n.cv-item-header {\n  font-size: 1.1em;\n  display: flex;\n  flex-direction: column;\n}\np.description {\n  margin: 0;\n}\n\ndiv.cv-item-name {\n  text-align: center;\n  font-weight: bold;\n}\n\ndiv.cv-item-date {\n  text-align: center;\n}\ndiv.cv-item-place {\n  font-style: italic;\n}\n\n@media (min-width: 480px) {\n  .cv-item-header {\n    font-size: 1.1em;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n  }\n\n  div.cv-item-name {\n    text-align: left;\n  }\n\n  div.cv-item-date {\n    text-align: right;\n  }\n\n  p.description {\n    text-align: left;\n  }\n  div.cv-item-place {\n    text-align: left;\n  }\n}\n",
+      "start": 1687247938940,
+      "end": 1687247938940,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1687247938940,
+      "end": 1687247938940,
+      "order": "normal"
+    }
+  ]
+}

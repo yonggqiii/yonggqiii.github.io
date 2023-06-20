@@ -1,0 +1,18 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/server/data.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"../data\";\nexport { ServerError } from \"../data\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
+      "start": 1687247939114,
+      "end": 1687247939164
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"../data\";\nexport { ServerError } from \"../data\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
+      "start": 1687247939164,
+      "end": 1687247939166,
+      "order": "normal"
+    }
+  ]
+}

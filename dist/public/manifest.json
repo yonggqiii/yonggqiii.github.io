@@ -1,0 +1,92 @@
+{
+  "Card.css": {
+    "file": "assets/Card-73b0cb51.css",
+    "src": "Card.css"
+  },
+  "_Card-a94b6b31.js": {
+    "css": [
+      "assets/Card-73b0cb51.css"
+    ],
+    "file": "assets/Card-a94b6b31.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ]
+  },
+  "src/entry-client.css": {
+    "file": "assets/entry-client-36360937.css",
+    "src": "src/entry-client.css"
+  },
+  "src/entry-client.tsx": {
+    "assets": [
+      "assets/iosevka-regular-1138ebac.ttf",
+      "assets/iosevka-bold-0012635c.ttf",
+      "assets/iosevka-italic-57836225.ttf"
+    ],
+    "css": [
+      "assets/entry-client-36360937.css"
+    ],
+    "dynamicImports": [
+      "src/routes/[...404].tsx",
+      "src/routes/index.tsx",
+      "src/routes/teaching.tsx",
+      "src/routes/cv/index.tsx"
+    ],
+    "file": "assets/entry-client-949c33fa.js",
+    "isEntry": true,
+    "src": "src/entry-client.tsx"
+  },
+  "src/fonts/Iosevka/iosevka-bold.ttf": {
+    "file": "assets/iosevka-bold-0012635c.ttf",
+    "src": "src/fonts/Iosevka/iosevka-bold.ttf"
+  },
+  "src/fonts/Iosevka/iosevka-italic.ttf": {
+    "file": "assets/iosevka-italic-57836225.ttf",
+    "src": "src/fonts/Iosevka/iosevka-italic.ttf"
+  },
+  "src/fonts/Iosevka/iosevka-regular.ttf": {
+    "file": "assets/iosevka-regular-1138ebac.ttf",
+    "src": "src/fonts/Iosevka/iosevka-regular.ttf"
+  },
+  "src/routes/[...404].tsx": {
+    "file": "assets/_...404_-7461f5ae.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/[...404].tsx"
+  },
+  "src/routes/cv/index.css": {
+    "file": "assets/index-bfe03ba4.css",
+    "src": "src/routes/cv/index.css"
+  },
+  "src/routes/cv/index.tsx": {
+    "css": [
+      "assets/index-bfe03ba4.css"
+    ],
+    "file": "assets/index-babd13ad.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_Card-a94b6b31.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/cv/index.tsx"
+  },
+  "src/routes/index.tsx": {
+    "file": "assets/index-537b3552.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_Card-a94b6b31.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/index.tsx"
+  },
+  "src/routes/teaching.tsx": {
+    "file": "assets/teaching-3e96a443.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_Card-a94b6b31.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/teaching.tsx"
+  }
+}
