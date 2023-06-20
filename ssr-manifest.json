@@ -1,0 +1,145 @@
+{
+  "\u0000vite/preload-helper": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/@solidjs/meta/dist/index.jsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/@solidjs/router/dist/components.jsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/@solidjs/router/dist/integration.js": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/@solidjs/router/dist/lifecycle.js": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/@solidjs/router/dist/routing.js": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/@solidjs/router/dist/utils.js": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-js/dist/solid.js": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-js/web/dist/web.js": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/entry-client/StartClient.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/entry-client/mount.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/error-boundary/ErrorBoundary.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/root/Document.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/root/FileRoutes.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/root/Scripts.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/router.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/server/ServerContext.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
+    "/assets/_...404_-7461f5ae.js"
+  ],
+  "node_modules/solid-start/server/types.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "src/components/Card.css": [
+    "/assets/Card-a94b6b31.js",
+    "/assets/Card-73b0cb51.css"
+  ],
+  "src/components/Card.tsx": [
+    "/assets/Card-a94b6b31.js",
+    "/assets/Card-73b0cb51.css"
+  ],
+  "src/components/NavBar.css": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "src/components/NavBar.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "src/entry-client.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "src/root.css": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "src/root.tsx": [
+    "/assets/iosevka-regular-1138ebac.ttf",
+    "/assets/iosevka-bold-0012635c.ttf",
+    "/assets/iosevka-italic-57836225.ttf"
+  ],
+  "src/routes/[...404].tsx": [
+    "/assets/_...404_-7461f5ae.js"
+  ],
+  "src/routes/cv/CV.css": [
+    "/assets/index-babd13ad.js",
+    "/assets/index-bfe03ba4.css"
+  ],
+  "src/routes/cv/index.tsx": [
+    "/assets/index-babd13ad.js",
+    "/assets/index-bfe03ba4.css"
+  ],
+  "src/routes/index.tsx": [
+    "/assets/index-537b3552.js"
+  ],
+  "src/routes/teaching.tsx": [
+    "/assets/teaching-3e96a443.js"
+  ]
+}
