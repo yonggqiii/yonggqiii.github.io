@@ -3,54 +3,63 @@
     "file": "assets/Card-73b0cb51.css",
     "src": "Card.css"
   },
-  "_Card-a94b6b31.js": {
+  "_Card-69aa90f9.js": {
     "css": [
       "assets/Card-73b0cb51.css"
     ],
-    "file": "assets/Card-a94b6b31.js",
+    "file": "assets/Card-69aa90f9.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ]
+  },
+  "_HttpStatusCode-6c198899.js": {
+    "file": "assets/HttpStatusCode-6c198899.js",
     "imports": [
       "src/entry-client.tsx"
     ]
   },
   "src/entry-client.css": {
-    "file": "assets/entry-client-36360937.css",
+    "file": "assets/entry-client-3cd3a2b5.css",
     "src": "src/entry-client.css"
   },
   "src/entry-client.tsx": {
     "assets": [
-      "assets/iosevka-regular-1138ebac.ttf",
-      "assets/iosevka-bold-0012635c.ttf",
-      "assets/iosevka-italic-57836225.ttf"
+      "assets/iosevka-regular-7d4e446c.woff2",
+      "assets/iosevka-bold-066703ef.woff2",
+      "assets/iosevka-italic-39c3b024.woff2"
     ],
     "css": [
-      "assets/entry-client-36360937.css"
+      "assets/entry-client-3cd3a2b5.css"
     ],
     "dynamicImports": [
       "src/routes/[...404].tsx",
+      "src/routes/fun.tsx",
       "src/routes/index.tsx",
+      "src/routes/research.tsx",
       "src/routes/teaching.tsx",
       "src/routes/cv/index.tsx"
     ],
-    "file": "assets/entry-client-949c33fa.js",
+    "file": "assets/entry-client-d4701ccc.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
   },
-  "src/fonts/Iosevka/iosevka-bold.ttf": {
-    "file": "assets/iosevka-bold-0012635c.ttf",
-    "src": "src/fonts/Iosevka/iosevka-bold.ttf"
+  "src/fonts/Iosevka/iosevka-bold.woff2": {
+    "file": "assets/iosevka-bold-066703ef.woff2",
+    "src": "src/fonts/Iosevka/iosevka-bold.woff2"
   },
-  "src/fonts/Iosevka/iosevka-italic.ttf": {
-    "file": "assets/iosevka-italic-57836225.ttf",
-    "src": "src/fonts/Iosevka/iosevka-italic.ttf"
+  "src/fonts/Iosevka/iosevka-italic.woff2": {
+    "file": "assets/iosevka-italic-39c3b024.woff2",
+    "src": "src/fonts/Iosevka/iosevka-italic.woff2"
   },
-  "src/fonts/Iosevka/iosevka-regular.ttf": {
-    "file": "assets/iosevka-regular-1138ebac.ttf",
-    "src": "src/fonts/Iosevka/iosevka-regular.ttf"
+  "src/fonts/Iosevka/iosevka-regular.woff2": {
+    "file": "assets/iosevka-regular-7d4e446c.woff2",
+    "src": "src/fonts/Iosevka/iosevka-regular.woff2"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-7461f5ae.js",
+    "file": "assets/_...404_-0edd0d82.js",
     "imports": [
-      "src/entry-client.tsx"
+      "src/entry-client.tsx",
+      "_HttpStatusCode-6c198899.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/[...404].tsx"
@@ -63,28 +72,46 @@
     "css": [
       "assets/index-bfe03ba4.css"
     ],
-    "file": "assets/index-babd13ad.js",
+    "file": "assets/index-87b97c52.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Card-a94b6b31.js"
+      "_Card-69aa90f9.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/cv/index.tsx"
   },
-  "src/routes/index.tsx": {
-    "file": "assets/index-537b3552.js",
+  "src/routes/fun.tsx": {
+    "file": "assets/fun-c597658b.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Card-a94b6b31.js"
+      "_HttpStatusCode-6c198899.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/fun.tsx"
+  },
+  "src/routes/index.tsx": {
+    "file": "assets/index-4588935a.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_Card-69aa90f9.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/index.tsx"
   },
-  "src/routes/teaching.tsx": {
-    "file": "assets/teaching-3e96a443.js",
+  "src/routes/research.tsx": {
+    "file": "assets/research-0b1f6881.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Card-a94b6b31.js"
+      "_Card-69aa90f9.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/research.tsx"
+  },
+  "src/routes/teaching.tsx": {
+    "file": "assets/teaching-e5090b9a.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_Card-69aa90f9.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/teaching.tsx"
