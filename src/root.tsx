@@ -13,9 +13,9 @@ import {
   Title,
 } from "solid-start";
 import NavBar from "./components/NavBar";
-import "./fonts/Iosevka/iosevka-regular.ttf";
-import "./fonts/Iosevka/iosevka-bold.ttf";
-import "./fonts/Iosevka/iosevka-italic.ttf";
+import "./fonts/Iosevka/iosevka-regular.woff2";
+import "./fonts/Iosevka/iosevka-bold.woff2";
+import "./fonts/Iosevka/iosevka-italic.woff2";
 import "./root.css";
 
 export default function Root() {

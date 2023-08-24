@@ -151,7 +151,15 @@ const api = [
   },
   {
     GET: "skip",
+    path: "/fun"
+  },
+  {
+    GET: "skip",
     path: "/"
+  },
+  {
+    GET: "skip",
+    path: "/research"
   },
   {
     GET: "skip",
@@ -1547,7 +1555,7 @@ const Meta$1 = props => MetaTag("meta", props, {
   escape: true
 });
 
-const _tmpl$$7 = ["<div", " style=\"", "\"><div style=\"", "\"><p style=\"", "\" id=\"error-message\">", "</p><button id=\"reset-errors\" style=\"", "\">Clear errors and retry</button><pre style=\"", "\">", "</pre></div></div>"];
+const _tmpl$$9 = ["<div", " style=\"", "\"><div style=\"", "\"><p style=\"", "\" id=\"error-message\">", "</p><button id=\"reset-errors\" style=\"", "\">Clear errors and retry</button><pre style=\"", "\">", "</pre></div></div>"];
 function ErrorBoundary(props) {
   return createComponent$1(ErrorBoundary$1, {
     fallback: (e, reset) => {
@@ -1572,7 +1580,7 @@ function ErrorBoundary(props) {
 }
 function ErrorMessage(props) {
   createEffect(() => console.error(props.error));
-  return ssr(_tmpl$$7, ssrHydrationKey(), "padding:" + "16px", "background-color:" + "rgba(252, 165, 165)" + (";color:" + "rgb(153, 27, 27)") + (";border-radius:" + "5px") + (";overflow:" + "scroll") + (";padding:" + "16px") + (";margin-bottom:" + "8px"), "font-weight:" + "bold", escape(props.error.message), "color:" + "rgba(252, 165, 165)" + (";background-color:" + "rgb(153, 27, 27)") + (";border-radius:" + "5px") + (";padding:" + "4px 8px"), "margin-top:" + "8px" + (";width:" + "100%"), escape(props.error.stack));
+  return ssr(_tmpl$$9, ssrHydrationKey(), "padding:" + "16px", "background-color:" + "rgba(252, 165, 165)" + (";color:" + "rgb(153, 27, 27)") + (";border-radius:" + "5px") + (";overflow:" + "scroll") + (";padding:" + "16px") + (";margin-bottom:" + "8px"), "font-weight:" + "bold", escape(props.error.message), "color:" + "rgba(252, 165, 165)" + (";background-color:" + "rgb(153, 27, 27)") + (";border-radius:" + "5px") + (";padding:" + "4px 8px"), "margin-top:" + "8px" + (";width:" + "100%"), escape(props.error.stack));
 }
 
 const routeLayouts = {
@@ -1580,8 +1588,16 @@ const routeLayouts = {
     "id": "/*404",
     "layouts": []
   },
+  "/fun": {
+    "id": "/fun",
+    "layouts": []
+  },
   "/": {
     "id": "/",
+    "layouts": []
+  },
+  "/research": {
+    "id": "/research",
     "layouts": []
   },
   "/teaching": {
@@ -1594,8 +1610,8 @@ const routeLayouts = {
   }
 };
 
-const _tmpl$$6 = ["<link", " rel=\"stylesheet\"", ">"],
-  _tmpl$2$3 = ["<link", " rel=\"modulepreload\"", ">"];
+const _tmpl$$8 = ["<link", " rel=\"stylesheet\"", ">"],
+  _tmpl$2$4 = ["<link", " rel=\"modulepreload\"", ">"];
 function flattenIslands(match, manifest) {
   let result = [...match];
   match.forEach(m => {
@@ -1624,7 +1640,7 @@ function getAssetsFromManifest(manifest, routerContext) {
   match.push(...(manifest["entry-client"] || []));
   match = manifest ? flattenIslands(match, manifest) : [];
   const links = match.reduce((r, src) => {
-    r[src.href] = src.type === "style" ? ssr(_tmpl$$6, ssrHydrationKey(), ssrAttribute("href", escape(src.href, true), false)) : src.type === "script" ? ssr(_tmpl$2$3, ssrHydrationKey(), ssrAttribute("href", escape(src.href, true), false)) : undefined;
+    r[src.href] = src.type === "style" ? ssr(_tmpl$$8, ssrHydrationKey(), ssrAttribute("href", escape(src.href, true), false)) : src.type === "script" ? ssr(_tmpl$2$4, ssrHydrationKey(), ssrAttribute("href", escape(src.href, true), false)) : undefined;
     return r;
   }, {});
   return Object.values(links);
@@ -1688,10 +1704,19 @@ function HttpStatusCode(props) {
   return null;
 }
 
-const _tmpl$$5 = ["<main", "><!--#-->", "<!--/--><!--#-->", "<!--/--><h1>Page Not Found</h1><p class=\"red\">Where are you going?</p></main>"];
+const _tmpl$$7 = ["<main", "><!--#-->", "<!--/--><!--#-->", "<!--/--><h1>Page Not Found</h1><p class=\"red\">Where are you going?</p></main>"];
 function NotFound() {
-  return ssr(_tmpl$$5, ssrHydrationKey(), escape(createComponent$1(Title, {
+  return ssr(_tmpl$$7, ssrHydrationKey(), escape(createComponent$1(Title, {
     children: "Page Not Found"
+  })), escape(createComponent$1(HttpStatusCode, {
+    code: 404
+  })));
+}
+
+const _tmpl$$6 = ["<main", "><!--#-->", "<!--/--><!--#-->", "<!--/--><h1>Page Not Found</h1><p class=\"red\">Page coming soon...</p></main>"];
+function Fun() {
+  return ssr(_tmpl$$6, ssrHydrationKey(), escape(createComponent$1(Title, {
+    children: "Fun - Foo Yong Qi"
   })), escape(createComponent$1(HttpStatusCode, {
     code: 404
   })));
@@ -1699,14 +1724,14 @@ function NotFound() {
 
 const Card$1 = '';
 
-const _tmpl$$4 = ["<div", " class=\"", "\"><h2", ">", "</h2><!--#-->", "<!--/--></div>"];
+const _tmpl$$5 = ["<div", " class=\"", "\"><h2", ">", "</h2><!--#-->", "<!--/--></div>"];
 function Card(props) {
-  return ssr(_tmpl$$4, ssrHydrationKey(), `${escape(props.border, true)}-border card`, ssrAttribute("class", escape(props.header_color, true), false), escape(props.header), escape(props.children));
+  return ssr(_tmpl$$5, ssrHydrationKey(), `${escape(props.border, true)}-border card`, ssrAttribute("class", escape(props.header_color, true), false), escape(props.header), escape(props.children));
 }
 
-const _tmpl$$3 = ["<p", "><em class=\"teal\">Instructor</em> and <em class=\"flamingo\">PhD in Computer Science candidate</em> at the Department of Computer Science, School of Computing, <em class=\"sky\">National University of Singapore</em>.</p>"],
-  _tmpl$2$2 = ["<p", ">I like <em class=\"yellow\">ducks</em>, <em class=\"red\">type systems</em>, and <em class=\"lavender\">programming languages</em></p>"],
-  _tmpl$3$2 = ["<div", "><strong>Email</strong>: <em class=\"sapphire\">yongqi@nus.edu.sg</em></div>"],
+const _tmpl$$4 = ["<p", "><em class=\"teal\">Instructor</em> and <em class=\"flamingo\">PhD in Computer Science candidate</em> at the Department of Computer Science, School of Computing, <em class=\"sky\">National University of Singapore</em>.</p>"],
+  _tmpl$2$3 = ["<p", ">I like <em class=\"yellow\">ducks</em>, <em class=\"red\">type systems</em>, and <em class=\"lavender\">programming languages</em></p>"],
+  _tmpl$3$3 = ["<div", "><strong>Email</strong>: <em class=\"sapphire\">yongqi@nus.edu.sg</em></div>"],
   _tmpl$4$2 = ["<div", "><strong>DID</strong>: <em class=\"rosewater\">+65 6516 7960</em></div>"],
   _tmpl$5$2 = ["<div", "><strong>Office</strong>: <em class=\"peach\">COM2-02-27, 15 Computing Drive, Singapore 117418</em></div>"],
   _tmpl$6$2 = ["<main", "><!--#-->", "<!--/--><img class=\"circle profile-pic\" src=\"../yongqi.jpg\"><h1><strong class=\"red\">Foo</strong> Yong Qi</h1><div><em>Keep it simple, stupid.</em></div><!--#-->", "<!--/--><!--#-->", "<!--/--></main>"];
@@ -1718,14 +1743,30 @@ function Home() {
     header_color: "green",
     header: "About",
     get children() {
-      return [ssr(_tmpl$$3, ssrHydrationKey()), ssr(_tmpl$2$2, ssrHydrationKey())];
+      return [ssr(_tmpl$$4, ssrHydrationKey()), ssr(_tmpl$2$3, ssrHydrationKey())];
     }
   })), escape(createComponent$1(Card, {
     border: "flamingo",
     header_color: "teal",
     header: "Contact",
     get children() {
-      return [ssr(_tmpl$3$2, ssrHydrationKey()), ssr(_tmpl$4$2, ssrHydrationKey()), ssr(_tmpl$5$2, ssrHydrationKey())];
+      return [ssr(_tmpl$3$3, ssrHydrationKey()), ssr(_tmpl$4$2, ssrHydrationKey()), ssr(_tmpl$5$2, ssrHydrationKey())];
+    }
+  })));
+}
+
+const _tmpl$$3 = ["<h3", ">Abstract</h3>"],
+  _tmpl$2$2 = ["<p", ">-- withheld until publication date --</p>"],
+  _tmpl$3$2 = ["<main", "><!--#-->", "<!--/--><h1>Research</h1><!--#-->", "<!--/--></main>"];
+function Teaching$1() {
+  return ssr(_tmpl$3$2, ssrHydrationKey(), escape(createComponent$1(Title, {
+    children: "Research - Foo Yong Qi"
+  })), escape(createComponent$1(Card, {
+    header: "-- withheld --",
+    header_color: "yellow",
+    border: "peach",
+    get children() {
+      return [ssr(_tmpl$$3, ssrHydrationKey()), ssr(_tmpl$2$2, ssrHydrationKey())];
     }
   })));
 }
@@ -1885,8 +1926,14 @@ const fileRoutes = [{
   component: NotFound,
   path: "/*404"
 }, {
+  component: Fun,
+  path: "/fun"
+}, {
   component: Home,
   path: "/"
+}, {
+  component: Teaching$1,
+  path: "/research"
 }, {
   component: Teaching,
   path: "/teaching"

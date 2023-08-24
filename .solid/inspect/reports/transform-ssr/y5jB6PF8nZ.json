@@ -4,21 +4,21 @@
     {
       "name": "vite:load-fallback",
       "result": "nav {\n  text-align: center;\n  padding: 5px;\n}\n\na {\n  text-decoration: none;\n}\n\nnav a {\n  margin: 0 5px;\n}\n\nnav a.active {\n  color: #a6e3a1;\n  font-weight: bold;\n}\n\na.inactive {\n  color: #94e2d5;\n}\n\n@media (min-width: 480px) {\n  nav a {\n    margin: 0 10px;\n  }\n}\n\n@media (min-width: 760px) {\n  nav a {\n    margin: 0 30px;\n  }\n}\n",
-      "start": 1687248446864,
-      "end": 1687248446880
+      "start": 1692896887934,
+      "end": 1692896887985
     },
     {
       "name": "vite:css",
       "result": "nav {\n  text-align: center;\n  padding: 5px;\n}\n\na {\n  text-decoration: none;\n}\n\nnav a {\n  margin: 0 5px;\n}\n\nnav a.active {\n  color: #a6e3a1;\n  font-weight: bold;\n}\n\na.inactive {\n  color: #94e2d5;\n}\n\n@media (min-width: 480px) {\n  nav a {\n    margin: 0 10px;\n  }\n}\n\n@media (min-width: 760px) {\n  nav a {\n    margin: 0 30px;\n  }\n}\n",
-      "start": 1687248446880,
-      "end": 1687248446929,
+      "start": 1692896887986,
+      "end": 1692896887986,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "export default ''",
-      "start": 1687248446930,
-      "end": 1687248446930,
+      "start": 1692896887986,
+      "end": 1692896887986,
       "order": "normal"
     }
   ]

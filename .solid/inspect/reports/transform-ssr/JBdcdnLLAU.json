@@ -1,0 +1,11 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/fonts/Iosevka/iosevka-italic.woff2",
+  "transforms": [
+    {
+      "name": "vite:asset",
+      "result": "export default \"__VITE_ASSET__876a6f4f__\"",
+      "start": 1692896887768,
+      "end": 1692896887938
+    }
+  ]
+}
