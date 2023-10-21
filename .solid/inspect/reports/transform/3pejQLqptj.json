@@ -1,0 +1,32 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/root/FileRoutes.tsx?v=56f7542b",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = $FILE_ROUTES;\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
+      "start": 1697864682665,
+      "end": 1697864682665
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\n  import { lazy } from 'solid-js';\n  \n  const fileRoutes = /*#__PURE__*/ [\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx')),\n path: \"/*404\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx')),\n path: \"/fun\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx')),\n path: \"/\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx')),\n path: \"/research\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx')),\n path: \"/teaching\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx')),\n path: \"/cv/\" \n}\n];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
+      "start": 1697864682665,
+      "end": 1697864682665,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\nimport { lazy } from 'solid-js';\nconst fileRoutes = /*#__PURE__*/[{\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx')),\n  path: \"/*404\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx')),\n  path: \"/fun\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx')),\n  path: \"/\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx')),\n  path: \"/research\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx')),\n  path: \"/teaching\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx')),\n  path: \"/cv/\"\n}];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
+      "start": 1697864682665,
+      "end": 1697864682672,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\nimport { lazy } from \"/node_modules/.vite/deps/solid-js.js?v=63e705cc\";\nconst fileRoutes = /*#__PURE__*/[{\n  component: lazy(() => import(\"/src/routes/[...404].tsx\")),\n  path: \"/*404\"\n}, {\n  component: lazy(() => import(\"/src/routes/fun.tsx\")),\n  path: \"/fun\"\n}, {\n  component: lazy(() => import(\"/src/routes/index.tsx\")),\n  path: \"/\"\n}, {\n  component: lazy(() => import(\"/src/routes/research.tsx?t=1697864552272\")),\n  path: \"/research\"\n}, {\n  component: lazy(() => import(\"/src/routes/teaching.tsx\")),\n  path: \"/teaching\"\n}, {\n  component: lazy(() => import(\"/src/routes/cv/index.tsx?t=1697864670388\")),\n  path: \"/cv/\"\n}];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
+      "start": 1697864682672,
+      "end": 1697864682673,
+      "order": "normal"
+    }
+  ]
+}

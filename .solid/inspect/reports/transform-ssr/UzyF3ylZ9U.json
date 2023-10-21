@@ -2,17 +2,31 @@
   "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/entry-server.tsx",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "import {\n  createHandler,\n  renderAsync,\n  StartServer,\n} from \"solid-start/entry-server\";\n\nexport default createHandler(\n  renderAsync((event) => <StartServer event={event} />)\n);\n",
-      "start": 1692896887647,
-      "end": 1692896887648
+      "start": 1697864682396,
+      "end": 1697864682396
     },
     {
       "name": "solid",
       "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"solid-start/entry-server\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
-      "start": 1692896887648,
-      "end": 1692896887651,
+      "start": 1697864682396,
+      "end": 1697864682404,
       "order": "pre"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"solid-start/entry-server\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
+      "start": 1697864682404,
+      "end": 1697864682404,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"/node_modules/solid-start/entry-server/index.ts\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
+      "start": 1697864682404,
+      "end": 1697864682404,
+      "order": "normal"
     }
   ]
 }

@@ -15,6 +15,10 @@ export default function CV() {
           <div class="cv-item-place green">
             National University of Singapore
           </div>
+          <p class="description">
+          <strong>Supervisor</strong>: <a href="https://michaeldadams.org">Assistant Professor Michael D. Adams,
+            Ph.D.</a>
+          </p>
         </div>
         <div class="cv-item">
           <div class="cv-item-header">

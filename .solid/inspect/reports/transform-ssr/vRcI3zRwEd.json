@@ -2,17 +2,31 @@
   "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/error-boundary/index.tsx",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;\n",
-      "start": 1692896887929,
-      "end": 1692896887958
+      "start": 1697864220977,
+      "end": 1697864220977
     },
     {
       "name": "solid",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
-      "start": 1692896887958,
-      "end": 1692896887960,
+      "start": 1697864220977,
+      "end": 1697864220980,
       "order": "pre"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1697864220980,
+      "end": 1697864220980,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { ErrorBoundary } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx\";\nexport { ErrorMessage } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1697864220980,
+      "end": 1697864220981,
+      "order": "normal"
     }
   ]
 }

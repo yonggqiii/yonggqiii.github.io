@@ -2,16 +2,30 @@
   "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/server/shared.ts",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n\n",
-      "start": 1692896887990,
-      "end": 1692896888045
+      "start": 1697864221153,
+      "end": 1697864221153
     },
     {
       "name": "vite:esbuild",
       "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n",
-      "start": 1692896888045,
-      "end": 1692896888115,
+      "start": 1697864221153,
+      "end": 1697864221248,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n",
+      "start": 1697864221248,
+      "end": 1697864221248,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export { HttpHeader } from \"/node_modules/solid-start/server/components/HttpHeader.tsx\";\nexport { HttpStatusCode } from \"/node_modules/solid-start/server/components/HttpStatusCode.tsx\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"/node_modules/solid-start/server/data.ts\";\nexport * from \"/node_modules/solid-start/server/responses.ts\";\nexport * from \"/node_modules/solid-start/server/ServerContext.tsx\";\nexport * from \"/node_modules/solid-start/server/types.tsx\";\n",
+      "start": 1697864221248,
+      "end": 1697864221252,
       "order": "normal"
     }
   ]

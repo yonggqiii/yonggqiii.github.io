@@ -2,17 +2,31 @@
   "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/@solidjs/router/dist/index.jsx",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave, } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";\n",
-      "start": 1692896887687,
-      "end": 1692896887716
+      "start": 1697864220729,
+      "end": 1697864220729
     },
     {
       "name": "solid",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";",
-      "start": 1692896887717,
-      "end": 1692896887718,
+      "start": 1697864220729,
+      "end": 1697864220735,
       "order": "pre"
+    },
+    {
+      "name": "vite:define",
+      "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";",
+      "start": 1697864220735,
+      "end": 1697864220735,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export * from \"/node_modules/@solidjs/router/dist/components.jsx\";\nexport * from \"/node_modules/@solidjs/router/dist/integration.js\";\nexport * from \"/node_modules/@solidjs/router/dist/lifecycle.js\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"/node_modules/@solidjs/router/dist/routing.js\";\nexport { mergeSearchString as _mergeSearchString } from \"/node_modules/@solidjs/router/dist/utils.js\";",
+      "start": 1697864220735,
+      "end": 1697864220736,
+      "order": "normal"
     }
   ]
 }

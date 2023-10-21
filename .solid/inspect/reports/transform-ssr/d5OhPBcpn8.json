@@ -2,16 +2,30 @@
   "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/server/server.ts",
   "transforms": [
     {
-      "name": "vite:load-fallback",
+      "name": "__load__",
       "result": "import { server$ } from \"./server-functions/server\";\n\nexport default server$;\n\nexport * from \"./shared\";\n",
-      "start": 1692896887833,
-      "end": 1692896887951
+      "start": 1697864220970,
+      "end": 1697864220970
     },
     {
       "name": "vite:esbuild",
       "result": "import { server$ } from \"./server-functions/server\";\nexport default server$;\nexport * from \"./shared\";\n",
-      "start": 1692896887952,
-      "end": 1692896887986,
+      "start": 1697864220970,
+      "end": 1697864221043,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { server$ } from \"./server-functions/server\";\nexport default server$;\nexport * from \"./shared\";\n",
+      "start": 1697864221043,
+      "end": 1697864221043,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { server$ } from \"/node_modules/solid-start/server/server-functions/server.ts\";\nexport default server$;\nexport * from \"/node_modules/solid-start/server/shared.ts\";\n",
+      "start": 1697864221044,
+      "end": 1697864221045,
       "order": "normal"
     }
   ]

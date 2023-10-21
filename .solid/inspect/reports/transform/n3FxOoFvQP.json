@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/server/ServerContext.tsx?v=56f7542b",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { PageEvent } from \"./types\";\n\nimport { createContext, useContext } from \"solid-js\";\n\nexport const ServerContext = createContext<PageEvent>({} as any);\n\nexport const useRequest = () => {\n  return useContext(ServerContext)!;\n};\n\nexport const useServerContext = () => {\n  throw new Error(\"useServerContext is deprecated. Use useRequest instead.\");\n};\n",
+      "start": 1697864221503,
+      "end": 1697864221503
+    },
+    {
+      "name": "solid",
+      "result": "import { createContext, useContext } from \"solid-js\";\nexport const ServerContext = createContext({});\nexport const useRequest = () => {\n  return useContext(ServerContext);\n};\nexport const useServerContext = () => {\n  throw new Error(\"useServerContext is deprecated. Use useRequest instead.\");\n};",
+      "start": 1697864221503,
+      "end": 1697864221509,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createContext, useContext } from \"/node_modules/.vite/deps/solid-js.js?v=63e705cc\";\nexport const ServerContext = createContext({});\nexport const useRequest = () => {\n  return useContext(ServerContext);\n};\nexport const useServerContext = () => {\n  throw new Error(\"useServerContext is deprecated. Use useRequest instead.\");\n};",
+      "start": 1697864221509,
+      "end": 1697864221509,
+      "order": "normal"
+    }
+  ]
+}

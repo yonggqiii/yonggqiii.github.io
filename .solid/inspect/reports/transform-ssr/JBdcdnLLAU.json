@@ -3,9 +3,16 @@
   "transforms": [
     {
       "name": "vite:asset",
-      "result": "export default \"__VITE_ASSET__876a6f4f__\"",
-      "start": 1692896887768,
-      "end": 1692896887938
+      "result": "export default \"/src/fonts/Iosevka/iosevka-italic.woff2\"",
+      "start": 1697864220686,
+      "end": 1697864220687
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export default \"/src/fonts/Iosevka/iosevka-italic.woff2\"",
+      "start": 1697864220687,
+      "end": 1697864220687,
+      "order": "normal"
     }
   ]
 }
