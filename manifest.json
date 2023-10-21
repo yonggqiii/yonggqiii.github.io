@@ -3,17 +3,17 @@
     "file": "assets/Card-73b0cb51.css",
     "src": "Card.css"
   },
-  "_Card-69aa90f9.js": {
+  "_Card-18313797.js": {
     "css": [
       "assets/Card-73b0cb51.css"
     ],
-    "file": "assets/Card-69aa90f9.js",
+    "file": "assets/Card-18313797.js",
     "imports": [
       "src/entry-client.tsx"
     ]
   },
-  "_HttpStatusCode-6c198899.js": {
-    "file": "assets/HttpStatusCode-6c198899.js",
+  "_HttpStatusCode-f9ed2a67.js": {
+    "file": "assets/HttpStatusCode-f9ed2a67.js",
     "imports": [
       "src/entry-client.tsx"
     ]
@@ -39,7 +39,7 @@
       "src/routes/teaching.tsx",
       "src/routes/cv/index.tsx"
     ],
-    "file": "assets/entry-client-d4701ccc.js",
+    "file": "assets/entry-client-7b468156.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
   },
@@ -56,10 +56,10 @@
     "src": "src/fonts/Iosevka/iosevka-regular.woff2"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-0edd0d82.js",
+    "file": "assets/_...404_-9445893c.js",
     "imports": [
       "src/entry-client.tsx",
-      "_HttpStatusCode-6c198899.js"
+      "_HttpStatusCode-f9ed2a67.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/[...404].tsx"
@@ -72,46 +72,46 @@
     "css": [
       "assets/index-bfe03ba4.css"
     ],
-    "file": "assets/index-87b97c52.js",
+    "file": "assets/index-5ea9490c.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Card-69aa90f9.js"
+      "_Card-18313797.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/cv/index.tsx"
   },
   "src/routes/fun.tsx": {
-    "file": "assets/fun-c597658b.js",
+    "file": "assets/fun-0fdfb321.js",
     "imports": [
       "src/entry-client.tsx",
-      "_HttpStatusCode-6c198899.js"
+      "_HttpStatusCode-f9ed2a67.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/fun.tsx"
   },
   "src/routes/index.tsx": {
-    "file": "assets/index-4588935a.js",
+    "file": "assets/index-b55edacd.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Card-69aa90f9.js"
+      "_Card-18313797.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/index.tsx"
   },
   "src/routes/research.tsx": {
-    "file": "assets/research-0b1f6881.js",
+    "file": "assets/research-0bcf5182.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Card-69aa90f9.js"
+      "_Card-18313797.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/research.tsx"
   },
   "src/routes/teaching.tsx": {
-    "file": "assets/teaching-e5090b9a.js",
+    "file": "assets/teaching-6644ac69.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Card-69aa90f9.js"
+      "_Card-18313797.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/teaching.tsx"
