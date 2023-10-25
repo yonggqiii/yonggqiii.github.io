@@ -4,28 +4,28 @@
     {
       "name": "__load__",
       "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"../data\";\nexport { ServerError } from \"../data\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
-      "start": 1697864221326,
-      "end": 1697864221326
+      "start": 1698200361926,
+      "end": 1698200361926
     },
     {
       "name": "vite:esbuild",
       "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"../data\";\nexport { ServerError } from \"../data\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
-      "start": 1697864221326,
-      "end": 1697864221326,
+      "start": 1698200361926,
+      "end": 1698200361945,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"../data\";\nexport { ServerError } from \"../data\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
-      "start": 1697864221326,
-      "end": 1697864221326,
+      "start": 1698200361945,
+      "end": 1698200361945,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createRouteAction, createRouteData, createRouteMultiAction } from \"/node_modules/solid-start/data/index.ts\";\nexport { ServerError } from \"/node_modules/solid-start/data/index.ts\";\nexport const createServerData$ = createRouteData;\nexport const createServerAction$ = createRouteAction;\nexport const createServerMultiAction$ = createRouteMultiAction;\n",
-      "start": 1697864221326,
-      "end": 1697864221327,
+      "start": 1698200361945,
+      "end": 1698200361946,
       "order": "normal"
     }
   ]

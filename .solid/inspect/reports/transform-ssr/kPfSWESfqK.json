@@ -4,35 +4,35 @@
     {
       "name": "__load__",
       "result": "import { Title } from \"solid-start\";\nimport { HttpStatusCode } from \"solid-start/server\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <HttpStatusCode code={404} />\n      <h1>Page Not Found</h1>\n      <p class=\"red\">Page coming soon...</p>\n    </main>\n  );\n}\n",
-      "start": 1697864220737,
-      "end": 1697864220737
+      "start": 1698200361337,
+      "end": 1698200361337
     },
     {
       "name": "solid-start-file-system-router",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--#-->\", \"<!--/--><!--#-->\", \"<!--/--><h1>Page Not Found</h1><p class=\\\"red\\\">Page coming soon...</p></main>\"];\nimport { Title } from \"solid-start\";\nimport { HttpStatusCode } from \"solid-start/server\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(HttpStatusCode, {\n    code: 404\n  })));\n}",
-      "start": 1697864220737,
-      "end": 1697864220747,
+      "start": 1698200361337,
+      "end": 1698200361342,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--#-->\", \"<!--/--><!--#-->\", \"<!--/--><h1>Page Not Found</h1><p class=\\\"red\\\">Page coming soon...</p></main>\"];\nimport { Title } from \"solid-start\";\nimport { HttpStatusCode } from \"solid-start/server\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(HttpStatusCode, {\n    code: 404\n  })));\n}",
-      "start": 1697864220747,
-      "end": 1697864220752,
+      "start": 1698200361342,
+      "end": 1698200361346,
       "order": "pre"
     },
     {
       "name": "vite:define",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--#-->\", \"<!--/--><!--#-->\", \"<!--/--><h1>Page Not Found</h1><p class=\\\"red\\\">Page coming soon...</p></main>\"];\nimport { Title } from \"solid-start\";\nimport { HttpStatusCode } from \"solid-start/server\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(HttpStatusCode, {\n    code: 404\n  })));\n}",
-      "start": 1697864220752,
-      "end": 1697864220752,
+      "start": 1698200361346,
+      "end": 1698200361346,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--#-->\", \"<!--/--><!--#-->\", \"<!--/--><h1>Page Not Found</h1><p class=\\\"red\\\">Page coming soon...</p></main>\"];\nimport { Title } from \"/node_modules/solid-start/index.tsx\";\nimport { HttpStatusCode } from \"/node_modules/solid-start/server/server.ts\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(HttpStatusCode, {\n    code: 404\n  })));\n}",
-      "start": 1697864220752,
-      "end": 1697864220752,
+      "start": 1698200361346,
+      "end": 1698200361346,
       "order": "normal"
     }
   ]

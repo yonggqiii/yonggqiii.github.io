@@ -6,14 +6,14 @@
     },
     "resolveId": {
       "invokeCount": 6,
-      "totalTime": 4
+      "totalTime": 6
     },
     "name": "alias"
   },
   {
     "transform": {
       "invokeCount": 36,
-      "totalTime": 464
+      "totalTime": 460
     },
     "resolveId": {
       "invokeCount": 0,
@@ -37,7 +37,7 @@
   {
     "transform": {
       "invokeCount": 9,
-      "totalTime": 106
+      "totalTime": 86
     },
     "resolveId": {
       "invokeCount": 0,
@@ -95,7 +95,7 @@
   {
     "transform": {
       "invokeCount": 3,
-      "totalTime": 3
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
@@ -128,7 +128,7 @@
   {
     "transform": {
       "invokeCount": 4,
-      "totalTime": 197
+      "totalTime": 2
     },
     "resolveId": {
       "invokeCount": 0,
@@ -172,7 +172,7 @@
   {
     "transform": {
       "invokeCount": 21,
-      "totalTime": 841
+      "totalTime": 664
     },
     "resolveId": {
       "invokeCount": 0,
@@ -194,7 +194,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 75
+      "totalTime": 126
     },
     "resolveId": {
       "invokeCount": 0,
@@ -263,8 +263,8 @@
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 406,
-      "totalTime": 289
+      "invokeCount": 395,
+      "totalTime": 209
     },
     "name": "vite:resolve"
   },

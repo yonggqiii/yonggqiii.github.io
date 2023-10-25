@@ -4,14 +4,14 @@
     {
       "name": "vite:asset",
       "result": "export default \"/src/fonts/Iosevka/iosevka-regular.woff2\"",
-      "start": 1697864221552,
-      "end": 1697864221552
+      "start": 1698200362139,
+      "end": 1698200362139
     },
     {
       "name": "vite:import-analysis",
       "result": "export default \"/src/fonts/Iosevka/iosevka-regular.woff2\"",
-      "start": 1697864221552,
-      "end": 1697864221552,
+      "start": 1698200362139,
+      "end": 1698200362139,
       "order": "normal"
     }
   ]

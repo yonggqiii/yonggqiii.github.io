@@ -4,28 +4,28 @@
     {
       "name": "__load__",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;\n",
-      "start": 1697864220977,
-      "end": 1697864220977
+      "start": 1698200361575,
+      "end": 1698200361575
     },
     {
       "name": "solid",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
-      "start": 1697864220977,
-      "end": 1697864220980,
+      "start": 1698200361575,
+      "end": 1698200361582,
       "order": "pre"
     },
     {
       "name": "vite:define",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
-      "start": 1697864220980,
-      "end": 1697864220980,
+      "start": 1698200361582,
+      "end": 1698200361582,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { ErrorBoundary } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx\";\nexport { ErrorMessage } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
-      "start": 1697864220980,
-      "end": 1697864220981,
+      "start": 1698200361582,
+      "end": 1698200361582,
       "order": "normal"
     }
   ]

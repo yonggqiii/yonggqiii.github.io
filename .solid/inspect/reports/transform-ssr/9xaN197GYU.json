@@ -4,28 +4,28 @@
     {
       "name": "__load__",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\n\nexport function HttpStatusCode(props: { code: number }) {\n  const context = useContext(ServerContext);\n\n  if (isServer) {\n    context!.setStatusCode(props.code);\n  }\n\n  onCleanup(() => {\n    if (isServer) {\n      context!.setStatusCode(200);\n    }\n  });\n\n  return null;\n}\n",
-      "start": 1697864221322,
-      "end": 1697864221322
+      "start": 1698200361921,
+      "end": 1698200361921
     },
     {
       "name": "solid",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
-      "start": 1697864221322,
-      "end": 1697864221325,
+      "start": 1698200361921,
+      "end": 1698200361925,
       "order": "pre"
     },
     {
       "name": "vite:define",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
-      "start": 1697864221325,
-      "end": 1697864221325,
+      "start": 1698200361925,
+      "end": 1698200361925,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
-      "start": 1697864221325,
-      "end": 1697864221325,
+      "start": 1698200361925,
+      "end": 1698200361925,
       "order": "normal"
     }
   ]

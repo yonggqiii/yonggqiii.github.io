@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/entry-client/index.tsx?v=15f2c955",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "export { default as mount } from \"./mount\";\nexport { default as StartClient } from \"./StartClient\";\n",
+      "start": 1698200640034,
+      "end": 1698200640034
+    },
+    {
+      "name": "solid",
+      "result": "export { default as mount } from \"./mount\";\nexport { default as StartClient } from \"./StartClient\";",
+      "start": 1698200640034,
+      "end": 1698200640037,
+      "order": "pre"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export { default as mount } from \"/node_modules/solid-start/entry-client/mount.tsx?v=15f2c955\";\nexport { default as StartClient } from \"/node_modules/solid-start/entry-client/StartClient.tsx?t=1698200639905&v=15f2c955\";",
+      "start": 1698200640037,
+      "end": 1698200640038,
+      "order": "normal"
+    }
+  ]
+}

@@ -4,28 +4,28 @@
     {
       "name": "__load__",
       "result": "import { server$ } from \"./server-functions/server\";\n\nexport default server$;\n\nexport * from \"./shared\";\n",
-      "start": 1697864220970,
-      "end": 1697864220970
+      "start": 1698200361567,
+      "end": 1698200361567
     },
     {
       "name": "vite:esbuild",
       "result": "import { server$ } from \"./server-functions/server\";\nexport default server$;\nexport * from \"./shared\";\n",
-      "start": 1697864220970,
-      "end": 1697864221043,
+      "start": 1698200361567,
+      "end": 1698200361670,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { server$ } from \"./server-functions/server\";\nexport default server$;\nexport * from \"./shared\";\n",
-      "start": 1697864221043,
-      "end": 1697864221043,
+      "start": 1698200361670,
+      "end": 1698200361670,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { server$ } from \"/node_modules/solid-start/server/server-functions/server.ts\";\nexport default server$;\nexport * from \"/node_modules/solid-start/server/shared.ts\";\n",
-      "start": 1697864221044,
-      "end": 1697864221045,
+      "start": 1698200361670,
+      "end": 1698200361672,
       "order": "normal"
     }
   ]
