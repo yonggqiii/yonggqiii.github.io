@@ -1,0 +1,126 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/root/index.tsx?v=086a2f5f",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "// isomorphic exports\n\nexport { Body, Head, Html } from \"./Document\";\nexport { default as Links } from \"./Links\";\nexport { default as Meta } from \"./Meta\";\nexport { default as Scripts } from \"./Scripts\";\n\n",
+      "start": 1698297473171,
+      "end": 1698297473171
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297473171,
+      "end": 1698297473171,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "// isomorphic exports\n\nexport { Body, Head, Html } from \"./Document\";\nexport { default as Links } from \"./Links\";\nexport { default as Meta } from \"./Meta\";\nexport { default as Scripts } from \"./Scripts\";",
+      "start": 1698297473171,
+      "end": 1698297473174,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "Body",
+          "Head",
+          "Html",
+          "default",
+          "Links",
+          "Meta",
+          "Scripts"
+        ],
+        "sources": [
+          "index.tsx"
+        ],
+        "sourcesContent": [
+          "// isomorphic exports\n\nexport { Body, Head, Html } from \"./Document\";\nexport { default as Links } from \"./Links\";\nexport { default as Meta } from \"./Meta\";\nexport { default as Scripts } from \"./Scripts\";\n\n"
+        ],
+        "mappings": "AAAA;;AAEA,SAASA,IAAI,EAAEC,IAAI,EAAEC,IAAI,QAAQ,YAAY;AAC7C,SAASC,OAAO,IAAIC,KAAK,QAAQ,SAAS;AAC1C,SAASD,OAAO,IAAIE,IAAI,QAAQ,QAAQ;AACxC,SAASF,OAAO,IAAIG,OAAO,QAAQ,WAAW",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "// isomorphic exports\n\nexport { Body, Head, Html } from \"/node_modules/solid-start/root/Document.tsx?v=086a2f5f\";\nexport { default as Links } from \"/node_modules/solid-start/root/Links.tsx?v=086a2f5f\";\nexport { default as Meta } from \"/node_modules/solid-start/root/Meta.tsx?v=086a2f5f\";\nexport { default as Scripts } from \"/node_modules/solid-start/root/Scripts.tsx?v=086a2f5f\";",
+      "start": 1698297473174,
+      "end": 1698297473174,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/entry-client/StartClient.tsx?v=086a2f5f",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { MetaProvider } from \"@solidjs/meta\";\nimport { Router, RouterProps } from \"@solidjs/router\";\n// @ts-ignore\nimport Root from \"~start/root\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT, PageEvent } from \"../server/types\";\n\nconst rootData: { default: <T>() => Promise<T> } = Object.values(\n  import.meta.glob(\"/src/root.data.(js|ts)\", { eager: true })\n)[0] as any;\nconst dataFn = rootData ? rootData.default : undefined;\n\nfunction throwClientError(field: string): any {\n  throw new Error(\n    `\"${field}\" is not available on the client. Use it within an \\`if (isServer)\\` block to ensure it only runs on the server`\n  );\n}\n\nexport default () => {\n  let mockFetchEvent: PageEvent = {\n    get request() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"request\");\n      }\n    },\n    get clientAddress() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"clientAddress\");\n      }\n    },\n    get locals() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"locals\");\n      }\n    },\n    get prevUrl() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"prevUrl\");\n      }\n    },\n    get responseHeaders() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"responseHeaders\");\n      }\n    },\n    get tags() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"tags\");\n      }\n    },\n    get env() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"env\");\n      }\n    },\n    get routerContext() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"routerContext\");\n      }\n    },\n    setStatusCode(code: number) {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"setStatusCode\");\n      }\n    },\n    getStatusCode() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"getStatusCode\");\n      }\n    },\n    $type: FETCH_EVENT,\n    fetch\n  };\n\n  function StartRouter(props: RouterProps) {\n    return (\n      <Router {...props}></Router>\n    );\n  }\n\n  return (\n    <ServerContext.Provider value={mockFetchEvent}>\n      <MetaProvider>\n        <StartRouter base={import.meta.env.BASE_URL} data={dataFn}>\n          <Root />\n        </StartRouter>\n      </MetaProvider>\n    </ServerContext.Provider>\n  );\n};\n",
+      "start": 1698297472960,
+      "end": 1698297472960
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297472960,
+      "end": 1698297472960,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { MetaProvider } from \"@solidjs/meta\";\nimport { Router } from \"@solidjs/router\";\n// @ts-ignore\nimport Root from \"~start/root\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT } from \"../server/types\";\nconst rootData = Object.values(import.meta.glob(\"/src/root.data.(js|ts)\", {\n  eager: true\n}))[0];\nconst dataFn = rootData ? rootData.default : undefined;\nfunction throwClientError(field) {\n  throw new Error(`\"${field}\" is not available on the client. Use it within an \\`if (isServer)\\` block to ensure it only runs on the server`);\n}\nexport default (() => {\n  let mockFetchEvent = {\n    get request() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"request\");\n      }\n    },\n    get clientAddress() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"clientAddress\");\n      }\n    },\n    get locals() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"locals\");\n      }\n    },\n    get prevUrl() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"prevUrl\");\n      }\n    },\n    get responseHeaders() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"responseHeaders\");\n      }\n    },\n    get tags() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"tags\");\n      }\n    },\n    get env() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"env\");\n      }\n    },\n    get routerContext() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"routerContext\");\n      }\n    },\n    setStatusCode(code) {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"setStatusCode\");\n      }\n    },\n    getStatusCode() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"getStatusCode\");\n      }\n    },\n    $type: FETCH_EVENT,\n    fetch\n  };\n  function StartRouter(props) {\n    return _$createComponent(Router, props);\n  }\n  return _$createComponent(ServerContext.Provider, {\n    value: mockFetchEvent,\n    get children() {\n      return _$createComponent(MetaProvider, {\n        get children() {\n          return _$createComponent(StartRouter, {\n            get base() {\n              return import.meta.env.BASE_URL;\n            },\n            data: dataFn,\n            get children() {\n              return _$createComponent(Root, {});\n            }\n          });\n        }\n      });\n    }\n  });\n});",
+      "start": 1698297472960,
+      "end": 1698297472968,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "MetaProvider",
+          "Router",
+          "Root",
+          "ServerContext",
+          "FETCH_EVENT",
+          "rootData",
+          "Object",
+          "values",
+          "import",
+          "meta",
+          "glob",
+          "eager",
+          "dataFn",
+          "default",
+          "undefined",
+          "throwClientError",
+          "field",
+          "Error",
+          "mockFetchEvent",
+          "request",
+          "process",
+          "env",
+          "NODE_ENV",
+          "clientAddress",
+          "locals",
+          "prevUrl",
+          "responseHeaders",
+          "tags",
+          "routerContext",
+          "setStatusCode",
+          "code",
+          "getStatusCode",
+          "$type",
+          "fetch",
+          "StartRouter",
+          "props",
+          "_$createComponent",
+          "Provider",
+          "value",
+          "children",
+          "base",
+          "BASE_URL",
+          "data"
+        ],
+        "sources": [
+          "StartClient.tsx"
+        ],
+        "sourcesContent": [
+          "import { MetaProvider } from \"@solidjs/meta\";\nimport { Router, RouterProps } from \"@solidjs/router\";\n// @ts-ignore\nimport Root from \"~start/root\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT, PageEvent } from \"../server/types\";\n\nconst rootData: { default: <T>() => Promise<T> } = Object.values(\n  import.meta.glob(\"/src/root.data.(js|ts)\", { eager: true })\n)[0] as any;\nconst dataFn = rootData ? rootData.default : undefined;\n\nfunction throwClientError(field: string): any {\n  throw new Error(\n    `\"${field}\" is not available on the client. Use it within an \\`if (isServer)\\` block to ensure it only runs on the server`\n  );\n}\n\nexport default () => {\n  let mockFetchEvent: PageEvent = {\n    get request() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"request\");\n      }\n    },\n    get clientAddress() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"clientAddress\");\n      }\n    },\n    get locals() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"locals\");\n      }\n    },\n    get prevUrl() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"prevUrl\");\n      }\n    },\n    get responseHeaders() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"responseHeaders\");\n      }\n    },\n    get tags() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"tags\");\n      }\n    },\n    get env() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"env\");\n      }\n    },\n    get routerContext() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"routerContext\");\n      }\n    },\n    setStatusCode(code: number) {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"setStatusCode\");\n      }\n    },\n    getStatusCode() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"getStatusCode\");\n      }\n    },\n    $type: FETCH_EVENT,\n    fetch\n  };\n\n  function StartRouter(props: RouterProps) {\n    return (\n      <Router {...props}></Router>\n    );\n  }\n\n  return (\n    <ServerContext.Provider value={mockFetchEvent}>\n      <MetaProvider>\n        <StartRouter base={import.meta.env.BASE_URL} data={dataFn}>\n          <Root />\n        </StartRouter>\n      </MetaProvider>\n    </ServerContext.Provider>\n  );\n};\n"
+        ],
+        "mappings": "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",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297472968,
+      "end": 1698297472968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { MetaProvider } from \"@solidjs/meta\";\nimport { Router } from \"@solidjs/router\";\n// @ts-ignore\nimport Root from \"~start/root\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT } from \"../server/types\";\nconst rootData = Object.values(/* #__PURE__ */ Object.assign({\n\n}))[0];\nconst dataFn = rootData ? rootData.default : undefined;\nfunction throwClientError(field) {\n  throw new Error(`\"${field}\" is not available on the client. Use it within an \\`if (isServer)\\` block to ensure it only runs on the server`);\n}\nexport default (() => {\n  let mockFetchEvent = {\n    get request() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"request\");\n      }\n    },\n    get clientAddress() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"clientAddress\");\n      }\n    },\n    get locals() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"locals\");\n      }\n    },\n    get prevUrl() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"prevUrl\");\n      }\n    },\n    get responseHeaders() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"responseHeaders\");\n      }\n    },\n    get tags() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"tags\");\n      }\n    },\n    get env() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"env\");\n      }\n    },\n    get routerContext() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"routerContext\");\n      }\n    },\n    setStatusCode(code) {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"setStatusCode\");\n      }\n    },\n    getStatusCode() {\n      if (process.env.NODE_ENV === \"development\") {\n        return throwClientError(\"getStatusCode\");\n      }\n    },\n    $type: FETCH_EVENT,\n    fetch\n  };\n  function StartRouter(props) {\n    return _$createComponent(Router, props);\n  }\n  return _$createComponent(ServerContext.Provider, {\n    value: mockFetchEvent,\n    get children() {\n      return _$createComponent(MetaProvider, {\n        get children() {\n          return _$createComponent(StartRouter, {\n            get base() {\n              return import.meta.env.BASE_URL;\n            },\n            data: dataFn,\n            get children() {\n              return _$createComponent(Root, {});\n            }\n          });\n        }\n      });\n    }\n  });\n});",
+      "start": 1698297472968,
+      "end": 1698297472975,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:client-inject",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { MetaProvider } from \"@solidjs/meta\";\nimport { Router } from \"@solidjs/router\";\n// @ts-ignore\nimport Root from \"~start/root\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT } from \"../server/types\";\nconst rootData = Object.values(/* #__PURE__ */ Object.assign({\n\n}))[0];\nconst dataFn = rootData ? rootData.default : undefined;\nfunction throwClientError(field) {\n  throw new Error(`\"${field}\" is not available on the client. Use it within an \\`if (isServer)\\` block to ensure it only runs on the server`);\n}\nexport default (() => {\n  let mockFetchEvent = {\n    get request() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"request\");\n      }\n    },\n    get clientAddress() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"clientAddress\");\n      }\n    },\n    get locals() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"locals\");\n      }\n    },\n    get prevUrl() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"prevUrl\");\n      }\n    },\n    get responseHeaders() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"responseHeaders\");\n      }\n    },\n    get tags() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"tags\");\n      }\n    },\n    get env() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"env\");\n      }\n    },\n    get routerContext() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"routerContext\");\n      }\n    },\n    setStatusCode(code) {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"setStatusCode\");\n      }\n    },\n    getStatusCode() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"getStatusCode\");\n      }\n    },\n    $type: FETCH_EVENT,\n    fetch\n  };\n  function StartRouter(props) {\n    return _$createComponent(Router, props);\n  }\n  return _$createComponent(ServerContext.Provider, {\n    value: mockFetchEvent,\n    get children() {\n      return _$createComponent(MetaProvider, {\n        get children() {\n          return _$createComponent(StartRouter, {\n            get base() {\n              return import.meta.env.BASE_URL;\n            },\n            data: dataFn,\n            get children() {\n              return _$createComponent(Root, {});\n            }\n          });\n        }\n      });\n    }\n  });\n});",
+      "start": 1698297472975,
+      "end": 1698297472975,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import.meta.env = {\"BASE_URL\":\"/\",\"MODE\":\"development\",\"DEV\":true,\"PROD\":false,\"SSR\":false};import.meta.env.START_SSR = true;import.meta.env.START_ISLANDS = false;import.meta.env.START_ENTRY_CLIENT = \"/home/yongqi/Repositories/yonggqiii.github.io/src/entry-client.tsx\";import.meta.env.START_ENTRY_SERVER = \"/home/yongqi/Repositories/yonggqiii.github.io/src/entry-server.tsx\";import.meta.env.START_INDEX_HTML = false;import.meta.env.START_ISLANDS_ROUTER = false;import.meta.env.START_ADAPTER = \"static\";import { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=086a2f5f\";\nimport { MetaProvider } from \"/node_modules/@solidjs/meta/dist/index.jsx?v=086a2f5f\";\nimport { Router } from \"/node_modules/@solidjs/router/dist/index.jsx?v=086a2f5f\";\n// @ts-ignore\nimport Root from \"/src/root.tsx\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx?v=086a2f5f\";\nimport { FETCH_EVENT } from \"/node_modules/solid-start/server/types.tsx?v=086a2f5f\";\nconst rootData = Object.values(/* #__PURE__ */ Object.assign({\n\n}))[0];\nconst dataFn = rootData ? rootData.default : undefined;\nfunction throwClientError(field) {\n  throw new Error(`\"${field}\" is not available on the client. Use it within an \\`if (isServer)\\` block to ensure it only runs on the server`);\n}\nexport default (() => {\n  let mockFetchEvent = {\n    get request() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"request\");\n      }\n    },\n    get clientAddress() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"clientAddress\");\n      }\n    },\n    get locals() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"locals\");\n      }\n    },\n    get prevUrl() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"prevUrl\");\n      }\n    },\n    get responseHeaders() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"responseHeaders\");\n      }\n    },\n    get tags() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"tags\");\n      }\n    },\n    get env() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"env\");\n      }\n    },\n    get routerContext() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"routerContext\");\n      }\n    },\n    setStatusCode(code) {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"setStatusCode\");\n      }\n    },\n    getStatusCode() {\n      if (\"development\" === \"development\") {\n        return throwClientError(\"getStatusCode\");\n      }\n    },\n    $type: FETCH_EVENT,\n    fetch\n  };\n  function StartRouter(props) {\n    return _$createComponent(Router, props);\n  }\n  return _$createComponent(ServerContext.Provider, {\n    value: mockFetchEvent,\n    get children() {\n      return _$createComponent(MetaProvider, {\n        get children() {\n          return _$createComponent(StartRouter, {\n            get base() {\n              return import.meta.env.BASE_URL;\n            },\n            data: dataFn,\n            get children() {\n              return _$createComponent(Root, {});\n            }\n          });\n        }\n      });\n    }\n  });\n});",
+      "start": 1698297472975,
+      "end": 1698297472977,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

@@ -4,36 +4,129 @@
     {
       "name": "__load__",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = $FILE_ROUTES;\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
-      "start": 1698200361209,
-      "end": 1698200361209
+      "start": 1698297472169,
+      "end": 1698297472169
     },
     {
       "name": "solid-start-file-system-router",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\n  \n  import routeData0  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx';\nimport routeData1  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx';\nimport routeData2  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx';\nimport routeData3  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx';\nimport routeData4  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx';\nimport routeData5  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx';\n  const fileRoutes = /*#__PURE__*/ [\n{\ncomponent: routeData0,\n path: \"/*404\" \n},\n{\ncomponent: routeData1,\n path: \"/fun\" \n},\n{\ncomponent: routeData2,\n path: \"/\" \n},\n{\ncomponent: routeData3,\n path: \"/research\" \n},\n{\ncomponent: routeData4,\n path: \"/teaching\" \n},\n{\ncomponent: routeData5,\n path: \"/cv/\" \n}\n];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
-      "start": 1698200361209,
-      "end": 1698200361210,
+      "start": 1698297472169,
+      "end": 1698297472170,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\nimport routeData0 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx';\nimport routeData1 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx';\nimport routeData2 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx';\nimport routeData3 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx';\nimport routeData4 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx';\nimport routeData5 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx';\nconst fileRoutes = /*#__PURE__*/[{\n  component: routeData0,\n  path: \"/*404\"\n}, {\n  component: routeData1,\n  path: \"/fun\"\n}, {\n  component: routeData2,\n  path: \"/\"\n}, {\n  component: routeData3,\n  path: \"/research\"\n}, {\n  component: routeData4,\n  path: \"/teaching\"\n}, {\n  component: routeData5,\n  path: \"/cv/\"\n}];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1698200361210,
-      "end": 1698200361219,
-      "order": "pre"
+      "start": 1698297472170,
+      "end": 1698297472178,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "routeData0",
+          "routeData1",
+          "routeData2",
+          "routeData3",
+          "routeData4",
+          "routeData5",
+          "fileRoutes",
+          "component",
+          "path",
+          "FileRoutes"
+        ],
+        "sources": [
+          "FileRoutes.tsx"
+        ],
+        "sourcesContent": [
+          "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\n  \n  import routeData0  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx';\nimport routeData1  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx';\nimport routeData2  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx';\nimport routeData3  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx';\nimport routeData4  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx';\nimport routeData5  from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx';\n  const fileRoutes = /*#__PURE__*/ [\n{\ncomponent: routeData0,\n path: \"/*404\" \n},\n{\ncomponent: routeData1,\n path: \"/fun\" \n},\n{\ncomponent: routeData2,\n path: \"/\" \n},\n{\ncomponent: routeData3,\n path: \"/research\" \n},\n{\ncomponent: routeData4,\n path: \"/teaching\" \n},\n{\ncomponent: routeData5,\n path: \"/cv/\" \n}\n];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n"
+        ],
+        "mappings": "AAAA;;AAEA;;AAGE,OAAOA,UAAU,MAAO,uEAAuE;AACjG,OAAOC,UAAU,MAAO,kEAAkE;AAC1F,OAAOC,UAAU,MAAO,oEAAoE;AAC5F,OAAOC,UAAU,MAAO,uEAAuE;AAC/F,OAAOC,UAAU,MAAO,uEAAuE;AAC/F,OAAOC,UAAU,MAAO,uEAAuE;AAC7F,MAAMC,UAAU,GAAG,aAAc,CACnC;EACAC,SAAS,EAAEP,UAAU;EACpBQ,IAAI,EAAE;AACP,CAAC,EACD;EACAD,SAAS,EAAEN,UAAU;EACpBO,IAAI,EAAE;AACP,CAAC,EACD;EACAD,SAAS,EAAEL,UAAU;EACpBM,IAAI,EAAE;AACP,CAAC,EACD;EACAD,SAAS,EAAEJ,UAAU;EACpBK,IAAI,EAAE;AACP,CAAC,EACD;EACAD,SAAS,EAAEH,UAAU;EACpBI,IAAI,EAAE;AACP,CAAC,EACD;EACAD,SAAS,EAAEF,UAAU;EACpBG,IAAI,EAAE;AACP,CAAC,CACA;;AAED;AACA;AACA;;AAEA,MAAMC,UAAU,GAAGA,CAAA,KAAM;EACvB,OAAOH,UAAU;AACnB,CAAC;AAED,eAAeG,UAAU;AACzB,SAASH,UAAU",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1698297472178,
+      "end": 1698297472178,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297472178,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\nimport routeData0 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx';\nimport routeData1 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx';\nimport routeData2 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx';\nimport routeData3 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx';\nimport routeData4 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx';\nimport routeData5 from '/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx';\nconst fileRoutes = /*#__PURE__*/[{\n  component: routeData0,\n  path: \"/*404\"\n}, {\n  component: routeData1,\n  path: \"/fun\"\n}, {\n  component: routeData2,\n  path: \"/\"\n}, {\n  component: routeData3,\n  path: \"/research\"\n}, {\n  component: routeData4,\n  path: \"/teaching\"\n}, {\n  component: routeData5,\n  path: \"/cv/\"\n}];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1698200361220,
-      "end": 1698200361220,
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297472179,
+      "end": 1698297472179,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297472179,
+      "end": 1698297472179,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\nimport routeData0 from \"/src/routes/[...404].tsx\";\nimport routeData1 from \"/src/routes/fun.tsx\";\nimport routeData2 from \"/src/routes/index.tsx\";\nimport routeData3 from \"/src/routes/research.tsx\";\nimport routeData4 from \"/src/routes/teaching.tsx\";\nimport routeData5 from \"/src/routes/cv/index.tsx\";\nconst fileRoutes = /*#__PURE__*/[{\n  component: routeData0,\n  path: \"/*404\"\n}, {\n  component: routeData1,\n  path: \"/fun\"\n}, {\n  component: routeData2,\n  path: \"/\"\n}, {\n  component: routeData3,\n  path: \"/research\"\n}, {\n  component: routeData4,\n  path: \"/teaching\"\n}, {\n  component: routeData5,\n  path: \"/cv/\"\n}];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1698200361220,
-      "end": 1698200361222,
-      "order": "normal"
+      "start": 1698297472179,
+      "end": 1698297472180,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

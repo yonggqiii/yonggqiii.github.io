@@ -4,29 +4,108 @@
     {
       "name": "__load__",
       "result": "@font-face {\n  font-family: \"Iosevka\";\n  src: url(\"./fonts/Iosevka/iosevka-regular.woff2\") format(\"woff2\");\n  font-weight: normal;\n  font-style: normal;\n}\n\n@font-face {\n  font-family: \"Iosevka\";\n  src: url(\"./fonts/Iosevka/iosevka-bold.woff2\") format(\"woff2\");\n  font-weight: bold;\n  font-style: normal;\n}\n\n@font-face {\n  font-family: \"Iosevka\";\n  src: url(\"./fonts/Iosevka/iosevka-italic.woff2\") format(\"woff2\");\n  font-weight: normal;\n  font-style: italic;\n}\n\na {\n  color: #74c7ec;\n  text-decoration: none;\n}\n\nul {\n  text-align: left;\n}\n.main {\n  margin-top: 50px;\n}\n\n.flamingo {\n  color: #f2cdcd;\n}\n\n.rosewater {\n  color: #f5e0dc;\n}\n\n.pink {\n  color: #f5c2e7;\n}\n\n.mauve {\n  color: #cba6f7;\n}\n\n.red {\n  color: #f38ba8;\n}\n\n.maroon {\n  color: #eba0ac;\n}\n\n.peach {\n  color: #fab387;\n}\n\n.yellow {\n  color: #f9e2af;\n}\n\n.green {\n  color: #a6e3a1;\n}\n\n.teal {\n  color: #94e2d5;\n}\n\n.sky {\n  color: #89dceb;\n}\n\n.sapphire {\n  color: #74c7ec;\n}\n\n.blue {\n  color: #74c7ec;\n}\n\n.lavender {\n  color: #b4befe;\n}\n\n.flamingo-border {\n  border-color: #f2cdcd;\n}\n\n.rosewater-border {\n  border-color: #f5e0dc;\n}\n\n.pink-border {\n  border-color: #f5c2e7;\n}\n\n.mauve-border {\n  border-color: #cba6f7;\n}\n\n.red-border {\n  border-color: #f38ba8;\n}\n\n.maroon-border {\n  border-color: #eba0ac;\n}\n\n.peach-border {\n  border-color: #fab387;\n}\n\n.yellow-border {\n  border-color: #f9e2af;\n}\n\n.green-border {\n  border-color: #a6e3a1;\n}\n\n.teal-border {\n  border-color: #94e2d5;\n}\n\n.sky-border {\n  border-color: #89dceb;\n}\n\n.sapphire-border {\n  border-color: #74c7ec;\n}\n\n.blue-border {\n  border-color: #74c7ec;\n}\n\n.lavender-border {\n  border-color: #b4befe;\n}\n\nbody {\n  font-family: Iosevka, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\",\n    \"Helvetica Neue\", sans-serif;\n  background-color: #1e1e2e;\n  color: #cdd6f4;\n  font-size: 1rem;\n}\n\n.circle {\n  border-radius: 50%;\n}\n\n.profile-pic {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}\n\nmain {\n  text-align: center;\n  padding: 1em;\n  margin: 0 auto;\n}\n\nh1 {\n  color: #ffffff;\n  text-transform: uppercase;\n  font-size: 3rem;\n  /* font-weight: 100; */\n  font-weight: normal;\n  line-height: 1.1;\n  /* margin: 4rem auto; */\n  margin: auto;\n  /* max-width: 14rem; */\n}\n\np {\n  margin: 1em auto;\n  line-height: 1.35;\n}\n\n@media (min-width: 480px) {\n  h1 {\n    font-size: 4rem;\n  }\n\n  p {\n    max-width: none;\n  }\n\n  body {\n    font-size: 1.3rem;\n  }\n}\n\n@media (min-width: 1080px) {\n  .profile-pic {\n    width: 400px;\n    height: 400px;\n  }\n}\n",
-      "start": 1698200639945,
-      "end": 1698200639945
+      "start": 1698297473114,
+      "end": 1698297473114
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297473114,
+      "end": 1698297473114,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1698297473114,
+      "end": 1698297473114,
+      "order": "pre"
     },
     {
       "name": "vite:css",
       "result": "@font-face {\n  font-family: \"Iosevka\";\n  src: url(\"/src/fonts/Iosevka/iosevka-regular.woff2\") format(\"woff2\");\n  font-weight: normal;\n  font-style: normal;\n}\n\n@font-face {\n  font-family: \"Iosevka\";\n  src: url(\"/src/fonts/Iosevka/iosevka-bold.woff2\") format(\"woff2\");\n  font-weight: bold;\n  font-style: normal;\n}\n\n@font-face {\n  font-family: \"Iosevka\";\n  src: url(\"/src/fonts/Iosevka/iosevka-italic.woff2\") format(\"woff2\");\n  font-weight: normal;\n  font-style: italic;\n}\n\na {\n  color: #74c7ec;\n  text-decoration: none;\n}\n\nul {\n  text-align: left;\n}\n.main {\n  margin-top: 50px;\n}\n\n.flamingo {\n  color: #f2cdcd;\n}\n\n.rosewater {\n  color: #f5e0dc;\n}\n\n.pink {\n  color: #f5c2e7;\n}\n\n.mauve {\n  color: #cba6f7;\n}\n\n.red {\n  color: #f38ba8;\n}\n\n.maroon {\n  color: #eba0ac;\n}\n\n.peach {\n  color: #fab387;\n}\n\n.yellow {\n  color: #f9e2af;\n}\n\n.green {\n  color: #a6e3a1;\n}\n\n.teal {\n  color: #94e2d5;\n}\n\n.sky {\n  color: #89dceb;\n}\n\n.sapphire {\n  color: #74c7ec;\n}\n\n.blue {\n  color: #74c7ec;\n}\n\n.lavender {\n  color: #b4befe;\n}\n\n.flamingo-border {\n  border-color: #f2cdcd;\n}\n\n.rosewater-border {\n  border-color: #f5e0dc;\n}\n\n.pink-border {\n  border-color: #f5c2e7;\n}\n\n.mauve-border {\n  border-color: #cba6f7;\n}\n\n.red-border {\n  border-color: #f38ba8;\n}\n\n.maroon-border {\n  border-color: #eba0ac;\n}\n\n.peach-border {\n  border-color: #fab387;\n}\n\n.yellow-border {\n  border-color: #f9e2af;\n}\n\n.green-border {\n  border-color: #a6e3a1;\n}\n\n.teal-border {\n  border-color: #94e2d5;\n}\n\n.sky-border {\n  border-color: #89dceb;\n}\n\n.sapphire-border {\n  border-color: #74c7ec;\n}\n\n.blue-border {\n  border-color: #74c7ec;\n}\n\n.lavender-border {\n  border-color: #b4befe;\n}\n\nbody {\n  font-family: Iosevka, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\",\n    \"Helvetica Neue\", sans-serif;\n  background-color: #1e1e2e;\n  color: #cdd6f4;\n  font-size: 1rem;\n}\n\n.circle {\n  border-radius: 50%;\n}\n\n.profile-pic {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}\n\nmain {\n  text-align: center;\n  padding: 1em;\n  margin: 0 auto;\n}\n\nh1 {\n  color: #ffffff;\n  text-transform: uppercase;\n  font-size: 3rem;\n  /* font-weight: 100; */\n  font-weight: normal;\n  line-height: 1.1;\n  /* margin: 4rem auto; */\n  margin: auto;\n  /* max-width: 14rem; */\n}\n\np {\n  margin: 1em auto;\n  line-height: 1.35;\n}\n\n@media (min-width: 480px) {\n  h1 {\n    font-size: 4rem;\n  }\n\n  p {\n    max-width: none;\n  }\n\n  body {\n    font-size: 1.3rem;\n  }\n}\n\n@media (min-width: 1080px) {\n  .profile-pic {\n    width: 400px;\n    height: 400px;\n  }\n}\n",
-      "start": 1698200639945,
-      "end": 1698200639949,
+      "start": 1698297473114,
+      "end": 1698297473116,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1698297473116,
+      "end": 1698297473116,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/yongqi/Repositories/yonggqiii.github.io/src/root.css\"\nconst __vite__css = \"@font-face {\\n  font-family: \\\"Iosevka\\\";\\n  src: url(\\\"/src/fonts/Iosevka/iosevka-regular.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: normal;\\n  font-style: normal;\\n}\\n\\n@font-face {\\n  font-family: \\\"Iosevka\\\";\\n  src: url(\\\"/src/fonts/Iosevka/iosevka-bold.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: bold;\\n  font-style: normal;\\n}\\n\\n@font-face {\\n  font-family: \\\"Iosevka\\\";\\n  src: url(\\\"/src/fonts/Iosevka/iosevka-italic.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: normal;\\n  font-style: italic;\\n}\\n\\na {\\n  color: #74c7ec;\\n  text-decoration: none;\\n}\\n\\nul {\\n  text-align: left;\\n}\\n.main {\\n  margin-top: 50px;\\n}\\n\\n.flamingo {\\n  color: #f2cdcd;\\n}\\n\\n.rosewater {\\n  color: #f5e0dc;\\n}\\n\\n.pink {\\n  color: #f5c2e7;\\n}\\n\\n.mauve {\\n  color: #cba6f7;\\n}\\n\\n.red {\\n  color: #f38ba8;\\n}\\n\\n.maroon {\\n  color: #eba0ac;\\n}\\n\\n.peach {\\n  color: #fab387;\\n}\\n\\n.yellow {\\n  color: #f9e2af;\\n}\\n\\n.green {\\n  color: #a6e3a1;\\n}\\n\\n.teal {\\n  color: #94e2d5;\\n}\\n\\n.sky {\\n  color: #89dceb;\\n}\\n\\n.sapphire {\\n  color: #74c7ec;\\n}\\n\\n.blue {\\n  color: #74c7ec;\\n}\\n\\n.lavender {\\n  color: #b4befe;\\n}\\n\\n.flamingo-border {\\n  border-color: #f2cdcd;\\n}\\n\\n.rosewater-border {\\n  border-color: #f5e0dc;\\n}\\n\\n.pink-border {\\n  border-color: #f5c2e7;\\n}\\n\\n.mauve-border {\\n  border-color: #cba6f7;\\n}\\n\\n.red-border {\\n  border-color: #f38ba8;\\n}\\n\\n.maroon-border {\\n  border-color: #eba0ac;\\n}\\n\\n.peach-border {\\n  border-color: #fab387;\\n}\\n\\n.yellow-border {\\n  border-color: #f9e2af;\\n}\\n\\n.green-border {\\n  border-color: #a6e3a1;\\n}\\n\\n.teal-border {\\n  border-color: #94e2d5;\\n}\\n\\n.sky-border {\\n  border-color: #89dceb;\\n}\\n\\n.sapphire-border {\\n  border-color: #74c7ec;\\n}\\n\\n.blue-border {\\n  border-color: #74c7ec;\\n}\\n\\n.lavender-border {\\n  border-color: #b4befe;\\n}\\n\\nbody {\\n  font-family: Iosevka, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \\\"Open Sans\\\",\\n    \\\"Helvetica Neue\\\", sans-serif;\\n  background-color: #1e1e2e;\\n  color: #cdd6f4;\\n  font-size: 1rem;\\n}\\n\\n.circle {\\n  border-radius: 50%;\\n}\\n\\n.profile-pic {\\n  width: 200px;\\n  height: 200px;\\n  object-fit: cover;\\n}\\n\\nmain {\\n  text-align: center;\\n  padding: 1em;\\n  margin: 0 auto;\\n}\\n\\nh1 {\\n  color: #ffffff;\\n  text-transform: uppercase;\\n  font-size: 3rem;\\n  /* font-weight: 100; */\\n  font-weight: normal;\\n  line-height: 1.1;\\n  /* margin: 4rem auto; */\\n  margin: auto;\\n  /* max-width: 14rem; */\\n}\\n\\np {\\n  margin: 1em auto;\\n  line-height: 1.35;\\n}\\n\\n@media (min-width: 480px) {\\n  h1 {\\n    font-size: 4rem;\\n  }\\n\\n  p {\\n    max-width: none;\\n  }\\n\\n  body {\\n    font-size: 1.3rem;\\n  }\\n}\\n\\n@media (min-width: 1080px) {\\n  .profile-pic {\\n    width: 400px;\\n    height: 400px;\\n  }\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1698200639949,
-      "end": 1698200639949,
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297473116,
+      "end": 1698297473116,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297473116,
+      "end": 1698297473117,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297473117,
+      "end": 1698297473117,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/root.css\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/yongqi/Repositories/yonggqiii.github.io/src/root.css\"\nconst __vite__css = \"@font-face {\\n  font-family: \\\"Iosevka\\\";\\n  src: url(\\\"/src/fonts/Iosevka/iosevka-regular.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: normal;\\n  font-style: normal;\\n}\\n\\n@font-face {\\n  font-family: \\\"Iosevka\\\";\\n  src: url(\\\"/src/fonts/Iosevka/iosevka-bold.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: bold;\\n  font-style: normal;\\n}\\n\\n@font-face {\\n  font-family: \\\"Iosevka\\\";\\n  src: url(\\\"/src/fonts/Iosevka/iosevka-italic.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: normal;\\n  font-style: italic;\\n}\\n\\na {\\n  color: #74c7ec;\\n  text-decoration: none;\\n}\\n\\nul {\\n  text-align: left;\\n}\\n.main {\\n  margin-top: 50px;\\n}\\n\\n.flamingo {\\n  color: #f2cdcd;\\n}\\n\\n.rosewater {\\n  color: #f5e0dc;\\n}\\n\\n.pink {\\n  color: #f5c2e7;\\n}\\n\\n.mauve {\\n  color: #cba6f7;\\n}\\n\\n.red {\\n  color: #f38ba8;\\n}\\n\\n.maroon {\\n  color: #eba0ac;\\n}\\n\\n.peach {\\n  color: #fab387;\\n}\\n\\n.yellow {\\n  color: #f9e2af;\\n}\\n\\n.green {\\n  color: #a6e3a1;\\n}\\n\\n.teal {\\n  color: #94e2d5;\\n}\\n\\n.sky {\\n  color: #89dceb;\\n}\\n\\n.sapphire {\\n  color: #74c7ec;\\n}\\n\\n.blue {\\n  color: #74c7ec;\\n}\\n\\n.lavender {\\n  color: #b4befe;\\n}\\n\\n.flamingo-border {\\n  border-color: #f2cdcd;\\n}\\n\\n.rosewater-border {\\n  border-color: #f5e0dc;\\n}\\n\\n.pink-border {\\n  border-color: #f5c2e7;\\n}\\n\\n.mauve-border {\\n  border-color: #cba6f7;\\n}\\n\\n.red-border {\\n  border-color: #f38ba8;\\n}\\n\\n.maroon-border {\\n  border-color: #eba0ac;\\n}\\n\\n.peach-border {\\n  border-color: #fab387;\\n}\\n\\n.yellow-border {\\n  border-color: #f9e2af;\\n}\\n\\n.green-border {\\n  border-color: #a6e3a1;\\n}\\n\\n.teal-border {\\n  border-color: #94e2d5;\\n}\\n\\n.sky-border {\\n  border-color: #89dceb;\\n}\\n\\n.sapphire-border {\\n  border-color: #74c7ec;\\n}\\n\\n.blue-border {\\n  border-color: #74c7ec;\\n}\\n\\n.lavender-border {\\n  border-color: #b4befe;\\n}\\n\\nbody {\\n  font-family: Iosevka, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \\\"Open Sans\\\",\\n    \\\"Helvetica Neue\\\", sans-serif;\\n  background-color: #1e1e2e;\\n  color: #cdd6f4;\\n  font-size: 1rem;\\n}\\n\\n.circle {\\n  border-radius: 50%;\\n}\\n\\n.profile-pic {\\n  width: 200px;\\n  height: 200px;\\n  object-fit: cover;\\n}\\n\\nmain {\\n  text-align: center;\\n  padding: 1em;\\n  margin: 0 auto;\\n}\\n\\nh1 {\\n  color: #ffffff;\\n  text-transform: uppercase;\\n  font-size: 3rem;\\n  /* font-weight: 100; */\\n  font-weight: normal;\\n  line-height: 1.1;\\n  /* margin: 4rem auto; */\\n  margin: auto;\\n  /* max-width: 14rem; */\\n}\\n\\np {\\n  margin: 1em auto;\\n  line-height: 1.35;\\n}\\n\\n@media (min-width: 480px) {\\n  h1 {\\n    font-size: 4rem;\\n  }\\n\\n  p {\\n    max-width: none;\\n  }\\n\\n  body {\\n    font-size: 1.3rem;\\n  }\\n}\\n\\n@media (min-width: 1080px) {\\n  .profile-pic {\\n    width: 400px;\\n    height: 400px;\\n  }\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1698200639949,
-      "end": 1698200639949,
-      "order": "normal"
+      "start": 1698297473117,
+      "end": 1698297473117,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

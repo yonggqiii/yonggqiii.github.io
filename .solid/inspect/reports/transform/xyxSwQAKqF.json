@@ -4,29 +4,106 @@
     {
       "name": "__load__",
       "result": ".card {\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n  margin: 2em auto;\n  padding: 1em;\n  box-shadow: 0px 0px 30px black;\n  background-color: #181825;\n}\n.card h2 {\n  text-transform: uppercase;\n  border-bottom: 1px solid #9399b2;\n  margin-top: 10px;\n  max-width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 3px;\n}\n\n.card strong {\n  color: white;\n}\n\n@media (min-width: 760px) {\n  .card {\n    max-width: 60vw;\n  }\n  .card h2 {\n    max-width: 60%;\n  }\n}\n@media (min-width: 960px) {\n  .card {\n    width: 60vw;\n    max-width: 960px;\n  }\n}\n",
-      "start": 1698200362512,
-      "end": 1698200362512
+      "start": 1698297473436,
+      "end": 1698297473436
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "pre"
     },
     {
       "name": "vite:css",
       "result": ".card {\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n  margin: 2em auto;\n  padding: 1em;\n  box-shadow: 0px 0px 30px black;\n  background-color: #181825;\n}\n.card h2 {\n  text-transform: uppercase;\n  border-bottom: 1px solid #9399b2;\n  margin-top: 10px;\n  max-width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 3px;\n}\n\n.card strong {\n  color: white;\n}\n\n@media (min-width: 760px) {\n  .card {\n    max-width: 60vw;\n  }\n  .card h2 {\n    max-width: 60%;\n  }\n}\n@media (min-width: 960px) {\n  .card {\n    width: 60vw;\n    max-width: 960px;\n  }\n}\n",
-      "start": 1698200362512,
-      "end": 1698200362512,
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1698297473436,
+      "end": 1698297473436,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/yongqi/Repositories/yonggqiii.github.io/src/components/Card.css\"\nconst __vite__css = \".card {\\n  border-style: solid;\\n  border-width: 1px;\\n  border-radius: 5px;\\n  margin: 2em auto;\\n  padding: 1em;\\n  box-shadow: 0px 0px 30px black;\\n  background-color: #181825;\\n}\\n.card h2 {\\n  text-transform: uppercase;\\n  border-bottom: 1px solid #9399b2;\\n  margin-top: 10px;\\n  max-width: 80%;\\n  margin-left: auto;\\n  margin-right: auto;\\n  padding: 3px;\\n}\\n\\n.card strong {\\n  color: white;\\n}\\n\\n@media (min-width: 760px) {\\n  .card {\\n    max-width: 60vw;\\n  }\\n  .card h2 {\\n    max-width: 60%;\\n  }\\n}\\n@media (min-width: 960px) {\\n  .card {\\n    width: 60vw;\\n    max-width: 960px;\\n  }\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1698200362512,
-      "end": 1698200362512,
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297473436,
+      "end": 1698297473436,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/Card.css\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/yongqi/Repositories/yonggqiii.github.io/src/components/Card.css\"\nconst __vite__css = \".card {\\n  border-style: solid;\\n  border-width: 1px;\\n  border-radius: 5px;\\n  margin: 2em auto;\\n  padding: 1em;\\n  box-shadow: 0px 0px 30px black;\\n  background-color: #181825;\\n}\\n.card h2 {\\n  text-transform: uppercase;\\n  border-bottom: 1px solid #9399b2;\\n  margin-top: 10px;\\n  max-width: 80%;\\n  margin-left: auto;\\n  margin-right: auto;\\n  padding: 3px;\\n}\\n\\n.card strong {\\n  color: white;\\n}\\n\\n@media (min-width: 760px) {\\n  .card {\\n    max-width: 60vw;\\n  }\\n  .card h2 {\\n    max-width: 60%;\\n  }\\n}\\n@media (min-width: 960px) {\\n  .card {\\n    width: 60vw;\\n    max-width: 960px;\\n  }\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1698200362512,
-      "end": 1698200362512,
-      "order": "normal"
+      "start": 1698297473436,
+      "end": 1698297473436,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

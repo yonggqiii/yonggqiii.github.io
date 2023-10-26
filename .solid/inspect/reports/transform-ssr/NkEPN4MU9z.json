@@ -4,15 +4,101 @@
     {
       "name": "vite:asset",
       "result": "export default \"/src/fonts/Iosevka/iosevka-regular.woff2\"",
-      "start": 1698200361250,
-      "end": 1698200361250
+      "start": 1698297472197,
+      "end": 1698297472197,
+      "sourcemaps": null
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297472197,
+      "end": 1698297472198,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export default \"/src/fonts/Iosevka/iosevka-regular.woff2\"",
-      "start": 1698200361250,
-      "end": 1698200361251,
-      "order": "normal"
+      "start": 1698297472198,
+      "end": 1698297472198,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

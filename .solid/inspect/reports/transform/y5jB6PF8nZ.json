@@ -4,29 +4,106 @@
     {
       "name": "__load__",
       "result": "nav {\n  text-align: center;\n  padding: 5px;\n}\n\na {\n  text-decoration: none;\n}\n\nnav a {\n  margin: 0 5px;\n}\n\nnav a.active {\n  color: #a6e3a1;\n  font-weight: bold;\n}\n\na.inactive {\n  color: #94e2d5;\n}\n\n@media (min-width: 480px) {\n  nav a {\n    margin: 0 10px;\n  }\n}\n\n@media (min-width: 760px) {\n  nav a {\n    margin: 0 30px;\n  }\n}\n",
-      "start": 1698200362227,
-      "end": 1698200362227
+      "start": 1698297473141,
+      "end": 1698297473141
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "pre"
     },
     {
       "name": "vite:css",
       "result": "nav {\n  text-align: center;\n  padding: 5px;\n}\n\na {\n  text-decoration: none;\n}\n\nnav a {\n  margin: 0 5px;\n}\n\nnav a.active {\n  color: #a6e3a1;\n  font-weight: bold;\n}\n\na.inactive {\n  color: #94e2d5;\n}\n\n@media (min-width: 480px) {\n  nav a {\n    margin: 0 10px;\n  }\n}\n\n@media (min-width: 760px) {\n  nav a {\n    margin: 0 30px;\n  }\n}\n",
-      "start": 1698200362227,
-      "end": 1698200362227,
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1698297473141,
+      "end": 1698297473141,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/yongqi/Repositories/yonggqiii.github.io/src/components/NavBar.css\"\nconst __vite__css = \"nav {\\n  text-align: center;\\n  padding: 5px;\\n}\\n\\na {\\n  text-decoration: none;\\n}\\n\\nnav a {\\n  margin: 0 5px;\\n}\\n\\nnav a.active {\\n  color: #a6e3a1;\\n  font-weight: bold;\\n}\\n\\na.inactive {\\n  color: #94e2d5;\\n}\\n\\n@media (min-width: 480px) {\\n  nav a {\\n    margin: 0 10px;\\n  }\\n}\\n\\n@media (min-width: 760px) {\\n  nav a {\\n    margin: 0 30px;\\n  }\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1698200362227,
-      "end": 1698200362227,
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297473141,
+      "end": 1698297473141,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/NavBar.css\");import { updateStyle as __vite__updateStyle, removeStyle as __vite__removeStyle } from \"/@vite/client\"\nconst __vite__id = \"/home/yongqi/Repositories/yonggqiii.github.io/src/components/NavBar.css\"\nconst __vite__css = \"nav {\\n  text-align: center;\\n  padding: 5px;\\n}\\n\\na {\\n  text-decoration: none;\\n}\\n\\nnav a {\\n  margin: 0 5px;\\n}\\n\\nnav a.active {\\n  color: #a6e3a1;\\n  font-weight: bold;\\n}\\n\\na.inactive {\\n  color: #94e2d5;\\n}\\n\\n@media (min-width: 480px) {\\n  nav a {\\n    margin: 0 10px;\\n  }\\n}\\n\\n@media (min-width: 760px) {\\n  nav a {\\n    margin: 0 30px;\\n  }\\n}\\n\"\n__vite__updateStyle(__vite__id, __vite__css)\nimport.meta.hot.accept()\nexport default __vite__css\nimport.meta.hot.prune(() => __vite__removeStyle(__vite__id))",
-      "start": 1698200362227,
-      "end": 1698200362228,
-      "order": "normal"
+      "start": 1698297473141,
+      "end": 1698297473141,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

@@ -4,29 +4,120 @@
     {
       "name": "__load__",
       "result": "import {\n  createHandler,\n  renderAsync,\n  StartServer,\n} from \"solid-start/entry-server\";\n\nexport default createHandler(\n  renderAsync((event) => <StartServer event={event} />)\n);\n",
-      "start": 1698200639963,
-      "end": 1698200639963
+      "start": 1698297471858,
+      "end": 1698297471858
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297471858,
+      "end": 1698297471859,
+      "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"solid-start/entry-server\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
-      "start": 1698200639963,
-      "end": 1698200639968,
-      "order": "pre"
+      "start": 1698297471859,
+      "end": 1698297471918,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createHandler",
+          "renderAsync",
+          "StartServer",
+          "event",
+          "_$createComponent"
+        ],
+        "sources": [
+          "entry-server.tsx"
+        ],
+        "sourcesContent": [
+          "import {\n  createHandler,\n  renderAsync,\n  StartServer,\n} from \"solid-start/entry-server\";\n\nexport default createHandler(\n  renderAsync((event) => <StartServer event={event} />)\n);\n"
+        ],
+        "mappings": ";AAAA,SACEA,aAAa,EACbC,WAAW,EACXC,WAAW,QACN,0BAA0B;AAEjC,eAAeF,aAAa,CAC1BC,WAAW,CAAEE,KAAK,IAAAC,iBAAA,CAAMF,WAAW;EAACC,KAAK,EAAEA;AAAK,EAAI,CACtD,CAAC"
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1698297471918,
+      "end": 1698297471918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297471918,
+      "end": 1698297471918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297471918,
+      "end": 1698297471918,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297471918,
+      "end": 1698297471918,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297471918,
+      "end": 1698297471919,
+      "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"solid-start/entry-server\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
-      "start": 1698200639968,
-      "end": 1698200639968,
+      "start": 1698297471919,
+      "end": 1698297471919,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1698297471919,
+      "end": 1698297471919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297471919,
+      "end": 1698297471919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297471920,
+      "end": 1698297471920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297471920,
+      "end": 1698297471920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297471920,
+      "end": 1698297471920,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297471920,
+      "end": 1698297471920,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createHandler, renderAsync, StartServer } from \"/node_modules/solid-start/entry-server/index.ts\";\nexport default createHandler(renderAsync(event => _$createComponent(StartServer, {\n  event: event\n})));",
-      "start": 1698200639968,
-      "end": 1698200639968,
-      "order": "normal"
+      "start": 1698297471920,
+      "end": 1698297471926,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

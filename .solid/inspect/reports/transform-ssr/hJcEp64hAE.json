@@ -4,29 +4,117 @@
     {
       "name": "__load__",
       "result": "export { useRouteData } from \"@solidjs/router\";\nexport { createRouteAction, createRouteMultiAction } from \"./createRouteAction\";\nexport { createRouteData, refetchRouteData } from \"./createRouteData\";\nexport type { FormAction, FormMethod, FormProps, SubmitOptions } from \"./Form\";\nexport { FormError, ServerError } from \"./FormError\";\n\n",
-      "start": 1698200361575,
-      "end": 1698200361575
+      "start": 1698297472530,
+      "end": 1698297472530
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297472530,
+      "end": 1698297472530,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1698297472530,
+      "end": 1698297472530,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1698297472530,
+      "end": 1698297472530,
+      "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "export { useRouteData } from \"@solidjs/router\";\nexport { createRouteAction, createRouteMultiAction } from \"./createRouteAction\";\nexport { createRouteData, refetchRouteData } from \"./createRouteData\";\nexport { FormError, ServerError } from \"./FormError\";\n",
-      "start": 1698200361575,
-      "end": 1698200361670,
+      "start": 1698297472530,
+      "end": 1698297472597,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "index.ts"
+        ],
+        "sourcesContent": [
+          "export { useRouteData } from \"@solidjs/router\";\nexport { createRouteAction, createRouteMultiAction } from \"./createRouteAction\";\nexport { createRouteData, refetchRouteData } from \"./createRouteData\";\nexport type { FormAction, FormMethod, FormProps, SubmitOptions } from \"./Form\";\nexport { FormError, ServerError } from \"./FormError\";\n\n"
+        ],
+        "mappings": "AAAA,SAAS,oBAAoB;AAC7B,SAAS,mBAAmB,8BAA8B;AAC1D,SAAS,iBAAiB,wBAAwB;AAElD,SAAS,WAAW,mBAAmB;",
+        "names": [],
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297472597,
+      "end": 1698297472597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297472597,
+      "end": 1698297472597,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297472597,
+      "end": 1698297472597,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "export { useRouteData } from \"@solidjs/router\";\nexport { createRouteAction, createRouteMultiAction } from \"./createRouteAction\";\nexport { createRouteData, refetchRouteData } from \"./createRouteData\";\nexport { FormError, ServerError } from \"./FormError\";\n",
-      "start": 1698200361670,
-      "end": 1698200361670,
+      "start": 1698297472597,
+      "end": 1698297472597,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1698297472597,
+      "end": 1698297472597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297472597,
+      "end": 1698297472597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297472597,
+      "end": 1698297472597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297472597,
+      "end": 1698297472598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297472598,
+      "end": 1698297472598,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297472598,
+      "end": 1698297472598,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export { useRouteData } from \"/node_modules/@solidjs/router/dist/index.jsx\";\nexport { createRouteAction, createRouteMultiAction } from \"/node_modules/solid-start/data/createRouteAction.tsx\";\nexport { createRouteData, refetchRouteData } from \"/node_modules/solid-start/data/createRouteData.tsx\";\nexport { FormError, ServerError } from \"/node_modules/solid-start/data/FormError.tsx\";\n",
-      "start": 1698200361670,
-      "end": 1698200361672,
-      "order": "normal"
+      "start": 1698297472598,
+      "end": 1698297472601,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

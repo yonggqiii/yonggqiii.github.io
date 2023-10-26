@@ -4,29 +4,104 @@
     {
       "name": "__load__",
       "result": "nav {\n  text-align: center;\n  padding: 5px;\n}\n\na {\n  text-decoration: none;\n}\n\nnav a {\n  margin: 0 5px;\n}\n\nnav a.active {\n  color: #a6e3a1;\n  font-weight: bold;\n}\n\na.inactive {\n  color: #94e2d5;\n}\n\n@media (min-width: 480px) {\n  nav a {\n    margin: 0 10px;\n  }\n}\n\n@media (min-width: 760px) {\n  nav a {\n    margin: 0 30px;\n  }\n}\n",
-      "start": 1698200361670,
-      "end": 1698200361670
+      "start": 1698297472568,
+      "end": 1698297472568
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "pre"
     },
     {
       "name": "vite:css",
       "result": "nav {\n  text-align: center;\n  padding: 5px;\n}\n\na {\n  text-decoration: none;\n}\n\nnav a {\n  margin: 0 5px;\n}\n\nnav a.active {\n  color: #a6e3a1;\n  font-weight: bold;\n}\n\na.inactive {\n  color: #94e2d5;\n}\n\n@media (min-width: 480px) {\n  nav a {\n    margin: 0 10px;\n  }\n}\n\n@media (min-width: 760px) {\n  nav a {\n    margin: 0 30px;\n  }\n}\n",
-      "start": 1698200361670,
-      "end": 1698200361670,
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1698297472568,
+      "end": 1698297472568,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "export default \"nav {\\n  text-align: center;\\n  padding: 5px;\\n}\\n\\na {\\n  text-decoration: none;\\n}\\n\\nnav a {\\n  margin: 0 5px;\\n}\\n\\nnav a.active {\\n  color: #a6e3a1;\\n  font-weight: bold;\\n}\\n\\na.inactive {\\n  color: #94e2d5;\\n}\\n\\n@media (min-width: 480px) {\\n  nav a {\\n    margin: 0 10px;\\n  }\\n}\\n\\n@media (min-width: 760px) {\\n  nav a {\\n    margin: 0 30px;\\n  }\\n}\\n\"",
-      "start": 1698200361670,
-      "end": 1698200361670,
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297472568,
+      "end": 1698297472568,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export default \"nav {\\n  text-align: center;\\n  padding: 5px;\\n}\\n\\na {\\n  text-decoration: none;\\n}\\n\\nnav a {\\n  margin: 0 5px;\\n}\\n\\nnav a.active {\\n  color: #a6e3a1;\\n  font-weight: bold;\\n}\\n\\na.inactive {\\n  color: #94e2d5;\\n}\\n\\n@media (min-width: 480px) {\\n  nav a {\\n    margin: 0 10px;\\n  }\\n}\\n\\n@media (min-width: 760px) {\\n  nav a {\\n    margin: 0 30px;\\n  }\\n}\\n\"",
-      "start": 1698200361670,
-      "end": 1698200361670,
-      "order": "normal"
+      "start": 1698297472568,
+      "end": 1698297472568,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }

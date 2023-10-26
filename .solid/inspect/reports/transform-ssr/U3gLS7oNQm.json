@@ -4,36 +4,118 @@
     {
       "name": "__load__",
       "result": "import { registerApiRoutes } from \"./internalFetch\";\nimport { getRouteMatches } from \"./router\";\nimport { MatchRoute, Method, Route } from \"./types\";\n\n// the line below will be replaced by the compiler with a configuration of routes\n// based on the files in src/routes\n// we have to declare this with `var` so that we can find it even if vite precompiles the code\n// @ts-ignore\nvar api = $API_ROUTES;\n\n// This is copied from https://github.com/solidjs/solid-router/blob/main/src/utils.ts\nfunction expandOptionals(pattern: string): string[] {\n  let match = /(\\/?\\:[^\\/]+)\\?/.exec(pattern);\n  if (!match) return [pattern];\n\n  let prefix = pattern.slice(0, match.index);\n  let suffix = pattern.slice(match.index + match[0].length);\n  const prefixes: string[] = [prefix, (prefix += match[1])];\n\n  // This section handles adjacent optional params. We don't actually want all permuations since\n  // that will lead to equivalent routes which have the same number of params. For example\n  // `/:a?/:b?/:c`? only has the unique expansion: `/`, `/:a`, `/:a/:b`, `/:a/:b/:c` and we can\n  // discard `/:b`, `/:c`, `/:b/:c` by building them up in order and not recursing. This also helps\n  // ensure predictability where earlier params have precidence.\n  while ((match = /^(\\/\\:[^\\/]+)\\?/.exec(suffix))) {\n    prefixes.push((prefix += match[1]));\n    suffix = suffix.slice(match[0].length);\n  }\n\n  return expandOptionals(suffix).reduce<string[]>(\n    (results, expansion) => [...results, ...prefixes.map(p => p + expansion)],\n    []\n  );\n}\n\nfunction routeToMatchRoute(route: Route): MatchRoute {\n  const segments = route.path.split(\"/\").filter(Boolean);\n\n  const params: { type: \"*\" | \":\"; name: string; index: number }[] = [];\n  const matchSegments: (string | null)[] = [];\n  let score = 0;\n  let wildcard = false;\n\n  for (const [index, segment] of segments.entries()) {\n    if (segment[0] === \":\") {\n      const name = segment.slice(1);\n      score += 3;\n      params.push({\n        type: \":\",\n        name,\n        index\n      });\n      matchSegments.push(null);\n    } else if (segment[0] === \"*\") {\n      score -= 1;\n      params.push({\n        type: \"*\",\n        name: segment.slice(1),\n        index\n      });\n      wildcard = true;\n    } else {\n      score += 4;\n      matchSegments.push(segment);\n    }\n  }\n\n  return {\n    ...route,\n    score,\n    params,\n    matchSegments,\n    wildcard\n  };\n}\n\nconst allRoutes = (api as Route[])\n  .flatMap(route => {\n    const paths = expandOptionals(route.path);\n    return paths.map(path => ({ ...route, path }));\n  })\n  .map(routeToMatchRoute)\n  .sort((a, b) => b.score - a.score);\n\nregisterApiRoutes(allRoutes);\n\nexport function getApiHandler(url: URL, method: string) {\n  return getRouteMatches(allRoutes, url.pathname, method.toUpperCase() as Method);\n}\n\nexport function isApiRequest(request: Request) {\n  let apiHandler = getApiHandler(new URL(request.url), request.method);\n  return Boolean(apiHandler);\n}\n\nexport * from \"../server/responses\";\nexport type { APIEvent } from \"./types\";\n",
-      "start": 1698200361494,
-      "end": 1698200361494
+      "start": 1698297472475,
+      "end": 1698297472475
     },
     {
       "name": "solid-start-file-system-router",
       "result": "import { registerApiRoutes } from \"./internalFetch\";\nimport { getRouteMatches } from \"./router\";\nimport { MatchRoute, Method, Route } from \"./types\";\n\n// the line below will be replaced by the compiler with a configuration of routes\n// based on the files in src/routes\n// we have to declare this with `var` so that we can find it even if vite precompiles the code\n// @ts-ignore\n\n  \n  const api = [\n{\nGET: \"skip\",\n path: \"/*404\" \n},\n{\nGET: \"skip\",\n path: \"/fun\" \n},\n{\nGET: \"skip\",\n path: \"/\" \n},\n{\nGET: \"skip\",\n path: \"/research\" \n},\n{\nGET: \"skip\",\n path: \"/teaching\" \n},\n{\nGET: \"skip\",\n path: \"/cv/\" \n}\n];\n\n// This is copied from https://github.com/solidjs/solid-router/blob/main/src/utils.ts\nfunction expandOptionals(pattern: string): string[] {\n  let match = /(\\/?\\:[^\\/]+)\\?/.exec(pattern);\n  if (!match) return [pattern];\n\n  let prefix = pattern.slice(0, match.index);\n  let suffix = pattern.slice(match.index + match[0].length);\n  const prefixes: string[] = [prefix, (prefix += match[1])];\n\n  // This section handles adjacent optional params. We don't actually want all permuations since\n  // that will lead to equivalent routes which have the same number of params. For example\n  // `/:a?/:b?/:c`? only has the unique expansion: `/`, `/:a`, `/:a/:b`, `/:a/:b/:c` and we can\n  // discard `/:b`, `/:c`, `/:b/:c` by building them up in order and not recursing. This also helps\n  // ensure predictability where earlier params have precidence.\n  while ((match = /^(\\/\\:[^\\/]+)\\?/.exec(suffix))) {\n    prefixes.push((prefix += match[1]));\n    suffix = suffix.slice(match[0].length);\n  }\n\n  return expandOptionals(suffix).reduce<string[]>(\n    (results, expansion) => [...results, ...prefixes.map(p => p + expansion)],\n    []\n  );\n}\n\nfunction routeToMatchRoute(route: Route): MatchRoute {\n  const segments = route.path.split(\"/\").filter(Boolean);\n\n  const params: { type: \"*\" | \":\"; name: string; index: number }[] = [];\n  const matchSegments: (string | null)[] = [];\n  let score = 0;\n  let wildcard = false;\n\n  for (const [index, segment] of segments.entries()) {\n    if (segment[0] === \":\") {\n      const name = segment.slice(1);\n      score += 3;\n      params.push({\n        type: \":\",\n        name,\n        index\n      });\n      matchSegments.push(null);\n    } else if (segment[0] === \"*\") {\n      score -= 1;\n      params.push({\n        type: \"*\",\n        name: segment.slice(1),\n        index\n      });\n      wildcard = true;\n    } else {\n      score += 4;\n      matchSegments.push(segment);\n    }\n  }\n\n  return {\n    ...route,\n    score,\n    params,\n    matchSegments,\n    wildcard\n  };\n}\n\nconst allRoutes = (api as Route[])\n  .flatMap(route => {\n    const paths = expandOptionals(route.path);\n    return paths.map(path => ({ ...route, path }));\n  })\n  .map(routeToMatchRoute)\n  .sort((a, b) => b.score - a.score);\n\nregisterApiRoutes(allRoutes);\n\nexport function getApiHandler(url: URL, method: string) {\n  return getRouteMatches(allRoutes, url.pathname, method.toUpperCase() as Method);\n}\n\nexport function isApiRequest(request: Request) {\n  let apiHandler = getApiHandler(new URL(request.url), request.method);\n  return Boolean(apiHandler);\n}\n\nexport * from \"../server/responses\";\nexport type { APIEvent } from \"./types\";\n",
-      "start": 1698200361494,
-      "end": 1698200361495,
+      "start": 1698297472475,
+      "end": 1698297472475,
       "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1698297472475,
+      "end": 1698297472475,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1698297472475,
+      "end": 1698297472475,
+      "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { registerApiRoutes } from \"./internalFetch\";\nimport { getRouteMatches } from \"./router\";\nconst api = [\n  {\n    GET: \"skip\",\n    path: \"/*404\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/fun\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/research\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/teaching\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/cv/\"\n  }\n];\nfunction expandOptionals(pattern) {\n  let match = /(\\/?\\:[^\\/]+)\\?/.exec(pattern);\n  if (!match)\n    return [pattern];\n  let prefix = pattern.slice(0, match.index);\n  let suffix = pattern.slice(match.index + match[0].length);\n  const prefixes = [prefix, prefix += match[1]];\n  while (match = /^(\\/\\:[^\\/]+)\\?/.exec(suffix)) {\n    prefixes.push(prefix += match[1]);\n    suffix = suffix.slice(match[0].length);\n  }\n  return expandOptionals(suffix).reduce(\n    (results, expansion) => [...results, ...prefixes.map((p) => p + expansion)],\n    []\n  );\n}\nfunction routeToMatchRoute(route) {\n  const segments = route.path.split(\"/\").filter(Boolean);\n  const params = [];\n  const matchSegments = [];\n  let score = 0;\n  let wildcard = false;\n  for (const [index, segment] of segments.entries()) {\n    if (segment[0] === \":\") {\n      const name = segment.slice(1);\n      score += 3;\n      params.push({\n        type: \":\",\n        name,\n        index\n      });\n      matchSegments.push(null);\n    } else if (segment[0] === \"*\") {\n      score -= 1;\n      params.push({\n        type: \"*\",\n        name: segment.slice(1),\n        index\n      });\n      wildcard = true;\n    } else {\n      score += 4;\n      matchSegments.push(segment);\n    }\n  }\n  return {\n    ...route,\n    score,\n    params,\n    matchSegments,\n    wildcard\n  };\n}\nconst allRoutes = api.flatMap((route) => {\n  const paths = expandOptionals(route.path);\n  return paths.map((path) => ({ ...route, path }));\n}).map(routeToMatchRoute).sort((a, b) => b.score - a.score);\nregisterApiRoutes(allRoutes);\nexport function getApiHandler(url, method) {\n  return getRouteMatches(allRoutes, url.pathname, method.toUpperCase());\n}\nexport function isApiRequest(request) {\n  let apiHandler = getApiHandler(new URL(request.url), request.method);\n  return Boolean(apiHandler);\n}\nexport * from \"../server/responses\";\n",
-      "start": 1698200361495,
-      "end": 1698200361554,
+      "start": 1698297472475,
+      "end": 1698297472496,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "index.ts"
+        ],
+        "sourcesContent": [
+          "import { registerApiRoutes } from \"./internalFetch\";\nimport { getRouteMatches } from \"./router\";\nimport { MatchRoute, Method, Route } from \"./types\";\n\n// the line below will be replaced by the compiler with a configuration of routes\n// based on the files in src/routes\n// we have to declare this with `var` so that we can find it even if vite precompiles the code\n// @ts-ignore\n\n  \n  const api = [\n{\nGET: \"skip\",\n path: \"/*404\" \n},\n{\nGET: \"skip\",\n path: \"/fun\" \n},\n{\nGET: \"skip\",\n path: \"/\" \n},\n{\nGET: \"skip\",\n path: \"/research\" \n},\n{\nGET: \"skip\",\n path: \"/teaching\" \n},\n{\nGET: \"skip\",\n path: \"/cv/\" \n}\n];\n\n// This is copied from https://github.com/solidjs/solid-router/blob/main/src/utils.ts\nfunction expandOptionals(pattern: string): string[] {\n  let match = /(\\/?\\:[^\\/]+)\\?/.exec(pattern);\n  if (!match) return [pattern];\n\n  let prefix = pattern.slice(0, match.index);\n  let suffix = pattern.slice(match.index + match[0].length);\n  const prefixes: string[] = [prefix, (prefix += match[1])];\n\n  // This section handles adjacent optional params. We don't actually want all permuations since\n  // that will lead to equivalent routes which have the same number of params. For example\n  // `/:a?/:b?/:c`? only has the unique expansion: `/`, `/:a`, `/:a/:b`, `/:a/:b/:c` and we can\n  // discard `/:b`, `/:c`, `/:b/:c` by building them up in order and not recursing. This also helps\n  // ensure predictability where earlier params have precidence.\n  while ((match = /^(\\/\\:[^\\/]+)\\?/.exec(suffix))) {\n    prefixes.push((prefix += match[1]));\n    suffix = suffix.slice(match[0].length);\n  }\n\n  return expandOptionals(suffix).reduce<string[]>(\n    (results, expansion) => [...results, ...prefixes.map(p => p + expansion)],\n    []\n  );\n}\n\nfunction routeToMatchRoute(route: Route): MatchRoute {\n  const segments = route.path.split(\"/\").filter(Boolean);\n\n  const params: { type: \"*\" | \":\"; name: string; index: number }[] = [];\n  const matchSegments: (string | null)[] = [];\n  let score = 0;\n  let wildcard = false;\n\n  for (const [index, segment] of segments.entries()) {\n    if (segment[0] === \":\") {\n      const name = segment.slice(1);\n      score += 3;\n      params.push({\n        type: \":\",\n        name,\n        index\n      });\n      matchSegments.push(null);\n    } else if (segment[0] === \"*\") {\n      score -= 1;\n      params.push({\n        type: \"*\",\n        name: segment.slice(1),\n        index\n      });\n      wildcard = true;\n    } else {\n      score += 4;\n      matchSegments.push(segment);\n    }\n  }\n\n  return {\n    ...route,\n    score,\n    params,\n    matchSegments,\n    wildcard\n  };\n}\n\nconst allRoutes = (api as Route[])\n  .flatMap(route => {\n    const paths = expandOptionals(route.path);\n    return paths.map(path => ({ ...route, path }));\n  })\n  .map(routeToMatchRoute)\n  .sort((a, b) => b.score - a.score);\n\nregisterApiRoutes(allRoutes);\n\nexport function getApiHandler(url: URL, method: string) {\n  return getRouteMatches(allRoutes, url.pathname, method.toUpperCase() as Method);\n}\n\nexport function isApiRequest(request: Request) {\n  let apiHandler = getApiHandler(new URL(request.url), request.method);\n  return Boolean(apiHandler);\n}\n\nexport * from \"../server/responses\";\nexport type { APIEvent } from \"./types\";\n"
+        ],
+        "mappings": "AAAA,SAAS,yBAAyB;AAClC,SAAS,uBAAuB;AAS9B,MAAM,MAAM;AAAA,EACd;AAAA,IACA,KAAK;AAAA,IACJ,MAAM;AAAA,EACP;AAAA,EACA;AAAA,IACA,KAAK;AAAA,IACJ,MAAM;AAAA,EACP;AAAA,EACA;AAAA,IACA,KAAK;AAAA,IACJ,MAAM;AAAA,EACP;AAAA,EACA;AAAA,IACA,KAAK;AAAA,IACJ,MAAM;AAAA,EACP;AAAA,EACA;AAAA,IACA,KAAK;AAAA,IACJ,MAAM;AAAA,EACP;AAAA,EACA;AAAA,IACA,KAAK;AAAA,IACJ,MAAM;AAAA,EACP;AACA;AAGA,SAAS,gBAAgB,SAA2B;AAClD,MAAI,QAAQ,kBAAkB,KAAK,OAAO;AAC1C,MAAI,CAAC;AAAO,WAAO,CAAC,OAAO;AAE3B,MAAI,SAAS,QAAQ,MAAM,GAAG,MAAM,KAAK;AACzC,MAAI,SAAS,QAAQ,MAAM,MAAM,QAAQ,MAAM,CAAC,EAAE,MAAM;AACxD,QAAM,WAAqB,CAAC,QAAS,UAAU,MAAM,CAAC,CAAE;AAOxD,SAAQ,QAAQ,kBAAkB,KAAK,MAAM,GAAI;AAC/C,aAAS,KAAM,UAAU,MAAM,CAAC,CAAE;AAClC,aAAS,OAAO,MAAM,MAAM,CAAC,EAAE,MAAM;AAAA,EACvC;AAEA,SAAO,gBAAgB,MAAM,EAAE;AAAA,IAC7B,CAAC,SAAS,cAAc,CAAC,GAAG,SAAS,GAAG,SAAS,IAAI,OAAK,IAAI,SAAS,CAAC;AAAA,IACxE,CAAC;AAAA,EACH;AACF;AAEA,SAAS,kBAAkB,OAA0B;AACnD,QAAM,WAAW,MAAM,KAAK,MAAM,GAAG,EAAE,OAAO,OAAO;AAErD,QAAM,SAA6D,CAAC;AACpE,QAAM,gBAAmC,CAAC;AAC1C,MAAI,QAAQ;AACZ,MAAI,WAAW;AAEf,aAAW,CAAC,OAAO,OAAO,KAAK,SAAS,QAAQ,GAAG;AACjD,QAAI,QAAQ,CAAC,MAAM,KAAK;AACtB,YAAM,OAAO,QAAQ,MAAM,CAAC;AAC5B,eAAS;AACT,aAAO,KAAK;AAAA,QACV,MAAM;AAAA,QACN;AAAA,QACA;AAAA,MACF,CAAC;AACD,oBAAc,KAAK,IAAI;AAAA,IACzB,WAAW,QAAQ,CAAC,MAAM,KAAK;AAC7B,eAAS;AACT,aAAO,KAAK;AAAA,QACV,MAAM;AAAA,QACN,MAAM,QAAQ,MAAM,CAAC;AAAA,QACrB;AAAA,MACF,CAAC;AACD,iBAAW;AAAA,IACb,OAAO;AACL,eAAS;AACT,oBAAc,KAAK,OAAO;AAAA,IAC5B;AAAA,EACF;AAEA,SAAO;AAAA,IACL,GAAG;AAAA,IACH;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF;AAEA,MAAM,YAAa,IAChB,QAAQ,WAAS;AAChB,QAAM,QAAQ,gBAAgB,MAAM,IAAI;AACxC,SAAO,MAAM,IAAI,WAAS,EAAE,GAAG,OAAO,KAAK,EAAE;AAC/C,CAAC,EACA,IAAI,iBAAiB,EACrB,KAAK,CAAC,GAAG,MAAM,EAAE,QAAQ,EAAE,KAAK;AAEnC,kBAAkB,SAAS;AAEpB,gBAAS,cAAc,KAAU,QAAgB;AACtD,SAAO,gBAAgB,WAAW,IAAI,UAAU,OAAO,YAAY,CAAW;AAChF;AAEO,gBAAS,aAAa,SAAkB;AAC7C,MAAI,aAAa,cAAc,IAAI,IAAI,QAAQ,GAAG,GAAG,QAAQ,MAAM;AACnE,SAAO,QAAQ,UAAU;AAC3B;AAEA,cAAc;",
+        "names": [],
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1698297472496,
+      "end": 1698297472496,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { registerApiRoutes } from \"./internalFetch\";\nimport { getRouteMatches } from \"./router\";\nconst api = [\n  {\n    GET: \"skip\",\n    path: \"/*404\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/fun\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/research\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/teaching\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/cv/\"\n  }\n];\nfunction expandOptionals(pattern) {\n  let match = /(\\/?\\:[^\\/]+)\\?/.exec(pattern);\n  if (!match)\n    return [pattern];\n  let prefix = pattern.slice(0, match.index);\n  let suffix = pattern.slice(match.index + match[0].length);\n  const prefixes = [prefix, prefix += match[1]];\n  while (match = /^(\\/\\:[^\\/]+)\\?/.exec(suffix)) {\n    prefixes.push(prefix += match[1]);\n    suffix = suffix.slice(match[0].length);\n  }\n  return expandOptionals(suffix).reduce(\n    (results, expansion) => [...results, ...prefixes.map((p) => p + expansion)],\n    []\n  );\n}\nfunction routeToMatchRoute(route) {\n  const segments = route.path.split(\"/\").filter(Boolean);\n  const params = [];\n  const matchSegments = [];\n  let score = 0;\n  let wildcard = false;\n  for (const [index, segment] of segments.entries()) {\n    if (segment[0] === \":\") {\n      const name = segment.slice(1);\n      score += 3;\n      params.push({\n        type: \":\",\n        name,\n        index\n      });\n      matchSegments.push(null);\n    } else if (segment[0] === \"*\") {\n      score -= 1;\n      params.push({\n        type: \"*\",\n        name: segment.slice(1),\n        index\n      });\n      wildcard = true;\n    } else {\n      score += 4;\n      matchSegments.push(segment);\n    }\n  }\n  return {\n    ...route,\n    score,\n    params,\n    matchSegments,\n    wildcard\n  };\n}\nconst allRoutes = api.flatMap((route) => {\n  const paths = expandOptionals(route.path);\n  return paths.map((path) => ({ ...route, path }));\n}).map(routeToMatchRoute).sort((a, b) => b.score - a.score);\nregisterApiRoutes(allRoutes);\nexport function getApiHandler(url, method) {\n  return getRouteMatches(allRoutes, url.pathname, method.toUpperCase());\n}\nexport function isApiRequest(request) {\n  let apiHandler = getApiHandler(new URL(request.url), request.method);\n  return Boolean(apiHandler);\n}\nexport * from \"../server/responses\";\n",
-      "start": 1698200361554,
-      "end": 1698200361554,
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1698297472496,
+      "end": 1698297472496,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1698297472496,
+      "end": 1698297472496,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { registerApiRoutes } from \"/node_modules/solid-start/api/internalFetch.ts\";\nimport { getRouteMatches } from \"/node_modules/solid-start/api/router.ts\";\nconst api = [\n  {\n    GET: \"skip\",\n    path: \"/*404\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/fun\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/research\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/teaching\"\n  },\n  {\n    GET: \"skip\",\n    path: \"/cv/\"\n  }\n];\nfunction expandOptionals(pattern) {\n  let match = /(\\/?\\:[^\\/]+)\\?/.exec(pattern);\n  if (!match)\n    return [pattern];\n  let prefix = pattern.slice(0, match.index);\n  let suffix = pattern.slice(match.index + match[0].length);\n  const prefixes = [prefix, prefix += match[1]];\n  while (match = /^(\\/\\:[^\\/]+)\\?/.exec(suffix)) {\n    prefixes.push(prefix += match[1]);\n    suffix = suffix.slice(match[0].length);\n  }\n  return expandOptionals(suffix).reduce(\n    (results, expansion) => [...results, ...prefixes.map((p) => p + expansion)],\n    []\n  );\n}\nfunction routeToMatchRoute(route) {\n  const segments = route.path.split(\"/\").filter(Boolean);\n  const params = [];\n  const matchSegments = [];\n  let score = 0;\n  let wildcard = false;\n  for (const [index, segment] of segments.entries()) {\n    if (segment[0] === \":\") {\n      const name = segment.slice(1);\n      score += 3;\n      params.push({\n        type: \":\",\n        name,\n        index\n      });\n      matchSegments.push(null);\n    } else if (segment[0] === \"*\") {\n      score -= 1;\n      params.push({\n        type: \"*\",\n        name: segment.slice(1),\n        index\n      });\n      wildcard = true;\n    } else {\n      score += 4;\n      matchSegments.push(segment);\n    }\n  }\n  return {\n    ...route,\n    score,\n    params,\n    matchSegments,\n    wildcard\n  };\n}\nconst allRoutes = api.flatMap((route) => {\n  const paths = expandOptionals(route.path);\n  return paths.map((path) => ({ ...route, path }));\n}).map(routeToMatchRoute).sort((a, b) => b.score - a.score);\nregisterApiRoutes(allRoutes);\nexport function getApiHandler(url, method) {\n  return getRouteMatches(allRoutes, url.pathname, method.toUpperCase());\n}\nexport function isApiRequest(request) {\n  let apiHandler = getApiHandler(new URL(request.url), request.method);\n  return Boolean(apiHandler);\n}\nexport * from \"/node_modules/solid-start/server/responses.ts\";\n",
-      "start": 1698200361554,
-      "end": 1698200361557,
-      "order": "normal"
+      "start": 1698297472496,
+      "end": 1698297472498,
+      "order": "normal",
+      "sourcemaps": null
     }
   ]
 }
