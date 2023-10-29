@@ -14,6 +14,9 @@ export default function Fun() {
         <li>
           Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href="https://github.com/yonggqiii/teaching_templates">Teaching Templates</a>
         </li>
+        <li>
+          Articles: <a href="https://github.com/yonggqiii/article_template">Article Template</a>
+        </li>
         </ul>
     
       </Card>
