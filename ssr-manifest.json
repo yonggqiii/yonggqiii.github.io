@@ -85,7 +85,7 @@
     "/assets/iosevka-italic-39c3b024.woff2"
   ],
   "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
-    "/assets/_...404_-6e9b223a.js"
+    "/assets/_...404_-d85d0fc5.js"
   ],
   "node_modules/solid-start/server/types.tsx": [
     "/assets/iosevka-regular-7d4e446c.woff2",
@@ -93,11 +93,11 @@
     "/assets/iosevka-italic-39c3b024.woff2"
   ],
   "src/components/Card.css": [
-    "/assets/Card-24a36a9d.js",
+    "/assets/Card-7b12a405.js",
     "/assets/Card-73b0cb51.css"
   ],
   "src/components/Card.tsx": [
-    "/assets/Card-24a36a9d.js",
+    "/assets/Card-7b12a405.js",
     "/assets/Card-73b0cb51.css"
   ],
   "src/components/NavBar.css": [
@@ -126,26 +126,26 @@
     "/assets/iosevka-italic-39c3b024.woff2"
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_-6e9b223a.js"
+    "/assets/_...404_-d85d0fc5.js"
   ],
   "src/routes/cv/CV.css": [
-    "/assets/index-ee558c1c.js",
+    "/assets/index-1affdae0.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/cv/index.tsx": [
-    "/assets/index-ee558c1c.js",
+    "/assets/index-1affdae0.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/fun.tsx": [
-    "/assets/fun-7ca4ae0f.js"
+    "/assets/fun-e7e88603.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index-b375af51.js"
+    "/assets/index-3242cdbb.js"
   ],
   "src/routes/research.tsx": [
-    "/assets/research-d395080f.js"
+    "/assets/research-c475e5b0.js"
   ],
   "src/routes/teaching.tsx": [
-    "/assets/teaching-eec0e460.js"
+    "/assets/teaching-4eb8fe1c.js"
   ]
 }
