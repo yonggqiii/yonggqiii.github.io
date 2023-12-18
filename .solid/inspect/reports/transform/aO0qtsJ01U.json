@@ -4,21 +4,21 @@
     {
       "name": "__load__",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\nvar fileRoutes = $FILE_ROUTES;\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
-      "start": 1698297473117,
-      "end": 1698297473117
+      "start": 1702914707804,
+      "end": 1702914707804
     },
     {
       "name": "solid-start-file-system-router",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\n  import { lazy } from 'solid-js';\n  \n  const fileRoutes = /*#__PURE__*/ [\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx')),\n path: \"/*404\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx')),\n path: \"/fun\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx')),\n path: \"/\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx')),\n path: \"/research\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx')),\n path: \"/teaching\" \n},\n{\ncomponent: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx')),\n path: \"/cv/\" \n}\n];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\n\nexport default FileRoutes;\nexport { fileRoutes };\n",
-      "start": 1698297473117,
-      "end": 1698297473117,
+      "start": 1702914707804,
+      "end": 1702914707804,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\nimport { lazy } from 'solid-js';\nconst fileRoutes = /*#__PURE__*/[{\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/[...404].tsx')),\n  path: \"/*404\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx')),\n  path: \"/fun\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/index.tsx')),\n  path: \"/\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/research.tsx')),\n  path: \"/research\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/teaching.tsx')),\n  path: \"/teaching\"\n}, {\n  component: lazy(() => import('/home/yongqi/Repositories/yonggqiii.github.io/src/routes/cv/index.tsx')),\n  path: \"/cv/\"\n}];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1698297473117,
-      "end": 1698297473123,
+      "start": 1702914707805,
+      "end": 1702914707810,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -43,81 +43,81 @@
     },
     {
       "name": "vite:css",
-      "start": 1698297473123,
-      "end": 1698297473123,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297473123,
-      "end": 1698297473123,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297473123,
-      "end": 1698297473123,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297473123,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707810,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "/// <reference path=\"../server/types.tsx\" />\n\n// @ts-expect-error\n\nimport { lazy } from \"/node_modules/.vite/deps/solid-js.js?v=086a2f5f\";\nconst fileRoutes = /*#__PURE__*/[{\n  component: lazy(() => import(\"/src/routes/[...404].tsx\")),\n  path: \"/*404\"\n}, {\n  component: lazy(() => import(\"/src/routes/fun.tsx\")),\n  path: \"/fun\"\n}, {\n  component: lazy(() => import(\"/src/routes/index.tsx\")),\n  path: \"/\"\n}, {\n  component: lazy(() => import(\"/src/routes/research.tsx\")),\n  path: \"/research\"\n}, {\n  component: lazy(() => import(\"/src/routes/teaching.tsx\")),\n  path: \"/teaching\"\n}, {\n  component: lazy(() => import(\"/src/routes/cv/index.tsx\")),\n  path: \"/cv/\"\n}];\n\n/**\n * Routes are the file system based routes, used by Solid App Router to show the current page according to the URL.\n */\n\nconst FileRoutes = () => {\n  return fileRoutes;\n};\nexport default FileRoutes;\nexport { fileRoutes };",
-      "start": 1698297473124,
-      "end": 1698297473124,
+      "start": 1702914707810,
+      "end": 1702914707811,
       "order": "normal",
       "sourcemaps": null
     }

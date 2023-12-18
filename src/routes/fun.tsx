@@ -20,6 +20,12 @@ export default function Fun() {
         </ul>
     
       </Card>
+      <Card border="red" header_color="yellow" header="Monads?">
+        <p>
+          I wrote an <a href="../papers/fun/Monads.pdf">article</a> on the correspondence between programming constructs like functors and monads to their
+          definitions in Category Theory.
+        </p>
+      </Card>
     </main>
 
   );

@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default function NavBar() {\n  return (\n    <nav>\n      <A class=\"navitem\" href=\"/\">\n        Home\n      </A>\n      <A class=\"navitem\" href=\"/cv\">\n        CV\n      </A>\n      <A class=\"navitem\" href=\"/teaching\">\n        Teaching\n      </A>\n      <A class=\"navitem\" href=\"/research\">\n        Research\n      </A>\n      <A class=\"navitem\" href=\"/fun\">\n        Fun\n      </A>\n    </nav>\n  );\n}\n",
-      "start": 1698297473094,
-      "end": 1698297473094
+      "start": 1702914707788,
+      "end": 1702914707788
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1698297473094,
-      "end": 1698297473094,
+      "start": 1702914707788,
+      "end": 1702914707788,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { $$component as _$$component } from \"solid-refresh\";\nimport { $$refresh as _$$refresh } from \"solid-refresh\";\nimport { $$registry as _$$registry } from \"solid-refresh\";\nconst _REGISTRY = _$$registry();\nconst _tmpl$ = /*#__PURE__*/_$template(`<nav><!$><!/><!$><!/><!$><!/><!$><!/><!$><!/>`);\nimport { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default _$$component(_REGISTRY, \"NavBar\", function NavBar() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$2 = _el$.firstChild,\n      [_el$3, _co$] = _$getNextMarker(_el$2.nextSibling),\n      _el$4 = _el$3.nextSibling,\n      [_el$5, _co$2] = _$getNextMarker(_el$4.nextSibling),\n      _el$6 = _el$5.nextSibling,\n      [_el$7, _co$3] = _$getNextMarker(_el$6.nextSibling),\n      _el$8 = _el$7.nextSibling,\n      [_el$9, _co$4] = _$getNextMarker(_el$8.nextSibling),\n      _el$10 = _el$9.nextSibling,\n      [_el$11, _co$5] = _$getNextMarker(_el$10.nextSibling);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/\",\n      children: \"Home\"\n    }), _el$3, _co$);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/cv\",\n      children: \"CV\"\n    }), _el$5, _co$2);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/teaching\",\n      children: \"Teaching\"\n    }), _el$7, _co$3);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/research\",\n      children: \"Research\"\n    }), _el$9, _co$4);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/fun\",\n      children: \"Fun\"\n    }), _el$11, _co$5);\n    return _el$;\n  })();\n}, {\n  location: \"src/components/NavBar.tsx:3:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
-      "start": 1698297473094,
-      "end": 1698297473112,
+      "start": 1702914707788,
+      "end": 1702914707800,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -69,81 +69,81 @@
     },
     {
       "name": "vite:css",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297473112,
-      "end": 1698297473112,
+      "start": 1702914707800,
+      "end": 1702914707800,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/components/NavBar.tsx\");import { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=086a2f5f\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=086a2f5f\";\nimport { getNextMarker as _$getNextMarker } from \"/node_modules/.vite/deps/solid-js_web.js?v=086a2f5f\";\nimport { insert as _$insert } from \"/node_modules/.vite/deps/solid-js_web.js?v=086a2f5f\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=086a2f5f\";\nimport { $$component as _$$component } from \"/@solid-refresh\";\nimport { $$refresh as _$$refresh } from \"/@solid-refresh\";\nimport { $$registry as _$$registry } from \"/@solid-refresh\";\nconst _REGISTRY = _$$registry();\nconst _tmpl$ = /*#__PURE__*/_$template(`<nav><!$><!/><!$><!/><!$><!/><!$><!/><!$><!/>`);\nimport { A } from \"/node_modules/solid-start/index.tsx?v=086a2f5f\";\nimport \"/src/components/NavBar.css\";\nexport default _$$component(_REGISTRY, \"NavBar\", function NavBar() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$2 = _el$.firstChild,\n      [_el$3, _co$] = _$getNextMarker(_el$2.nextSibling),\n      _el$4 = _el$3.nextSibling,\n      [_el$5, _co$2] = _$getNextMarker(_el$4.nextSibling),\n      _el$6 = _el$5.nextSibling,\n      [_el$7, _co$3] = _$getNextMarker(_el$6.nextSibling),\n      _el$8 = _el$7.nextSibling,\n      [_el$9, _co$4] = _$getNextMarker(_el$8.nextSibling),\n      _el$10 = _el$9.nextSibling,\n      [_el$11, _co$5] = _$getNextMarker(_el$10.nextSibling);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/\",\n      children: \"Home\"\n    }), _el$3, _co$);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/cv\",\n      children: \"CV\"\n    }), _el$5, _co$2);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/teaching\",\n      children: \"Teaching\"\n    }), _el$7, _co$3);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/research\",\n      children: \"Research\"\n    }), _el$9, _co$4);\n    _$insert(_el$, _$createComponent(A, {\n      \"class\": \"navitem\",\n      href: \"/fun\",\n      children: \"Fun\"\n    }), _el$11, _co$5);\n    return _el$;\n  })();\n}, {\n  location: \"src/components/NavBar.tsx:3:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
-      "start": 1698297473112,
-      "end": 1698297473114,
+      "start": 1702914707800,
+      "end": 1702914707801,
       "order": "normal",
       "sourcemaps": null
     }

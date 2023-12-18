@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { mount, StartClient } from \"solid-start/entry-client\";\n\nmount(() => <StartClient />, document);\n",
-      "start": 1698297472918,
-      "end": 1698297472918
+      "start": 1702914707638,
+      "end": 1702914707638
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1698297472918,
-      "end": 1698297472918,
+      "start": 1702914707638,
+      "end": 1702914707638,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { mount, StartClient } from \"solid-start/entry-client\";\nmount(() => _$createComponent(StartClient, {}), document);",
-      "start": 1698297472918,
-      "end": 1698297472926,
+      "start": 1702914707638,
+      "end": 1702914707645,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -38,81 +38,81 @@
     },
     {
       "name": "vite:css",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297472926,
-      "end": 1698297472926,
+      "start": 1702914707645,
+      "end": 1702914707645,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=086a2f5f\";\nimport { mount, StartClient } from \"/node_modules/solid-start/entry-client/index.tsx?v=086a2f5f\";\nmount(() => _$createComponent(StartClient, {}), document);",
-      "start": 1698297472926,
-      "end": 1698297472927,
+      "start": 1702914707645,
+      "end": 1702914707647,
       "order": "normal",
       "sourcemaps": null
     }

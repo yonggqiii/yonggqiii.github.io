@@ -13,7 +13,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 554
+      "totalTime": 594
     },
     "resolveId": {
       "invokeCount": 0,
@@ -37,7 +37,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 114
+      "totalTime": 110
     },
     "resolveId": {
       "invokeCount": 0,
@@ -72,7 +72,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 1
+      "totalTime": 0
     },
     "resolveId": {
       "invokeCount": 0,
@@ -128,7 +128,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 115
+      "totalTime": 102
     },
     "resolveId": {
       "invokeCount": 0,
@@ -150,7 +150,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 2
+      "totalTime": 3
     },
     "resolveId": {
       "invokeCount": 0,
@@ -161,7 +161,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 4
+      "totalTime": 1
     },
     "resolveId": {
       "invokeCount": 0,
@@ -172,7 +172,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 1072
+      "totalTime": 1100
     },
     "resolveId": {
       "invokeCount": 0,
@@ -194,7 +194,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 59
+      "totalTime": 55
     },
     "resolveId": {
       "invokeCount": 0,
@@ -205,7 +205,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 17
+      "totalTime": 15
     },
     "resolveId": {
       "invokeCount": 0,
@@ -216,7 +216,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 0
+      "totalTime": 1
     },
     "resolveId": {
       "invokeCount": 0,
@@ -263,8 +263,8 @@
       "totalTime": 0
     },
     "resolveId": {
-      "invokeCount": 335,
-      "totalTime": 39
+      "invokeCount": 336,
+      "totalTime": 28
     },
     "name": "vite:resolve"
   },
@@ -304,7 +304,7 @@
   {
     "transform": {
       "invokeCount": 68,
-      "totalTime": 0
+      "totalTime": 1
     },
     "resolveId": {
       "invokeCount": 0,

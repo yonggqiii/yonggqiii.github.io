@@ -3,9 +3,9 @@
   "transforms": [
     {
       "name": "__load__",
-      "result": "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <h1>Fun</h1>\n      <Card border=\"mauve\" header_color=\"green\" header=\"LaTeX Templates\">\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        </ul>\n    \n      </Card>\n    </main>\n\n  );\n}\n",
-      "start": 1698297472299,
-      "end": 1698297472299,
+      "result": "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <h1>Fun</h1>\n      <Card border=\"mauve\" header_color=\"green\" header=\"LaTeX Templates\">\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n    \n      </Card>\n      <Card border=\"red\" header_color=\"yellow\" header=\"Monads?\">\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n      </Card>\n    </main>\n\n  );\n}\n",
+      "start": 1702914707016,
+      "end": 1702914707016,
       "sourcemaps": {
         "version": 3,
         "names": [
@@ -13,7 +13,7 @@
           "Card",
           "Fun",
           "_$ssr",
-          "_tmpl$3",
+          "_tmpl$4",
           "_$ssrHydrationKey",
           "_$escape",
           "_$createComponent",
@@ -22,22 +22,23 @@
           "header_color",
           "header",
           "_tmpl$",
-          "_tmpl$2"
+          "_tmpl$2",
+          "_tmpl$3"
         ],
         "sources": [
           "/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx"
         ],
         "sourcesContent": [
-          "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <h1>Fun</h1>\n      <Card border=\"mauve\" header_color=\"green\" header=\"LaTeX Templates\">\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        </ul>\n    \n      </Card>\n    </main>\n\n  );\n}\n"
+          "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <h1>Fun</h1>\n      <Card border=\"mauve\" header_color=\"green\" header=\"LaTeX Templates\">\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n    \n      </Card>\n      <Card border=\"red\" header_color=\"yellow\" header=\"Monads?\">\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n      </Card>\n    </main>\n\n  );\n}\n"
         ],
-        "mappings": ";;;;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AACnC,OAAOC,IAAI,MAAM,oBAAoB;AAErC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,OAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKP,KAAK;IAAAQ,QAAA;EAAA,KAAAF,QAAA,CAAAC,iBAAA,CAELN,IAAI;IAACQ,MAAM;IAASC,YAAY;IAASC,MAAM;IAAA,IAAAH,SAAA;MAAA,QAAAL,KAAA,CAAAS,MAAA,EAAAP,iBAAA,KAAAF,KAAA,CAAAU,OAAA,EAAAR,iBAAA;IAAA;EAAA;AActD"
+        "mappings": ";;;;;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AACnC,OAAOC,IAAI,MAAM,oBAAoB;AAErC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,OAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKP,KAAK;IAAAQ,QAAA;EAAA,KAAAF,QAAA,CAAAC,iBAAA,CAELN,IAAI;IAACQ,MAAM;IAASC,YAAY;IAASC,MAAM;IAAA,IAAAH,SAAA;MAAA,QAAAL,KAAA,CAAAS,MAAA,EAAAP,iBAAA,KAAAF,KAAA,CAAAU,OAAA,EAAAR,iBAAA;IAAA;EAAA,KAAAC,QAAA,CAAAC,iBAAA,CAc/CN,IAAI;IAACQ,MAAM;IAAOC,YAAY;IAAUC,MAAM;IAAA,IAAAH,SAAA;MAAA,OAAAL,KAAA,CAAAW,OAAA,EAAAT,iBAAA;IAAA;EAAA;AASrD"
       }
     },
     {
       "name": "solid-start-file-system-router",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li></ul>\"],\n  _tmpl$3 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$3, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })));\n}",
-      "start": 1698297472299,
-      "end": 1698297472309,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul>\"],\n  _tmpl$3 = [\"<p\", \">I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p>\"],\n  _tmpl$4 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$4, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })), _$escape(_$createComponent(Card, {\n    border: \"red\",\n    header_color: \"yellow\",\n    header: \"Monads?\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })));\n}",
+      "start": 1702914707016,
+      "end": 1702914707027,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -46,7 +47,7 @@
           "Card",
           "Fun",
           "_$ssr",
-          "_tmpl$3",
+          "_tmpl$4",
           "_$ssrHydrationKey",
           "_$escape",
           "_$createComponent",
@@ -55,22 +56,23 @@
           "header_color",
           "header",
           "_tmpl$",
-          "_tmpl$2"
+          "_tmpl$2",
+          "_tmpl$3"
         ],
         "sources": [
           "/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx"
         ],
         "sourcesContent": [
-          "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <h1>Fun</h1>\n      <Card border=\"mauve\" header_color=\"green\" header=\"LaTeX Templates\">\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        </ul>\n    \n      </Card>\n    </main>\n\n  );\n}\n"
+          "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <h1>Fun</h1>\n      <Card border=\"mauve\" header_color=\"green\" header=\"LaTeX Templates\">\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n    \n      </Card>\n      <Card border=\"red\" header_color=\"yellow\" header=\"Monads?\">\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n      </Card>\n    </main>\n\n  );\n}\n"
         ],
-        "mappings": ";;;;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AACnC,OAAOC,IAAI,MAAM,oBAAoB;AAErC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,OAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKP,KAAK;IAAAQ,QAAA;EAAA,KAAAF,QAAA,CAAAC,iBAAA,CAELN,IAAI;IAACQ,MAAM;IAASC,YAAY;IAASC,MAAM;IAAA,IAAAH,SAAA;MAAA,QAAAL,KAAA,CAAAS,MAAA,EAAAP,iBAAA,KAAAF,KAAA,CAAAU,OAAA,EAAAR,iBAAA;IAAA;EAAA;AActD"
+        "mappings": ";;;;;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AACnC,OAAOC,IAAI,MAAM,oBAAoB;AAErC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,OAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKP,KAAK;IAAAQ,QAAA;EAAA,KAAAF,QAAA,CAAAC,iBAAA,CAELN,IAAI;IAACQ,MAAM;IAASC,YAAY;IAASC,MAAM;IAAA,IAAAH,SAAA;MAAA,QAAAL,KAAA,CAAAS,MAAA,EAAAP,iBAAA,KAAAF,KAAA,CAAAU,OAAA,EAAAR,iBAAA;IAAA;EAAA,KAAAC,QAAA,CAAAC,iBAAA,CAc/CN,IAAI;IAACQ,MAAM;IAAOC,YAAY;IAAUC,MAAM;IAAA,IAAAH,SAAA;MAAA,OAAAL,KAAA,CAAAW,OAAA,EAAAT,iBAAA;IAAA;EAAA;AASrD"
       }
     },
     {
       "name": "solid",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li></ul>\"],\n  _tmpl$3 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$3, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })));\n}",
-      "start": 1698297472309,
-      "end": 1698297472315,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul>\"],\n  _tmpl$3 = [\"<p\", \">I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p>\"],\n  _tmpl$4 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$4, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })), _$escape(_$createComponent(Card, {\n    border: \"red\",\n    header_color: \"yellow\",\n    header: \"Monads?\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })));\n}",
+      "start": 1702914707027,
+      "end": 1702914707037,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -86,6 +88,7 @@
           "_tmpl$",
           "_tmpl$2",
           "_tmpl$3",
+          "_tmpl$4",
           "Title",
           "Card",
           "Fun",
@@ -98,90 +101,90 @@
           "/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx"
         ],
         "sourcesContent": [
-          "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li></ul>\"],\n  _tmpl$3 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$3, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })));\n}"
+          "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul>\"],\n  _tmpl$3 = [\"<p\", \">I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p>\"],\n  _tmpl$4 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$4, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })), _$escape(_$createComponent(Card, {\n    border: \"red\",\n    header_color: \"yellow\",\n    header: \"Monads?\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })));\n}"
         ],
-        "mappings": "AAAA,SAASA,GAAG,IAAIC,KAAK,QAAQ,cAAc;AAC3C,SAASC,MAAM,IAAIC,QAAQ,QAAQ,cAAc;AACjD,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,MAAMC,MAAM,GAAG,CAAC,IAAI,EAAE,kJAAkJ,CAAC;EACvKC,OAAO,GAAG,CAAC,KAAK,EAAE,yMAAyM,CAAC;EAC5NC,OAAO,GAAG,CAAC,OAAO,EAAE,WAAW,EAAE,8BAA8B,EAAE,iBAAiB,CAAC;AACrF,SAASC,KAAK,QAAQ,aAAa;AACnC,OAAOC,IAAI,MAAM,oBAAoB;AACrC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAOZ,KAAK,CAACS,OAAO,EAAEH,iBAAiB,CAAC,CAAC,EAAEJ,QAAQ,CAACE,iBAAiB,CAACM,KAAK,EAAE;IAC3EG,QAAQ,EAAE;EACZ,CAAC,CAAC,CAAC,EAAEX,QAAQ,CAACE,iBAAiB,CAACO,IAAI,EAAE;IACpCG,MAAM,EAAE,OAAO;IACfC,YAAY,EAAE,OAAO;IACrBC,MAAM,EAAE,iBAAiB;IACzB,IAAIH,QAAQA,CAAA,EAAG;MACb,OAAO,CAACb,KAAK,CAACO,MAAM,EAAED,iBAAiB,CAAC,CAAC,CAAC,EAAEN,KAAK,CAACQ,OAAO,EAAEF,iBAAiB,CAAC,CAAC,CAAC,CAAC;IAClF;EACF,CAAC,CAAC,CAAC,CAAC;AACN"
+        "mappings": "AAAA,SAASA,GAAG,IAAIC,KAAK,QAAQ,cAAc;AAC3C,SAASC,MAAM,IAAIC,QAAQ,QAAQ,cAAc;AACjD,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,MAAMC,MAAM,GAAG,CAAC,IAAI,EAAE,kJAAkJ,CAAC;EACvKC,OAAO,GAAG,CAAC,KAAK,EAAE,0SAA0S,CAAC;EAC7TC,OAAO,GAAG,CAAC,IAAI,EAAE,yLAAyL,CAAC;EAC3MC,OAAO,GAAG,CAAC,OAAO,EAAE,WAAW,EAAE,8BAA8B,EAAE,kBAAkB,EAAE,iBAAiB,CAAC;AACzG,SAASC,KAAK,QAAQ,aAAa;AACnC,OAAOC,IAAI,MAAM,oBAAoB;AACrC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAOb,KAAK,CAACU,OAAO,EAAEJ,iBAAiB,CAAC,CAAC,EAAEJ,QAAQ,CAACE,iBAAiB,CAACO,KAAK,EAAE;IAC3EG,QAAQ,EAAE;EACZ,CAAC,CAAC,CAAC,EAAEZ,QAAQ,CAACE,iBAAiB,CAACQ,IAAI,EAAE;IACpCG,MAAM,EAAE,OAAO;IACfC,YAAY,EAAE,OAAO;IACrBC,MAAM,EAAE,iBAAiB;IACzB,IAAIH,QAAQA,CAAA,EAAG;MACb,OAAO,CAACd,KAAK,CAACO,MAAM,EAAED,iBAAiB,CAAC,CAAC,CAAC,EAAEN,KAAK,CAACQ,OAAO,EAAEF,iBAAiB,CAAC,CAAC,CAAC,CAAC;IAClF;EACF,CAAC,CAAC,CAAC,EAAEJ,QAAQ,CAACE,iBAAiB,CAACQ,IAAI,EAAE;IACpCG,MAAM,EAAE,KAAK;IACbC,YAAY,EAAE,QAAQ;IACtBC,MAAM,EAAE,SAAS;IACjB,IAAIH,QAAQA,CAAA,EAAG;MACb,OAAOd,KAAK,CAACS,OAAO,EAAEH,iBAAiB,CAAC,CAAC,CAAC;IAC5C;EACF,CAAC,CAAC,CAAC,CAAC;AACN"
       }
     },
     {
       "name": "vite:css",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li></ul>\"],\n  _tmpl$3 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$3, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })));\n}",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul>\"],\n  _tmpl$3 = [\"<p\", \">I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p>\"],\n  _tmpl$4 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$4, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })), _$escape(_$createComponent(Card, {\n    border: \"red\",\n    header_color: \"yellow\",\n    header: \"Monads?\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })));\n}",
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "start": 1702914707037,
+      "end": 1702914707037,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li></ul>\"],\n  _tmpl$3 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"/node_modules/solid-start/index.tsx\";\nimport Card from \"/src/components/Card.tsx\";\nexport default function Fun() {\n  return _$ssr(_tmpl$3, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })));\n}",
-      "start": 1698297472316,
-      "end": 1698297472316,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<p\", \">Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p>\"],\n  _tmpl$2 = [\"<ul\", \"><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul>\"],\n  _tmpl$3 = [\"<p\", \">I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p>\"],\n  _tmpl$4 = [\"<main\", \"><!--$-->\", \"<!--/--><h1>Fun</h1><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></main>\"];\nimport { Title } from \"/node_modules/solid-start/index.tsx\";\nimport Card from \"/src/components/Card.tsx\";\nexport default function Fun() {\n  return _$ssr(_tmpl$4, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })), _$escape(_$createComponent(Card, {\n    border: \"mauve\",\n    header_color: \"green\",\n    header: \"LaTeX Templates\",\n    get children() {\n      return [_$ssr(_tmpl$, _$ssrHydrationKey()), _$ssr(_tmpl$2, _$ssrHydrationKey())];\n    }\n  })), _$escape(_$createComponent(Card, {\n    border: \"red\",\n    header_color: \"yellow\",\n    header: \"Monads?\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })));\n}",
+      "start": 1702914707037,
+      "end": 1702914707038,
       "order": "normal",
       "sourcemaps": null
     }

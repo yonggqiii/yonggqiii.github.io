@@ -4,32 +4,32 @@
     {
       "name": "__load__",
       "result": "import { server$ } from \"./server-functions/server\";\n\nexport default server$;\n\nexport * from \"./shared\";\n",
-      "start": 1698297472521,
-      "end": 1698297472521
+      "start": 1702914707223,
+      "end": 1702914707223
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1698297472521,
-      "end": 1698297472521,
+      "start": 1702914707223,
+      "end": 1702914707223,
       "order": "pre"
     },
     {
       "name": "solid",
-      "start": 1698297472521,
-      "end": 1698297472521,
+      "start": 1702914707223,
+      "end": 1702914707223,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1698297472521,
-      "end": 1698297472521,
+      "start": 1702914707223,
+      "end": 1702914707223,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "import { server$ } from \"./server-functions/server\";\nexport default server$;\nexport * from \"./shared\";\n",
-      "start": 1698297472521,
-      "end": 1698297472597,
+      "start": 1702914707223,
+      "end": 1702914707279,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -48,71 +48,71 @@
     },
     {
       "name": "vite:json",
-      "start": 1698297472597,
-      "end": 1698297472597,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297472597,
-      "end": 1698297472597,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297472597,
-      "end": 1698297472597,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { server$ } from \"./server-functions/server\";\nexport default server$;\nexport * from \"./shared\";\n",
-      "start": 1698297472597,
-      "end": 1698297472597,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1698297472597,
-      "end": 1698297472597,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297472597,
-      "end": 1698297472597,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297472597,
-      "end": 1698297472597,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297472597,
-      "end": 1698297472598,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297472598,
-      "end": 1698297472598,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297472598,
-      "end": 1698297472598,
+      "start": 1702914707279,
+      "end": 1702914707279,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { server$ } from \"/node_modules/solid-start/server/server-functions/server.ts\";\nexport default server$;\nexport * from \"/node_modules/solid-start/server/shared.ts\";\n",
-      "start": 1698297472598,
-      "end": 1698297472601,
+      "start": 1702914707279,
+      "end": 1702914707281,
       "order": "normal",
       "sourcemaps": null
     }

@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\n\nexport function HttpHeader(props: { name: string; value: string; append?: boolean }) {\n  const pageContext = useContext(ServerContext);\n\n  if (isServer) {\n    if (props.append) {\n      pageContext!.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext!.responseHeaders.set(props.name, props.value);\n    }\n  }\n\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext!.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext!.responseHeaders.set(props.name, values.join(\", \"));\n        else pageContext!.responseHeaders.delete(props.name);\n      }\n    }\n  });\n\n  return null;\n}\n",
-      "start": 1698297472836,
-      "end": 1698297472836
+      "start": 1702914707552,
+      "end": 1702914707552
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1698297472836,
-      "end": 1698297472836,
+      "start": 1702914707552,
+      "end": 1702914707552,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpHeader(props) {\n  const pageContext = useContext(ServerContext);\n  if (isServer) {\n    if (props.append) {\n      pageContext.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext.responseHeaders.set(props.name, props.value);\n    }\n  }\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext.responseHeaders.set(props.name, values.join(\", \"));else pageContext.responseHeaders.delete(props.name);\n      }\n    }\n  });\n  return null;\n}",
-      "start": 1698297472836,
-      "end": 1698297472840,
+      "start": 1702914707552,
+      "end": 1702914707557,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -58,83 +58,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpHeader(props) {\n  const pageContext = useContext(ServerContext);\n  if (isServer) {\n    if (props.append) {\n      pageContext.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext.responseHeaders.set(props.name, props.value);\n    }\n  }\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext.responseHeaders.set(props.name, values.join(\", \"));else pageContext.responseHeaders.delete(props.name);\n      }\n    }\n  });\n  return null;\n}",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297472840,
-      "end": 1698297472840,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx\";\nexport function HttpHeader(props) {\n  const pageContext = useContext(ServerContext);\n  if (isServer) {\n    if (props.append) {\n      pageContext.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext.responseHeaders.set(props.name, props.value);\n    }\n  }\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext.responseHeaders.set(props.name, values.join(\", \"));else pageContext.responseHeaders.delete(props.name);\n      }\n    }\n  });\n  return null;\n}",
-      "start": 1698297472840,
-      "end": 1698297472841,
+      "start": 1702914707557,
+      "end": 1702914707557,
       "order": "normal",
       "sourcemaps": null
     }

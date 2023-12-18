@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import \"./Card.css\";\nexport default function Card(props) {\n  return (\n    <div class={`${props.border}-border card`}>\n      <h2 class={props.header_color}>{props.header}</h2>\n      {props.children}\n    </div>\n  );\n}\n",
-      "start": 1698297472523,
-      "end": 1698297472523
+      "start": 1702914707224,
+      "end": 1702914707224
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1698297472523,
-      "end": 1698297472523,
+      "start": 1702914707224,
+      "end": 1702914707224,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { ssrAttribute as _$ssrAttribute } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<div\", \" class=\\\"\", \"\\\"><h2\", \">\", \"</h2><!--$-->\", \"<!--/--></div>\"];\nimport \"./Card.css\";\nexport default function Card(props) {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), `${_$escape(props.border, true)}-border card`, _$ssrAttribute(\"class\", _$escape(props.header_color, true), false), _$escape(props.header), _$escape(props.children));\n}",
-      "start": 1698297472523,
-      "end": 1698297472530,
+      "start": 1702914707224,
+      "end": 1702914707228,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -45,83 +45,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { ssrAttribute as _$ssrAttribute } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<div\", \" class=\\\"\", \"\\\"><h2\", \">\", \"</h2><!--$-->\", \"<!--/--></div>\"];\nimport \"./Card.css\";\nexport default function Card(props) {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), `${_$escape(props.border, true)}-border card`, _$ssrAttribute(\"class\", _$escape(props.header_color, true), false), _$escape(props.header), _$escape(props.children));\n}",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { ssrAttribute as _$ssrAttribute } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<div\", \" class=\\\"\", \"\\\"><h2\", \">\", \"</h2><!--$-->\", \"<!--/--></div>\"];\nimport \"/src/components/Card.css\";\nexport default function Card(props) {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), `${_$escape(props.border, true)}-border card`, _$ssrAttribute(\"class\", _$escape(props.header_color, true), false), _$escape(props.header), _$escape(props.children));\n}",
-      "start": 1698297472530,
-      "end": 1698297472530,
+      "start": 1702914707228,
+      "end": 1702914707228,
       "order": "normal",
       "sourcemaps": null
     }

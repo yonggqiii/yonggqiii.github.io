@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "// isomorphic exports\n\nexport { Body, Head, Html } from \"./Document\";\nexport { default as Links } from \"./Links\";\nexport { default as Meta } from \"./Meta\";\nexport { default as Scripts } from \"./Scripts\";\n\n",
-      "start": 1698297473171,
-      "end": 1698297473171
+      "start": 1702914707877,
+      "end": 1702914707877
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1698297473171,
-      "end": 1698297473171,
+      "start": 1702914707877,
+      "end": 1702914707877,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "// isomorphic exports\n\nexport { Body, Head, Html } from \"./Document\";\nexport { default as Links } from \"./Links\";\nexport { default as Meta } from \"./Meta\";\nexport { default as Scripts } from \"./Scripts\";",
-      "start": 1698297473171,
-      "end": 1698297473174,
+      "start": 1702914707877,
+      "end": 1702914707880,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -44,81 +44,81 @@
     },
     {
       "name": "vite:css",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707880,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "// isomorphic exports\n\nexport { Body, Head, Html } from \"/node_modules/solid-start/root/Document.tsx?v=086a2f5f\";\nexport { default as Links } from \"/node_modules/solid-start/root/Links.tsx?v=086a2f5f\";\nexport { default as Meta } from \"/node_modules/solid-start/root/Meta.tsx?v=086a2f5f\";\nexport { default as Scripts } from \"/node_modules/solid-start/root/Scripts.tsx?v=086a2f5f\";",
-      "start": 1698297473174,
-      "end": 1698297473174,
+      "start": 1702914707880,
+      "end": 1702914707881,
       "order": "normal",
       "sourcemaps": null
     }

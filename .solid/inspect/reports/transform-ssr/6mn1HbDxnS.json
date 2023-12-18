@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default function NavBar() {\n  return (\n    <nav>\n      <A class=\"navitem\" href=\"/\">\n        Home\n      </A>\n      <A class=\"navitem\" href=\"/cv\">\n        CV\n      </A>\n      <A class=\"navitem\" href=\"/teaching\">\n        Teaching\n      </A>\n      <A class=\"navitem\" href=\"/research\">\n        Research\n      </A>\n      <A class=\"navitem\" href=\"/fun\">\n        Fun\n      </A>\n    </nav>\n  );\n}\n",
-      "start": 1698297472463,
-      "end": 1698297472463
+      "start": 1702914707170,
+      "end": 1702914707170
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1698297472463,
-      "end": 1698297472464,
+      "start": 1702914707170,
+      "end": 1702914707170,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<nav\", \"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></nav>\"];\nimport { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default function NavBar() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/\",\n    children: \"Home\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/cv\",\n    children: \"CV\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/teaching\",\n    children: \"Teaching\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/research\",\n    children: \"Research\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/fun\",\n    children: \"Fun\"\n  })));\n}",
-      "start": 1698297472464,
-      "end": 1698297472473,
+      "start": 1702914707170,
+      "end": 1702914707177,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -43,83 +43,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<nav\", \"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></nav>\"];\nimport { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default function NavBar() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/\",\n    children: \"Home\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/cv\",\n    children: \"CV\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/teaching\",\n    children: \"Teaching\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/research\",\n    children: \"Research\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/fun\",\n    children: \"Fun\"\n  })));\n}",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707177,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<nav\", \"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></nav>\"];\nimport { A } from \"/node_modules/solid-start/index.tsx\";\nimport \"/src/components/NavBar.css\";\nexport default function NavBar() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/\",\n    children: \"Home\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/cv\",\n    children: \"CV\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/teaching\",\n    children: \"Teaching\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/research\",\n    children: \"Research\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/fun\",\n    children: \"Fun\"\n  })));\n}",
-      "start": 1698297472473,
-      "end": 1698297472473,
+      "start": 1702914707177,
+      "end": 1702914707178,
       "order": "normal",
       "sourcemaps": null
     }
