@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;\n",
-      "start": 1702914707229,
-      "end": 1702914707229
+      "start": 1720883219851,
+      "end": 1720883219851
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1702914707229,
-      "end": 1702914707229,
+      "start": 1720883219851,
+      "end": 1720883219851,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
-      "start": 1702914707229,
-      "end": 1702914707232,
+      "start": 1720883219851,
+      "end": 1720883219852,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -39,83 +39,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1702914707232,
-      "end": 1702914707232,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { ErrorBoundary } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx\";\nexport { ErrorMessage } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
-      "start": 1702914707232,
-      "end": 1702914707233,
+      "start": 1720883219852,
+      "end": 1720883219852,
       "order": "normal",
       "sourcemaps": null
     }

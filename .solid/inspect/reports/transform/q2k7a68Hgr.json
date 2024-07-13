@@ -1,0 +1,10 @@
+{
+  "resolvedId": "/teaching",
+  "transforms": [
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720883219732,
+      "end": 1720883219732
+    }
+  ]
+}

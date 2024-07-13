@@ -1,0 +1,140 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/server/components/HttpHeader.tsx?v=2ea599d4",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\n\nexport function HttpHeader(props: { name: string; value: string; append?: boolean }) {\n  const pageContext = useContext(ServerContext);\n\n  if (isServer) {\n    if (props.append) {\n      pageContext!.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext!.responseHeaders.set(props.name, props.value);\n    }\n  }\n\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext!.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext!.responseHeaders.set(props.name, values.join(\", \"));\n        else pageContext!.responseHeaders.delete(props.name);\n      }\n    }\n  });\n\n  return null;\n}\n",
+      "start": 1720884034205,
+      "end": 1720884034205
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720884034205,
+      "end": 1720884034205,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpHeader(props) {\n  const pageContext = useContext(ServerContext);\n  if (isServer) {\n    if (props.append) {\n      pageContext.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext.responseHeaders.set(props.name, props.value);\n    }\n  }\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext.responseHeaders.set(props.name, values.join(\", \"));else pageContext.responseHeaders.delete(props.name);\n      }\n    }\n  });\n  return null;\n}",
+      "start": 1720884034205,
+      "end": 1720884034207,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "onCleanup",
+          "useContext",
+          "isServer",
+          "ServerContext",
+          "HttpHeader",
+          "props",
+          "pageContext",
+          "append",
+          "responseHeaders",
+          "name",
+          "value",
+          "set",
+          "get",
+          "values",
+          "split",
+          "index",
+          "indexOf",
+          "splice",
+          "length",
+          "join",
+          "delete"
+        ],
+        "sources": [
+          "HttpHeader.tsx"
+        ],
+        "sourcesContent": [
+          "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\n\nexport function HttpHeader(props: { name: string; value: string; append?: boolean }) {\n  const pageContext = useContext(ServerContext);\n\n  if (isServer) {\n    if (props.append) {\n      pageContext!.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext!.responseHeaders.set(props.name, props.value);\n    }\n  }\n\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext!.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext!.responseHeaders.set(props.name, values.join(\", \"));\n        else pageContext!.responseHeaders.delete(props.name);\n      }\n    }\n  });\n\n  return null;\n}\n"
+        ],
+        "mappings": "AAAA,SAASA,SAAS,EAAEC,UAAU,QAAQ,UAAU;AAChD,SAASC,QAAQ,QAAQ,cAAc;AACvC,SAASC,aAAa,QAAQ,kBAAkB;AAEhD,OAAO,SAASC,UAAUA,CAACC,KAAwD,EAAE;EACnF,MAAMC,WAAW,GAAGL,UAAU,CAACE,aAAa,CAAC;EAE7C,IAAID,QAAQ,EAAE;IACZ,IAAIG,KAAK,CAACE,MAAM,EAAE;MAChBD,WAAW,CAAEE,eAAe,CAACD,MAAM,CAACF,KAAK,CAACI,IAAI,EAAEJ,KAAK,CAACK,KAAK,CAAC;IAC9D,CAAC,MAAM;MACLJ,WAAW,CAAEE,eAAe,CAACG,GAAG,CAACN,KAAK,CAACI,IAAI,EAAEJ,KAAK,CAACK,KAAK,CAAC;IAC3D;EACF;EAEAV,SAAS,CAAC,MAAM;IACd,IAAIE,QAAQ,EAAE;MACZ,MAAMQ,KAAK,GAAGJ,WAAW,CAAEE,eAAe,CAACI,GAAG,CAACP,KAAK,CAACI,IAAI,CAAC;MAC1D,IAAIC,KAAK,EAAE;QACT,MAAMG,MAAM,GAAGH,KAAK,CAACI,KAAK,CAAC,IAAI,CAAC;QAChC,MAAMC,KAAK,GAAGF,MAAM,CAACG,OAAO,CAACX,KAAK,CAACK,KAAK,CAAC;QACzCK,KAAK,KAAK,CAAC,CAAC,IAAIF,MAAM,CAACI,MAAM,CAACF,KAAK,EAAE,CAAC,CAAC;QACvC,IAAIF,MAAM,CAACK,MAAM,EAAEZ,WAAW,CAAEE,eAAe,CAACG,GAAG,CAACN,KAAK,CAACI,IAAI,EAAEI,MAAM,CAACM,IAAI,CAAC,IAAI,CAAC,CAAC,CAAC,KAC9Eb,WAAW,CAAEE,eAAe,CAACY,MAAM,CAACf,KAAK,CAACI,IAAI,CAAC;MACtD;IACF;EACF,CAAC,CAAC;EAEF,OAAO,IAAI;AACb",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720884034207,
+      "end": 1720884034207,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { onCleanup, useContext } from \"/node_modules/.vite/deps/solid-js.js?v=d921a2ff\";\nimport { isServer } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx?v=2ea599d4\";\nexport function HttpHeader(props) {\n  const pageContext = useContext(ServerContext);\n  if (isServer) {\n    if (props.append) {\n      pageContext.responseHeaders.append(props.name, props.value);\n    } else {\n      pageContext.responseHeaders.set(props.name, props.value);\n    }\n  }\n  onCleanup(() => {\n    if (isServer) {\n      const value = pageContext.responseHeaders.get(props.name);\n      if (value) {\n        const values = value.split(\", \");\n        const index = values.indexOf(props.value);\n        index !== -1 && values.splice(index, 1);\n        if (values.length) pageContext.responseHeaders.set(props.name, values.join(\", \"));else pageContext.responseHeaders.delete(props.name);\n      }\n    }\n  });\n  return null;\n}",
+      "start": 1720884034207,
+      "end": 1720884034208,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/data/FormError.tsx?v=2ea599d4",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "export class ServerError extends Error {\n  status: number;\n  constructor(message: string, { status, stack }: { status?: number; stack?: string } = {}) {\n    super(message);\n    this.name = \"ServerError\";\n    this.status = status || 400\n    if (stack) {\n      this.stack = stack;\n    }\n  }\n}\n\nexport class FormError extends ServerError {\n  formError?: string;\n  fields?: {};\n  fieldErrors?: { [key: string]: string };\n  constructor(\n    message: string,\n    {\n      fieldErrors = {},\n      form,\n      fields,\n      stack\n    }: { fieldErrors?: {}; form?: FormData; fields?: {}; stack?: string } = {}\n  ) {\n    super(message, { stack });\n    this.formError = message;\n    this.name = \"FormError\";\n    this.fields =\n      fields || Object.fromEntries(typeof form !== \"undefined\" ? form.entries() : []) || {};\n    this.fieldErrors = fieldErrors;\n  }\n}\n",
+      "start": 1720883219727,
+      "end": 1720883219727
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "export class ServerError extends Error {\n  constructor(message, {\n    status,\n    stack\n  } = {}) {\n    super(message);\n    this.name = \"ServerError\";\n    this.status = status || 400;\n    if (stack) {\n      this.stack = stack;\n    }\n  }\n}\nexport class FormError extends ServerError {\n  constructor(message, {\n    fieldErrors = {},\n    form,\n    fields,\n    stack\n  } = {}) {\n    super(message, {\n      stack\n    });\n    this.formError = message;\n    this.name = \"FormError\";\n    this.fields = fields || Object.fromEntries(typeof form !== \"undefined\" ? form.entries() : []) || {};\n    this.fieldErrors = fieldErrors;\n  }\n}",
+      "start": 1720883219727,
+      "end": 1720883219729,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ServerError",
+          "Error",
+          "constructor",
+          "message",
+          "status",
+          "stack",
+          "name",
+          "FormError",
+          "fieldErrors",
+          "form",
+          "fields",
+          "formError",
+          "Object",
+          "fromEntries",
+          "entries"
+        ],
+        "sources": [
+          "FormError.tsx"
+        ],
+        "sourcesContent": [
+          "export class ServerError extends Error {\n  status: number;\n  constructor(message: string, { status, stack }: { status?: number; stack?: string } = {}) {\n    super(message);\n    this.name = \"ServerError\";\n    this.status = status || 400\n    if (stack) {\n      this.stack = stack;\n    }\n  }\n}\n\nexport class FormError extends ServerError {\n  formError?: string;\n  fields?: {};\n  fieldErrors?: { [key: string]: string };\n  constructor(\n    message: string,\n    {\n      fieldErrors = {},\n      form,\n      fields,\n      stack\n    }: { fieldErrors?: {}; form?: FormData; fields?: {}; stack?: string } = {}\n  ) {\n    super(message, { stack });\n    this.formError = message;\n    this.name = \"FormError\";\n    this.fields =\n      fields || Object.fromEntries(typeof form !== \"undefined\" ? form.entries() : []) || {};\n    this.fieldErrors = fieldErrors;\n  }\n}\n"
+        ],
+        "mappings": "AAAA,OAAO,MAAMA,WAAW,SAASC,KAAK,CAAC;EAErCC,WAAWA,CAACC,OAAe,EAAE;IAAEC,MAAM;IAAEC;EAA2C,CAAC,GAAG,CAAC,CAAC,EAAE;IACxF,KAAK,CAACF,OAAO,CAAC;IACd,IAAI,CAACG,IAAI,GAAG,aAAa;IACzB,IAAI,CAACF,MAAM,GAAGA,MAAM,IAAI,GAAG;IAC3B,IAAIC,KAAK,EAAE;MACT,IAAI,CAACA,KAAK,GAAGA,KAAK;IACpB;EACF;AACF;AAEA,OAAO,MAAME,SAAS,SAASP,WAAW,CAAC;EAIzCE,WAAWA,CACTC,OAAe,EACf;IACEK,WAAW,GAAG,CAAC,CAAC;IAChBC,IAAI;IACJC,MAAM;IACNL;EACkE,CAAC,GAAG,CAAC,CAAC,EAC1E;IACA,KAAK,CAACF,OAAO,EAAE;MAAEE;IAAM,CAAC,CAAC;IACzB,IAAI,CAACM,SAAS,GAAGR,OAAO;IACxB,IAAI,CAACG,IAAI,GAAG,WAAW;IACvB,IAAI,CAACI,MAAM,GACTA,MAAM,IAAIE,MAAM,CAACC,WAAW,CAAC,OAAOJ,IAAI,KAAK,WAAW,GAAGA,IAAI,CAACK,OAAO,CAAC,CAAC,GAAG,EAAE,CAAC,IAAI,CAAC,CAAC;IACvF,IAAI,CAACN,WAAW,GAAGA,WAAW;EAChC;AACF",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export class ServerError extends Error {\n  constructor(message, {\n    status,\n    stack\n  } = {}) {\n    super(message);\n    this.name = \"ServerError\";\n    this.status = status || 400;\n    if (stack) {\n      this.stack = stack;\n    }\n  }\n}\nexport class FormError extends ServerError {\n  constructor(message, {\n    fieldErrors = {},\n    form,\n    fields,\n    stack\n  } = {}) {\n    super(message, {\n      stack\n    });\n    this.formError = message;\n    this.name = \"FormError\";\n    this.fields = fields || Object.fromEntries(typeof form !== \"undefined\" ? form.entries() : []) || {};\n    this.fieldErrors = fieldErrors;\n  }\n}",
+      "start": 1720883219729,
+      "end": 1720883219729,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

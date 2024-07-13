@@ -1,0 +1,231 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/@solidjs/router/dist/components.jsx?v=2ea599d4",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "/*@refresh skip*/\nimport { children, createMemo, createRoot, mergeProps, on, Show, splitProps } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { pathIntegration, staticIntegration } from \"./integration\";\nimport { createBranches, createRouteContext, createRouterContext, getRouteMatches, RouteContextObj, RouterContextObj, useHref, useLocation, useNavigate, useResolvedPath, useRoute, useRouter } from \"./routing\";\nimport { joinPaths, normalizePath, createMemoObject } from \"./utils\";\nexport const Router = (props) => {\n    const { source, url, base, data, out } = props;\n    const integration = source || (isServer ? staticIntegration({ value: url || \"\" }) : pathIntegration());\n    const routerState = createRouterContext(integration, base, data, out);\n    return (<RouterContextObj.Provider value={routerState}>{props.children}</RouterContextObj.Provider>);\n};\nexport const Routes = (props) => {\n    const router = useRouter();\n    const parentRoute = useRoute();\n    const routeDefs = children(() => props.children);\n    const branches = createMemo(() => createBranches(routeDefs(), joinPaths(parentRoute.pattern, props.base || \"\"), Outlet));\n    const matches = createMemo(() => getRouteMatches(branches(), router.location.pathname));\n    const params = createMemoObject(() => {\n        const m = matches();\n        const params = {};\n        for (let i = 0; i < m.length; i++) {\n            Object.assign(params, m[i].params);\n        }\n        return params;\n    });\n    if (router.out) {\n        router.out.matches.push(matches().map(({ route, path, params }) => ({\n            originalPath: route.originalPath,\n            pattern: route.pattern,\n            path,\n            params\n        })));\n    }\n    const disposers = [];\n    let root;\n    const routeStates = createMemo(on(matches, (nextMatches, prevMatches, prev) => {\n        let equal = prevMatches && nextMatches.length === prevMatches.length;\n        const next = [];\n        for (let i = 0, len = nextMatches.length; i < len; i++) {\n            const prevMatch = prevMatches && prevMatches[i];\n            const nextMatch = nextMatches[i];\n            if (prev && prevMatch && nextMatch.route.key === prevMatch.route.key) {\n                next[i] = prev[i];\n            }\n            else {\n                equal = false;\n                if (disposers[i]) {\n                    disposers[i]();\n                }\n                createRoot(dispose => {\n                    disposers[i] = dispose;\n                    next[i] = createRouteContext(router, next[i - 1] || parentRoute, () => routeStates()[i + 1], () => matches()[i], params);\n                });\n            }\n        }\n        disposers.splice(nextMatches.length).forEach(dispose => dispose());\n        if (prev && equal) {\n            return prev;\n        }\n        root = next[0];\n        return next;\n    }));\n    return (<Show when={routeStates() && root} keyed>\n      {route => <RouteContextObj.Provider value={route}>{route.outlet()}</RouteContextObj.Provider>}\n    </Show>);\n};\nexport const useRoutes = (routes, base) => {\n    return () => <Routes base={base}>{routes}</Routes>;\n};\nexport const Route = (props) => {\n    const childRoutes = children(() => props.children);\n    return mergeProps(props, {\n        get children() {\n            return childRoutes();\n        }\n    });\n};\nexport const Outlet = () => {\n    const route = useRoute();\n    return (<Show when={route.child} keyed>\n      {child => <RouteContextObj.Provider value={child}>{child.outlet()}</RouteContextObj.Provider>}\n    </Show>);\n};\nexport function A(props) {\n    props = mergeProps({ inactiveClass: \"inactive\", activeClass: \"active\" }, props);\n    const [, rest] = splitProps(props, [\n        \"href\",\n        \"state\",\n        \"class\",\n        \"activeClass\",\n        \"inactiveClass\",\n        \"end\"\n    ]);\n    const to = useResolvedPath(() => props.href);\n    const href = useHref(to);\n    const location = useLocation();\n    const isActive = createMemo(() => {\n        const to_ = to();\n        if (to_ === undefined)\n            return false;\n        const path = normalizePath(to_.split(/[?#]/, 1)[0]).toLowerCase();\n        const loc = normalizePath(location.pathname).toLowerCase();\n        return props.end ? path === loc : loc.startsWith(path);\n    });\n    return (<a link {...rest} href={href() || props.href} state={JSON.stringify(props.state)} classList={{\n            ...(props.class && { [props.class]: true }),\n            [props.inactiveClass]: !isActive(),\n            [props.activeClass]: isActive(),\n            ...rest.classList\n        }} aria-current={isActive() ? \"page\" : undefined}/>);\n}\n// deprecated alias exports\nexport { A as Link, A as NavLink };\nexport function Navigate(props) {\n    const navigate = useNavigate();\n    const location = useLocation();\n    const { href, state } = props;\n    const path = typeof href === \"function\" ? href({ navigate, location }) : href;\n    navigate(path, { replace: true, state });\n    return null;\n}\n",
+      "start": 1720883219701,
+      "end": 1720883219701
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720883219701,
+      "end": 1720883219701,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { runHydrationEvents as _$runHydrationEvents } from \"solid-js/web\";\nimport { spread as _$spread } from \"solid-js/web\";\nimport { mergeProps as _$mergeProps } from \"solid-js/web\";\nimport { memo as _$memo } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<a link>`);\n/*@refresh skip*/\nimport { children, createMemo, createRoot, mergeProps, on, Show, splitProps } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { pathIntegration, staticIntegration } from \"./integration\";\nimport { createBranches, createRouteContext, createRouterContext, getRouteMatches, RouteContextObj, RouterContextObj, useHref, useLocation, useNavigate, useResolvedPath, useRoute, useRouter } from \"./routing\";\nimport { joinPaths, normalizePath, createMemoObject } from \"./utils\";\nexport const Router = props => {\n  const {\n    source,\n    url,\n    base,\n    data,\n    out\n  } = props;\n  const integration = source || (isServer ? staticIntegration({\n    value: url || \"\"\n  }) : pathIntegration());\n  const routerState = createRouterContext(integration, base, data, out);\n  return _$createComponent(RouterContextObj.Provider, {\n    value: routerState,\n    get children() {\n      return props.children;\n    }\n  });\n};\nexport const Routes = props => {\n  const router = useRouter();\n  const parentRoute = useRoute();\n  const routeDefs = children(() => props.children);\n  const branches = createMemo(() => createBranches(routeDefs(), joinPaths(parentRoute.pattern, props.base || \"\"), Outlet));\n  const matches = createMemo(() => getRouteMatches(branches(), router.location.pathname));\n  const params = createMemoObject(() => {\n    const m = matches();\n    const params = {};\n    for (let i = 0; i < m.length; i++) {\n      Object.assign(params, m[i].params);\n    }\n    return params;\n  });\n  if (router.out) {\n    router.out.matches.push(matches().map(({\n      route,\n      path,\n      params\n    }) => ({\n      originalPath: route.originalPath,\n      pattern: route.pattern,\n      path,\n      params\n    })));\n  }\n  const disposers = [];\n  let root;\n  const routeStates = createMemo(on(matches, (nextMatches, prevMatches, prev) => {\n    let equal = prevMatches && nextMatches.length === prevMatches.length;\n    const next = [];\n    for (let i = 0, len = nextMatches.length; i < len; i++) {\n      const prevMatch = prevMatches && prevMatches[i];\n      const nextMatch = nextMatches[i];\n      if (prev && prevMatch && nextMatch.route.key === prevMatch.route.key) {\n        next[i] = prev[i];\n      } else {\n        equal = false;\n        if (disposers[i]) {\n          disposers[i]();\n        }\n        createRoot(dispose => {\n          disposers[i] = dispose;\n          next[i] = createRouteContext(router, next[i - 1] || parentRoute, () => routeStates()[i + 1], () => matches()[i], params);\n        });\n      }\n    }\n    disposers.splice(nextMatches.length).forEach(dispose => dispose());\n    if (prev && equal) {\n      return prev;\n    }\n    root = next[0];\n    return next;\n  }));\n  return _$createComponent(Show, {\n    get when() {\n      return routeStates() && root;\n    },\n    keyed: true,\n    children: route => _$createComponent(RouteContextObj.Provider, {\n      value: route,\n      get children() {\n        return route.outlet();\n      }\n    })\n  });\n};\nexport const useRoutes = (routes, base) => {\n  return () => _$createComponent(Routes, {\n    base: base,\n    children: routes\n  });\n};\nexport const Route = props => {\n  const childRoutes = children(() => props.children);\n  return mergeProps(props, {\n    get children() {\n      return childRoutes();\n    }\n  });\n};\nexport const Outlet = () => {\n  const route = useRoute();\n  return _$createComponent(Show, {\n    get when() {\n      return route.child;\n    },\n    keyed: true,\n    children: child => _$createComponent(RouteContextObj.Provider, {\n      value: child,\n      get children() {\n        return child.outlet();\n      }\n    })\n  });\n};\nexport function A(props) {\n  props = mergeProps({\n    inactiveClass: \"inactive\",\n    activeClass: \"active\"\n  }, props);\n  const [, rest] = splitProps(props, [\"href\", \"state\", \"class\", \"activeClass\", \"inactiveClass\", \"end\"]);\n  const to = useResolvedPath(() => props.href);\n  const href = useHref(to);\n  const location = useLocation();\n  const isActive = createMemo(() => {\n    const to_ = to();\n    if (to_ === undefined) return false;\n    const path = normalizePath(to_.split(/[?#]/, 1)[0]).toLowerCase();\n    const loc = normalizePath(location.pathname).toLowerCase();\n    return props.end ? path === loc : loc.startsWith(path);\n  });\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$);\n    _$spread(_el$, _$mergeProps(rest, {\n      get href() {\n        return href() || props.href;\n      },\n      get state() {\n        return JSON.stringify(props.state);\n      },\n      get classList() {\n        return {\n          ...(props.class && {\n            [props.class]: true\n          }),\n          [props.inactiveClass]: !isActive(),\n          [props.activeClass]: isActive(),\n          ...rest.classList\n        };\n      },\n      get [\"aria-current\"]() {\n        return isActive() ? \"page\" : undefined;\n      }\n    }), false, false);\n    _$runHydrationEvents();\n    return _el$;\n  })();\n}\n// deprecated alias exports\nexport { A as Link, A as NavLink };\nexport function Navigate(props) {\n  const navigate = useNavigate();\n  const location = useLocation();\n  const {\n    href,\n    state\n  } = props;\n  const path = typeof href === \"function\" ? href({\n    navigate,\n    location\n  }) : href;\n  navigate(path, {\n    replace: true,\n    state\n  });\n  return null;\n}",
+      "start": 1720883219701,
+      "end": 1720883219710,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "children",
+          "createMemo",
+          "createRoot",
+          "mergeProps",
+          "on",
+          "Show",
+          "splitProps",
+          "isServer",
+          "pathIntegration",
+          "staticIntegration",
+          "createBranches",
+          "createRouteContext",
+          "createRouterContext",
+          "getRouteMatches",
+          "RouteContextObj",
+          "RouterContextObj",
+          "useHref",
+          "useLocation",
+          "useNavigate",
+          "useResolvedPath",
+          "useRoute",
+          "useRouter",
+          "joinPaths",
+          "normalizePath",
+          "createMemoObject",
+          "Router",
+          "props",
+          "source",
+          "url",
+          "base",
+          "data",
+          "out",
+          "integration",
+          "value",
+          "routerState",
+          "_$createComponent",
+          "Provider",
+          "Routes",
+          "router",
+          "parentRoute",
+          "routeDefs",
+          "branches",
+          "pattern",
+          "Outlet",
+          "matches",
+          "location",
+          "pathname",
+          "params",
+          "m",
+          "i",
+          "length",
+          "Object",
+          "assign",
+          "push",
+          "map",
+          "route",
+          "path",
+          "originalPath",
+          "disposers",
+          "root",
+          "routeStates",
+          "nextMatches",
+          "prevMatches",
+          "prev",
+          "equal",
+          "next",
+          "len",
+          "prevMatch",
+          "nextMatch",
+          "key",
+          "dispose",
+          "splice",
+          "forEach",
+          "when",
+          "keyed",
+          "outlet",
+          "useRoutes",
+          "routes",
+          "Route",
+          "childRoutes",
+          "child",
+          "A",
+          "inactiveClass",
+          "activeClass",
+          "rest",
+          "to",
+          "href",
+          "isActive",
+          "to_",
+          "undefined",
+          "split",
+          "toLowerCase",
+          "loc",
+          "end",
+          "startsWith",
+          "_el$",
+          "_$getNextElement",
+          "_tmpl$",
+          "_$spread",
+          "_$mergeProps",
+          "state",
+          "JSON",
+          "stringify",
+          "classList",
+          "class",
+          "aria-current",
+          "_$runHydrationEvents",
+          "Link",
+          "NavLink",
+          "Navigate",
+          "navigate",
+          "replace"
+        ],
+        "sources": [
+          "components.jsx"
+        ],
+        "sourcesContent": [
+          "/*@refresh skip*/\nimport { children, createMemo, createRoot, mergeProps, on, Show, splitProps } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { pathIntegration, staticIntegration } from \"./integration\";\nimport { createBranches, createRouteContext, createRouterContext, getRouteMatches, RouteContextObj, RouterContextObj, useHref, useLocation, useNavigate, useResolvedPath, useRoute, useRouter } from \"./routing\";\nimport { joinPaths, normalizePath, createMemoObject } from \"./utils\";\nexport const Router = (props) => {\n    const { source, url, base, data, out } = props;\n    const integration = source || (isServer ? staticIntegration({ value: url || \"\" }) : pathIntegration());\n    const routerState = createRouterContext(integration, base, data, out);\n    return (<RouterContextObj.Provider value={routerState}>{props.children}</RouterContextObj.Provider>);\n};\nexport const Routes = (props) => {\n    const router = useRouter();\n    const parentRoute = useRoute();\n    const routeDefs = children(() => props.children);\n    const branches = createMemo(() => createBranches(routeDefs(), joinPaths(parentRoute.pattern, props.base || \"\"), Outlet));\n    const matches = createMemo(() => getRouteMatches(branches(), router.location.pathname));\n    const params = createMemoObject(() => {\n        const m = matches();\n        const params = {};\n        for (let i = 0; i < m.length; i++) {\n            Object.assign(params, m[i].params);\n        }\n        return params;\n    });\n    if (router.out) {\n        router.out.matches.push(matches().map(({ route, path, params }) => ({\n            originalPath: route.originalPath,\n            pattern: route.pattern,\n            path,\n            params\n        })));\n    }\n    const disposers = [];\n    let root;\n    const routeStates = createMemo(on(matches, (nextMatches, prevMatches, prev) => {\n        let equal = prevMatches && nextMatches.length === prevMatches.length;\n        const next = [];\n        for (let i = 0, len = nextMatches.length; i < len; i++) {\n            const prevMatch = prevMatches && prevMatches[i];\n            const nextMatch = nextMatches[i];\n            if (prev && prevMatch && nextMatch.route.key === prevMatch.route.key) {\n                next[i] = prev[i];\n            }\n            else {\n                equal = false;\n                if (disposers[i]) {\n                    disposers[i]();\n                }\n                createRoot(dispose => {\n                    disposers[i] = dispose;\n                    next[i] = createRouteContext(router, next[i - 1] || parentRoute, () => routeStates()[i + 1], () => matches()[i], params);\n                });\n            }\n        }\n        disposers.splice(nextMatches.length).forEach(dispose => dispose());\n        if (prev && equal) {\n            return prev;\n        }\n        root = next[0];\n        return next;\n    }));\n    return (<Show when={routeStates() && root} keyed>\n      {route => <RouteContextObj.Provider value={route}>{route.outlet()}</RouteContextObj.Provider>}\n    </Show>);\n};\nexport const useRoutes = (routes, base) => {\n    return () => <Routes base={base}>{routes}</Routes>;\n};\nexport const Route = (props) => {\n    const childRoutes = children(() => props.children);\n    return mergeProps(props, {\n        get children() {\n            return childRoutes();\n        }\n    });\n};\nexport const Outlet = () => {\n    const route = useRoute();\n    return (<Show when={route.child} keyed>\n      {child => <RouteContextObj.Provider value={child}>{child.outlet()}</RouteContextObj.Provider>}\n    </Show>);\n};\nexport function A(props) {\n    props = mergeProps({ inactiveClass: \"inactive\", activeClass: \"active\" }, props);\n    const [, rest] = splitProps(props, [\n        \"href\",\n        \"state\",\n        \"class\",\n        \"activeClass\",\n        \"inactiveClass\",\n        \"end\"\n    ]);\n    const to = useResolvedPath(() => props.href);\n    const href = useHref(to);\n    const location = useLocation();\n    const isActive = createMemo(() => {\n        const to_ = to();\n        if (to_ === undefined)\n            return false;\n        const path = normalizePath(to_.split(/[?#]/, 1)[0]).toLowerCase();\n        const loc = normalizePath(location.pathname).toLowerCase();\n        return props.end ? path === loc : loc.startsWith(path);\n    });\n    return (<a link {...rest} href={href() || props.href} state={JSON.stringify(props.state)} classList={{\n            ...(props.class && { [props.class]: true }),\n            [props.inactiveClass]: !isActive(),\n            [props.activeClass]: isActive(),\n            ...rest.classList\n        }} aria-current={isActive() ? \"page\" : undefined}/>);\n}\n// deprecated alias exports\nexport { A as Link, A as NavLink };\nexport function Navigate(props) {\n    const navigate = useNavigate();\n    const location = useLocation();\n    const { href, state } = props;\n    const path = typeof href === \"function\" ? href({ navigate, location }) : href;\n    navigate(path, { replace: true, state });\n    return null;\n}\n"
+        ],
+        "mappings": ";;;;;;;;AAAA;AACA,SAASA,QAAQ,EAAEC,UAAU,EAAEC,UAAU,EAAEC,UAAU,EAAEC,EAAE,EAAEC,IAAI,EAAEC,UAAU,QAAQ,UAAU;AAC7F,SAASC,QAAQ,QAAQ,cAAc;AACvC,SAASC,eAAe,EAAEC,iBAAiB,QAAQ,eAAe;AAClE,SAASC,cAAc,EAAEC,kBAAkB,EAAEC,mBAAmB,EAAEC,eAAe,EAAEC,eAAe,EAAEC,gBAAgB,EAAEC,OAAO,EAAEC,WAAW,EAAEC,WAAW,EAAEC,eAAe,EAAEC,QAAQ,EAAEC,SAAS,QAAQ,WAAW;AAChN,SAASC,SAAS,EAAEC,aAAa,EAAEC,gBAAgB,QAAQ,SAAS;AACpE,OAAO,MAAMC,MAAM,GAAIC,KAAK,IAAK;EAC7B,MAAM;IAAEC,MAAM;IAAEC,GAAG;IAAEC,IAAI;IAAEC,IAAI;IAAEC;EAAI,CAAC,GAAGL,KAAK;EAC9C,MAAMM,WAAW,GAAGL,MAAM,KAAKpB,QAAQ,GAAGE,iBAAiB,CAAC;IAAEwB,KAAK,EAAEL,GAAG,IAAI;EAAG,CAAC,CAAC,GAAGpB,eAAe,CAAC,CAAC,CAAC;EACtG,MAAM0B,WAAW,GAAGtB,mBAAmB,CAACoB,WAAW,EAAEH,IAAI,EAAEC,IAAI,EAAEC,GAAG,CAAC;EACrE,OAAAI,iBAAA,CAASpB,gBAAgB,CAACqB,QAAQ;IAACH,KAAK,EAAEC,WAAW;IAAA,IAAAlC,SAAA;MAAA,OAAG0B,KAAK,CAAC1B,QAAQ;IAAA;EAAA;AAC1E,CAAC;AACD,OAAO,MAAMqC,MAAM,GAAIX,KAAK,IAAK;EAC7B,MAAMY,MAAM,GAAGjB,SAAS,CAAC,CAAC;EAC1B,MAAMkB,WAAW,GAAGnB,QAAQ,CAAC,CAAC;EAC9B,MAAMoB,SAAS,GAAGxC,QAAQ,CAAC,MAAM0B,KAAK,CAAC1B,QAAQ,CAAC;EAChD,MAAMyC,QAAQ,GAAGxC,UAAU,CAAC,MAAMS,cAAc,CAAC8B,SAAS,CAAC,CAAC,EAAElB,SAAS,CAACiB,WAAW,CAACG,OAAO,EAAEhB,KAAK,CAACG,IAAI,IAAI,EAAE,CAAC,EAAEc,MAAM,CAAC,CAAC;EACxH,MAAMC,OAAO,GAAG3C,UAAU,CAAC,MAAMY,eAAe,CAAC4B,QAAQ,CAAC,CAAC,EAAEH,MAAM,CAACO,QAAQ,CAACC,QAAQ,CAAC,CAAC;EACvF,MAAMC,MAAM,GAAGvB,gBAAgB,CAAC,MAAM;IAClC,MAAMwB,CAAC,GAAGJ,OAAO,CAAC,CAAC;IACnB,MAAMG,MAAM,GAAG,CAAC,CAAC;IACjB,KAAK,IAAIE,CAAC,GAAG,CAAC,EAAEA,CAAC,GAAGD,CAAC,CAACE,MAAM,EAAED,CAAC,EAAE,EAAE;MAC/BE,MAAM,CAACC,MAAM,CAACL,MAAM,EAAEC,CAAC,CAACC,CAAC,CAAC,CAACF,MAAM,CAAC;IACtC;IACA,OAAOA,MAAM;EACjB,CAAC,CAAC;EACF,IAAIT,MAAM,CAACP,GAAG,EAAE;IACZO,MAAM,CAACP,GAAG,CAACa,OAAO,CAACS,IAAI,CAACT,OAAO,CAAC,CAAC,CAACU,GAAG,CAAC,CAAC;MAAEC,KAAK;MAAEC,IAAI;MAAET;IAAO,CAAC,MAAM;MAChEU,YAAY,EAAEF,KAAK,CAACE,YAAY;MAChCf,OAAO,EAAEa,KAAK,CAACb,OAAO;MACtBc,IAAI;MACJT;IACJ,CAAC,CAAC,CAAC,CAAC;EACR;EACA,MAAMW,SAAS,GAAG,EAAE;EACpB,IAAIC,IAAI;EACR,MAAMC,WAAW,GAAG3D,UAAU,CAACG,EAAE,CAACwC,OAAO,EAAE,CAACiB,WAAW,EAAEC,WAAW,EAAEC,IAAI,KAAK;IAC3E,IAAIC,KAAK,GAAGF,WAAW,IAAID,WAAW,CAACX,MAAM,KAAKY,WAAW,CAACZ,MAAM;IACpE,MAAMe,IAAI,GAAG,EAAE;IACf,KAAK,IAAIhB,CAAC,GAAG,CAAC,EAAEiB,GAAG,GAAGL,WAAW,CAACX,MAAM,EAAED,CAAC,GAAGiB,GAAG,EAAEjB,CAAC,EAAE,EAAE;MACpD,MAAMkB,SAAS,GAAGL,WAAW,IAAIA,WAAW,CAACb,CAAC,CAAC;MAC/C,MAAMmB,SAAS,GAAGP,WAAW,CAACZ,CAAC,CAAC;MAChC,IAAIc,IAAI,IAAII,SAAS,IAAIC,SAAS,CAACb,KAAK,CAACc,GAAG,KAAKF,SAAS,CAACZ,KAAK,CAACc,GAAG,EAAE;QAClEJ,IAAI,CAAChB,CAAC,CAAC,GAAGc,IAAI,CAACd,CAAC,CAAC;MACrB,CAAC,MACI;QACDe,KAAK,GAAG,KAAK;QACb,IAAIN,SAAS,CAACT,CAAC,CAAC,EAAE;UACdS,SAAS,CAACT,CAAC,CAAC,CAAC,CAAC;QAClB;QACA/C,UAAU,CAACoE,OAAO,IAAI;UAClBZ,SAAS,CAACT,CAAC,CAAC,GAAGqB,OAAO;UACtBL,IAAI,CAAChB,CAAC,CAAC,GAAGtC,kBAAkB,CAAC2B,MAAM,EAAE2B,IAAI,CAAChB,CAAC,GAAG,CAAC,CAAC,IAAIV,WAAW,EAAE,MAAMqB,WAAW,CAAC,CAAC,CAACX,CAAC,GAAG,CAAC,CAAC,EAAE,MAAML,OAAO,CAAC,CAAC,CAACK,CAAC,CAAC,EAAEF,MAAM,CAAC;QAC5H,CAAC,CAAC;MACN;IACJ;IACAW,SAAS,CAACa,MAAM,CAACV,WAAW,CAACX,MAAM,CAAC,CAACsB,OAAO,CAACF,OAAO,IAAIA,OAAO,CAAC,CAAC,CAAC;IAClE,IAAIP,IAAI,IAAIC,KAAK,EAAE;MACf,OAAOD,IAAI;IACf;IACAJ,IAAI,GAAGM,IAAI,CAAC,CAAC,CAAC;IACd,OAAOA,IAAI;EACf,CAAC,CAAC,CAAC;EACH,OAAA9B,iBAAA,CAAS9B,IAAI;IAAA,IAACoE,IAAIA,CAAA;MAAA,OAAEb,WAAW,CAAC,CAAC,IAAID,IAAI;IAAA;IAAEe,KAAK;IAAA1E,QAAA,EAC7CuD,KAAK,IAAApB,iBAAA,CAAKrB,eAAe,CAACsB,QAAQ;MAACH,KAAK,EAAEsB,KAAK;MAAA,IAAAvD,SAAA;QAAA,OAAGuD,KAAK,CAACoB,MAAM,CAAC,CAAC;MAAA;IAAA;EAA4B;AAEnG,CAAC;AACD,OAAO,MAAMC,SAAS,GAAGA,CAACC,MAAM,EAAEhD,IAAI,KAAK;EACvC,OAAO,MAAAM,iBAAA,CAAOE,MAAM;IAACR,IAAI,EAAEA,IAAI;IAAA7B,QAAA,EAAG6E;EAAM,EAAU;AACtD,CAAC;AACD,OAAO,MAAMC,KAAK,GAAIpD,KAAK,IAAK;EAC5B,MAAMqD,WAAW,GAAG/E,QAAQ,CAAC,MAAM0B,KAAK,CAAC1B,QAAQ,CAAC;EAClD,OAAOG,UAAU,CAACuB,KAAK,EAAE;IACrB,IAAI1B,QAAQA,CAAA,EAAG;MACX,OAAO+E,WAAW,CAAC,CAAC;IACxB;EACJ,CAAC,CAAC;AACN,CAAC;AACD,OAAO,MAAMpC,MAAM,GAAGA,CAAA,KAAM;EACxB,MAAMY,KAAK,GAAGnC,QAAQ,CAAC,CAAC;EACxB,OAAAe,iBAAA,CAAS9B,IAAI;IAAA,IAACoE,IAAIA,CAAA;MAAA,OAAElB,KAAK,CAACyB,KAAK;IAAA;IAAEN,KAAK;IAAA1E,QAAA,EACnCgF,KAAK,IAAA7C,iBAAA,CAAKrB,eAAe,CAACsB,QAAQ;MAACH,KAAK,EAAE+C,KAAK;MAAA,IAAAhF,SAAA;QAAA,OAAGgF,KAAK,CAACL,MAAM,CAAC,CAAC;MAAA;IAAA;EAA4B;AAEnG,CAAC;AACD,OAAO,SAASM,CAACA,CAACvD,KAAK,EAAE;EACrBA,KAAK,GAAGvB,UAAU,CAAC;IAAE+E,aAAa,EAAE,UAAU;IAAEC,WAAW,EAAE;EAAS,CAAC,EAAEzD,KAAK,CAAC;EAC/E,MAAM,GAAG0D,IAAI,CAAC,GAAG9E,UAAU,CAACoB,KAAK,EAAE,CAC/B,MAAM,EACN,OAAO,EACP,OAAO,EACP,aAAa,EACb,eAAe,EACf,KAAK,CACR,CAAC;EACF,MAAM2D,EAAE,GAAGlE,eAAe,CAAC,MAAMO,KAAK,CAAC4D,IAAI,CAAC;EAC5C,MAAMA,IAAI,GAAGtE,OAAO,CAACqE,EAAE,CAAC;EACxB,MAAMxC,QAAQ,GAAG5B,WAAW,CAAC,CAAC;EAC9B,MAAMsE,QAAQ,GAAGtF,UAAU,CAAC,MAAM;IAC9B,MAAMuF,GAAG,GAAGH,EAAE,CAAC,CAAC;IAChB,IAAIG,GAAG,KAAKC,SAAS,EACjB,OAAO,KAAK;IAChB,MAAMjC,IAAI,GAAGjC,aAAa,CAACiE,GAAG,CAACE,KAAK,CAAC,MAAM,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAACC,WAAW,CAAC,CAAC;IACjE,MAAMC,GAAG,GAAGrE,aAAa,CAACsB,QAAQ,CAACC,QAAQ,CAAC,CAAC6C,WAAW,CAAC,CAAC;IAC1D,OAAOjE,KAAK,CAACmE,GAAG,GAAGrC,IAAI,KAAKoC,GAAG,GAAGA,GAAG,CAACE,UAAU,CAACtC,IAAI,CAAC;EAC1D,CAAC,CAAC;EACF;IAAA,MAAAuC,IAAA,GAAAC,gBAAA,CAAAC,MAAA;IAAAC,QAAA,CAAAH,IAAA,EAAAI,YAAA,CAAoBf,IAAI;MAAA,IAAEE,IAAIA,CAAA;QAAA,OAAEA,IAAI,CAAC,CAAC,IAAI5D,KAAK,CAAC4D,IAAI;MAAA;MAAA,IAAEc,KAAKA,CAAA;QAAA,OAAEC,IAAI,CAACC,SAAS,CAAC5E,KAAK,CAAC0E,KAAK,CAAC;MAAA;MAAA,IAAEG,SAASA,CAAA;QAAA,OAAE;UAC7F,IAAI7E,KAAK,CAAC8E,KAAK,IAAI;YAAE,CAAC9E,KAAK,CAAC8E,KAAK,GAAG;UAAK,CAAC,CAAC;UAC3C,CAAC9E,KAAK,CAACwD,aAAa,GAAG,CAACK,QAAQ,CAAC,CAAC;UAClC,CAAC7D,KAAK,CAACyD,WAAW,GAAGI,QAAQ,CAAC,CAAC;UAC/B,GAAGH,IAAI,CAACmB;QACZ,CAAC;MAAA;MAAA,oBAAAE,CAAA;QAAA,OAAgBlB,QAAQ,CAAC,CAAC,GAAG,MAAM,GAAGE,SAAS;MAAA;IAAA;IAAAiB,oBAAA;IAAA,OAAAX,IAAA;EAAA;AACxD;AACA;AACA,SAASd,CAAC,IAAI0B,IAAI,EAAE1B,CAAC,IAAI2B,OAAO;AAChC,OAAO,SAASC,QAAQA,CAACnF,KAAK,EAAE;EAC5B,MAAMoF,QAAQ,GAAG5F,WAAW,CAAC,CAAC;EAC9B,MAAM2B,QAAQ,GAAG5B,WAAW,CAAC,CAAC;EAC9B,MAAM;IAAEqE,IAAI;IAAEc;EAAM,CAAC,GAAG1E,KAAK;EAC7B,MAAM8B,IAAI,GAAG,OAAO8B,IAAI,KAAK,UAAU,GAAGA,IAAI,CAAC;IAAEwB,QAAQ;IAAEjE;EAAS,CAAC,CAAC,GAAGyC,IAAI;EAC7EwB,QAAQ,CAACtD,IAAI,EAAE;IAAEuD,OAAO,EAAE,IAAI;IAAEX;EAAM,CAAC,CAAC;EACxC,OAAO,IAAI;AACf",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { runHydrationEvents as _$runHydrationEvents } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { spread as _$spread } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { mergeProps as _$mergeProps } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { memo as _$memo } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<a link>`);\n/*@refresh skip*/\nimport { children, createMemo, createRoot, mergeProps, on, Show, splitProps } from \"/node_modules/.vite/deps/solid-js.js?v=d921a2ff\";\nimport { isServer } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { pathIntegration, staticIntegration } from \"/node_modules/@solidjs/router/dist/integration.js?v=2ea599d4\";\nimport { createBranches, createRouteContext, createRouterContext, getRouteMatches, RouteContextObj, RouterContextObj, useHref, useLocation, useNavigate, useResolvedPath, useRoute, useRouter } from \"/node_modules/@solidjs/router/dist/routing.js?v=2ea599d4\";\nimport { joinPaths, normalizePath, createMemoObject } from \"/node_modules/@solidjs/router/dist/utils.js?v=2ea599d4\";\nexport const Router = props => {\n  const {\n    source,\n    url,\n    base,\n    data,\n    out\n  } = props;\n  const integration = source || (isServer ? staticIntegration({\n    value: url || \"\"\n  }) : pathIntegration());\n  const routerState = createRouterContext(integration, base, data, out);\n  return _$createComponent(RouterContextObj.Provider, {\n    value: routerState,\n    get children() {\n      return props.children;\n    }\n  });\n};\nexport const Routes = props => {\n  const router = useRouter();\n  const parentRoute = useRoute();\n  const routeDefs = children(() => props.children);\n  const branches = createMemo(() => createBranches(routeDefs(), joinPaths(parentRoute.pattern, props.base || \"\"), Outlet));\n  const matches = createMemo(() => getRouteMatches(branches(), router.location.pathname));\n  const params = createMemoObject(() => {\n    const m = matches();\n    const params = {};\n    for (let i = 0; i < m.length; i++) {\n      Object.assign(params, m[i].params);\n    }\n    return params;\n  });\n  if (router.out) {\n    router.out.matches.push(matches().map(({\n      route,\n      path,\n      params\n    }) => ({\n      originalPath: route.originalPath,\n      pattern: route.pattern,\n      path,\n      params\n    })));\n  }\n  const disposers = [];\n  let root;\n  const routeStates = createMemo(on(matches, (nextMatches, prevMatches, prev) => {\n    let equal = prevMatches && nextMatches.length === prevMatches.length;\n    const next = [];\n    for (let i = 0, len = nextMatches.length; i < len; i++) {\n      const prevMatch = prevMatches && prevMatches[i];\n      const nextMatch = nextMatches[i];\n      if (prev && prevMatch && nextMatch.route.key === prevMatch.route.key) {\n        next[i] = prev[i];\n      } else {\n        equal = false;\n        if (disposers[i]) {\n          disposers[i]();\n        }\n        createRoot(dispose => {\n          disposers[i] = dispose;\n          next[i] = createRouteContext(router, next[i - 1] || parentRoute, () => routeStates()[i + 1], () => matches()[i], params);\n        });\n      }\n    }\n    disposers.splice(nextMatches.length).forEach(dispose => dispose());\n    if (prev && equal) {\n      return prev;\n    }\n    root = next[0];\n    return next;\n  }));\n  return _$createComponent(Show, {\n    get when() {\n      return routeStates() && root;\n    },\n    keyed: true,\n    children: route => _$createComponent(RouteContextObj.Provider, {\n      value: route,\n      get children() {\n        return route.outlet();\n      }\n    })\n  });\n};\nexport const useRoutes = (routes, base) => {\n  return () => _$createComponent(Routes, {\n    base: base,\n    children: routes\n  });\n};\nexport const Route = props => {\n  const childRoutes = children(() => props.children);\n  return mergeProps(props, {\n    get children() {\n      return childRoutes();\n    }\n  });\n};\nexport const Outlet = () => {\n  const route = useRoute();\n  return _$createComponent(Show, {\n    get when() {\n      return route.child;\n    },\n    keyed: true,\n    children: child => _$createComponent(RouteContextObj.Provider, {\n      value: child,\n      get children() {\n        return child.outlet();\n      }\n    })\n  });\n};\nexport function A(props) {\n  props = mergeProps({\n    inactiveClass: \"inactive\",\n    activeClass: \"active\"\n  }, props);\n  const [, rest] = splitProps(props, [\"href\", \"state\", \"class\", \"activeClass\", \"inactiveClass\", \"end\"]);\n  const to = useResolvedPath(() => props.href);\n  const href = useHref(to);\n  const location = useLocation();\n  const isActive = createMemo(() => {\n    const to_ = to();\n    if (to_ === undefined) return false;\n    const path = normalizePath(to_.split(/[?#]/, 1)[0]).toLowerCase();\n    const loc = normalizePath(location.pathname).toLowerCase();\n    return props.end ? path === loc : loc.startsWith(path);\n  });\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$);\n    _$spread(_el$, _$mergeProps(rest, {\n      get href() {\n        return href() || props.href;\n      },\n      get state() {\n        return JSON.stringify(props.state);\n      },\n      get classList() {\n        return {\n          ...(props.class && {\n            [props.class]: true\n          }),\n          [props.inactiveClass]: !isActive(),\n          [props.activeClass]: isActive(),\n          ...rest.classList\n        };\n      },\n      get [\"aria-current\"]() {\n        return isActive() ? \"page\" : undefined;\n      }\n    }), false, false);\n    _$runHydrationEvents();\n    return _el$;\n  })();\n}\n// deprecated alias exports\nexport { A as Link, A as NavLink };\nexport function Navigate(props) {\n  const navigate = useNavigate();\n  const location = useLocation();\n  const {\n    href,\n    state\n  } = props;\n  const path = typeof href === \"function\" ? href({\n    navigate,\n    location\n  }) : href;\n  navigate(path, {\n    replace: true,\n    state\n  });\n  return null;\n}",
+      "start": 1720883219710,
+      "end": 1720883219710,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

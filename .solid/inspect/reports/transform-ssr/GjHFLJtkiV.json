@@ -4,32 +4,32 @@
     {
       "name": "__load__",
       "result": "import { MatchRoute, Method } from \"./types\";\n\nexport function getRouteMatches(routes: MatchRoute[], path: string, method: Method) {\n  const segments = path.split(\"/\").filter(Boolean);\n\n  routeLoop: for (const route of routes) {\n    const matchSegments = route.matchSegments;\n\n    if (\n      segments.length < matchSegments.length ||\n      (!route.wildcard && segments.length > matchSegments.length)\n    ) {\n      continue;\n    }\n\n    for (let index = 0; index < matchSegments.length; index++) {\n      const match = matchSegments[index];\n      if (!match) {\n        continue;\n      }\n\n      if (segments[index] !== match) {\n        continue routeLoop;\n      }\n    }\n\n    const handler = route[method];\n    if (handler === \"skip\" || handler === undefined) {\n      return;\n    }\n\n    const params: Record<string, string> = {};\n    for (const { type, name, index } of route.params) {\n      if (type === \":\") {\n        params[name] = segments[index];\n      } else {\n        params[name] = segments.slice(index).join(\"/\");\n      }\n    }\n\n    return { handler, params };\n  }\n}\n",
-      "start": 1702914707217,
-      "end": 1702914707217
+      "start": 1720883219848,
+      "end": 1720883219848
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1702914707217,
-      "end": 1702914707218,
+      "start": 1720883219848,
+      "end": 1720883219849,
       "order": "pre"
     },
     {
       "name": "solid",
-      "start": 1702914707218,
-      "end": 1702914707218,
+      "start": 1720883219849,
+      "end": 1720883219849,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1702914707218,
-      "end": 1702914707218,
+      "start": 1720883219849,
+      "end": 1720883219849,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "export function getRouteMatches(routes, path, method) {\n  const segments = path.split(\"/\").filter(Boolean);\n  routeLoop:\n    for (const route of routes) {\n      const matchSegments = route.matchSegments;\n      if (segments.length < matchSegments.length || !route.wildcard && segments.length > matchSegments.length) {\n        continue;\n      }\n      for (let index = 0; index < matchSegments.length; index++) {\n        const match = matchSegments[index];\n        if (!match) {\n          continue;\n        }\n        if (segments[index] !== match) {\n          continue routeLoop;\n        }\n      }\n      const handler = route[method];\n      if (handler === \"skip\" || handler === void 0) {\n        return;\n      }\n      const params = {};\n      for (const { type, name, index } of route.params) {\n        if (type === \":\") {\n          params[name] = segments[index];\n        } else {\n          params[name] = segments.slice(index).join(\"/\");\n        }\n      }\n      return { handler, params };\n    }\n}\n",
-      "start": 1702914707218,
-      "end": 1702914707220,
+      "start": 1720883219849,
+      "end": 1720883219862,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -48,71 +48,71 @@
     },
     {
       "name": "vite:json",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "export function getRouteMatches(routes, path, method) {\n  const segments = path.split(\"/\").filter(Boolean);\n  routeLoop:\n    for (const route of routes) {\n      const matchSegments = route.matchSegments;\n      if (segments.length < matchSegments.length || !route.wildcard && segments.length > matchSegments.length) {\n        continue;\n      }\n      for (let index = 0; index < matchSegments.length; index++) {\n        const match = matchSegments[index];\n        if (!match) {\n          continue;\n        }\n        if (segments[index] !== match) {\n          continue routeLoop;\n        }\n      }\n      const handler = route[method];\n      if (handler === \"skip\" || handler === void 0) {\n        return;\n      }\n      const params = {};\n      for (const { type, name, index } of route.params) {\n        if (type === \":\") {\n          params[name] = segments[index];\n        } else {\n          params[name] = segments.slice(index).join(\"/\");\n        }\n      }\n      return { handler, params };\n    }\n}\n",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export function getRouteMatches(routes, path, method) {\n  const segments = path.split(\"/\").filter(Boolean);\n  routeLoop:\n    for (const route of routes) {\n      const matchSegments = route.matchSegments;\n      if (segments.length < matchSegments.length || !route.wildcard && segments.length > matchSegments.length) {\n        continue;\n      }\n      for (let index = 0; index < matchSegments.length; index++) {\n        const match = matchSegments[index];\n        if (!match) {\n          continue;\n        }\n        if (segments[index] !== match) {\n          continue routeLoop;\n        }\n      }\n      const handler = route[method];\n      if (handler === \"skip\" || handler === void 0) {\n        return;\n      }\n      const params = {};\n      for (const { type, name, index } of route.params) {\n        if (type === \":\") {\n          params[name] = segments[index];\n        } else {\n          params[name] = segments.slice(index).join(\"/\");\n        }\n      }\n      return { handler, params };\n    }\n}\n",
-      "start": 1702914707220,
-      "end": 1702914707220,
+      "start": 1720883219862,
+      "end": 1720883219862,
       "order": "normal",
       "sourcemaps": null
     }

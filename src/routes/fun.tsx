@@ -5,8 +5,9 @@ export default function Fun() {
   return (
     <main>
       <Title>Fun - Foo Yong Qi</Title>
-      <h1>Fun</h1>
-      <Card border="mauve" header_color="green" header="LaTeX Templates">
+      <div class="flex-row">
+        <div class="box left">
+          <h2>Latex Templates</h2>
         <p>
           Templates for typesetting a bunch of documents I frequently create can be found in my <a href="https://github.com/yonggqiii/">GitHub</a>.
         </p>
@@ -18,14 +19,16 @@ export default function Fun() {
           Articles: <a href="https://github.com/yonggqiii/article_template">Article Template</a>
         </li>
         </ul>
-    
-      </Card>
-      <Card border="red" header_color="yellow" header="Monads?">
+        </div>
+        <div class="box">
+        <h2>Monads?</h2>
         <p>
           I wrote an <a href="../papers/fun/Monads.pdf">article</a> on the correspondence between programming constructs like functors and monads to their
           definitions in Category Theory.
         </p>
-      </Card>
+
+        </div>
+      </div>
     </main>
 
   );

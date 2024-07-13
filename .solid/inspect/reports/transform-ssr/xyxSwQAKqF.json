@@ -4,102 +4,102 @@
     {
       "name": "__load__",
       "result": ".card {\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n  margin: 2em auto;\n  padding: 1em;\n  box-shadow: 0px 0px 30px black;\n  background-color: #181825;\n}\n.card h2 {\n  text-transform: uppercase;\n  border-bottom: 1px solid #9399b2;\n  margin-top: 10px;\n  max-width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 3px;\n}\n\n.card strong {\n  color: white;\n}\n\n@media (min-width: 760px) {\n  .card {\n    max-width: 60vw;\n  }\n  .card h2 {\n    max-width: 60%;\n  }\n}\n@media (min-width: 960px) {\n  .card {\n    width: 60vw;\n    max-width: 960px;\n  }\n}\n",
-      "start": 1702914707305,
-      "end": 1702914707305
+      "start": 1720883219872,
+      "end": 1720883219872
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "pre"
     },
     {
       "name": "solid",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "pre"
     },
     {
       "name": "vite:css",
       "result": ".card {\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n  margin: 2em auto;\n  padding: 1em;\n  box-shadow: 0px 0px 30px black;\n  background-color: #181825;\n}\n.card h2 {\n  text-transform: uppercase;\n  border-bottom: 1px solid #9399b2;\n  margin-top: 10px;\n  max-width: 80%;\n  margin-left: auto;\n  margin-right: auto;\n  padding: 3px;\n}\n\n.card strong {\n  color: white;\n}\n\n@media (min-width: 760px) {\n  .card {\n    max-width: 60vw;\n  }\n  .card h2 {\n    max-width: 60%;\n  }\n}\n@media (min-width: 960px) {\n  .card {\n    width: 60vw;\n    max-width: 960px;\n  }\n}\n",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:esbuild",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
       "result": "export default \".card {\\n  border-style: solid;\\n  border-width: 1px;\\n  border-radius: 5px;\\n  margin: 2em auto;\\n  padding: 1em;\\n  box-shadow: 0px 0px 30px black;\\n  background-color: #181825;\\n}\\n.card h2 {\\n  text-transform: uppercase;\\n  border-bottom: 1px solid #9399b2;\\n  margin-top: 10px;\\n  max-width: 80%;\\n  margin-left: auto;\\n  margin-right: auto;\\n  padding: 3px;\\n}\\n\\n.card strong {\\n  color: white;\\n}\\n\\n@media (min-width: 760px) {\\n  .card {\\n    max-width: 60vw;\\n  }\\n  .card h2 {\\n    max-width: 60%;\\n  }\\n}\\n@media (min-width: 960px) {\\n  .card {\\n    width: 60vw;\\n    max-width: 960px;\\n  }\\n}\\n\"",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export default \".card {\\n  border-style: solid;\\n  border-width: 1px;\\n  border-radius: 5px;\\n  margin: 2em auto;\\n  padding: 1em;\\n  box-shadow: 0px 0px 30px black;\\n  background-color: #181825;\\n}\\n.card h2 {\\n  text-transform: uppercase;\\n  border-bottom: 1px solid #9399b2;\\n  margin-top: 10px;\\n  max-width: 80%;\\n  margin-left: auto;\\n  margin-right: auto;\\n  padding: 3px;\\n}\\n\\n.card strong {\\n  color: white;\\n}\\n\\n@media (min-width: 760px) {\\n  .card {\\n    max-width: 60vw;\\n  }\\n  .card h2 {\\n    max-width: 60%;\\n  }\\n}\\n@media (min-width: 960px) {\\n  .card {\\n    width: 60vw;\\n    max-width: 960px;\\n  }\\n}\\n\"",
-      "start": 1702914707305,
-      "end": 1702914707305,
+      "start": 1720883219872,
+      "end": 1720883219872,
       "order": "normal",
       "sourcemaps": null
     }

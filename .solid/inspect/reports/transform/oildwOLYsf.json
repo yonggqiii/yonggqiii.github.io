@@ -1,0 +1,203 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/data/createRouteData.tsx?v=2ea599d4",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import type {\n  Resource,\n  ResourceFetcher, ResourceFetcherInfo, ResourceOptions, Signal\n} from \"solid-js\";\nimport {\n  createResource,\n  onCleanup,\n  startTransition, untrack, useContext\n} from \"solid-js\";\nimport type { ReconcileOptions } from \"solid-js/store\";\nimport { createStore, reconcile, unwrap } from \"solid-js/store\";\nimport { isServer } from \"solid-js/web\";\nimport { useNavigate } from \"../router\";\nimport { isRedirectResponse, LocationHeader } from \"../server/responses\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT, ServerFunctionEvent } from \"../server/types\";\n\ninterface RouteDataEvent extends ServerFunctionEvent {}\n\ntype RouteDataSource<S> = S | false | null | undefined | (() => S | false | null | undefined);\n\ntype RouteDataFetcher<S, T> = (source: S, event: RouteDataEvent) => T | Promise<T>;\n\ntype RouteDataOptions<T, S> = ResourceOptions<T> & {\n  key?: RouteDataSource<S>;\n  reconcileOptions?: ReconcileOptions;\n};\n\nconst resources = new Set<(k: any) => void>();\nconst promises = new Map<any, Promise<any>>();\n\nexport function createRouteData<T, S = true>(\n  fetcher: RouteDataFetcher<S, T>,\n  options?: RouteDataOptions<undefined, S>\n): Resource<T | undefined>;\nexport function createRouteData<T, S = true>(\n  fetcher: RouteDataFetcher<S, T>,\n  options: RouteDataOptions<T, S>\n): Resource<T>;\nexport function createRouteData<T, S>(\n  fetcher?: RouteDataFetcher<S, T>,\n  options: RouteDataOptions<T, S> | RouteDataOptions<undefined, S> = {}\n): Resource<T> | Resource<T | undefined> {\n  const navigate = useNavigate();\n  const pageEvent = useContext(ServerContext);\n\n  function handleResponse(response: Response) {\n    if (isRedirectResponse(response)) {\n      startTransition(() => {\n        let url = response.headers.get(LocationHeader);\n        if (url && url.startsWith(\"/\")) {\n          navigate(url, {\n            replace: true\n          });\n        } else {\n          if (!isServer && url) {\n            window.location.href = url;\n          }\n        }\n      });\n      if (isServer && pageEvent) {\n        pageEvent.setStatusCode(response.status);\n        response.headers.forEach((head, value) => {\n          pageEvent.responseHeaders.set(value, head);\n        });\n      }\n    }\n  }\n\n  const resourceFetcher: ResourceFetcher<S, T> = async (key: S) => {\n    try {\n      let event = pageEvent as RouteDataEvent;\n      if (isServer && pageEvent) {\n        event = Object.freeze({\n          request: pageEvent.request,\n          env: pageEvent.env,\n          clientAddress: pageEvent.clientAddress,\n          locals: pageEvent.locals,\n          $type: FETCH_EVENT,\n          fetch: pageEvent.fetch\n        });\n      }\n\n      let response = await (fetcher as any).call(event, key, event);\n      if (response instanceof Response) {\n        if (isServer) {\n          handleResponse(response);\n        } else {\n          setTimeout(() => handleResponse(response), 0);\n        }\n      }\n      return response;\n    } catch (e: any | Error) {\n      if (e instanceof Response) {\n        if (isServer) {\n          handleResponse(e);\n        } else {\n          setTimeout(() => handleResponse(e), 0);\n        }\n        return e;\n      }\n      throw e;\n    }\n  };\n\n  function dedupe(fetcher: ResourceFetcher<S, T>): ResourceFetcher<S, T> {\n    return (key: S, info: ResourceFetcherInfo<T>) => {\n      if (info.refetching && info.refetching !== true && !partialMatch(key, info.refetching) && info.value) {\n        return info.value;\n      }\n\n      if (key == true) return fetcher(key, info);\n\n      let promise = promises.get(key);\n      if (promise) return promise;\n      promise = fetcher(key, info) as Promise<T>;\n      promises.set(key, promise);\n      return promise.finally(() => promises.delete(key));\n    };\n  }\n\n  const [resource, { refetch }] = createResource<T, S>(\n    (options.key || true) as RouteDataSource<S>,\n    dedupe(resourceFetcher),\n    {\n      storage: (init: T | undefined) => createDeepSignal(init, options.reconcileOptions),\n      ...options\n    } as any\n  );\n\n  if (!isServer) {\n    resources.add(refetch);\n    onCleanup(() => resources.delete(refetch));\n  }\n\n  return resource;\n}\n\nexport function refetchRouteData(key?: string | any[] | void) {\n  if (isServer) throw new Error(\"Cannot refetch route data on the server.\");\n  return startTransition(() => {\n    for (let refetch of resources) refetch(key);\n  });\n}\n\nfunction createDeepSignal<T>(value: T, options?: ReconcileOptions) {\n  const [store, setStore] = createStore({\n    value\n  });\n  return [\n    () => store.value,\n    (v: T) => {\n      const unwrapped = untrack(() => unwrap(store.value));\n      typeof v === \"function\" && (v = v(unwrapped));\n      setStore(\"value\", reconcile(v, options));\n      return store.value;\n    }\n  ] as Signal<T>;\n}\n\n/* React Query key matching  https://github.com/tannerlinsley/react-query */\nfunction partialMatch(a: any, b: any) {\n  return partialDeepEqual(ensureQueryKeyArray(a), ensureQueryKeyArray(b));\n}\n\nfunction ensureQueryKeyArray<V extends any | any[], R = V extends [] ? V : [V]>(value: V): R {\n  return (Array.isArray(value) ? value : [value]) as R;\n}\n\n/**\n * Checks if `b` partially matches with `a`.\n */\nfunction partialDeepEqual(a: any, b: any): boolean {\n  if (a === b) {\n    return true;\n  }\n\n  if (typeof a !== typeof b) {\n    return false;\n  }\n\n  if (a.length && !b.length) return false;\n\n  if (a && b && typeof a === \"object\" && typeof b === \"object\") {\n    return !Object.keys(b).some(key => !partialDeepEqual(a[key], b[key]));\n  }\n\n  return false;\n}\n",
+      "start": 1720883219722,
+      "end": 1720883219722
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720883219722,
+      "end": 1720883219722,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { createResource, onCleanup, startTransition, untrack, useContext } from \"solid-js\";\nimport { createStore, reconcile, unwrap } from \"solid-js/store\";\nimport { isServer } from \"solid-js/web\";\nimport { useNavigate } from \"../router\";\nimport { isRedirectResponse, LocationHeader } from \"../server/responses\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT } from \"../server/types\";\nconst resources = new Set();\nconst promises = new Map();\nexport function createRouteData(fetcher, options = {}) {\n  const navigate = useNavigate();\n  const pageEvent = useContext(ServerContext);\n  function handleResponse(response) {\n    if (isRedirectResponse(response)) {\n      startTransition(() => {\n        let url = response.headers.get(LocationHeader);\n        if (url && url.startsWith(\"/\")) {\n          navigate(url, {\n            replace: true\n          });\n        } else {\n          if (!isServer && url) {\n            window.location.href = url;\n          }\n        }\n      });\n      if (isServer && pageEvent) {\n        pageEvent.setStatusCode(response.status);\n        response.headers.forEach((head, value) => {\n          pageEvent.responseHeaders.set(value, head);\n        });\n      }\n    }\n  }\n  const resourceFetcher = async key => {\n    try {\n      let event = pageEvent;\n      if (isServer && pageEvent) {\n        event = Object.freeze({\n          request: pageEvent.request,\n          env: pageEvent.env,\n          clientAddress: pageEvent.clientAddress,\n          locals: pageEvent.locals,\n          $type: FETCH_EVENT,\n          fetch: pageEvent.fetch\n        });\n      }\n      let response = await fetcher.call(event, key, event);\n      if (response instanceof Response) {\n        if (isServer) {\n          handleResponse(response);\n        } else {\n          setTimeout(() => handleResponse(response), 0);\n        }\n      }\n      return response;\n    } catch (e) {\n      if (e instanceof Response) {\n        if (isServer) {\n          handleResponse(e);\n        } else {\n          setTimeout(() => handleResponse(e), 0);\n        }\n        return e;\n      }\n      throw e;\n    }\n  };\n  function dedupe(fetcher) {\n    return (key, info) => {\n      if (info.refetching && info.refetching !== true && !partialMatch(key, info.refetching) && info.value) {\n        return info.value;\n      }\n      if (key == true) return fetcher(key, info);\n      let promise = promises.get(key);\n      if (promise) return promise;\n      promise = fetcher(key, info);\n      promises.set(key, promise);\n      return promise.finally(() => promises.delete(key));\n    };\n  }\n  const [resource, {\n    refetch\n  }] = createResource(options.key || true, dedupe(resourceFetcher), {\n    storage: init => createDeepSignal(init, options.reconcileOptions),\n    ...options\n  });\n  if (!isServer) {\n    resources.add(refetch);\n    onCleanup(() => resources.delete(refetch));\n  }\n  return resource;\n}\nexport function refetchRouteData(key) {\n  if (isServer) throw new Error(\"Cannot refetch route data on the server.\");\n  return startTransition(() => {\n    for (let refetch of resources) refetch(key);\n  });\n}\nfunction createDeepSignal(value, options) {\n  const [store, setStore] = createStore({\n    value\n  });\n  return [() => store.value, v => {\n    const unwrapped = untrack(() => unwrap(store.value));\n    typeof v === \"function\" && (v = v(unwrapped));\n    setStore(\"value\", reconcile(v, options));\n    return store.value;\n  }];\n}\n\n/* React Query key matching  https://github.com/tannerlinsley/react-query */\nfunction partialMatch(a, b) {\n  return partialDeepEqual(ensureQueryKeyArray(a), ensureQueryKeyArray(b));\n}\nfunction ensureQueryKeyArray(value) {\n  return Array.isArray(value) ? value : [value];\n}\n\n/**\n * Checks if `b` partially matches with `a`.\n */\nfunction partialDeepEqual(a, b) {\n  if (a === b) {\n    return true;\n  }\n  if (typeof a !== typeof b) {\n    return false;\n  }\n  if (a.length && !b.length) return false;\n  if (a && b && typeof a === \"object\" && typeof b === \"object\") {\n    return !Object.keys(b).some(key => !partialDeepEqual(a[key], b[key]));\n  }\n  return false;\n}",
+      "start": 1720883219722,
+      "end": 1720883219727,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createResource",
+          "onCleanup",
+          "startTransition",
+          "untrack",
+          "useContext",
+          "createStore",
+          "reconcile",
+          "unwrap",
+          "isServer",
+          "useNavigate",
+          "isRedirectResponse",
+          "LocationHeader",
+          "ServerContext",
+          "FETCH_EVENT",
+          "resources",
+          "Set",
+          "promises",
+          "Map",
+          "createRouteData",
+          "fetcher",
+          "options",
+          "navigate",
+          "pageEvent",
+          "handleResponse",
+          "response",
+          "url",
+          "headers",
+          "get",
+          "startsWith",
+          "replace",
+          "window",
+          "location",
+          "href",
+          "setStatusCode",
+          "status",
+          "forEach",
+          "head",
+          "value",
+          "responseHeaders",
+          "set",
+          "resourceFetcher",
+          "key",
+          "event",
+          "Object",
+          "freeze",
+          "request",
+          "env",
+          "clientAddress",
+          "locals",
+          "$type",
+          "fetch",
+          "call",
+          "Response",
+          "setTimeout",
+          "e",
+          "dedupe",
+          "info",
+          "refetching",
+          "partialMatch",
+          "promise",
+          "finally",
+          "delete",
+          "resource",
+          "refetch",
+          "storage",
+          "init",
+          "createDeepSignal",
+          "reconcileOptions",
+          "add",
+          "refetchRouteData",
+          "Error",
+          "store",
+          "setStore",
+          "v",
+          "unwrapped",
+          "a",
+          "b",
+          "partialDeepEqual",
+          "ensureQueryKeyArray",
+          "Array",
+          "isArray",
+          "length",
+          "keys",
+          "some"
+        ],
+        "sources": [
+          "createRouteData.tsx"
+        ],
+        "sourcesContent": [
+          "import type {\n  Resource,\n  ResourceFetcher, ResourceFetcherInfo, ResourceOptions, Signal\n} from \"solid-js\";\nimport {\n  createResource,\n  onCleanup,\n  startTransition, untrack, useContext\n} from \"solid-js\";\nimport type { ReconcileOptions } from \"solid-js/store\";\nimport { createStore, reconcile, unwrap } from \"solid-js/store\";\nimport { isServer } from \"solid-js/web\";\nimport { useNavigate } from \"../router\";\nimport { isRedirectResponse, LocationHeader } from \"../server/responses\";\nimport { ServerContext } from \"../server/ServerContext\";\nimport { FETCH_EVENT, ServerFunctionEvent } from \"../server/types\";\n\ninterface RouteDataEvent extends ServerFunctionEvent {}\n\ntype RouteDataSource<S> = S | false | null | undefined | (() => S | false | null | undefined);\n\ntype RouteDataFetcher<S, T> = (source: S, event: RouteDataEvent) => T | Promise<T>;\n\ntype RouteDataOptions<T, S> = ResourceOptions<T> & {\n  key?: RouteDataSource<S>;\n  reconcileOptions?: ReconcileOptions;\n};\n\nconst resources = new Set<(k: any) => void>();\nconst promises = new Map<any, Promise<any>>();\n\nexport function createRouteData<T, S = true>(\n  fetcher: RouteDataFetcher<S, T>,\n  options?: RouteDataOptions<undefined, S>\n): Resource<T | undefined>;\nexport function createRouteData<T, S = true>(\n  fetcher: RouteDataFetcher<S, T>,\n  options: RouteDataOptions<T, S>\n): Resource<T>;\nexport function createRouteData<T, S>(\n  fetcher?: RouteDataFetcher<S, T>,\n  options: RouteDataOptions<T, S> | RouteDataOptions<undefined, S> = {}\n): Resource<T> | Resource<T | undefined> {\n  const navigate = useNavigate();\n  const pageEvent = useContext(ServerContext);\n\n  function handleResponse(response: Response) {\n    if (isRedirectResponse(response)) {\n      startTransition(() => {\n        let url = response.headers.get(LocationHeader);\n        if (url && url.startsWith(\"/\")) {\n          navigate(url, {\n            replace: true\n          });\n        } else {\n          if (!isServer && url) {\n            window.location.href = url;\n          }\n        }\n      });\n      if (isServer && pageEvent) {\n        pageEvent.setStatusCode(response.status);\n        response.headers.forEach((head, value) => {\n          pageEvent.responseHeaders.set(value, head);\n        });\n      }\n    }\n  }\n\n  const resourceFetcher: ResourceFetcher<S, T> = async (key: S) => {\n    try {\n      let event = pageEvent as RouteDataEvent;\n      if (isServer && pageEvent) {\n        event = Object.freeze({\n          request: pageEvent.request,\n          env: pageEvent.env,\n          clientAddress: pageEvent.clientAddress,\n          locals: pageEvent.locals,\n          $type: FETCH_EVENT,\n          fetch: pageEvent.fetch\n        });\n      }\n\n      let response = await (fetcher as any).call(event, key, event);\n      if (response instanceof Response) {\n        if (isServer) {\n          handleResponse(response);\n        } else {\n          setTimeout(() => handleResponse(response), 0);\n        }\n      }\n      return response;\n    } catch (e: any | Error) {\n      if (e instanceof Response) {\n        if (isServer) {\n          handleResponse(e);\n        } else {\n          setTimeout(() => handleResponse(e), 0);\n        }\n        return e;\n      }\n      throw e;\n    }\n  };\n\n  function dedupe(fetcher: ResourceFetcher<S, T>): ResourceFetcher<S, T> {\n    return (key: S, info: ResourceFetcherInfo<T>) => {\n      if (info.refetching && info.refetching !== true && !partialMatch(key, info.refetching) && info.value) {\n        return info.value;\n      }\n\n      if (key == true) return fetcher(key, info);\n\n      let promise = promises.get(key);\n      if (promise) return promise;\n      promise = fetcher(key, info) as Promise<T>;\n      promises.set(key, promise);\n      return promise.finally(() => promises.delete(key));\n    };\n  }\n\n  const [resource, { refetch }] = createResource<T, S>(\n    (options.key || true) as RouteDataSource<S>,\n    dedupe(resourceFetcher),\n    {\n      storage: (init: T | undefined) => createDeepSignal(init, options.reconcileOptions),\n      ...options\n    } as any\n  );\n\n  if (!isServer) {\n    resources.add(refetch);\n    onCleanup(() => resources.delete(refetch));\n  }\n\n  return resource;\n}\n\nexport function refetchRouteData(key?: string | any[] | void) {\n  if (isServer) throw new Error(\"Cannot refetch route data on the server.\");\n  return startTransition(() => {\n    for (let refetch of resources) refetch(key);\n  });\n}\n\nfunction createDeepSignal<T>(value: T, options?: ReconcileOptions) {\n  const [store, setStore] = createStore({\n    value\n  });\n  return [\n    () => store.value,\n    (v: T) => {\n      const unwrapped = untrack(() => unwrap(store.value));\n      typeof v === \"function\" && (v = v(unwrapped));\n      setStore(\"value\", reconcile(v, options));\n      return store.value;\n    }\n  ] as Signal<T>;\n}\n\n/* React Query key matching  https://github.com/tannerlinsley/react-query */\nfunction partialMatch(a: any, b: any) {\n  return partialDeepEqual(ensureQueryKeyArray(a), ensureQueryKeyArray(b));\n}\n\nfunction ensureQueryKeyArray<V extends any | any[], R = V extends [] ? V : [V]>(value: V): R {\n  return (Array.isArray(value) ? value : [value]) as R;\n}\n\n/**\n * Checks if `b` partially matches with `a`.\n */\nfunction partialDeepEqual(a: any, b: any): boolean {\n  if (a === b) {\n    return true;\n  }\n\n  if (typeof a !== typeof b) {\n    return false;\n  }\n\n  if (a.length && !b.length) return false;\n\n  if (a && b && typeof a === \"object\" && typeof b === \"object\") {\n    return !Object.keys(b).some(key => !partialDeepEqual(a[key], b[key]));\n  }\n\n  return false;\n}\n"
+        ],
+        "mappings": "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",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createResource, onCleanup, startTransition, untrack, useContext } from \"/node_modules/.vite/deps/solid-js.js?v=d921a2ff\";\nimport { createStore, reconcile, unwrap } from \"/node_modules/.vite/deps/solid-js_store.js?v=d921a2ff\";\nimport { isServer } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { useNavigate } from \"/node_modules/solid-start/router.tsx?v=2ea599d4\";\nimport { isRedirectResponse, LocationHeader } from \"/node_modules/solid-start/server/responses.ts?v=2ea599d4\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx?v=2ea599d4\";\nimport { FETCH_EVENT } from \"/node_modules/solid-start/server/types.tsx?v=2ea599d4\";\nconst resources = new Set();\nconst promises = new Map();\nexport function createRouteData(fetcher, options = {}) {\n  const navigate = useNavigate();\n  const pageEvent = useContext(ServerContext);\n  function handleResponse(response) {\n    if (isRedirectResponse(response)) {\n      startTransition(() => {\n        let url = response.headers.get(LocationHeader);\n        if (url && url.startsWith(\"/\")) {\n          navigate(url, {\n            replace: true\n          });\n        } else {\n          if (!isServer && url) {\n            window.location.href = url;\n          }\n        }\n      });\n      if (isServer && pageEvent) {\n        pageEvent.setStatusCode(response.status);\n        response.headers.forEach((head, value) => {\n          pageEvent.responseHeaders.set(value, head);\n        });\n      }\n    }\n  }\n  const resourceFetcher = async key => {\n    try {\n      let event = pageEvent;\n      if (isServer && pageEvent) {\n        event = Object.freeze({\n          request: pageEvent.request,\n          env: pageEvent.env,\n          clientAddress: pageEvent.clientAddress,\n          locals: pageEvent.locals,\n          $type: FETCH_EVENT,\n          fetch: pageEvent.fetch\n        });\n      }\n      let response = await fetcher.call(event, key, event);\n      if (response instanceof Response) {\n        if (isServer) {\n          handleResponse(response);\n        } else {\n          setTimeout(() => handleResponse(response), 0);\n        }\n      }\n      return response;\n    } catch (e) {\n      if (e instanceof Response) {\n        if (isServer) {\n          handleResponse(e);\n        } else {\n          setTimeout(() => handleResponse(e), 0);\n        }\n        return e;\n      }\n      throw e;\n    }\n  };\n  function dedupe(fetcher) {\n    return (key, info) => {\n      if (info.refetching && info.refetching !== true && !partialMatch(key, info.refetching) && info.value) {\n        return info.value;\n      }\n      if (key == true) return fetcher(key, info);\n      let promise = promises.get(key);\n      if (promise) return promise;\n      promise = fetcher(key, info);\n      promises.set(key, promise);\n      return promise.finally(() => promises.delete(key));\n    };\n  }\n  const [resource, {\n    refetch\n  }] = createResource(options.key || true, dedupe(resourceFetcher), {\n    storage: init => createDeepSignal(init, options.reconcileOptions),\n    ...options\n  });\n  if (!isServer) {\n    resources.add(refetch);\n    onCleanup(() => resources.delete(refetch));\n  }\n  return resource;\n}\nexport function refetchRouteData(key) {\n  if (isServer) throw new Error(\"Cannot refetch route data on the server.\");\n  return startTransition(() => {\n    for (let refetch of resources) refetch(key);\n  });\n}\nfunction createDeepSignal(value, options) {\n  const [store, setStore] = createStore({\n    value\n  });\n  return [() => store.value, v => {\n    const unwrapped = untrack(() => unwrap(store.value));\n    typeof v === \"function\" && (v = v(unwrapped));\n    setStore(\"value\", reconcile(v, options));\n    return store.value;\n  }];\n}\n\n/* React Query key matching  https://github.com/tannerlinsley/react-query */\nfunction partialMatch(a, b) {\n  return partialDeepEqual(ensureQueryKeyArray(a), ensureQueryKeyArray(b));\n}\nfunction ensureQueryKeyArray(value) {\n  return Array.isArray(value) ? value : [value];\n}\n\n/**\n * Checks if `b` partially matches with `a`.\n */\nfunction partialDeepEqual(a, b) {\n  if (a === b) {\n    return true;\n  }\n  if (typeof a !== typeof b) {\n    return false;\n  }\n  if (a.length && !b.length) return false;\n  if (a && b && typeof a === \"object\" && typeof b === \"object\") {\n    return !Object.keys(b).some(key => !partialDeepEqual(a[key], b[key]));\n  }\n  return false;\n}",
+      "start": 1720883219727,
+      "end": 1720883219727,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

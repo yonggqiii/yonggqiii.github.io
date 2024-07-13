@@ -1,0 +1,10 @@
+{
+  "resolvedId": "/research",
+  "transforms": [
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720884136702,
+      "end": 1720884136702
+    }
+  ]
+}

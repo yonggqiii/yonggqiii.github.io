@@ -1,33 +1,197 @@
-nav {
-  text-align: center;
-  padding: 5px;
+.nav-bar {
+  display: none;
 }
+
+#checkbox {
+  display: none;
+}
+
+#menuToggle {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 5;
+  background:black;
+}
+
+#nav-pane {
+  position: fixed;
+  left: 100vw;
+  top: 20px;
+  border: 1px #222 dashed;
+  background: black;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  transition: left 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navitem {
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.toggle {
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  height: calc(3px * 3 + 9px * 2);
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  border-radius: calc(3px / 2);
+  background: #fff;
+  color: inherit;
+  opacity: 1;
+  transition: none 0.35s cubic-bezier(.5,-0.35,.35,1.5) 0s;
+  z-index: 5;
+}
+
+/***** Tornado Animation *****/
+
+.bar--top {
+  bottom: calc(50% + 9px + 3px/ 2);
+  transition-property: bottom,transform, background;
+  transition-delay: calc(0s + 0.35s) * .6;
+}
+
+.bar--middle {
+  top: calc(50% - 3px/ 2);
+  transition-property: opacity,transform, background;
+  transition-delay: calc(0s + 0.35s * .3);
+}
+
+.bar--bottom {
+  top: calc(50% + 9px + 3px/ 2);
+  transition-property: top,transform, background;
+  transition-delay: 0s;
+}
+
+#checkbox:checked + .toggle .bar--top {
+  transform: rotate(-135deg);
+  transition-delay: 0s;
+  bottom: calc(50% - 3px/ 2);
+  background: #FF204E;
+}
+
+#checkbox:checked + .toggle .bar--middle {
+  opacity: 0;
+  transform: rotate(-135deg);
+  transition-delay: calc(0s + 0.35s * .3);
+  background: #FF204E;
+}
+
+#checkbox:checked + .toggle .bar--bottom {
+  top: calc(50% - 3px/ 2);
+  transform: rotate(-225deg);
+  transition-delay: calc(0s + 0.35s * .6);
+  background: #FF204E;
+}
+
+#checkbox:checked + .toggle #nav-pane {
+  left: 20px;
+}
+
 
 a {
   text-decoration: none;
 }
 
-nav a {
-  margin: 0 5px;
-}
-
 nav a.active {
-  color: #a6e3a1;
+  color: #FFFFFF;
   font-weight: bold;
 }
 
-a.inactive {
-  color: #94e2d5;
+nav a.inactive {
+  color: #CCCCCC;
 }
 
-@media (min-width: 480px) {
-  nav a {
-    margin: 0 10px;
-  }
-}
 
-@media (min-width: 760px) {
-  nav a {
-    margin: 0 30px;
+@media (min-width: 1080px) {
+  #nav-pane {
+    display: none;
   }
+  #menuToggle {
+    display: none;
+  }
+  .nav-bar {
+    display: flex;
+    padding: 5px;
+    align-items:center;
+    justify-content: center;
+    border-bottom: 1px #222 solid;
+  }
+  nav {
+  }
+
+  .home {
+    /* border: 2px blue solid; */
+    width: 50px;
+  }
+
+  .home-svg {
+    height: 15px;
+  }
+
+  .nav-grp {
+    margin-left: 200px;
+  }
+
+  nav a {
+    margin: 0 0px;
+  }
+
+  nav a button {
+   width: 150px;
+   height: 2.3em;
+   /* margin: 0.5em; */
+   background: none;
+   color: inherit;
+   border: none;
+   border-radius: 0.3em;
+   font: inherit;
+   /* font-size: 1.3rem; */
+   /* font-family: Geist; */
+   /* font-weight: bold; */
+   cursor: pointer;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+  }
+
+  nav a button:hover {
+   color: black;
+  }
+
+  nav a button:after {
+   content: "";
+   background: white;
+   position: absolute;
+   z-index: -1;
+   left: -50%;
+   right: -50%;
+   top: 0;
+   bottom: 0;
+   transform: skewX(-45deg) scale(0, 1);
+   transition: all 0.5s;
+  }
+
+  nav a button:hover:after {
+   transform: skewX(-45deg) scale(1, 1);
+   -webkit-transition: all 0.5s;
+   transition: all 0.5s;
+  }
+
+
 }

@@ -1,0 +1,10 @@
+{
+  "resolvedId": "/cv",
+  "transforms": [
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720883222031,
+      "end": 1720883222031
+    }
+  ]
+}

@@ -1,154 +1,100 @@
-@font-face {
-  font-family: "Iosevka";
-  src: url("./fonts/Iosevka/iosevka-regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+.big-name {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.big-name-name {
+  font-size: 3.5rem; 
+  margin: 0; 
+  color: white;
+}
+strong {
+  color: white;
+}
+.blinking {
+  color: #FF204E;
+  animation: blink-animation 1s steps(2, start) infinite;
+  -webkit-animation: blink-animation 1s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
-@font-face {
-  font-family: "Iosevka";
-  src: url("./fonts/Iosevka/iosevka-bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
+.flex-row {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  border-top: 1px #222 dashed;
+  border-bottom: 1px #222 dashed;
+  flex-direction: column;
 }
 
-@font-face {
-  font-family: "Iosevka";
-  src: url("./fonts/Iosevka/iosevka-italic.woff2") format("woff2");
-  font-weight: normal;
-  font-style: italic;
+.box {
+  /* width: 30vw; */
+  padding: 10px;
+  text-align: left;
 }
+.left-box {
+  /* border-right: 1px #222 dashed; */
+  border-bottom: 1px #222 dashed;
+}
+
+.box h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.box p {
+  margin-top: 0;
+}
+
+.box h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.box p {
+  margin-top: 0;
+}
+
 
 a {
-  color: #74c7ec;
+  color: #AF47D2;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+a:hover {
+  color: #FF70AB;
 }
 
 ul {
   text-align: left;
 }
-.main {
-  margin-top: 50px;
-}
-
-.flamingo {
-  color: #f2cdcd;
-}
-
-.rosewater {
-  color: #f5e0dc;
-}
-
-.pink {
-  color: #f5c2e7;
-}
-
-.mauve {
-  color: #cba6f7;
-}
-
-.red {
-  color: #f38ba8;
-}
-
-.maroon {
-  color: #eba0ac;
-}
-
-.peach {
-  color: #fab387;
-}
-
-.yellow {
-  color: #f9e2af;
-}
-
-.green {
-  color: #a6e3a1;
-}
-
-.teal {
-  color: #94e2d5;
-}
-
-.sky {
-  color: #89dceb;
-}
-
-.sapphire {
-  color: #74c7ec;
-}
-
-.blue {
-  color: #74c7ec;
-}
-
-.lavender {
-  color: #b4befe;
-}
-
-.flamingo-border {
-  border-color: #f2cdcd;
-}
-
-.rosewater-border {
-  border-color: #f5e0dc;
-}
-
-.pink-border {
-  border-color: #f5c2e7;
-}
-
-.mauve-border {
-  border-color: #cba6f7;
-}
-
-.red-border {
-  border-color: #f38ba8;
-}
-
-.maroon-border {
-  border-color: #eba0ac;
-}
-
-.peach-border {
-  border-color: #fab387;
-}
-
-.yellow-border {
-  border-color: #f9e2af;
-}
-
-.green-border {
-  border-color: #a6e3a1;
-}
-
-.teal-border {
-  border-color: #94e2d5;
-}
-
-.sky-border {
-  border-color: #89dceb;
-}
-
-.sapphire-border {
-  border-color: #74c7ec;
-}
-
-.blue-border {
-  border-color: #74c7ec;
-}
-
-.lavender-border {
-  border-color: #b4befe;
-}
 
 body {
-  font-family: Iosevka, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+  font-family: Geist, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-  background-color: #1e1e2e;
-  color: #cdd6f4;
+  background-color: #000000;
+  color: #DDD;
   font-size: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
 .circle {
@@ -163,13 +109,15 @@ body {
 
 main {
   text-align: center;
-  padding: 1em;
-  margin: 0 auto;
+  /* padding: 1em; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 h1 {
   color: #ffffff;
-  text-transform: uppercase;
   font-size: 3rem;
   /* font-weight: 100; */
   font-weight: normal;
@@ -185,8 +133,15 @@ p {
 }
 
 @media (min-width: 480px) {
+  .big-name-name {
+    font-size: 4.5rem;
+  }
   h1 {
     font-size: 4rem;
+  }
+
+  .box h2 {
+    font-size: 2rem;
   }
 
   p {
@@ -196,6 +151,10 @@ p {
   body {
     font-size: 1.3rem;
   }
+
+  .box {
+    padding: 20px;
+  }
 }
 
 @media (min-width: 1080px) {
@@ -203,4 +162,27 @@ p {
     width: 400px;
     height: 400px;
   }
+  .big-name-name {
+    font-size: 7rem;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .box {
+    width: 30vw;
+    padding: 30px;
+  }
+  .left-box {
+    border-right: 1px #222 dashed;
+    border-bottom: none;
+  }
+  .box h2 {
+    font-size: 2.5rem;
+  }
+  .box.solo {
+    margin: auto;
+    width: 50vw;
+    border: 1px #222 dashed;
+  }
+
 }
