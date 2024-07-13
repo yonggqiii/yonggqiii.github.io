@@ -4,8 +4,8 @@
     {
       "name": "__load__",
       "result": "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <div class=\"flex-row\">\n        <div class=\"box left\">\n          <h2>Latex Templates</h2>\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n        </div>\n        <div class=\"box\">\n        <h2>Monads?</h2>\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n\n        </div>\n      </div>\n    </main>\n\n  );\n}\n",
-      "start": 1720884302978,
-      "end": 1720884302978,
+      "start": 1720885760986,
+      "end": 1720885760986,
       "sourcemaps": {
         "version": 3,
         "names": [
@@ -37,8 +37,8 @@
     {
       "name": "solid-start-file-system-router",
       "result": "import { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=flex-row><div class=\"box left\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=https://github.com/yonggqiii/>GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=https://github.com/yonggqiii/teaching_templates>Teaching Templates</a></li><li>Articles: <a href=https://github.com/yonggqiii/article_template>Article Template</a></li></ul></div><div class=box><h2>Monads?</h2><p>I wrote an <a href=../papers/fun/Monads.pdf>article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.`);\nimport { Title } from \"solid-start\";\nexport default function Fun() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Fun - Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}",
-      "start": 1720884302978,
-      "end": 1720884302981,
+      "start": 1720885760986,
+      "end": 1720885760993,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -71,8 +71,8 @@
     {
       "name": "solid",
       "result": "import { $$component as _$$component } from \"solid-refresh\";\nimport { $$refresh as _$$refresh } from \"solid-refresh\";\nimport { $$registry as _$$registry } from \"solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=flex-row><div class=\"box left\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=https://github.com/yonggqiii/>GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=https://github.com/yonggqiii/teaching_templates>Teaching Templates</a></li><li>Articles: <a href=https://github.com/yonggqiii/article_template>Article Template</a></li></ul></div><div class=box><h2>Monads?</h2><p>I wrote an <a href=../papers/fun/Monads.pdf>article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.`);\nimport { Title } from \"solid-start\";\nexport default _$$component(_REGISTRY, \"Fun\", function Fun() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Fun - Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}, {\n  location: \"src/routes/fun.tsx:8:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
-      "start": 1720884302981,
-      "end": 1720884302983,
+      "start": 1720885760993,
+      "end": 1720885760996,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -118,81 +118,81 @@
     },
     {
       "name": "vite:css",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
-      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/routes/fun.tsx\");import { $$component as _$$component } from \"/@solid-refresh\";\nimport { $$refresh as _$$refresh } from \"/@solid-refresh\";\nimport { $$registry as _$$registry } from \"/@solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { getNextMarker as _$getNextMarker } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { insert as _$insert } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=flex-row><div class=\"box left\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=https://github.com/yonggqiii/>GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=https://github.com/yonggqiii/teaching_templates>Teaching Templates</a></li><li>Articles: <a href=https://github.com/yonggqiii/article_template>Article Template</a></li></ul></div><div class=box><h2>Monads?</h2><p>I wrote an <a href=../papers/fun/Monads.pdf>article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.`);\nimport { Title } from \"/node_modules/solid-start/index.tsx?v=2ea599d4\";\nexport default _$$component(_REGISTRY, \"Fun\", function Fun() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Fun - Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}, {\n  location: \"src/routes/fun.tsx:8:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
-      "start": 1720884302983,
-      "end": 1720884302983,
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/routes/fun.tsx\");import { $$component as _$$component } from \"/@solid-refresh\";\nimport { $$refresh as _$$refresh } from \"/@solid-refresh\";\nimport { $$registry as _$$registry } from \"/@solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { getNextMarker as _$getNextMarker } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { insert as _$insert } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=flex-row><div class=\"box left\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=https://github.com/yonggqiii/>GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=https://github.com/yonggqiii/teaching_templates>Teaching Templates</a></li><li>Articles: <a href=https://github.com/yonggqiii/article_template>Article Template</a></li></ul></div><div class=box><h2>Monads?</h2><p>I wrote an <a href=../papers/fun/Monads.pdf>article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.`);\nimport { Title } from \"/node_modules/solid-start/index.tsx?v=b59f1b3e\";\nexport default _$$component(_REGISTRY, \"Fun\", function Fun() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Fun - Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}, {\n  location: \"src/routes/fun.tsx:8:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
+      "start": 1720885760996,
+      "end": 1720885760996,
       "order": "normal",
       "sourcemaps": null
     }

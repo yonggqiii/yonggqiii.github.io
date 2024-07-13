@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\n\nexport function HttpStatusCode(props: { code: number }) {\n  const context = useContext(ServerContext);\n\n  if (isServer) {\n    context!.setStatusCode(props.code);\n  }\n\n  onCleanup(() => {\n    if (isServer) {\n      context!.setStatusCode(200);\n    }\n  });\n\n  return null;\n}\n",
-      "start": 1720883219965,
-      "end": 1720883219965
+      "start": 1720885728810,
+      "end": 1720885728810
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1720883219965,
-      "end": 1720883219965,
+      "start": 1720885728810,
+      "end": 1720885728810,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
-      "start": 1720883219965,
-      "end": 1720883219966,
+      "start": 1720885728810,
+      "end": 1720885728811,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -46,83 +46,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"../ServerContext\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { onCleanup, useContext } from \"solid-js\";\nimport { isServer } from \"solid-js/web\";\nimport { ServerContext } from \"/node_modules/solid-start/server/ServerContext.tsx\";\nexport function HttpStatusCode(props) {\n  const context = useContext(ServerContext);\n  if (isServer) {\n    context.setStatusCode(props.code);\n  }\n  onCleanup(() => {\n    if (isServer) {\n      context.setStatusCode(200);\n    }\n  });\n  return null;\n}",
-      "start": 1720883219966,
-      "end": 1720883219966,
+      "start": 1720885728811,
+      "end": 1720885728811,
       "order": "normal",
       "sourcemaps": null
     }

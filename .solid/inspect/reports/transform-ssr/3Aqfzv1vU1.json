@@ -1,0 +1,109 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/root.css",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "@font-face {\n  font-family: \"Geist\";\n  src: url(\"./fonts/Geist/Geist-Regular.woff2\") format(\"woff2\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Geist\";\n  src: url(\"./fonts/Geist/Geist-Bold.woff2\") format(\"woff2\");\n  font-weight: bold;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Geist\";\n  src: url(\"./fonts/Geist/Geist-Light.woff2\") format(\"woff2\");\n  font-weight: lighter;\n  font-style: normal;\n}\n.big-name {\n  height: 40vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.big-name-name {\n  font-size: 3.5rem; \n  margin: 0; \n  color: white;\n}\nstrong {\n  color: white;\n}\n.blinking {\n  color: #FF204E;\n  animation: blink-animation 1s steps(2, start) infinite;\n  -webkit-animation: blink-animation 1s steps(2, start) infinite;\n}\n@keyframes blink-animation {\n  to {\n    visibility: hidden;\n  }\n}\n@-webkit-keyframes blink-animation {\n  to {\n    visibility: hidden;\n  }\n}\n\n.flex-row {\n  display: flex;\n  /* align-items: center; */\n  justify-content: center;\n  border-top: 1px #222 dashed;\n  border-bottom: 1px #222 dashed;\n  flex-direction: column;\n}\n\n.box {\n  /* width: 30vw; */\n  padding: 10px;\n  text-align: left;\n}\n.left-box {\n  /* border-right: 1px #222 dashed; */\n  border-bottom: 1px #222 dashed;\n}\n\n.box h2 {\n  margin-top: 0;\n  margin-bottom: 0;\n  color: white;\n  font-size: 1.5rem;\n}\n\n.box p {\n  margin-top: 0;\n}\n\n.box h2 {\n  margin-top: 0;\n  margin-bottom: 0;\n  color: white;\n  font-size: 1.5rem;\n}\n\n.box p {\n  margin-top: 0;\n}\n\n\na {\n  color: #AF47D2;\n  text-decoration: none;\n  transition-property: color;\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in;\n}\n\na:hover {\n  color: #FF70AB;\n}\n\nul {\n  text-align: left;\n}\n\nbody {\n  font-family: Geist, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\",\n    \"Helvetica Neue\", sans-serif;\n  background-color: #000000;\n  color: #DDD;\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\n.circle {\n  border-radius: 50%;\n}\n\n.profile-pic {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}\n\nmain {\n  text-align: center;\n  /* padding: 1em; */\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 50px;\n  margin-bottom: 0;\n}\n\nh1 {\n  color: #ffffff;\n  font-size: 3rem;\n  /* font-weight: 100; */\n  font-weight: normal;\n  line-height: 1.1;\n  /* margin: 4rem auto; */\n  margin: auto;\n  /* max-width: 14rem; */\n}\n\np {\n  margin: 1em auto;\n  line-height: 1.35;\n}\n\n@media (min-width: 480px) {\n  .big-name-name {\n    font-size: 4.5rem;\n  }\n  h1 {\n    font-size: 4rem;\n  }\n\n  .box h2 {\n    font-size: 2rem;\n  }\n\n  p {\n    max-width: none;\n  }\n\n  body {\n    font-size: 1.3rem;\n  }\n\n  .box {\n    padding: 20px;\n  }\n}\n\n@media (min-width: 1080px) {\n  .profile-pic {\n    width: 400px;\n    height: 400px;\n  }\n  .big-name-name {\n    font-size: 7rem;\n  }\n  .flex-row {\n    flex-direction: row;\n  }\n  .box {\n    width: 30vw;\n    padding: 30px;\n  }\n  .left-box {\n    border-right: 1px #222 dashed;\n    border-bottom: none;\n  }\n  .box h2 {\n    font-size: 2.5rem;\n  }\n  .box.solo {\n    margin: auto;\n    width: 50vw;\n    border: 1px #222 dashed;\n  }\n\n}\n",
+      "start": 1720885789777,
+      "end": 1720885789777
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720885789777,
+      "end": 1720885789777,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1720885789777,
+      "end": 1720885789777,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "@font-face {\n  font-family: \"Geist\";\n  src: url(\"/src/fonts/Geist/Geist-Regular.woff2\") format(\"woff2\");\n  font-weight: normal;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Geist\";\n  src: url(\"/src/fonts/Geist/Geist-Bold.woff2\") format(\"woff2\");\n  font-weight: bold;\n  font-style: normal;\n}\n@font-face {\n  font-family: \"Geist\";\n  src: url(\"/src/fonts/Geist/Geist-Light.woff2\") format(\"woff2\");\n  font-weight: lighter;\n  font-style: normal;\n}\n.big-name {\n  height: 40vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n}\n.big-name-name {\n  font-size: 3.5rem; \n  margin: 0; \n  color: white;\n}\nstrong {\n  color: white;\n}\n.blinking {\n  color: #FF204E;\n  animation: blink-animation 1s steps(2, start) infinite;\n  -webkit-animation: blink-animation 1s steps(2, start) infinite;\n}\n@keyframes blink-animation {\n  to {\n    visibility: hidden;\n  }\n}\n@-webkit-keyframes blink-animation {\n  to {\n    visibility: hidden;\n  }\n}\n\n.flex-row {\n  display: flex;\n  /* align-items: center; */\n  justify-content: center;\n  border-top: 1px #222 dashed;\n  border-bottom: 1px #222 dashed;\n  flex-direction: column;\n}\n\n.box {\n  /* width: 30vw; */\n  padding: 10px;\n  text-align: left;\n}\n.left-box {\n  /* border-right: 1px #222 dashed; */\n  border-bottom: 1px #222 dashed;\n}\n\n.box h2 {\n  margin-top: 0;\n  margin-bottom: 0;\n  color: white;\n  font-size: 1.5rem;\n}\n\n.box p {\n  margin-top: 0;\n}\n\n.box h2 {\n  margin-top: 0;\n  margin-bottom: 0;\n  color: white;\n  font-size: 1.5rem;\n}\n\n.box p {\n  margin-top: 0;\n}\n\n\na {\n  color: #AF47D2;\n  text-decoration: none;\n  transition-property: color;\n  transition-duration: 0.2s;\n  transition-timing-function: ease-in;\n}\n\na:hover {\n  color: #FF70AB;\n}\n\nul {\n  text-align: left;\n}\n\nbody {\n  font-family: Geist, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\",\n    \"Helvetica Neue\", sans-serif;\n  background-color: #000000;\n  color: #DDD;\n  font-size: 1rem;\n  margin: 0;\n  padding: 0;\n}\n\n.circle {\n  border-radius: 50%;\n}\n\n.profile-pic {\n  width: 200px;\n  height: 200px;\n  object-fit: cover;\n}\n\nmain {\n  text-align: center;\n  /* padding: 1em; */\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 50px;\n  margin-bottom: 0;\n}\n\nh1 {\n  color: #ffffff;\n  font-size: 3rem;\n  /* font-weight: 100; */\n  font-weight: normal;\n  line-height: 1.1;\n  /* margin: 4rem auto; */\n  margin: auto;\n  /* max-width: 14rem; */\n}\n\np {\n  margin: 1em auto;\n  line-height: 1.35;\n}\n\n@media (min-width: 480px) {\n  .big-name-name {\n    font-size: 4.5rem;\n  }\n  h1 {\n    font-size: 4rem;\n  }\n\n  .box h2 {\n    font-size: 2rem;\n  }\n\n  p {\n    max-width: none;\n  }\n\n  body {\n    font-size: 1.3rem;\n  }\n\n  .box {\n    padding: 20px;\n  }\n}\n\n@media (min-width: 1080px) {\n  .profile-pic {\n    width: 400px;\n    height: 400px;\n  }\n  .big-name-name {\n    font-size: 7rem;\n  }\n  .flex-row {\n    flex-direction: row;\n  }\n  .box {\n    width: 30vw;\n    padding: 30px;\n  }\n  .left-box {\n    border-right: 1px #222 dashed;\n    border-bottom: none;\n  }\n  .box h2 {\n    font-size: 2.5rem;\n  }\n  .box.solo {\n    margin: auto;\n    width: 50vw;\n    border: 1px #222 dashed;\n  }\n\n}\n",
+      "start": 1720885789777,
+      "end": 1720885789778,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \"@font-face {\\n  font-family: \\\"Geist\\\";\\n  src: url(\\\"/src/fonts/Geist/Geist-Regular.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: normal;\\n  font-style: normal;\\n}\\n@font-face {\\n  font-family: \\\"Geist\\\";\\n  src: url(\\\"/src/fonts/Geist/Geist-Bold.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: bold;\\n  font-style: normal;\\n}\\n@font-face {\\n  font-family: \\\"Geist\\\";\\n  src: url(\\\"/src/fonts/Geist/Geist-Light.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: lighter;\\n  font-style: normal;\\n}\\n.big-name {\\n  height: 40vh;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n}\\n.big-name-name {\\n  font-size: 3.5rem; \\n  margin: 0; \\n  color: white;\\n}\\nstrong {\\n  color: white;\\n}\\n.blinking {\\n  color: #FF204E;\\n  animation: blink-animation 1s steps(2, start) infinite;\\n  -webkit-animation: blink-animation 1s steps(2, start) infinite;\\n}\\n@keyframes blink-animation {\\n  to {\\n    visibility: hidden;\\n  }\\n}\\n@-webkit-keyframes blink-animation {\\n  to {\\n    visibility: hidden;\\n  }\\n}\\n\\n.flex-row {\\n  display: flex;\\n  /* align-items: center; */\\n  justify-content: center;\\n  border-top: 1px #222 dashed;\\n  border-bottom: 1px #222 dashed;\\n  flex-direction: column;\\n}\\n\\n.box {\\n  /* width: 30vw; */\\n  padding: 10px;\\n  text-align: left;\\n}\\n.left-box {\\n  /* border-right: 1px #222 dashed; */\\n  border-bottom: 1px #222 dashed;\\n}\\n\\n.box h2 {\\n  margin-top: 0;\\n  margin-bottom: 0;\\n  color: white;\\n  font-size: 1.5rem;\\n}\\n\\n.box p {\\n  margin-top: 0;\\n}\\n\\n.box h2 {\\n  margin-top: 0;\\n  margin-bottom: 0;\\n  color: white;\\n  font-size: 1.5rem;\\n}\\n\\n.box p {\\n  margin-top: 0;\\n}\\n\\n\\na {\\n  color: #AF47D2;\\n  text-decoration: none;\\n  transition-property: color;\\n  transition-duration: 0.2s;\\n  transition-timing-function: ease-in;\\n}\\n\\na:hover {\\n  color: #FF70AB;\\n}\\n\\nul {\\n  text-align: left;\\n}\\n\\nbody {\\n  font-family: Geist, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \\\"Open Sans\\\",\\n    \\\"Helvetica Neue\\\", sans-serif;\\n  background-color: #000000;\\n  color: #DDD;\\n  font-size: 1rem;\\n  margin: 0;\\n  padding: 0;\\n}\\n\\n.circle {\\n  border-radius: 50%;\\n}\\n\\n.profile-pic {\\n  width: 200px;\\n  height: 200px;\\n  object-fit: cover;\\n}\\n\\nmain {\\n  text-align: center;\\n  /* padding: 1em; */\\n  margin-left: auto;\\n  margin-right: auto;\\n  margin-top: 50px;\\n  margin-bottom: 0;\\n}\\n\\nh1 {\\n  color: #ffffff;\\n  font-size: 3rem;\\n  /* font-weight: 100; */\\n  font-weight: normal;\\n  line-height: 1.1;\\n  /* margin: 4rem auto; */\\n  margin: auto;\\n  /* max-width: 14rem; */\\n}\\n\\np {\\n  margin: 1em auto;\\n  line-height: 1.35;\\n}\\n\\n@media (min-width: 480px) {\\n  .big-name-name {\\n    font-size: 4.5rem;\\n  }\\n  h1 {\\n    font-size: 4rem;\\n  }\\n\\n  .box h2 {\\n    font-size: 2rem;\\n  }\\n\\n  p {\\n    max-width: none;\\n  }\\n\\n  body {\\n    font-size: 1.3rem;\\n  }\\n\\n  .box {\\n    padding: 20px;\\n  }\\n}\\n\\n@media (min-width: 1080px) {\\n  .profile-pic {\\n    width: 400px;\\n    height: 400px;\\n  }\\n  .big-name-name {\\n    font-size: 7rem;\\n  }\\n  .flex-row {\\n    flex-direction: row;\\n  }\\n  .box {\\n    width: 30vw;\\n    padding: 30px;\\n  }\\n  .left-box {\\n    border-right: 1px #222 dashed;\\n    border-bottom: none;\\n  }\\n  .box h2 {\\n    font-size: 2.5rem;\\n  }\\n  .box.solo {\\n    margin: auto;\\n    width: 50vw;\\n    border: 1px #222 dashed;\\n  }\\n\\n}\\n\"",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export default \"@font-face {\\n  font-family: \\\"Geist\\\";\\n  src: url(\\\"/src/fonts/Geist/Geist-Regular.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: normal;\\n  font-style: normal;\\n}\\n@font-face {\\n  font-family: \\\"Geist\\\";\\n  src: url(\\\"/src/fonts/Geist/Geist-Bold.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: bold;\\n  font-style: normal;\\n}\\n@font-face {\\n  font-family: \\\"Geist\\\";\\n  src: url(\\\"/src/fonts/Geist/Geist-Light.woff2\\\") format(\\\"woff2\\\");\\n  font-weight: lighter;\\n  font-style: normal;\\n}\\n.big-name {\\n  height: 40vh;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n}\\n.big-name-name {\\n  font-size: 3.5rem; \\n  margin: 0; \\n  color: white;\\n}\\nstrong {\\n  color: white;\\n}\\n.blinking {\\n  color: #FF204E;\\n  animation: blink-animation 1s steps(2, start) infinite;\\n  -webkit-animation: blink-animation 1s steps(2, start) infinite;\\n}\\n@keyframes blink-animation {\\n  to {\\n    visibility: hidden;\\n  }\\n}\\n@-webkit-keyframes blink-animation {\\n  to {\\n    visibility: hidden;\\n  }\\n}\\n\\n.flex-row {\\n  display: flex;\\n  /* align-items: center; */\\n  justify-content: center;\\n  border-top: 1px #222 dashed;\\n  border-bottom: 1px #222 dashed;\\n  flex-direction: column;\\n}\\n\\n.box {\\n  /* width: 30vw; */\\n  padding: 10px;\\n  text-align: left;\\n}\\n.left-box {\\n  /* border-right: 1px #222 dashed; */\\n  border-bottom: 1px #222 dashed;\\n}\\n\\n.box h2 {\\n  margin-top: 0;\\n  margin-bottom: 0;\\n  color: white;\\n  font-size: 1.5rem;\\n}\\n\\n.box p {\\n  margin-top: 0;\\n}\\n\\n.box h2 {\\n  margin-top: 0;\\n  margin-bottom: 0;\\n  color: white;\\n  font-size: 1.5rem;\\n}\\n\\n.box p {\\n  margin-top: 0;\\n}\\n\\n\\na {\\n  color: #AF47D2;\\n  text-decoration: none;\\n  transition-property: color;\\n  transition-duration: 0.2s;\\n  transition-timing-function: ease-in;\\n}\\n\\na:hover {\\n  color: #FF70AB;\\n}\\n\\nul {\\n  text-align: left;\\n}\\n\\nbody {\\n  font-family: Geist, Gordita, Roboto, Oxygen, Ubuntu, Cantarell, \\\"Open Sans\\\",\\n    \\\"Helvetica Neue\\\", sans-serif;\\n  background-color: #000000;\\n  color: #DDD;\\n  font-size: 1rem;\\n  margin: 0;\\n  padding: 0;\\n}\\n\\n.circle {\\n  border-radius: 50%;\\n}\\n\\n.profile-pic {\\n  width: 200px;\\n  height: 200px;\\n  object-fit: cover;\\n}\\n\\nmain {\\n  text-align: center;\\n  /* padding: 1em; */\\n  margin-left: auto;\\n  margin-right: auto;\\n  margin-top: 50px;\\n  margin-bottom: 0;\\n}\\n\\nh1 {\\n  color: #ffffff;\\n  font-size: 3rem;\\n  /* font-weight: 100; */\\n  font-weight: normal;\\n  line-height: 1.1;\\n  /* margin: 4rem auto; */\\n  margin: auto;\\n  /* max-width: 14rem; */\\n}\\n\\np {\\n  margin: 1em auto;\\n  line-height: 1.35;\\n}\\n\\n@media (min-width: 480px) {\\n  .big-name-name {\\n    font-size: 4.5rem;\\n  }\\n  h1 {\\n    font-size: 4rem;\\n  }\\n\\n  .box h2 {\\n    font-size: 2rem;\\n  }\\n\\n  p {\\n    max-width: none;\\n  }\\n\\n  body {\\n    font-size: 1.3rem;\\n  }\\n\\n  .box {\\n    padding: 20px;\\n  }\\n}\\n\\n@media (min-width: 1080px) {\\n  .profile-pic {\\n    width: 400px;\\n    height: 400px;\\n  }\\n  .big-name-name {\\n    font-size: 7rem;\\n  }\\n  .flex-row {\\n    flex-direction: row;\\n  }\\n  .box {\\n    width: 30vw;\\n    padding: 30px;\\n  }\\n  .left-box {\\n    border-right: 1px #222 dashed;\\n    border-bottom: none;\\n  }\\n  .box h2 {\\n    font-size: 2.5rem;\\n  }\\n  .box.solo {\\n    margin: auto;\\n    width: 50vw;\\n    border: 1px #222 dashed;\\n  }\\n\\n}\\n\"",
+      "start": 1720885789778,
+      "end": 1720885789778,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

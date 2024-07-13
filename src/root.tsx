@@ -13,10 +13,17 @@ import {
   Title,
 } from "solid-start";
 import NavBar from "./components/NavBar";
-import "./fonts/Iosevka/iosevka-regular.woff2";
-import "./fonts/Iosevka/iosevka-bold.woff2";
-import "./fonts/Iosevka/iosevka-italic.woff2";
+import "./fonts/Geist/Geist-Regular.woff2";
+import "./fonts/Geist/Geist-Black.woff2";
+import "./fonts/Geist/Geist-Light.woff2";
+import "./fonts/Geist/Geist-Bold.woff2";
+import "./fonts/Geist/Geist-Medium.woff2";
+import "./fonts/Geist/Geist-SemiBold.woff2";
+import "./fonts/Geist/Geist-Thin.woff2";
+import "./fonts/Geist/Geist-UltraBlack.woff2";
+import "./fonts/Geist/Geist-UltraLight.woff2";
 import "./root.css";
+
 
 export default function Root() {
   return (

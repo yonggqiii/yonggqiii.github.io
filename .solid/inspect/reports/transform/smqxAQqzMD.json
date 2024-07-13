@@ -4,8 +4,8 @@
     {
       "name": "__load__",
       "result": "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Home() {\n  return (\n    <main>\n      <Title>Foo Yong Qi</Title>\n      <div class=\"big-name\">\n      <p class=\"big-name-name\">\n        <strong>Foo</strong> Yong Qi<span class=\"blinking\">.</span>\n      </p>\n      <p>\n        Keep it simple, stupid.\n      </p>\n      </div>\n\n      <div class=\"flex-row\">\n      <div class=\"box left-box\" id=\"about-box\">\n          <h2>About</h2>\n          <p><strong>Instructor</strong> and <strong>PhD in Computer Science candidate</strong> at the Department of Computer Science, School of Computing, <strong>National University of Singapore</strong>.</p>\n          <p>Likes ducks and programming languages.</p>\n      </div>\n      <div class=\"box\">\n          <h2>Contact</h2>\n          <p><strong>Email</strong>: yongqi@nus.edu.sg<br/><strong>DID</strong>: +6516 7960<br/><strong>Office</strong>: COM2-02-27, 15 Computing Drive, Singapore 117418</p>\n      </div>\n      </div>\n    </main>\n  );\n}\n",
-      "start": 1720883357872,
-      "end": 1720883357872,
+      "start": 1720885729002,
+      "end": 1720885729002,
       "sourcemaps": {
         "version": 3,
         "names": [
@@ -37,8 +37,8 @@
     {
       "name": "solid-start-file-system-router",
       "result": "import { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=big-name><p class=big-name-name><strong>Foo</strong> Yong Qi<span class=blinking>.</span></p><p>Keep it simple, stupid.</p></div><div class=flex-row><div class=\"box left-box\"id=about-box><h2>About</h2><p><strong>Instructor</strong> and <strong>PhD in Computer Science candidate</strong> at the Department of Computer Science, School of Computing, <strong>National University of Singapore</strong>.</p><p>Likes ducks and programming languages.</p></div><div class=box><h2>Contact</h2><p><strong>Email</strong>: yongqi@nus.edu.sg<br><strong>DID</strong>: +6516 7960<br><strong>Office</strong>: COM2-02-27, 15 Computing Drive, Singapore 117418`);\nimport { Title } from \"solid-start\";\nexport default function Home() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}",
-      "start": 1720883357872,
-      "end": 1720883357877,
+      "start": 1720885729002,
+      "end": 1720885729005,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -71,8 +71,8 @@
     {
       "name": "solid",
       "result": "import { $$component as _$$component } from \"solid-refresh\";\nimport { $$refresh as _$$refresh } from \"solid-refresh\";\nimport { $$registry as _$$registry } from \"solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"solid-js/web\";\nimport { getNextElement as _$getNextElement } from \"solid-js/web\";\nimport { getNextMarker as _$getNextMarker } from \"solid-js/web\";\nimport { insert as _$insert } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=big-name><p class=big-name-name><strong>Foo</strong> Yong Qi<span class=blinking>.</span></p><p>Keep it simple, stupid.</p></div><div class=flex-row><div class=\"box left-box\"id=about-box><h2>About</h2><p><strong>Instructor</strong> and <strong>PhD in Computer Science candidate</strong> at the Department of Computer Science, School of Computing, <strong>National University of Singapore</strong>.</p><p>Likes ducks and programming languages.</p></div><div class=box><h2>Contact</h2><p><strong>Email</strong>: yongqi@nus.edu.sg<br><strong>DID</strong>: +6516 7960<br><strong>Office</strong>: COM2-02-27, 15 Computing Drive, Singapore 117418`);\nimport { Title } from \"solid-start\";\nexport default _$$component(_REGISTRY, \"Home\", function Home() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}, {\n  location: \"src/routes/index.tsx:8:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
-      "start": 1720883357877,
-      "end": 1720883357880,
+      "start": 1720885729005,
+      "end": 1720885729007,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -118,81 +118,81 @@
     },
     {
       "name": "vite:css",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
-      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/routes/index.tsx\");import { $$component as _$$component } from \"/@solid-refresh\";\nimport { $$refresh as _$$refresh } from \"/@solid-refresh\";\nimport { $$registry as _$$registry } from \"/@solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { getNextMarker as _$getNextMarker } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { insert as _$insert } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=d921a2ff\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=big-name><p class=big-name-name><strong>Foo</strong> Yong Qi<span class=blinking>.</span></p><p>Keep it simple, stupid.</p></div><div class=flex-row><div class=\"box left-box\"id=about-box><h2>About</h2><p><strong>Instructor</strong> and <strong>PhD in Computer Science candidate</strong> at the Department of Computer Science, School of Computing, <strong>National University of Singapore</strong>.</p><p>Likes ducks and programming languages.</p></div><div class=box><h2>Contact</h2><p><strong>Email</strong>: yongqi@nus.edu.sg<br><strong>DID</strong>: +6516 7960<br><strong>Office</strong>: COM2-02-27, 15 Computing Drive, Singapore 117418`);\nimport { Title } from \"/node_modules/solid-start/index.tsx?v=2ea599d4\";\nexport default _$$component(_REGISTRY, \"Home\", function Home() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}, {\n  location: \"src/routes/index.tsx:8:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
-      "start": 1720883357880,
-      "end": 1720883357880,
+      "result": "import { createHotContext as __vite__createHotContext } from \"/@vite/client\";import.meta.hot = __vite__createHotContext(\"/src/routes/index.tsx\");import { $$component as _$$component } from \"/@solid-refresh\";\nimport { $$refresh as _$$refresh } from \"/@solid-refresh\";\nimport { $$registry as _$$registry } from \"/@solid-refresh\";\nconst _REGISTRY = _$$registry();\nimport { template as _$template } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { getNextElement as _$getNextElement } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { getNextMarker as _$getNextMarker } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { insert as _$insert } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nconst _tmpl$ = /*#__PURE__*/_$template(`<main><!$><!/><div class=big-name><p class=big-name-name><strong>Foo</strong> Yong Qi<span class=blinking>.</span></p><p>Keep it simple, stupid.</p></div><div class=flex-row><div class=\"box left-box\"id=about-box><h2>About</h2><p><strong>Instructor</strong> and <strong>PhD in Computer Science candidate</strong> at the Department of Computer Science, School of Computing, <strong>National University of Singapore</strong>.</p><p>Likes ducks and programming languages.</p></div><div class=box><h2>Contact</h2><p><strong>Email</strong>: yongqi@nus.edu.sg<br><strong>DID</strong>: +6516 7960<br><strong>Office</strong>: COM2-02-27, 15 Computing Drive, Singapore 117418`);\nimport { Title } from \"/node_modules/solid-start/index.tsx?v=b59f1b3e\";\nexport default _$$component(_REGISTRY, \"Home\", function Home() {\n  return (() => {\n    const _el$ = _$getNextElement(_tmpl$),\n      _el$3 = _el$.firstChild,\n      [_el$4, _co$] = _$getNextMarker(_el$3.nextSibling),\n      _el$2 = _el$4.nextSibling;\n    _$insert(_el$, _$createComponent(Title, {\n      children: \"Foo Yong Qi\"\n    }), _el$4, _co$);\n    return _el$;\n  })();\n}, {\n  location: \"src/routes/index.tsx:8:15\"\n});\nif (import.meta.hot) {\n  _$$refresh(\"vite\", import.meta.hot, _REGISTRY);\n  import.meta.hot.accept();\n}",
+      "start": 1720885729007,
+      "end": 1720885729007,
       "order": "normal",
       "sourcemaps": null
     }

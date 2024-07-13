@@ -1,0 +1,120 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/entry-client.tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { mount, StartClient } from \"solid-start/entry-client\";\n\nmount(() => <StartClient />, document);\n",
+      "start": 1720885789788,
+      "end": 1720885789788
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720885789788,
+      "end": 1720885789788,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { createComponent as _$createComponent } from \"solid-js/web\";\nimport { mount, StartClient } from \"solid-start/entry-client\";\nmount(() => _$createComponent(StartClient, {}), document);",
+      "start": 1720885789788,
+      "end": 1720885789790,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "mount",
+          "StartClient",
+          "_$createComponent",
+          "document"
+        ],
+        "sources": [
+          "entry-client.tsx"
+        ],
+        "sourcesContent": [
+          "import { mount, StartClient } from \"solid-start/entry-client\";\n\nmount(() => <StartClient />, document);\n"
+        ],
+        "mappings": ";AAAA,SAASA,KAAK,EAAEC,WAAW,QAAQ,0BAA0B;AAE7DD,KAAK,CAAC,MAAAE,iBAAA,CAAOD,WAAW,KAAG,EAAEE,QAAQ,CAAC"
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720885789790,
+      "end": 1720885789790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=b59f1b3e\";\nimport { mount, StartClient } from \"/node_modules/solid-start/entry-client/index.tsx?t=1720885789670&v=b59f1b3e\";\nmount(() => _$createComponent(StartClient, {}), document);",
+      "start": 1720885789790,
+      "end": 1720885789791,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

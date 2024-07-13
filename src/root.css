@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist/Geist-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist/Geist-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("./fonts/Geist/Geist-Light.woff2") format("woff2");
+  font-weight: lighter;
+  font-style: normal;
+}
 .big-name {
   height: 40vh;
   display: flex;

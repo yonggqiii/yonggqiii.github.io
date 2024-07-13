@@ -1,0 +1,121 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/error-boundary/index.tsx?v=b59f1b3e",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;\n",
+      "start": 1720885728911,
+      "end": 1720885728911
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720885728911,
+      "end": 1720885728911,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1720885728911,
+      "end": 1720885728912,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "ErrorBoundary",
+          "ErrorMessage"
+        ],
+        "sources": [
+          "index.tsx"
+        ],
+        "sourcesContent": [
+          "import { ErrorBoundary } from \"./ErrorBoundary\";\nexport { ErrorMessage } from \"./ErrorBoundary\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;\n"
+        ],
+        "mappings": "AAAA,SAASA,aAAa,QAAQ,iBAAiB;AAC/C,SAASC,YAAY,QAAQ,iBAAiB;AAC9C,SAASD,aAAa;AACtB,eAAeA,aAAa",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { ErrorBoundary } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx?v=b59f1b3e\";\nexport { ErrorMessage } from \"/node_modules/solid-start/error-boundary/ErrorBoundary.tsx?v=b59f1b3e\";\nexport { ErrorBoundary };\nexport default ErrorBoundary;",
+      "start": 1720885728912,
+      "end": 1720885728912,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

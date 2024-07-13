@@ -1,0 +1,118 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/islands/router.ts?v=b59f1b3e",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import type { Location, Navigator } from \"@solidjs/router\";\nimport { createSignal } from \"solid-js\";\ninterface LocationEntry {\n  path: string;\n  state: any;\n  pathname: string;\n  search: string;\n  hash: string;\n}\n\nexport default function mountRouter() {\n  if (import.meta.env.START_ISLANDS_ROUTER) {\n    _$DEBUG(\"mounting islands router\");\n\n    const basePath = \"/\";\n    let [currentLocation, setCurrentLocation] = createSignal<Location>(getLocation());\n    window.LOCATION = currentLocation;\n\n    function getLocation(): Location & LocationEntry {\n      const { pathname, search, hash } = window.location;\n      return {\n        path: pathname + search + hash,\n        state: history.state,\n        pathname,\n        search,\n        hash,\n        query: {},\n        key: \"\"\n      };\n    }\n\n    async function handleAnchorClick(evt: MouseEvent) {\n      if (\n        evt.defaultPrevented ||\n        evt.button !== 0 ||\n        evt.metaKey ||\n        evt.altKey ||\n        evt.ctrlKey ||\n        evt.shiftKey\n      )\n        return;\n\n      const a = evt\n        .composedPath()\n        .find(el => el instanceof Node && el.nodeName.toUpperCase() === \"A\") as\n        | HTMLAnchorElement\n        | undefined;\n\n      if (!a || !a.hasAttribute(\"link\")) return;\n\n      const href = a.href;\n      const target = a.target;\n      if (target || (!href && !a.hasAttribute(\"state\"))) return;\n\n      const rel = (a.getAttribute(\"rel\") || \"\").split(/\\s+/);\n      if (a.hasAttribute(\"download\") || (rel && rel.includes(\"external\"))) return;\n\n      const url = new URL(href);\n      if (\n        url.origin !== window.location.origin ||\n        (basePath && url.pathname && !url.pathname.toLowerCase().startsWith(basePath.toLowerCase()))\n      )\n        return;\n\n      const prevLocation = getLocation();\n\n      const to = url.pathname + url.search + url.hash;\n      const state = a.getAttribute(\"state\");\n\n      if (url.pathname === prevLocation.pathname && url.search === prevLocation.search) {\n        if (url.hash !== prevLocation.hash) {\n          window.location.hash = url.hash;\n          setCurrentLocation(getLocation());\n        }\n      }\n\n      evt.preventDefault();\n\n      const options = {\n        resolve: false,\n        replace: a.hasAttribute(\"replace\"),\n        scroll: !a.hasAttribute(\"noscroll\"),\n        state: state && JSON.parse(state)\n      };\n\n      if (await navigate(to)) {\n        if (options.replace) {\n          history.replaceState(options.state, \"\", to);\n        } else {\n          history.pushState(options.state, \"\", to);\n        }\n        setCurrentLocation(getLocation());\n      }\n    }\n\n    interface NavigateOptions {\n      resolve?: boolean;\n      replace?: boolean;\n      scroll?: boolean;\n      state?: any;\n    }\n\n    async function handlePopState(evt: PopStateEvent) {\n      const { pathname, state } = getLocation();\n      if (currentLocation().pathname !== pathname) {\n        if (await navigate(pathname)) {\n          setCurrentLocation(getLocation());\n        }\n      }\n    }\n\n    async function navigate(to: string, options: NavigateOptions = {}) {\n      const response = await fetch(to, {\n        method: \"POST\",\n        headers: {\n          \"x-solid-referrer\": currentLocation().pathname\n        }\n      });\n\n      if (!response.ok) {\n        console.error(`Navigation failed: ${response.status} ${response.statusText}`);\n        return false;\n      }\n\n      const body = await response.text();\n      const splitIndex = body.indexOf(\"=\");\n      const meta = body.substring(0, splitIndex);\n      const content = body.substring(splitIndex + 1);\n\n      if (meta) {\n        const [prev, next] = meta.split(\":\");\n        const outletEl = document.getElementById(prev);\n        if (outletEl) {\n          outletEl.innerHTML = content;\n          outletEl.id = next;\n          window._$HY && window._$HY.hydrateIslands && window._$HY.hydrateIslands();\n          return true;\n        } else {\n          console.warn(`No outlet element with id ${prev}`);\n        }\n      } else {\n        console.warn(`No meta data in response`);\n      }\n\n      return false;\n    }\n\n    window.NAVIGATE = navigate as unknown as Navigator;\n\n    document.addEventListener(\"click\", handleAnchorClick);\n    window.addEventListener(\"popstate\", handlePopState);\n    _$DEBUG(\"mounted islands router\");\n  }\n}\n",
+      "start": 1720885728859,
+      "end": 1720885728859
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720885728859,
+      "end": 1720885728859,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1720885728859,
+      "end": 1720885728859,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1720885728859,
+      "end": 1720885728859,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { createSignal } from \"solid-js\";\nexport default function mountRouter() {\n  if (import.meta.env.START_ISLANDS_ROUTER) {\n    let getLocation = function() {\n      const { pathname, search, hash } = window.location;\n      return {\n        path: pathname + search + hash,\n        state: history.state,\n        pathname,\n        search,\n        hash,\n        query: {},\n        key: \"\"\n      };\n    };\n    _$DEBUG(\"mounting islands router\");\n    const basePath = \"/\";\n    let [currentLocation, setCurrentLocation] = createSignal(getLocation());\n    window.LOCATION = currentLocation;\n    async function handleAnchorClick(evt) {\n      if (evt.defaultPrevented || evt.button !== 0 || evt.metaKey || evt.altKey || evt.ctrlKey || evt.shiftKey)\n        return;\n      const a = evt.composedPath().find((el) => el instanceof Node && el.nodeName.toUpperCase() === \"A\");\n      if (!a || !a.hasAttribute(\"link\"))\n        return;\n      const href = a.href;\n      const target = a.target;\n      if (target || !href && !a.hasAttribute(\"state\"))\n        return;\n      const rel = (a.getAttribute(\"rel\") || \"\").split(/\\s+/);\n      if (a.hasAttribute(\"download\") || rel && rel.includes(\"external\"))\n        return;\n      const url = new URL(href);\n      if (url.origin !== window.location.origin || basePath && url.pathname && !url.pathname.toLowerCase().startsWith(basePath.toLowerCase()))\n        return;\n      const prevLocation = getLocation();\n      const to = url.pathname + url.search + url.hash;\n      const state = a.getAttribute(\"state\");\n      if (url.pathname === prevLocation.pathname && url.search === prevLocation.search) {\n        if (url.hash !== prevLocation.hash) {\n          window.location.hash = url.hash;\n          setCurrentLocation(getLocation());\n        }\n      }\n      evt.preventDefault();\n      const options = {\n        resolve: false,\n        replace: a.hasAttribute(\"replace\"),\n        scroll: !a.hasAttribute(\"noscroll\"),\n        state: state && JSON.parse(state)\n      };\n      if (await navigate(to)) {\n        if (options.replace) {\n          history.replaceState(options.state, \"\", to);\n        } else {\n          history.pushState(options.state, \"\", to);\n        }\n        setCurrentLocation(getLocation());\n      }\n    }\n    async function handlePopState(evt) {\n      const { pathname, state } = getLocation();\n      if (currentLocation().pathname !== pathname) {\n        if (await navigate(pathname)) {\n          setCurrentLocation(getLocation());\n        }\n      }\n    }\n    async function navigate(to, options = {}) {\n      const response = await fetch(to, {\n        method: \"POST\",\n        headers: {\n          \"x-solid-referrer\": currentLocation().pathname\n        }\n      });\n      if (!response.ok) {\n        console.error(`Navigation failed: ${response.status} ${response.statusText}`);\n        return false;\n      }\n      const body = await response.text();\n      const splitIndex = body.indexOf(\"=\");\n      const meta = body.substring(0, splitIndex);\n      const content = body.substring(splitIndex + 1);\n      if (meta) {\n        const [prev, next] = meta.split(\":\");\n        const outletEl = document.getElementById(prev);\n        if (outletEl) {\n          outletEl.innerHTML = content;\n          outletEl.id = next;\n          window._$HY && window._$HY.hydrateIslands && window._$HY.hydrateIslands();\n          return true;\n        } else {\n          console.warn(`No outlet element with id ${prev}`);\n        }\n      } else {\n        console.warn(`No meta data in response`);\n      }\n      return false;\n    }\n    window.NAVIGATE = navigate;\n    document.addEventListener(\"click\", handleAnchorClick);\n    window.addEventListener(\"popstate\", handlePopState);\n    _$DEBUG(\"mounted islands router\");\n  }\n}\n",
+      "start": 1720885728859,
+      "end": 1720885728877,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "router.ts?v=b59f1b3e"
+        ],
+        "sourcesContent": [
+          "import type { Location, Navigator } from \"@solidjs/router\";\nimport { createSignal } from \"solid-js\";\ninterface LocationEntry {\n  path: string;\n  state: any;\n  pathname: string;\n  search: string;\n  hash: string;\n}\n\nexport default function mountRouter() {\n  if (import.meta.env.START_ISLANDS_ROUTER) {\n    _$DEBUG(\"mounting islands router\");\n\n    const basePath = \"/\";\n    let [currentLocation, setCurrentLocation] = createSignal<Location>(getLocation());\n    window.LOCATION = currentLocation;\n\n    function getLocation(): Location & LocationEntry {\n      const { pathname, search, hash } = window.location;\n      return {\n        path: pathname + search + hash,\n        state: history.state,\n        pathname,\n        search,\n        hash,\n        query: {},\n        key: \"\"\n      };\n    }\n\n    async function handleAnchorClick(evt: MouseEvent) {\n      if (\n        evt.defaultPrevented ||\n        evt.button !== 0 ||\n        evt.metaKey ||\n        evt.altKey ||\n        evt.ctrlKey ||\n        evt.shiftKey\n      )\n        return;\n\n      const a = evt\n        .composedPath()\n        .find(el => el instanceof Node && el.nodeName.toUpperCase() === \"A\") as\n        | HTMLAnchorElement\n        | undefined;\n\n      if (!a || !a.hasAttribute(\"link\")) return;\n\n      const href = a.href;\n      const target = a.target;\n      if (target || (!href && !a.hasAttribute(\"state\"))) return;\n\n      const rel = (a.getAttribute(\"rel\") || \"\").split(/\\s+/);\n      if (a.hasAttribute(\"download\") || (rel && rel.includes(\"external\"))) return;\n\n      const url = new URL(href);\n      if (\n        url.origin !== window.location.origin ||\n        (basePath && url.pathname && !url.pathname.toLowerCase().startsWith(basePath.toLowerCase()))\n      )\n        return;\n\n      const prevLocation = getLocation();\n\n      const to = url.pathname + url.search + url.hash;\n      const state = a.getAttribute(\"state\");\n\n      if (url.pathname === prevLocation.pathname && url.search === prevLocation.search) {\n        if (url.hash !== prevLocation.hash) {\n          window.location.hash = url.hash;\n          setCurrentLocation(getLocation());\n        }\n      }\n\n      evt.preventDefault();\n\n      const options = {\n        resolve: false,\n        replace: a.hasAttribute(\"replace\"),\n        scroll: !a.hasAttribute(\"noscroll\"),\n        state: state && JSON.parse(state)\n      };\n\n      if (await navigate(to)) {\n        if (options.replace) {\n          history.replaceState(options.state, \"\", to);\n        } else {\n          history.pushState(options.state, \"\", to);\n        }\n        setCurrentLocation(getLocation());\n      }\n    }\n\n    interface NavigateOptions {\n      resolve?: boolean;\n      replace?: boolean;\n      scroll?: boolean;\n      state?: any;\n    }\n\n    async function handlePopState(evt: PopStateEvent) {\n      const { pathname, state } = getLocation();\n      if (currentLocation().pathname !== pathname) {\n        if (await navigate(pathname)) {\n          setCurrentLocation(getLocation());\n        }\n      }\n    }\n\n    async function navigate(to: string, options: NavigateOptions = {}) {\n      const response = await fetch(to, {\n        method: \"POST\",\n        headers: {\n          \"x-solid-referrer\": currentLocation().pathname\n        }\n      });\n\n      if (!response.ok) {\n        console.error(`Navigation failed: ${response.status} ${response.statusText}`);\n        return false;\n      }\n\n      const body = await response.text();\n      const splitIndex = body.indexOf(\"=\");\n      const meta = body.substring(0, splitIndex);\n      const content = body.substring(splitIndex + 1);\n\n      if (meta) {\n        const [prev, next] = meta.split(\":\");\n        const outletEl = document.getElementById(prev);\n        if (outletEl) {\n          outletEl.innerHTML = content;\n          outletEl.id = next;\n          window._$HY && window._$HY.hydrateIslands && window._$HY.hydrateIslands();\n          return true;\n        } else {\n          console.warn(`No outlet element with id ${prev}`);\n        }\n      } else {\n        console.warn(`No meta data in response`);\n      }\n\n      return false;\n    }\n\n    window.NAVIGATE = navigate as unknown as Navigator;\n\n    document.addEventListener(\"click\", handleAnchorClick);\n    window.addEventListener(\"popstate\", handlePopState);\n    _$DEBUG(\"mounted islands router\");\n  }\n}\n"
+        ],
+        "mappings": "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",
+        "names": [],
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import.meta.env = {\"BASE_URL\":\"/\",\"MODE\":\"development\",\"DEV\":true,\"PROD\":false,\"SSR\":false};import.meta.env.START_SSR = true;import.meta.env.START_ISLANDS = false;import.meta.env.START_ENTRY_CLIENT = \"/home/yongqi/Repositories/yonggqiii.github.io/src/entry-client.tsx\";import.meta.env.START_ENTRY_SERVER = \"/home/yongqi/Repositories/yonggqiii.github.io/src/entry-server.tsx\";import.meta.env.START_INDEX_HTML = false;import.meta.env.START_ISLANDS_ROUTER = false;import.meta.env.START_ADAPTER = \"static\";import { createSignal } from \"/node_modules/.vite/deps/solid-js.js?v=b59f1b3e\";\nexport default function mountRouter() {\n  if (import.meta.env.START_ISLANDS_ROUTER) {\n    let getLocation = function() {\n      const { pathname, search, hash } = window.location;\n      return {\n        path: pathname + search + hash,\n        state: history.state,\n        pathname,\n        search,\n        hash,\n        query: {},\n        key: \"\"\n      };\n    };\n    _$DEBUG(\"mounting islands router\");\n    const basePath = \"/\";\n    let [currentLocation, setCurrentLocation] = createSignal(getLocation());\n    window.LOCATION = currentLocation;\n    async function handleAnchorClick(evt) {\n      if (evt.defaultPrevented || evt.button !== 0 || evt.metaKey || evt.altKey || evt.ctrlKey || evt.shiftKey)\n        return;\n      const a = evt.composedPath().find((el) => el instanceof Node && el.nodeName.toUpperCase() === \"A\");\n      if (!a || !a.hasAttribute(\"link\"))\n        return;\n      const href = a.href;\n      const target = a.target;\n      if (target || !href && !a.hasAttribute(\"state\"))\n        return;\n      const rel = (a.getAttribute(\"rel\") || \"\").split(/\\s+/);\n      if (a.hasAttribute(\"download\") || rel && rel.includes(\"external\"))\n        return;\n      const url = new URL(href);\n      if (url.origin !== window.location.origin || basePath && url.pathname && !url.pathname.toLowerCase().startsWith(basePath.toLowerCase()))\n        return;\n      const prevLocation = getLocation();\n      const to = url.pathname + url.search + url.hash;\n      const state = a.getAttribute(\"state\");\n      if (url.pathname === prevLocation.pathname && url.search === prevLocation.search) {\n        if (url.hash !== prevLocation.hash) {\n          window.location.hash = url.hash;\n          setCurrentLocation(getLocation());\n        }\n      }\n      evt.preventDefault();\n      const options = {\n        resolve: false,\n        replace: a.hasAttribute(\"replace\"),\n        scroll: !a.hasAttribute(\"noscroll\"),\n        state: state && JSON.parse(state)\n      };\n      if (await navigate(to)) {\n        if (options.replace) {\n          history.replaceState(options.state, \"\", to);\n        } else {\n          history.pushState(options.state, \"\", to);\n        }\n        setCurrentLocation(getLocation());\n      }\n    }\n    async function handlePopState(evt) {\n      const { pathname, state } = getLocation();\n      if (currentLocation().pathname !== pathname) {\n        if (await navigate(pathname)) {\n          setCurrentLocation(getLocation());\n        }\n      }\n    }\n    async function navigate(to, options = {}) {\n      const response = await fetch(to, {\n        method: \"POST\",\n        headers: {\n          \"x-solid-referrer\": currentLocation().pathname\n        }\n      });\n      if (!response.ok) {\n        console.error(`Navigation failed: ${response.status} ${response.statusText}`);\n        return false;\n      }\n      const body = await response.text();\n      const splitIndex = body.indexOf(\"=\");\n      const meta = body.substring(0, splitIndex);\n      const content = body.substring(splitIndex + 1);\n      if (meta) {\n        const [prev, next] = meta.split(\":\");\n        const outletEl = document.getElementById(prev);\n        if (outletEl) {\n          outletEl.innerHTML = content;\n          outletEl.id = next;\n          window._$HY && window._$HY.hydrateIslands && window._$HY.hydrateIslands();\n          return true;\n        } else {\n          console.warn(`No outlet element with id ${prev}`);\n        }\n      } else {\n        console.warn(`No meta data in response`);\n      }\n      return false;\n    }\n    window.NAVIGATE = navigate;\n    document.addEventListener(\"click\", handleAnchorClick);\n    window.addEventListener(\"popstate\", handlePopState);\n    _$DEBUG(\"mounted islands router\");\n  }\n}\n",
+      "start": 1720885728877,
+      "end": 1720885728877,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}
