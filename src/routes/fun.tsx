@@ -1,12 +1,11 @@
 import { Title } from "solid-start";
-import Card from "../components/Card";
 
 export default function Fun() {
   return (
     <main>
       <Title>Fun - Foo Yong Qi</Title>
       <div class="flex-row">
-        <div class="box left">
+        <div class="box left-box">
           <h2>Latex Templates</h2>
         <p>
           Templates for typesetting a bunch of documents I frequently create can be found in my <a href="https://github.com/yonggqiii/">GitHub</a>.

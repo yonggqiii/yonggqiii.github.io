@@ -1,0 +1,139 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/components/NewsItem.tsx",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import \"./NewsItem.css\";\nexport default function NewsItem(props) {\n  let current_date = Date.now()\n  let elapsed = Math.floor((current_date - props.date) / (3600000 * 24))\n  let is_new = elapsed < 31 ? \" <span class=\\\"recent\\\">(New!)</span>\" : \"\"\n  let item_date = new Date(props.date)\n  let day = item_date.getDate()\n  let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][item_date.getMonth()]\n  if (is_new) {\n    return (\n      <div class=\"tr\"><div class=\"left-col\"><strong>{day} {month}</strong> <span class=\"recent\">(New!)</span></div><div>{props.children}</div></div>\n    );\n  } else {\n    return (\n      <div class=\"tr\"><div class=\"left-col\"><strong>{day} {month}</strong></div><div>{props.children}</div></div>\n    );\n\n  }\n}\n",
+      "start": 1720949287562,
+      "end": 1720949287562
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720949287562,
+      "end": 1720949287562,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<div\", \" class=\\\"tr\\\"><div class=\\\"left-col\\\"><strong><!--$-->\", \"<!--/--> <!--$-->\", \"<!--/--></strong> <span class=\\\"recent\\\">(New!)</span></div><div>\", \"</div></div>\"],\n  _tmpl$2 = [\"<div\", \" class=\\\"tr\\\"><div class=\\\"left-col\\\"><strong><!--$-->\", \"<!--/--> <!--$-->\", \"<!--/--></strong></div><div>\", \"</div></div>\"];\nimport \"./NewsItem.css\";\nexport default function NewsItem(props) {\n  let current_date = Date.now();\n  let elapsed = Math.floor((current_date - props.date) / (3600000 * 24));\n  let is_new = elapsed < 31 ? \" <span class=\\\"recent\\\">(New!)</span>\" : \"\";\n  let item_date = new Date(props.date);\n  let day = item_date.getDate();\n  let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][item_date.getMonth()];\n  if (is_new) {\n    return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(day), _$escape(month), _$escape(props.children));\n  } else {\n    return _$ssr(_tmpl$2, _$ssrHydrationKey(), _$escape(day), _$escape(month), _$escape(props.children));\n  }\n}",
+      "start": 1720949287562,
+      "end": 1720949287565,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "NewsItem",
+          "props",
+          "current_date",
+          "Date",
+          "now",
+          "elapsed",
+          "Math",
+          "floor",
+          "date",
+          "is_new",
+          "item_date",
+          "day",
+          "getDate",
+          "month",
+          "getMonth",
+          "_$ssr",
+          "_tmpl$",
+          "_$ssrHydrationKey",
+          "_$escape",
+          "children",
+          "_tmpl$2"
+        ],
+        "sources": [
+          "NewsItem.tsx"
+        ],
+        "sourcesContent": [
+          "import \"./NewsItem.css\";\nexport default function NewsItem(props) {\n  let current_date = Date.now()\n  let elapsed = Math.floor((current_date - props.date) / (3600000 * 24))\n  let is_new = elapsed < 31 ? \" <span class=\\\"recent\\\">(New!)</span>\" : \"\"\n  let item_date = new Date(props.date)\n  let day = item_date.getDate()\n  let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][item_date.getMonth()]\n  if (is_new) {\n    return (\n      <div class=\"tr\"><div class=\"left-col\"><strong>{day} {month}</strong> <span class=\"recent\">(New!)</span></div><div>{props.children}</div></div>\n    );\n  } else {\n    return (\n      <div class=\"tr\"><div class=\"left-col\"><strong>{day} {month}</strong></div><div>{props.children}</div></div>\n    );\n\n  }\n}\n"
+        ],
+        "mappings": ";;;;;AAAA,OAAO,gBAAgB;AACvB,eAAe,SAASA,QAAQA,CAACC,KAAK,EAAE;EACtC,IAAIC,YAAY,GAAGC,IAAI,CAACC,GAAG,CAAC,CAAC;EAC7B,IAAIC,OAAO,GAAGC,IAAI,CAACC,KAAK,CAAC,CAACL,YAAY,GAAGD,KAAK,CAACO,IAAI,KAAK,OAAO,GAAG,EAAE,CAAC,CAAC;EACtE,IAAIC,MAAM,GAAGJ,OAAO,GAAG,EAAE,GAAG,uCAAuC,GAAG,EAAE;EACxE,IAAIK,SAAS,GAAG,IAAIP,IAAI,CAACF,KAAK,CAACO,IAAI,CAAC;EACpC,IAAIG,GAAG,GAAGD,SAAS,CAACE,OAAO,CAAC,CAAC;EAC7B,IAAIC,KAAK,GAAG,CAAC,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,EAAE,KAAK,CAAC,CAACH,SAAS,CAACI,QAAQ,CAAC,CAAC,CAAC;EACtH,IAAIL,MAAM,EAAE;IACV,OAAAM,KAAA,CAAAC,MAAA,EAAAC,iBAAA,IAAAC,QAAA,CACiDP,GAAG,GAAAO,QAAA,CAAGL,KAAK,GAAAK,QAAA,CAAyDjB,KAAK,CAACkB,QAAQ;EAErI,CAAC,MAAM;IACL,OAAAJ,KAAA,CAAAK,OAAA,EAAAH,iBAAA,IAAAC,QAAA,CACiDP,GAAG,GAAAO,QAAA,CAAGL,KAAK,GAAAK,QAAA,CAAsBjB,KAAK,CAACkB,QAAQ;EAGlG;AACF"
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<div\", \" class=\\\"tr\\\"><div class=\\\"left-col\\\"><strong><!--$-->\", \"<!--/--> <!--$-->\", \"<!--/--></strong> <span class=\\\"recent\\\">(New!)</span></div><div>\", \"</div></div>\"],\n  _tmpl$2 = [\"<div\", \" class=\\\"tr\\\"><div class=\\\"left-col\\\"><strong><!--$-->\", \"<!--/--> <!--$-->\", \"<!--/--></strong></div><div>\", \"</div></div>\"];\nimport \"./NewsItem.css\";\nexport default function NewsItem(props) {\n  let current_date = Date.now();\n  let elapsed = Math.floor((current_date - props.date) / (3600000 * 24));\n  let is_new = elapsed < 31 ? \" <span class=\\\"recent\\\">(New!)</span>\" : \"\";\n  let item_date = new Date(props.date);\n  let day = item_date.getDate();\n  let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][item_date.getMonth()];\n  if (is_new) {\n    return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(day), _$escape(month), _$escape(props.children));\n  } else {\n    return _$ssr(_tmpl$2, _$ssrHydrationKey(), _$escape(day), _$escape(month), _$escape(props.children));\n  }\n}",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<div\", \" class=\\\"tr\\\"><div class=\\\"left-col\\\"><strong><!--$-->\", \"<!--/--> <!--$-->\", \"<!--/--></strong> <span class=\\\"recent\\\">(New!)</span></div><div>\", \"</div></div>\"],\n  _tmpl$2 = [\"<div\", \" class=\\\"tr\\\"><div class=\\\"left-col\\\"><strong><!--$-->\", \"<!--/--> <!--$-->\", \"<!--/--></strong></div><div>\", \"</div></div>\"];\nimport \"/src/components/NewsItem.css\";\nexport default function NewsItem(props) {\n  let current_date = Date.now();\n  let elapsed = Math.floor((current_date - props.date) / (3600000 * 24));\n  let is_new = elapsed < 31 ? \" <span class=\\\"recent\\\">(New!)</span>\" : \"\";\n  let item_date = new Date(props.date);\n  let day = item_date.getDate();\n  let month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][item_date.getMonth()];\n  if (is_new) {\n    return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(day), _$escape(month), _$escape(props.children));\n  } else {\n    return _$ssr(_tmpl$2, _$ssrHydrationKey(), _$escape(day), _$escape(month), _$escape(props.children));\n  }\n}",
+      "start": 1720949287565,
+      "end": 1720949287565,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

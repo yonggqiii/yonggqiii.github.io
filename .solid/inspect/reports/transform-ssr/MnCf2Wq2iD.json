@@ -1,0 +1,107 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/components/MyTable.css",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": ".table {\n  display: flex;\n  flex-direction: column;\n}\n",
+      "start": 1720949392177,
+      "end": 1720949392177
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".table {\n  display: flex;\n  flex-direction: column;\n}\n",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".table {\\n  display: flex;\\n  flex-direction: column;\\n}\\n\"",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export default \".table {\\n  display: flex;\\n  flex-direction: column;\\n}\\n\"",
+      "start": 1720949392177,
+      "end": 1720949392177,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

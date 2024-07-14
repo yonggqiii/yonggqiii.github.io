@@ -1,0 +1,216 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/islands/server-router.tsx?v=f4e4b3e8",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import { createContext, JSX, useContext } from \"solid-js\";\nimport { ssr } from \"solid-js/web\";\nexport interface RouteDefinition {\n  path: string;\n  component?: () => JSX.Element;\n  children?: RouteDefinition | RouteDefinition[];\n}\n\nexport type Params = Record<string, string>;\n\nexport interface PathMatch {\n  params: Params;\n  path: string;\n}\n\nexport interface MatchedRoute {\n  id: string;\n  originalPath: string;\n  pattern: string;\n  component: (props: any) => JSX.Element;\n  match: PathMatch;\n  shared: boolean;\n}\n\nexport interface Branch {\n  routes: MatchedRoute[];\n  score: number;\n}\n\nconst hasSchemeRegex = /^(?:[a-z0-9]+:)?\\/\\//i;\nconst trimPathRegex = /^\\/+|\\/+$|\\s+/g;\n\nfunction normalize(path: string) {\n  const s = path.replace(trimPathRegex, \"\");\n  return s ? (s.startsWith(\"?\") ? s : \"/\" + s) : \"\";\n}\n\nexport function resolvePath(base: string, path: string, from?: string): string | undefined {\n  if (hasSchemeRegex.test(path)) {\n    return undefined;\n  }\n  const basePath = normalize(base);\n  const fromPath = from && normalize(from);\n  let result = \"\";\n  if (!fromPath || path.charAt(0) === \"/\") {\n    result = basePath;\n  } else if (fromPath.toLowerCase().indexOf(basePath.toLowerCase()) !== 0) {\n    result = basePath + fromPath;\n  } else {\n    result = fromPath;\n  }\n  return result + normalize(path) || \"/\";\n}\n\nexport function joinPaths(from: string, to: string): string {\n  return normalize(from).replace(/\\/*(\\*.*)?$/g, \"\") + normalize(to);\n}\n\nexport function matchPath(path: string, location: string, partial?: boolean): PathMatch | null {\n  const [pattern, splat] = path.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  const len = segments.length;\n  const locSegments = location.split(\"/\").filter(Boolean);\n  const lenDiff = locSegments.length - len;\n  if (lenDiff < 0 || (lenDiff > 0 && splat === undefined && !partial)) {\n    return null;\n  }\n\n  const match: PathMatch = {\n    path: len ? \"\" : \"/\",\n    params: {}\n  };\n\n  for (let i = 0; i < len; i++) {\n    const segment = segments[i];\n    const locSegment = locSegments[i];\n\n    if (segment[0] === \":\") {\n      match.params[segment.slice(1)] = locSegment;\n    } else if (segment.localeCompare(locSegment, undefined, { sensitivity: \"base\" }) !== 0) {\n      return null;\n    }\n    match.path += `/${locSegment}`;\n  }\n\n  if (splat) {\n    match.params[splat] = lenDiff ? locSegments.slice(-lenDiff).join(\"/\") : \"\";\n  }\n\n  return match;\n}\n\nexport function scoreRoute(route: MatchedRoute): number {\n  const [pattern, splat] = route.pattern.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  return segments.reduce(\n    (score, segment) => score + (segment.startsWith(\":\") ? 2 : 3),\n    segments.length - (splat === undefined ? 0 : 1)\n  );\n}\n\nexport function createMatchedRoute(\n  routeDef: RouteDefinition,\n  base: string,\n  id: string,\n  location: string\n): MatchedRoute | null {\n  if (!routeDef || typeof routeDef !== \"object\" || !routeDef.hasOwnProperty(\"path\")) {\n    return null;\n  }\n\n  const { path: originalPath, component = Outlet, children } = routeDef;\n  const isLeaf = !children || !Array.isArray(children) || !children.length;\n  const path = joinPaths(base, originalPath);\n  const pattern = isLeaf ? path : path.split(\"/*\", 1)[0];\n\n  const match = matchPath(pattern, location, !isLeaf);\n  if (!match) {\n    return null;\n  }\n\n  return {\n    id,\n    originalPath,\n    pattern,\n    component,\n    match,\n    shared: false\n  };\n}\n\nexport function getMatchedBranch(\n  routeDef: RouteDefinition | RouteDefinition[],\n  location: string,\n  stack: MatchedRoute[] = [],\n  branches: Branch[] = []\n): Branch | null {\n  const routeDefs = Array.isArray(routeDef) ? routeDef : [routeDef];\n\n  for (let i = 0, len = routeDefs.length; i < len; i++) {\n    const def = routeDefs[i];\n    const parent = stack[stack.length - 1];\n    const route = createMatchedRoute(\n      def,\n      parent ? parent.pattern : \"/\",\n      parent ? `${parent.id}.${i}` : \"\" + i,\n      location\n    );\n\n    if (route) {\n      stack.push(route);\n\n      if (def.children) {\n        getMatchedBranch(def.children, location, stack, branches);\n      } else {\n        const score = scoreRoute(route);\n        if (!branches.length || score > branches[0].score) {\n          branches[0] = {\n            routes: [...stack],\n            score\n          };\n        }\n      }\n\n      stack.pop();\n    }\n  }\n\n  return branches[0] || null;\n}\n\nexport interface RouterContextState {\n  routes: MatchedRoute[];\n  location: string;\n}\n\nexport const RouterContext = createContext<RouterContextState>();\n\nexport const useRouter = () => useContext(RouterContext)!;\n\nexport interface OutletContextState {\n  depth: number;\n  route: MatchedRoute;\n}\n\nexport const OutletContext = createContext<OutletContextState>();\n\nexport const useOutlet = () => useContext(OutletContext);\n\nexport const useRouteParams = () => {\n  const outlet = useOutlet()!;\n  return () => outlet.route.match.params;\n};\n\nexport interface RouterProps {\n  location: string;\n  prevLocation: string;\n  routes: RouteDefinition | RouteDefinition[];\n  children: JSX.Element;\n  out?: any;\n}\n\nexport function Router(props: RouterProps) {\n  const next = getMatchedBranch(props.routes, props.location);\n  if (!next || !next.routes.length) {\n    return [];\n  }\n\n  const nextRoutes = next.routes;\n\n  const prev = props.prevLocation ? getMatchedBranch(props.routes, props.prevLocation) : null;\n  if (prev) {\n    const prevRoutes = prev.routes;\n\n    for (let i = 0, len = nextRoutes.length; i < len; i++) {\n      const nextRoute = nextRoutes[i];\n      const prevRoute = prevRoutes[i];\n      if (\n        prevRoute &&\n        nextRoute.id === prevRoute.id &&\n        nextRoute.match.path === prevRoute.match.path\n      ) {\n        if (JSON.stringify(nextRoute.match.params) === JSON.stringify(prevRoute.match.params)) {\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n        } else {\n          // console.log(\"diff rendered\");\n          // const Comp = nextRoute.component;\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n          // diffedRender = (\n          //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n          //     <Comp />\n          //   </outlet-wrapper>\n          // );\n          // return diffedRender;\n        }\n        // Routes are shared\n      } else {\n        // console.log(\"diff rendered\");\n        // const Comp = nextRoute.component;\n        props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n        props.out.newOutletId = `outlet-${nextRoute.id}`;\n        //console.log(prevRoute, nextRoute);\n        //console.log(`diff render from: ${props.prevLocation} to: ${props.location}`);\n        // diffedRender = (\n        //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n        //     <Comp />\n        //   </outlet-wrapper>\n        // );\n        // return diffedRender;\n      }\n    }\n  }\n\n  const state = {\n    routes: nextRoutes,\n    location: props.location,\n    out: props.out\n  };\n\n  return <RouterContext.Provider value={state}>{props.children}</RouterContext.Provider>;\n}\n\nexport function Outlet(props: { children: JSX.Element }) {\n  const router = useRouter();\n  const parent = useOutlet();\n  const depth = parent ? parent.depth : 0;\n\n  const state = {\n    depth: depth + 1,\n    route: router.routes[depth]\n  };\n\n  return (\n    <>\n      {ssr(`<!--outlet-${state.route.id}--><outlet-wrapper id=\"outlet-${state.route.id}\">`)}\n      <OutletContext.Provider value={state}>{props.children}</OutletContext.Provider>\n      {ssr(`</outlet-wrapper><!--outlet-${state.route.id}-->`)}\n    </>\n  );\n}\n",
+      "start": 1720943932372,
+      "end": 1720943932372
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720943932372,
+      "end": 1720943932372,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { memo as _$memo } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { createContext, useContext } from \"solid-js\";\nimport { ssr } from \"solid-js/web\";\nconst hasSchemeRegex = /^(?:[a-z0-9]+:)?\\/\\//i;\nconst trimPathRegex = /^\\/+|\\/+$|\\s+/g;\nfunction normalize(path) {\n  const s = path.replace(trimPathRegex, \"\");\n  return s ? s.startsWith(\"?\") ? s : \"/\" + s : \"\";\n}\nexport function resolvePath(base, path, from) {\n  if (hasSchemeRegex.test(path)) {\n    return undefined;\n  }\n  const basePath = normalize(base);\n  const fromPath = from && normalize(from);\n  let result = \"\";\n  if (!fromPath || path.charAt(0) === \"/\") {\n    result = basePath;\n  } else if (fromPath.toLowerCase().indexOf(basePath.toLowerCase()) !== 0) {\n    result = basePath + fromPath;\n  } else {\n    result = fromPath;\n  }\n  return result + normalize(path) || \"/\";\n}\nexport function joinPaths(from, to) {\n  return normalize(from).replace(/\\/*(\\*.*)?$/g, \"\") + normalize(to);\n}\nexport function matchPath(path, location, partial) {\n  const [pattern, splat] = path.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  const len = segments.length;\n  const locSegments = location.split(\"/\").filter(Boolean);\n  const lenDiff = locSegments.length - len;\n  if (lenDiff < 0 || lenDiff > 0 && splat === undefined && !partial) {\n    return null;\n  }\n  const match = {\n    path: len ? \"\" : \"/\",\n    params: {}\n  };\n  for (let i = 0; i < len; i++) {\n    const segment = segments[i];\n    const locSegment = locSegments[i];\n    if (segment[0] === \":\") {\n      match.params[segment.slice(1)] = locSegment;\n    } else if (segment.localeCompare(locSegment, undefined, {\n      sensitivity: \"base\"\n    }) !== 0) {\n      return null;\n    }\n    match.path += `/${locSegment}`;\n  }\n  if (splat) {\n    match.params[splat] = lenDiff ? locSegments.slice(-lenDiff).join(\"/\") : \"\";\n  }\n  return match;\n}\nexport function scoreRoute(route) {\n  const [pattern, splat] = route.pattern.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  return segments.reduce((score, segment) => score + (segment.startsWith(\":\") ? 2 : 3), segments.length - (splat === undefined ? 0 : 1));\n}\nexport function createMatchedRoute(routeDef, base, id, location) {\n  if (!routeDef || typeof routeDef !== \"object\" || !routeDef.hasOwnProperty(\"path\")) {\n    return null;\n  }\n  const {\n    path: originalPath,\n    component = Outlet,\n    children\n  } = routeDef;\n  const isLeaf = !children || !Array.isArray(children) || !children.length;\n  const path = joinPaths(base, originalPath);\n  const pattern = isLeaf ? path : path.split(\"/*\", 1)[0];\n  const match = matchPath(pattern, location, !isLeaf);\n  if (!match) {\n    return null;\n  }\n  return {\n    id,\n    originalPath,\n    pattern,\n    component,\n    match,\n    shared: false\n  };\n}\nexport function getMatchedBranch(routeDef, location, stack = [], branches = []) {\n  const routeDefs = Array.isArray(routeDef) ? routeDef : [routeDef];\n  for (let i = 0, len = routeDefs.length; i < len; i++) {\n    const def = routeDefs[i];\n    const parent = stack[stack.length - 1];\n    const route = createMatchedRoute(def, parent ? parent.pattern : \"/\", parent ? `${parent.id}.${i}` : \"\" + i, location);\n    if (route) {\n      stack.push(route);\n      if (def.children) {\n        getMatchedBranch(def.children, location, stack, branches);\n      } else {\n        const score = scoreRoute(route);\n        if (!branches.length || score > branches[0].score) {\n          branches[0] = {\n            routes: [...stack],\n            score\n          };\n        }\n      }\n      stack.pop();\n    }\n  }\n  return branches[0] || null;\n}\nexport const RouterContext = createContext();\nexport const useRouter = () => useContext(RouterContext);\nexport const OutletContext = createContext();\nexport const useOutlet = () => useContext(OutletContext);\nexport const useRouteParams = () => {\n  const outlet = useOutlet();\n  return () => outlet.route.match.params;\n};\nexport function Router(props) {\n  const next = getMatchedBranch(props.routes, props.location);\n  if (!next || !next.routes.length) {\n    return [];\n  }\n  const nextRoutes = next.routes;\n  const prev = props.prevLocation ? getMatchedBranch(props.routes, props.prevLocation) : null;\n  if (prev) {\n    const prevRoutes = prev.routes;\n    for (let i = 0, len = nextRoutes.length; i < len; i++) {\n      const nextRoute = nextRoutes[i];\n      const prevRoute = prevRoutes[i];\n      if (prevRoute && nextRoute.id === prevRoute.id && nextRoute.match.path === prevRoute.match.path) {\n        if (JSON.stringify(nextRoute.match.params) === JSON.stringify(prevRoute.match.params)) {\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n        } else {\n          // console.log(\"diff rendered\");\n          // const Comp = nextRoute.component;\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n          // diffedRender = (\n          //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n          //     <Comp />\n          //   </outlet-wrapper>\n          // );\n          // return diffedRender;\n        }\n        // Routes are shared\n      } else {\n        // console.log(\"diff rendered\");\n        // const Comp = nextRoute.component;\n        props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n        props.out.newOutletId = `outlet-${nextRoute.id}`;\n        //console.log(prevRoute, nextRoute);\n        //console.log(`diff render from: ${props.prevLocation} to: ${props.location}`);\n        // diffedRender = (\n        //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n        //     <Comp />\n        //   </outlet-wrapper>\n        // );\n        // return diffedRender;\n      }\n    }\n  }\n\n  const state = {\n    routes: nextRoutes,\n    location: props.location,\n    out: props.out\n  };\n  return _$createComponent(RouterContext.Provider, {\n    value: state,\n    get children() {\n      return props.children;\n    }\n  });\n}\nexport function Outlet(props) {\n  const router = useRouter();\n  const parent = useOutlet();\n  const depth = parent ? parent.depth : 0;\n  const state = {\n    depth: depth + 1,\n    route: router.routes[depth]\n  };\n  return [_$memo(() => ssr(`<!--outlet-${state.route.id}--><outlet-wrapper id=\"outlet-${state.route.id}\">`)), _$createComponent(OutletContext.Provider, {\n    value: state,\n    get children() {\n      return props.children;\n    }\n  }), _$memo(() => ssr(`</outlet-wrapper><!--outlet-${state.route.id}-->`))];\n}",
+      "start": 1720943932372,
+      "end": 1720943932380,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "createContext",
+          "useContext",
+          "ssr",
+          "hasSchemeRegex",
+          "trimPathRegex",
+          "normalize",
+          "path",
+          "s",
+          "replace",
+          "startsWith",
+          "resolvePath",
+          "base",
+          "from",
+          "test",
+          "undefined",
+          "basePath",
+          "fromPath",
+          "result",
+          "charAt",
+          "toLowerCase",
+          "indexOf",
+          "joinPaths",
+          "to",
+          "matchPath",
+          "location",
+          "partial",
+          "pattern",
+          "splat",
+          "split",
+          "segments",
+          "filter",
+          "Boolean",
+          "len",
+          "length",
+          "locSegments",
+          "lenDiff",
+          "match",
+          "params",
+          "i",
+          "segment",
+          "locSegment",
+          "slice",
+          "localeCompare",
+          "sensitivity",
+          "join",
+          "scoreRoute",
+          "route",
+          "reduce",
+          "score",
+          "createMatchedRoute",
+          "routeDef",
+          "id",
+          "hasOwnProperty",
+          "originalPath",
+          "component",
+          "Outlet",
+          "children",
+          "isLeaf",
+          "Array",
+          "isArray",
+          "shared",
+          "getMatchedBranch",
+          "stack",
+          "branches",
+          "routeDefs",
+          "def",
+          "parent",
+          "push",
+          "routes",
+          "pop",
+          "RouterContext",
+          "useRouter",
+          "OutletContext",
+          "useOutlet",
+          "useRouteParams",
+          "outlet",
+          "Router",
+          "props",
+          "next",
+          "nextRoutes",
+          "prev",
+          "prevLocation",
+          "prevRoutes",
+          "nextRoute",
+          "prevRoute",
+          "JSON",
+          "stringify",
+          "out",
+          "replaceOutletId",
+          "newOutletId",
+          "state",
+          "_$createComponent",
+          "Provider",
+          "value",
+          "router",
+          "depth",
+          "_$memo"
+        ],
+        "sources": [
+          "server-router.tsx"
+        ],
+        "sourcesContent": [
+          "import { createContext, JSX, useContext } from \"solid-js\";\nimport { ssr } from \"solid-js/web\";\nexport interface RouteDefinition {\n  path: string;\n  component?: () => JSX.Element;\n  children?: RouteDefinition | RouteDefinition[];\n}\n\nexport type Params = Record<string, string>;\n\nexport interface PathMatch {\n  params: Params;\n  path: string;\n}\n\nexport interface MatchedRoute {\n  id: string;\n  originalPath: string;\n  pattern: string;\n  component: (props: any) => JSX.Element;\n  match: PathMatch;\n  shared: boolean;\n}\n\nexport interface Branch {\n  routes: MatchedRoute[];\n  score: number;\n}\n\nconst hasSchemeRegex = /^(?:[a-z0-9]+:)?\\/\\//i;\nconst trimPathRegex = /^\\/+|\\/+$|\\s+/g;\n\nfunction normalize(path: string) {\n  const s = path.replace(trimPathRegex, \"\");\n  return s ? (s.startsWith(\"?\") ? s : \"/\" + s) : \"\";\n}\n\nexport function resolvePath(base: string, path: string, from?: string): string | undefined {\n  if (hasSchemeRegex.test(path)) {\n    return undefined;\n  }\n  const basePath = normalize(base);\n  const fromPath = from && normalize(from);\n  let result = \"\";\n  if (!fromPath || path.charAt(0) === \"/\") {\n    result = basePath;\n  } else if (fromPath.toLowerCase().indexOf(basePath.toLowerCase()) !== 0) {\n    result = basePath + fromPath;\n  } else {\n    result = fromPath;\n  }\n  return result + normalize(path) || \"/\";\n}\n\nexport function joinPaths(from: string, to: string): string {\n  return normalize(from).replace(/\\/*(\\*.*)?$/g, \"\") + normalize(to);\n}\n\nexport function matchPath(path: string, location: string, partial?: boolean): PathMatch | null {\n  const [pattern, splat] = path.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  const len = segments.length;\n  const locSegments = location.split(\"/\").filter(Boolean);\n  const lenDiff = locSegments.length - len;\n  if (lenDiff < 0 || (lenDiff > 0 && splat === undefined && !partial)) {\n    return null;\n  }\n\n  const match: PathMatch = {\n    path: len ? \"\" : \"/\",\n    params: {}\n  };\n\n  for (let i = 0; i < len; i++) {\n    const segment = segments[i];\n    const locSegment = locSegments[i];\n\n    if (segment[0] === \":\") {\n      match.params[segment.slice(1)] = locSegment;\n    } else if (segment.localeCompare(locSegment, undefined, { sensitivity: \"base\" }) !== 0) {\n      return null;\n    }\n    match.path += `/${locSegment}`;\n  }\n\n  if (splat) {\n    match.params[splat] = lenDiff ? locSegments.slice(-lenDiff).join(\"/\") : \"\";\n  }\n\n  return match;\n}\n\nexport function scoreRoute(route: MatchedRoute): number {\n  const [pattern, splat] = route.pattern.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  return segments.reduce(\n    (score, segment) => score + (segment.startsWith(\":\") ? 2 : 3),\n    segments.length - (splat === undefined ? 0 : 1)\n  );\n}\n\nexport function createMatchedRoute(\n  routeDef: RouteDefinition,\n  base: string,\n  id: string,\n  location: string\n): MatchedRoute | null {\n  if (!routeDef || typeof routeDef !== \"object\" || !routeDef.hasOwnProperty(\"path\")) {\n    return null;\n  }\n\n  const { path: originalPath, component = Outlet, children } = routeDef;\n  const isLeaf = !children || !Array.isArray(children) || !children.length;\n  const path = joinPaths(base, originalPath);\n  const pattern = isLeaf ? path : path.split(\"/*\", 1)[0];\n\n  const match = matchPath(pattern, location, !isLeaf);\n  if (!match) {\n    return null;\n  }\n\n  return {\n    id,\n    originalPath,\n    pattern,\n    component,\n    match,\n    shared: false\n  };\n}\n\nexport function getMatchedBranch(\n  routeDef: RouteDefinition | RouteDefinition[],\n  location: string,\n  stack: MatchedRoute[] = [],\n  branches: Branch[] = []\n): Branch | null {\n  const routeDefs = Array.isArray(routeDef) ? routeDef : [routeDef];\n\n  for (let i = 0, len = routeDefs.length; i < len; i++) {\n    const def = routeDefs[i];\n    const parent = stack[stack.length - 1];\n    const route = createMatchedRoute(\n      def,\n      parent ? parent.pattern : \"/\",\n      parent ? `${parent.id}.${i}` : \"\" + i,\n      location\n    );\n\n    if (route) {\n      stack.push(route);\n\n      if (def.children) {\n        getMatchedBranch(def.children, location, stack, branches);\n      } else {\n        const score = scoreRoute(route);\n        if (!branches.length || score > branches[0].score) {\n          branches[0] = {\n            routes: [...stack],\n            score\n          };\n        }\n      }\n\n      stack.pop();\n    }\n  }\n\n  return branches[0] || null;\n}\n\nexport interface RouterContextState {\n  routes: MatchedRoute[];\n  location: string;\n}\n\nexport const RouterContext = createContext<RouterContextState>();\n\nexport const useRouter = () => useContext(RouterContext)!;\n\nexport interface OutletContextState {\n  depth: number;\n  route: MatchedRoute;\n}\n\nexport const OutletContext = createContext<OutletContextState>();\n\nexport const useOutlet = () => useContext(OutletContext);\n\nexport const useRouteParams = () => {\n  const outlet = useOutlet()!;\n  return () => outlet.route.match.params;\n};\n\nexport interface RouterProps {\n  location: string;\n  prevLocation: string;\n  routes: RouteDefinition | RouteDefinition[];\n  children: JSX.Element;\n  out?: any;\n}\n\nexport function Router(props: RouterProps) {\n  const next = getMatchedBranch(props.routes, props.location);\n  if (!next || !next.routes.length) {\n    return [];\n  }\n\n  const nextRoutes = next.routes;\n\n  const prev = props.prevLocation ? getMatchedBranch(props.routes, props.prevLocation) : null;\n  if (prev) {\n    const prevRoutes = prev.routes;\n\n    for (let i = 0, len = nextRoutes.length; i < len; i++) {\n      const nextRoute = nextRoutes[i];\n      const prevRoute = prevRoutes[i];\n      if (\n        prevRoute &&\n        nextRoute.id === prevRoute.id &&\n        nextRoute.match.path === prevRoute.match.path\n      ) {\n        if (JSON.stringify(nextRoute.match.params) === JSON.stringify(prevRoute.match.params)) {\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n        } else {\n          // console.log(\"diff rendered\");\n          // const Comp = nextRoute.component;\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n          // diffedRender = (\n          //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n          //     <Comp />\n          //   </outlet-wrapper>\n          // );\n          // return diffedRender;\n        }\n        // Routes are shared\n      } else {\n        // console.log(\"diff rendered\");\n        // const Comp = nextRoute.component;\n        props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n        props.out.newOutletId = `outlet-${nextRoute.id}`;\n        //console.log(prevRoute, nextRoute);\n        //console.log(`diff render from: ${props.prevLocation} to: ${props.location}`);\n        // diffedRender = (\n        //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n        //     <Comp />\n        //   </outlet-wrapper>\n        // );\n        // return diffedRender;\n      }\n    }\n  }\n\n  const state = {\n    routes: nextRoutes,\n    location: props.location,\n    out: props.out\n  };\n\n  return <RouterContext.Provider value={state}>{props.children}</RouterContext.Provider>;\n}\n\nexport function Outlet(props: { children: JSX.Element }) {\n  const router = useRouter();\n  const parent = useOutlet();\n  const depth = parent ? parent.depth : 0;\n\n  const state = {\n    depth: depth + 1,\n    route: router.routes[depth]\n  };\n\n  return (\n    <>\n      {ssr(`<!--outlet-${state.route.id}--><outlet-wrapper id=\"outlet-${state.route.id}\">`)}\n      <OutletContext.Provider value={state}>{props.children}</OutletContext.Provider>\n      {ssr(`</outlet-wrapper><!--outlet-${state.route.id}-->`)}\n    </>\n  );\n}\n"
+        ],
+        "mappings": "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",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720943932380,
+      "end": 1720943932380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { memo as _$memo } from \"/node_modules/.vite/deps/solid-js_web.js?v=f4e4b3e8\";\nimport { createComponent as _$createComponent } from \"/node_modules/.vite/deps/solid-js_web.js?v=f4e4b3e8\";\nimport { createContext, useContext } from \"/node_modules/.vite/deps/solid-js.js?v=f4e4b3e8\";\nimport { ssr } from \"/node_modules/.vite/deps/solid-js_web.js?v=f4e4b3e8\";\nconst hasSchemeRegex = /^(?:[a-z0-9]+:)?\\/\\//i;\nconst trimPathRegex = /^\\/+|\\/+$|\\s+/g;\nfunction normalize(path) {\n  const s = path.replace(trimPathRegex, \"\");\n  return s ? s.startsWith(\"?\") ? s : \"/\" + s : \"\";\n}\nexport function resolvePath(base, path, from) {\n  if (hasSchemeRegex.test(path)) {\n    return undefined;\n  }\n  const basePath = normalize(base);\n  const fromPath = from && normalize(from);\n  let result = \"\";\n  if (!fromPath || path.charAt(0) === \"/\") {\n    result = basePath;\n  } else if (fromPath.toLowerCase().indexOf(basePath.toLowerCase()) !== 0) {\n    result = basePath + fromPath;\n  } else {\n    result = fromPath;\n  }\n  return result + normalize(path) || \"/\";\n}\nexport function joinPaths(from, to) {\n  return normalize(from).replace(/\\/*(\\*.*)?$/g, \"\") + normalize(to);\n}\nexport function matchPath(path, location, partial) {\n  const [pattern, splat] = path.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  const len = segments.length;\n  const locSegments = location.split(\"/\").filter(Boolean);\n  const lenDiff = locSegments.length - len;\n  if (lenDiff < 0 || lenDiff > 0 && splat === undefined && !partial) {\n    return null;\n  }\n  const match = {\n    path: len ? \"\" : \"/\",\n    params: {}\n  };\n  for (let i = 0; i < len; i++) {\n    const segment = segments[i];\n    const locSegment = locSegments[i];\n    if (segment[0] === \":\") {\n      match.params[segment.slice(1)] = locSegment;\n    } else if (segment.localeCompare(locSegment, undefined, {\n      sensitivity: \"base\"\n    }) !== 0) {\n      return null;\n    }\n    match.path += `/${locSegment}`;\n  }\n  if (splat) {\n    match.params[splat] = lenDiff ? locSegments.slice(-lenDiff).join(\"/\") : \"\";\n  }\n  return match;\n}\nexport function scoreRoute(route) {\n  const [pattern, splat] = route.pattern.split(\"/*\", 2);\n  const segments = pattern.split(\"/\").filter(Boolean);\n  return segments.reduce((score, segment) => score + (segment.startsWith(\":\") ? 2 : 3), segments.length - (splat === undefined ? 0 : 1));\n}\nexport function createMatchedRoute(routeDef, base, id, location) {\n  if (!routeDef || typeof routeDef !== \"object\" || !routeDef.hasOwnProperty(\"path\")) {\n    return null;\n  }\n  const {\n    path: originalPath,\n    component = Outlet,\n    children\n  } = routeDef;\n  const isLeaf = !children || !Array.isArray(children) || !children.length;\n  const path = joinPaths(base, originalPath);\n  const pattern = isLeaf ? path : path.split(\"/*\", 1)[0];\n  const match = matchPath(pattern, location, !isLeaf);\n  if (!match) {\n    return null;\n  }\n  return {\n    id,\n    originalPath,\n    pattern,\n    component,\n    match,\n    shared: false\n  };\n}\nexport function getMatchedBranch(routeDef, location, stack = [], branches = []) {\n  const routeDefs = Array.isArray(routeDef) ? routeDef : [routeDef];\n  for (let i = 0, len = routeDefs.length; i < len; i++) {\n    const def = routeDefs[i];\n    const parent = stack[stack.length - 1];\n    const route = createMatchedRoute(def, parent ? parent.pattern : \"/\", parent ? `${parent.id}.${i}` : \"\" + i, location);\n    if (route) {\n      stack.push(route);\n      if (def.children) {\n        getMatchedBranch(def.children, location, stack, branches);\n      } else {\n        const score = scoreRoute(route);\n        if (!branches.length || score > branches[0].score) {\n          branches[0] = {\n            routes: [...stack],\n            score\n          };\n        }\n      }\n      stack.pop();\n    }\n  }\n  return branches[0] || null;\n}\nexport const RouterContext = createContext();\nexport const useRouter = () => useContext(RouterContext);\nexport const OutletContext = createContext();\nexport const useOutlet = () => useContext(OutletContext);\nexport const useRouteParams = () => {\n  const outlet = useOutlet();\n  return () => outlet.route.match.params;\n};\nexport function Router(props) {\n  const next = getMatchedBranch(props.routes, props.location);\n  if (!next || !next.routes.length) {\n    return [];\n  }\n  const nextRoutes = next.routes;\n  const prev = props.prevLocation ? getMatchedBranch(props.routes, props.prevLocation) : null;\n  if (prev) {\n    const prevRoutes = prev.routes;\n    for (let i = 0, len = nextRoutes.length; i < len; i++) {\n      const nextRoute = nextRoutes[i];\n      const prevRoute = prevRoutes[i];\n      if (prevRoute && nextRoute.id === prevRoute.id && nextRoute.match.path === prevRoute.match.path) {\n        if (JSON.stringify(nextRoute.match.params) === JSON.stringify(prevRoute.match.params)) {\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n        } else {\n          // console.log(\"diff rendered\");\n          // const Comp = nextRoute.component;\n          props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n          props.out.newOutletId = `outlet-${nextRoute.id}`;\n          // diffedRender = (\n          //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n          //     <Comp />\n          //   </outlet-wrapper>\n          // );\n          // return diffedRender;\n        }\n        // Routes are shared\n      } else {\n        // console.log(\"diff rendered\");\n        // const Comp = nextRoute.component;\n        props.out.replaceOutletId = `outlet-${prevRoute.id}`;\n        props.out.newOutletId = `outlet-${nextRoute.id}`;\n        //console.log(prevRoute, nextRoute);\n        //console.log(`diff render from: ${props.prevLocation} to: ${props.location}`);\n        // diffedRender = (\n        //   <outlet-wrapper id={`outlet-${nextRoute.id}`}>\n        //     <Comp />\n        //   </outlet-wrapper>\n        // );\n        // return diffedRender;\n      }\n    }\n  }\n\n  const state = {\n    routes: nextRoutes,\n    location: props.location,\n    out: props.out\n  };\n  return _$createComponent(RouterContext.Provider, {\n    value: state,\n    get children() {\n      return props.children;\n    }\n  });\n}\nexport function Outlet(props) {\n  const router = useRouter();\n  const parent = useOutlet();\n  const depth = parent ? parent.depth : 0;\n  const state = {\n    depth: depth + 1,\n    route: router.routes[depth]\n  };\n  return [_$memo(() => ssr(`<!--outlet-${state.route.id}--><outlet-wrapper id=\"outlet-${state.route.id}\">`)), _$createComponent(OutletContext.Provider, {\n    value: state,\n    get children() {\n      return props.children;\n    }\n  }), _$memo(() => ssr(`</outlet-wrapper><!--outlet-${state.route.id}-->`))];\n}",
+      "start": 1720943932380,
+      "end": 1720943932381,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

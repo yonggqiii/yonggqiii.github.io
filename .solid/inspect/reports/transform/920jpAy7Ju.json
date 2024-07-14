@@ -4,99 +4,99 @@
     {
       "name": "vite:asset",
       "result": "export default \"/src/fonts/Geist/Geist-SemiBold.woff2\"",
-      "start": 1720885728875,
-      "end": 1720885728875,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "sourcemaps": null
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "pre"
     },
     {
       "name": "solid",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:css-post",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export default \"/src/fonts/Geist/Geist-SemiBold.woff2\"",
-      "start": 1720885728876,
-      "end": 1720885728876,
+      "start": 1720943932298,
+      "end": 1720943932298,
       "order": "normal",
       "sourcemaps": null
     }

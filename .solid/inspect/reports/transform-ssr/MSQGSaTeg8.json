@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { PageEvent } from \"./types\";\n\nimport { createContext, useContext } from \"solid-js\";\n\nexport const ServerContext = createContext<PageEvent>({} as any);\n\nexport const useRequest = () => {\n  return useContext(ServerContext)!;\n};\n\nexport const useServerContext = () => {\n  throw new Error(\"useServerContext is deprecated. Use useRequest instead.\");\n};\n",
-      "start": 1720885728612,
-      "end": 1720885728612
+      "start": 1720943855101,
+      "end": 1720943855101
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1720885728612,
-      "end": 1720885728612,
+      "start": 1720943855101,
+      "end": 1720943855101,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { createContext, useContext } from \"solid-js\";\nexport const ServerContext = createContext({});\nexport const useRequest = () => {\n  return useContext(ServerContext);\n};\nexport const useServerContext = () => {\n  throw new Error(\"useServerContext is deprecated. Use useRequest instead.\");\n};",
-      "start": 1720885728612,
-      "end": 1720885728614,
+      "start": 1720943855101,
+      "end": 1720943855102,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -43,83 +43,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { createContext, useContext } from \"solid-js\";\nexport const ServerContext = createContext({});\nexport const useRequest = () => {\n  return useContext(ServerContext);\n};\nexport const useServerContext = () => {\n  throw new Error(\"useServerContext is deprecated. Use useRequest instead.\");\n};",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855102,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { createContext, useContext } from \"solid-js\";\nexport const ServerContext = createContext({});\nexport const useRequest = () => {\n  return useContext(ServerContext);\n};\nexport const useServerContext = () => {\n  throw new Error(\"useServerContext is deprecated. Use useRequest instead.\");\n};",
-      "start": 1720885728614,
-      "end": 1720885728614,
+      "start": 1720943855102,
+      "end": 1720943855103,
       "order": "normal",
       "sourcemaps": null
     }

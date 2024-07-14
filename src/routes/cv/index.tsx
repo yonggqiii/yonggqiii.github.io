@@ -1,5 +1,4 @@
 import { Title } from "solid-start";
-import Card from "../../components/Card";
 import "./CV.css";
 export default function CV() {
   return (

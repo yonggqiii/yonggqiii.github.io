@@ -1,5 +1,4 @@
 import { Title } from "solid-start";
-import Card from "../components/Card";
 export default function Teaching() {
   return (
     <main>

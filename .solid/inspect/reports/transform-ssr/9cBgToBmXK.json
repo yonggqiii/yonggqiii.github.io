@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave, } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";\n",
-      "start": 1720885728591,
-      "end": 1720885728591
+      "start": 1720943855081,
+      "end": 1720943855081
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1720885728591,
-      "end": 1720885728591,
+      "start": 1720943855081,
+      "end": 1720943855081,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";",
-      "start": 1720885728591,
-      "end": 1720885728593,
+      "start": 1720943855081,
+      "end": 1720943855083,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,83 +49,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "export * from \"./components\";\nexport * from \"./integration\";\nexport * from \"./lifecycle\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"./routing\";\nexport { mergeSearchString as _mergeSearchString } from \"./utils\";",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export * from \"/node_modules/@solidjs/router/dist/components.jsx\";\nexport * from \"/node_modules/@solidjs/router/dist/integration.js\";\nexport * from \"/node_modules/@solidjs/router/dist/lifecycle.js\";\nexport { useRouteData, useHref, useIsRouting, useLocation, useMatch, useNavigate, useParams, useResolvedPath, useSearchParams, useBeforeLeave } from \"/node_modules/@solidjs/router/dist/routing.js\";\nexport { mergeSearchString as _mergeSearchString } from \"/node_modules/@solidjs/router/dist/utils.js\";",
-      "start": 1720885728593,
-      "end": 1720885728593,
+      "start": 1720943855083,
+      "end": 1720943855083,
       "order": "normal",
       "sourcemaps": null
     }

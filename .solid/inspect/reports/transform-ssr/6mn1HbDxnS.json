@@ -4,20 +4,20 @@
     {
       "name": "__load__",
       "result": "import { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default function NavBar() {\n  return (\n    <nav>\n      <div class=\"nav-bar\">\n        <A href=\"/\">\n          <button class=\"btn home\">\n  <svg class=\"home-svg\" fill=\"currentColor\" viewBox=\"0 0 75 65\"><path d=\"M37.59.25l36.95 64H.64l36.95-64z\"></path></svg>\n          </button>\n        </A>\n        <div class=\"nav-grp\">\n          <A href=\"/cv\">\n            <button class=\"btn\">\n              CV\n            </button>\n          </A>\n          <A href=\"/teaching\">\n            <button class=\"btn\">\n              Teaching\n            </button>\n          </A>\n          <A href=\"/research\">\n            <button class=\"btn\">\n              Research\n            </button>\n          </A>\n          <A href=\"/fun\">\n            <button class=\"btn\">\n              Fun\n            </button>\n          </A>\n        </div>\n      </div>\n      <div id=\"menuToggle\">\n        <input id=\"checkbox\" type=\"checkbox\" />\n        <label class=\"toggle\" for=\"checkbox\">\n          <div class=\"bar bar--top\"></div>\n          <div class=\"bar bar--middle\"></div>\n          <div class=\"bar bar--bottom\"></div>\n          <div id=\"nav-pane\">\n            <A class=\"navitem\" href=\"/\">\n              Home\n            </A>\n            <A class=\"navitem\" href=\"/cv\">\n              CV\n            </A>\n            <A class=\"navitem\" href=\"/teaching\">\n              Teaching\n            </A>\n            <A class=\"navitem\" href=\"/research\">\n              Research\n            </A>\n            <A class=\"navitem\" href=\"/fun\">\n              Fun\n            </A>\n          </div>\n        </label>\n      </div>\n    </nav>\n  );\n}\n",
-      "start": 1720885728691,
-      "end": 1720885728691
+      "start": 1720943855175,
+      "end": 1720943855175
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1720885728691,
-      "end": 1720885728691,
+      "start": 1720943855175,
+      "end": 1720943855175,
       "order": "pre"
     },
     {
       "name": "solid",
       "result": "import { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssr as _$ssr } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<button\", \" class=\\\"btn home\\\"><svg class=\\\"home-svg\\\" fill=\\\"currentColor\\\" viewBox=\\\"0 0 75 65\\\"><path d=\\\"M37.59.25l36.95 64H.64l36.95-64z\\\"></path></svg></button>\"],\n  _tmpl$2 = [\"<button\", \" class=\\\"btn\\\">CV</button>\"],\n  _tmpl$3 = [\"<button\", \" class=\\\"btn\\\">Teaching</button>\"],\n  _tmpl$4 = [\"<button\", \" class=\\\"btn\\\">Research</button>\"],\n  _tmpl$5 = [\"<button\", \" class=\\\"btn\\\">Fun</button>\"],\n  _tmpl$6 = [\"<nav\", \"><div class=\\\"nav-bar\\\"><!--$-->\", \"<!--/--><div class=\\\"nav-grp\\\"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></div></div><div id=\\\"menuToggle\\\"><input id=\\\"checkbox\\\" type=\\\"checkbox\\\"><label class=\\\"toggle\\\" for=\\\"checkbox\\\"><div class=\\\"bar bar--top\\\"></div><div class=\\\"bar bar--middle\\\"></div><div class=\\\"bar bar--bottom\\\"></div><div id=\\\"nav-pane\\\"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></div></label></div></nav>\"];\nimport { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default function NavBar() {\n  return _$ssr(_tmpl$6, _$ssrHydrationKey(), _$escape(_$createComponent(A, {\n    href: \"/\",\n    get children() {\n      return _$ssr(_tmpl$, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/cv\",\n    get children() {\n      return _$ssr(_tmpl$2, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/teaching\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/research\",\n    get children() {\n      return _$ssr(_tmpl$4, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/fun\",\n    get children() {\n      return _$ssr(_tmpl$5, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/\",\n    children: \"Home\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/cv\",\n    children: \"CV\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/teaching\",\n    children: \"Teaching\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/research\",\n    children: \"Research\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/fun\",\n    children: \"Fun\"\n  })));\n}",
-      "start": 1720885728691,
-      "end": 1720885728694,
+      "start": 1720943855175,
+      "end": 1720943855178,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -48,83 +48,83 @@
     },
     {
       "name": "vite:css",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "import { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssr as _$ssr } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<button\", \" class=\\\"btn home\\\"><svg class=\\\"home-svg\\\" fill=\\\"currentColor\\\" viewBox=\\\"0 0 75 65\\\"><path d=\\\"M37.59.25l36.95 64H.64l36.95-64z\\\"></path></svg></button>\"],\n  _tmpl$2 = [\"<button\", \" class=\\\"btn\\\">CV</button>\"],\n  _tmpl$3 = [\"<button\", \" class=\\\"btn\\\">Teaching</button>\"],\n  _tmpl$4 = [\"<button\", \" class=\\\"btn\\\">Research</button>\"],\n  _tmpl$5 = [\"<button\", \" class=\\\"btn\\\">Fun</button>\"],\n  _tmpl$6 = [\"<nav\", \"><div class=\\\"nav-bar\\\"><!--$-->\", \"<!--/--><div class=\\\"nav-grp\\\"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></div></div><div id=\\\"menuToggle\\\"><input id=\\\"checkbox\\\" type=\\\"checkbox\\\"><label class=\\\"toggle\\\" for=\\\"checkbox\\\"><div class=\\\"bar bar--top\\\"></div><div class=\\\"bar bar--middle\\\"></div><div class=\\\"bar bar--bottom\\\"></div><div id=\\\"nav-pane\\\"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></div></label></div></nav>\"];\nimport { A } from \"solid-start\";\nimport \"./NavBar.css\";\nexport default function NavBar() {\n  return _$ssr(_tmpl$6, _$ssrHydrationKey(), _$escape(_$createComponent(A, {\n    href: \"/\",\n    get children() {\n      return _$ssr(_tmpl$, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/cv\",\n    get children() {\n      return _$ssr(_tmpl$2, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/teaching\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/research\",\n    get children() {\n      return _$ssr(_tmpl$4, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/fun\",\n    get children() {\n      return _$ssr(_tmpl$5, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/\",\n    children: \"Home\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/cv\",\n    children: \"CV\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/teaching\",\n    children: \"Teaching\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/research\",\n    children: \"Research\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/fun\",\n    children: \"Fun\"\n  })));\n}",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "import { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssr as _$ssr } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<button\", \" class=\\\"btn home\\\"><svg class=\\\"home-svg\\\" fill=\\\"currentColor\\\" viewBox=\\\"0 0 75 65\\\"><path d=\\\"M37.59.25l36.95 64H.64l36.95-64z\\\"></path></svg></button>\"],\n  _tmpl$2 = [\"<button\", \" class=\\\"btn\\\">CV</button>\"],\n  _tmpl$3 = [\"<button\", \" class=\\\"btn\\\">Teaching</button>\"],\n  _tmpl$4 = [\"<button\", \" class=\\\"btn\\\">Research</button>\"],\n  _tmpl$5 = [\"<button\", \" class=\\\"btn\\\">Fun</button>\"],\n  _tmpl$6 = [\"<nav\", \"><div class=\\\"nav-bar\\\"><!--$-->\", \"<!--/--><div class=\\\"nav-grp\\\"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></div></div><div id=\\\"menuToggle\\\"><input id=\\\"checkbox\\\" type=\\\"checkbox\\\"><label class=\\\"toggle\\\" for=\\\"checkbox\\\"><div class=\\\"bar bar--top\\\"></div><div class=\\\"bar bar--middle\\\"></div><div class=\\\"bar bar--bottom\\\"></div><div id=\\\"nav-pane\\\"><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--><!--$-->\", \"<!--/--></div></label></div></nav>\"];\nimport { A } from \"/node_modules/solid-start/index.tsx\";\nimport \"/src/components/NavBar.css\";\nexport default function NavBar() {\n  return _$ssr(_tmpl$6, _$ssrHydrationKey(), _$escape(_$createComponent(A, {\n    href: \"/\",\n    get children() {\n      return _$ssr(_tmpl$, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/cv\",\n    get children() {\n      return _$ssr(_tmpl$2, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/teaching\",\n    get children() {\n      return _$ssr(_tmpl$3, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/research\",\n    get children() {\n      return _$ssr(_tmpl$4, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    href: \"/fun\",\n    get children() {\n      return _$ssr(_tmpl$5, _$ssrHydrationKey());\n    }\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/\",\n    children: \"Home\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/cv\",\n    children: \"CV\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/teaching\",\n    children: \"Teaching\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/research\",\n    children: \"Research\"\n  })), _$escape(_$createComponent(A, {\n    \"class\": \"navitem\",\n    href: \"/fun\",\n    children: \"Fun\"\n  })));\n}",
-      "start": 1720885728694,
-      "end": 1720885728694,
+      "start": 1720943855178,
+      "end": 1720943855178,
       "order": "normal",
       "sourcemaps": null
     }

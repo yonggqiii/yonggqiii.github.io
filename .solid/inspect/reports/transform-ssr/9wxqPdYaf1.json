@@ -1,0 +1,107 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/src/components/NewsItem.css",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": ".recent {\n  color: #FF204E;\n}\n.tr {\n  display: flex;\n  flex-direction: column;\n  margin: 10px 0;\n}\n\n.left-col {\n  white-space: nowrap;\n}\n\n@media (min-width: 1080px) {\n  .tr {\n    flex-direction: row;\n  }\n  .left-col {\n    min-width: 150px;\n  }\n}\n",
+      "start": 1720949287569,
+      "end": 1720949287569
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": ".recent {\n  color: #FF204E;\n}\n.tr {\n  display: flex;\n  flex-direction: column;\n  margin: 10px 0;\n}\n\n.left-col {\n  white-space: nowrap;\n}\n\n@media (min-width: 1080px) {\n  .tr {\n    flex-direction: row;\n  }\n  .left-col {\n    min-width: 150px;\n  }\n}\n",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \".recent {\\n  color: #FF204E;\\n}\\n.tr {\\n  display: flex;\\n  flex-direction: column;\\n  margin: 10px 0;\\n}\\n\\n.left-col {\\n  white-space: nowrap;\\n}\\n\\n@media (min-width: 1080px) {\\n  .tr {\\n    flex-direction: row;\\n  }\\n  .left-col {\\n    min-width: 150px;\\n  }\\n}\\n\"",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "export default \".recent {\\n  color: #FF204E;\\n}\\n.tr {\\n  display: flex;\\n  flex-direction: column;\\n  margin: 10px 0;\\n}\\n\\n.left-col {\\n  white-space: nowrap;\\n}\\n\\n@media (min-width: 1080px) {\\n  .tr {\\n    flex-direction: row;\\n  }\\n  .left-col {\\n    min-width: 150px;\\n  }\\n}\\n\"",
+      "start": 1720949287569,
+      "end": 1720949287569,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

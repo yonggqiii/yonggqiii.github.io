@@ -3,9 +3,9 @@
   "transforms": [
     {
       "name": "__load__",
-      "result": "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <div class=\"flex-row\">\n        <div class=\"box left\">\n          <h2>Latex Templates</h2>\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n        </div>\n        <div class=\"box\">\n        <h2>Monads?</h2>\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n\n        </div>\n      </div>\n    </main>\n\n  );\n}\n",
-      "start": 1720885728659,
-      "end": 1720885728659,
+      "result": "import { Title } from \"solid-start\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <div class=\"flex-row\">\n        <div class=\"box left-box\">\n          <h2>Latex Templates</h2>\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n        </div>\n        <div class=\"box\">\n        <h2>Monads?</h2>\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n\n        </div>\n      </div>\n    </main>\n\n  );\n}\n",
+      "start": 1720948442216,
+      "end": 1720948442216,
       "sourcemaps": {
         "version": 3,
         "names": [
@@ -22,16 +22,16 @@
           "/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx"
         ],
         "sourcesContent": [
-          "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <div class=\"flex-row\">\n        <div class=\"box left\">\n          <h2>Latex Templates</h2>\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n        </div>\n        <div class=\"box\">\n        <h2>Monads?</h2>\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n\n        </div>\n      </div>\n    </main>\n\n  );\n}\n"
+          "import { Title } from \"solid-start\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <div class=\"flex-row\">\n        <div class=\"box left-box\">\n          <h2>Latex Templates</h2>\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n        </div>\n        <div class=\"box\">\n        <h2>Monads?</h2>\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n\n        </div>\n      </div>\n    </main>\n\n  );\n}\n"
         ],
-        "mappings": ";;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AACnC,OAAiB,oBAAoB;AAErC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,MAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKN,KAAK;IAAAO,QAAA;EAAA;AA4BZ"
+        "mappings": ";;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AAEnC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,MAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKN,KAAK;IAAAO,QAAA;EAAA;AA4BZ"
       }
     },
     {
       "name": "solid-start-file-system-router",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nimport \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
-      "start": 1720885728659,
-      "end": 1720885728662,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left-box\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
+      "start": 1720948442216,
+      "end": 1720948442217,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -49,16 +49,16 @@
           "/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx"
         ],
         "sourcesContent": [
-          "import { Title } from \"solid-start\";\nimport Card from \"../components/Card\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <div class=\"flex-row\">\n        <div class=\"box left\">\n          <h2>Latex Templates</h2>\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n        </div>\n        <div class=\"box\">\n        <h2>Monads?</h2>\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n\n        </div>\n      </div>\n    </main>\n\n  );\n}\n"
+          "import { Title } from \"solid-start\";\n\nexport default function Fun() {\n  return (\n    <main>\n      <Title>Fun - Foo Yong Qi</Title>\n      <div class=\"flex-row\">\n        <div class=\"box left-box\">\n          <h2>Latex Templates</h2>\n        <p>\n          Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\"https://github.com/yonggqiii/\">GitHub</a>.\n        </p>\n        <ul>\n        <li>\n          Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\"https://github.com/yonggqiii/teaching_templates\">Teaching Templates</a>\n        </li>\n        <li>\n          Articles: <a href=\"https://github.com/yonggqiii/article_template\">Article Template</a>\n        </li>\n        </ul>\n        </div>\n        <div class=\"box\">\n        <h2>Monads?</h2>\n        <p>\n          I wrote an <a href=\"../papers/fun/Monads.pdf\">article</a> on the correspondence between programming constructs like functors and monads to their\n          definitions in Category Theory.\n        </p>\n\n        </div>\n      </div>\n    </main>\n\n  );\n}\n"
         ],
-        "mappings": ";;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AACnC,OAAiB,oBAAoB;AAErC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,MAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKN,KAAK;IAAAO,QAAA;EAAA;AA4BZ"
+        "mappings": ";;;;;AAAA,SAASA,KAAK,QAAQ,aAAa;AAEnC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAAC,KAAA,CAAAC,MAAA,EAAAC,iBAAA,IAAAC,QAAA,CAAAC,iBAAA,CAEKN,KAAK;IAAAO,QAAA;EAAA;AA4BZ"
       }
     },
     {
       "name": "solid",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nimport \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
-      "start": 1720885728662,
-      "end": 1720885728663,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left-box\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
+      "start": 1720948442217,
+      "end": 1720948442219,
       "order": "pre",
       "sourcemaps": {
         "version": 3,
@@ -80,90 +80,90 @@
           "/home/yongqi/Repositories/yonggqiii.github.io/src/routes/fun.tsx"
         ],
         "sourcesContent": [
-          "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nimport \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}"
+          "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left-box\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}"
         ],
-        "mappings": "AAAA,SAASA,GAAG,IAAIC,KAAK,QAAQ,cAAc;AAC3C,SAASC,MAAM,IAAIC,QAAQ,QAAQ,cAAc;AACjD,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,MAAMC,MAAM,GAAG,CAAC,OAAO,EAAE,WAAW,EAAE,owBAAowB,CAAC;AAC3yB,SAASC,KAAK,QAAQ,aAAa;AACnC,OAAO,oBAAoB;AAC3B,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAOT,KAAK,CAACO,MAAM,EAAED,iBAAiB,CAAC,CAAC,EAAEJ,QAAQ,CAACE,iBAAiB,CAACI,KAAK,EAAE;IAC1EE,QAAQ,EAAE;EACZ,CAAC,CAAC,CAAC,CAAC;AACN"
+        "mappings": "AAAA,SAASA,GAAG,IAAIC,KAAK,QAAQ,cAAc;AAC3C,SAASC,MAAM,IAAIC,QAAQ,QAAQ,cAAc;AACjD,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,SAASC,eAAe,IAAIC,iBAAiB,QAAQ,cAAc;AACnE,MAAMC,MAAM,GAAG,CAAC,OAAO,EAAE,WAAW,EAAE,wwBAAwwB,CAAC;AAC/yB,SAASC,KAAK,QAAQ,aAAa;AACnC,eAAe,SAASC,GAAGA,CAAA,EAAG;EAC5B,OAAOT,KAAK,CAACO,MAAM,EAAED,iBAAiB,CAAC,CAAC,EAAEJ,QAAQ,CAACE,iBAAiB,CAACI,KAAK,EAAE;IAC1EE,QAAQ,EAAE;EACZ,CAAC,CAAC,CAAC,CAAC;AACN"
       }
     },
     {
       "name": "vite:css",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:json",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:define",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nimport \"../components/Card\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left-box\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"solid-start\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720885728663,
-      "end": 1720885728663,
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
-      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"/node_modules/solid-start/index.tsx\";\nimport \"/src/components/Card.tsx\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
-      "start": 1720885728663,
-      "end": 1720885728664,
+      "result": "import { ssr as _$ssr } from \"solid-js/web\";\nimport { escape as _$escape } from \"solid-js/web\";\nimport { createComponent as _$createComponent } from \"solid-js/web\";\nimport { ssrHydrationKey as _$ssrHydrationKey } from \"solid-js/web\";\nconst _tmpl$ = [\"<main\", \"><!--$-->\", \"<!--/--><div class=\\\"flex-row\\\"><div class=\\\"box left-box\\\"><h2>Latex Templates</h2><p>Templates for typesetting a bunch of documents I frequently create can be found in my <a href=\\\"https://github.com/yonggqiii/\\\">GitHub</a>.</p><ul><li>Exam question booklets, answer booklets, solutions manuals and assignments (questions and solutions): <a href=\\\"https://github.com/yonggqiii/teaching_templates\\\">Teaching Templates</a></li><li>Articles: <a href=\\\"https://github.com/yonggqiii/article_template\\\">Article Template</a></li></ul></div><div class=\\\"box\\\"><h2>Monads?</h2><p>I wrote an <a href=\\\"../papers/fun/Monads.pdf\\\">article</a> on the correspondence between programming constructs like functors and monads to their definitions in Category Theory.</p></div></div></main>\"];\nimport { Title } from \"/node_modules/solid-start/index.tsx\";\nexport default function Fun() {\n  return _$ssr(_tmpl$, _$ssrHydrationKey(), _$escape(_$createComponent(Title, {\n    children: \"Fun - Foo Yong Qi\"\n  })));\n}",
+      "start": 1720948442219,
+      "end": 1720948442219,
       "order": "normal",
       "sourcemaps": null
     }

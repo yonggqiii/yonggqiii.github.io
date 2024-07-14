@@ -1,0 +1,195 @@
+{
+  "resolvedId": "/home/yongqi/Repositories/yonggqiii.github.io/node_modules/solid-start/entry-client/mount.tsx?v=f4e4b3e8",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "import type { JSX } from \"solid-js\";\nimport { getOwner } from \"solid-js\";\nimport { createComponent, getNextElement, hydrate, render } from \"solid-js/web\";\n\nimport mountRouter from \"../islands/router\";\n\ndeclare global {\n  interface Window {\n    INSPECT: () => void;\n  }\n}\n\nif (import.meta.env.DEV) {\n  localStorage.setItem(\"debug\", import.meta.env.DEBUG ?? \"start*\");\n  // const { default: createDebugger } = await import(\"debug\");\n  // window._$DEBUG = createDebugger(\"start:client\");\n  window._$DEBUG = console.log as unknown as any;\n\n  _$DEBUG(`import.meta.env.DEV = ${import.meta.env.DEV}`);\n  _$DEBUG(`import.meta.env.PROD = ${import.meta.env.PROD}`);\n  _$DEBUG(`import.meta.env.START_SSR = ${import.meta.env.START_SSR}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS = ${import.meta.env.START_ISLANDS}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS_ROUTER = ${import.meta.env.START_ISLANDS_ROUTER}`);\n  _$DEBUG(`import.meta.env.SSR = ${import.meta.env.SSR}`);\n\n  window.INSPECT = () => {\n    window.open(window.location.href.replace(window.location.pathname, \"/__inspect\"));\n  };\n}\n\nfunction lookupOwner(el: HTMLElement) {\n  const parent = el.closest(\"solid-children\");\n  return parent && (parent as any).__$owner;\n}\n\nexport default function mount(code?: () => JSX.Element, element?: Document) {\n  if (import.meta.env.START_ISLANDS) {\n    mountRouter();\n\n    async function mountIsland(el: HTMLElement) {\n      let Component = el.dataset.island && window._$HY.islandMap[el.dataset.island];\n      if (!Component || !el.dataset.hk) return;\n      _$DEBUG(\n        \"hydrating island\",\n        el.dataset.island,\n        el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`,\n        el\n      );\n\n      hydrate(\n        () =>\n          !Component || typeof Component === \"string\"\n            ? Component\n            : createComponent(Component, {\n                ...JSON.parse(el.dataset.props || \"undefined\"),\n                get children() {\n                  const el = getNextElement();\n                  (el as any).__$owner = getOwner();\n                  return;\n                }\n              }),\n        el,\n        {\n          renderId: el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`,\n          owner: lookupOwner(el)\n        }\n      );\n\n      delete el.dataset.hk;\n    }\n\n    let queue: HTMLElement[] = [];\n    let queued = false;\n    function runTaskQueue(info: { timeRemaining(): number }) {\n      while (info.timeRemaining() > 0 && queue.length) {\n        mountIsland(queue.shift() as HTMLElement);\n      }\n      if (queue.length) {\n        requestIdleCallback(runTaskQueue);\n      } else queued = false;\n    }\n    window._$HY.hydrateIslands = () => {\n      const islands = document.querySelectorAll(\"solid-island[data-hk]\");\n      const assets = new Set<string>();\n      islands.forEach((el: Element) => assets.add((el as HTMLElement).dataset.component || \"\"));\n      Promise.all([...assets].map(asset => import(/* @vite-ignore */ asset))).then(() => {\n        islands.forEach((el: Element) => {\n          if ((el as HTMLElement).dataset.when === \"idle\" && \"requestIdleCallback\" in window) {\n            if (!queued) {\n              queued = true;\n              requestIdleCallback(runTaskQueue);\n            }\n            queue.push(el as HTMLElement);\n          } else mountIsland(el as HTMLElement);\n        });\n      });\n    };\n    window._$HY.fe = window._$HY.hydrateIslands;\n\n    window._$HY.hydrateIslands();\n\n    return;\n  } else if (import.meta.env.START_ISLANDS_ROUTER) {\n    mountRouter();\n    return;\n  }\n\n  if (import.meta.env.START_SSR) {\n    code && element && hydrate(code, element);\n  } else {\n    code && element && render(code, element === document ? element.body : element);\n  }\n}\n",
+      "start": 1720943932256,
+      "end": 1720943932256
+    },
+    {
+      "name": "solid-start-file-system-router",
+      "start": 1720943932256,
+      "end": 1720943932256,
+      "order": "pre"
+    },
+    {
+      "name": "solid",
+      "result": "import { getOwner } from \"solid-js\";\nimport { createComponent, getNextElement, hydrate, render } from \"solid-js/web\";\nimport mountRouter from \"../islands/router\";\nif (import.meta.env.DEV) {\n  localStorage.setItem(\"debug\", import.meta.env.DEBUG ?? \"start*\");\n  // const { default: createDebugger } = await import(\"debug\");\n  // window._$DEBUG = createDebugger(\"start:client\");\n  window._$DEBUG = console.log;\n  _$DEBUG(`import.meta.env.DEV = ${import.meta.env.DEV}`);\n  _$DEBUG(`import.meta.env.PROD = ${import.meta.env.PROD}`);\n  _$DEBUG(`import.meta.env.START_SSR = ${import.meta.env.START_SSR}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS = ${import.meta.env.START_ISLANDS}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS_ROUTER = ${import.meta.env.START_ISLANDS_ROUTER}`);\n  _$DEBUG(`import.meta.env.SSR = ${import.meta.env.SSR}`);\n  window.INSPECT = () => {\n    window.open(window.location.href.replace(window.location.pathname, \"/__inspect\"));\n  };\n}\nfunction lookupOwner(el) {\n  const parent = el.closest(\"solid-children\");\n  return parent && parent.__$owner;\n}\nexport default function mount(code, element) {\n  if (import.meta.env.START_ISLANDS) {\n    mountRouter();\n    async function mountIsland(el) {\n      let Component = el.dataset.island && window._$HY.islandMap[el.dataset.island];\n      if (!Component || !el.dataset.hk) return;\n      _$DEBUG(\"hydrating island\", el.dataset.island, el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`, el);\n      hydrate(() => !Component || typeof Component === \"string\" ? Component : createComponent(Component, {\n        ...JSON.parse(el.dataset.props || \"undefined\"),\n        get children() {\n          const el = getNextElement();\n          el.__$owner = getOwner();\n          return;\n        }\n      }), el, {\n        renderId: el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`,\n        owner: lookupOwner(el)\n      });\n      delete el.dataset.hk;\n    }\n    let queue = [];\n    let queued = false;\n    function runTaskQueue(info) {\n      while (info.timeRemaining() > 0 && queue.length) {\n        mountIsland(queue.shift());\n      }\n      if (queue.length) {\n        requestIdleCallback(runTaskQueue);\n      } else queued = false;\n    }\n    window._$HY.hydrateIslands = () => {\n      const islands = document.querySelectorAll(\"solid-island[data-hk]\");\n      const assets = new Set();\n      islands.forEach(el => assets.add(el.dataset.component || \"\"));\n      Promise.all([...assets].map(asset => import( /* @vite-ignore */asset))).then(() => {\n        islands.forEach(el => {\n          if (el.dataset.when === \"idle\" && \"requestIdleCallback\" in window) {\n            if (!queued) {\n              queued = true;\n              requestIdleCallback(runTaskQueue);\n            }\n            queue.push(el);\n          } else mountIsland(el);\n        });\n      });\n    };\n    window._$HY.fe = window._$HY.hydrateIslands;\n    window._$HY.hydrateIslands();\n    return;\n  } else if (import.meta.env.START_ISLANDS_ROUTER) {\n    mountRouter();\n    return;\n  }\n  if (import.meta.env.START_SSR) {\n    code && element && hydrate(code, element);\n  } else {\n    code && element && render(code, element === document ? element.body : element);\n  }\n}",
+      "start": 1720943932256,
+      "end": 1720943932263,
+      "order": "pre",
+      "sourcemaps": {
+        "version": 3,
+        "names": [
+          "getOwner",
+          "createComponent",
+          "getNextElement",
+          "hydrate",
+          "render",
+          "mountRouter",
+          "import",
+          "meta",
+          "env",
+          "DEV",
+          "localStorage",
+          "setItem",
+          "DEBUG",
+          "window",
+          "_$DEBUG",
+          "console",
+          "log",
+          "PROD",
+          "START_SSR",
+          "START_ISLANDS",
+          "START_ISLANDS_ROUTER",
+          "SSR",
+          "INSPECT",
+          "open",
+          "location",
+          "href",
+          "replace",
+          "pathname",
+          "lookupOwner",
+          "el",
+          "parent",
+          "closest",
+          "__$owner",
+          "mount",
+          "code",
+          "element",
+          "mountIsland",
+          "Component",
+          "dataset",
+          "island",
+          "_$HY",
+          "islandMap",
+          "hk",
+          "slice",
+          "length",
+          "JSON",
+          "parse",
+          "props",
+          "children",
+          "renderId",
+          "owner",
+          "queue",
+          "queued",
+          "runTaskQueue",
+          "info",
+          "timeRemaining",
+          "shift",
+          "requestIdleCallback",
+          "hydrateIslands",
+          "islands",
+          "document",
+          "querySelectorAll",
+          "assets",
+          "Set",
+          "forEach",
+          "add",
+          "component",
+          "Promise",
+          "all",
+          "map",
+          "asset",
+          "then",
+          "when",
+          "push",
+          "fe",
+          "body"
+        ],
+        "sources": [
+          "mount.tsx"
+        ],
+        "sourcesContent": [
+          "import type { JSX } from \"solid-js\";\nimport { getOwner } from \"solid-js\";\nimport { createComponent, getNextElement, hydrate, render } from \"solid-js/web\";\n\nimport mountRouter from \"../islands/router\";\n\ndeclare global {\n  interface Window {\n    INSPECT: () => void;\n  }\n}\n\nif (import.meta.env.DEV) {\n  localStorage.setItem(\"debug\", import.meta.env.DEBUG ?? \"start*\");\n  // const { default: createDebugger } = await import(\"debug\");\n  // window._$DEBUG = createDebugger(\"start:client\");\n  window._$DEBUG = console.log as unknown as any;\n\n  _$DEBUG(`import.meta.env.DEV = ${import.meta.env.DEV}`);\n  _$DEBUG(`import.meta.env.PROD = ${import.meta.env.PROD}`);\n  _$DEBUG(`import.meta.env.START_SSR = ${import.meta.env.START_SSR}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS = ${import.meta.env.START_ISLANDS}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS_ROUTER = ${import.meta.env.START_ISLANDS_ROUTER}`);\n  _$DEBUG(`import.meta.env.SSR = ${import.meta.env.SSR}`);\n\n  window.INSPECT = () => {\n    window.open(window.location.href.replace(window.location.pathname, \"/__inspect\"));\n  };\n}\n\nfunction lookupOwner(el: HTMLElement) {\n  const parent = el.closest(\"solid-children\");\n  return parent && (parent as any).__$owner;\n}\n\nexport default function mount(code?: () => JSX.Element, element?: Document) {\n  if (import.meta.env.START_ISLANDS) {\n    mountRouter();\n\n    async function mountIsland(el: HTMLElement) {\n      let Component = el.dataset.island && window._$HY.islandMap[el.dataset.island];\n      if (!Component || !el.dataset.hk) return;\n      _$DEBUG(\n        \"hydrating island\",\n        el.dataset.island,\n        el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`,\n        el\n      );\n\n      hydrate(\n        () =>\n          !Component || typeof Component === \"string\"\n            ? Component\n            : createComponent(Component, {\n                ...JSON.parse(el.dataset.props || \"undefined\"),\n                get children() {\n                  const el = getNextElement();\n                  (el as any).__$owner = getOwner();\n                  return;\n                }\n              }),\n        el,\n        {\n          renderId: el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`,\n          owner: lookupOwner(el)\n        }\n      );\n\n      delete el.dataset.hk;\n    }\n\n    let queue: HTMLElement[] = [];\n    let queued = false;\n    function runTaskQueue(info: { timeRemaining(): number }) {\n      while (info.timeRemaining() > 0 && queue.length) {\n        mountIsland(queue.shift() as HTMLElement);\n      }\n      if (queue.length) {\n        requestIdleCallback(runTaskQueue);\n      } else queued = false;\n    }\n    window._$HY.hydrateIslands = () => {\n      const islands = document.querySelectorAll(\"solid-island[data-hk]\");\n      const assets = new Set<string>();\n      islands.forEach((el: Element) => assets.add((el as HTMLElement).dataset.component || \"\"));\n      Promise.all([...assets].map(asset => import(/* @vite-ignore */ asset))).then(() => {\n        islands.forEach((el: Element) => {\n          if ((el as HTMLElement).dataset.when === \"idle\" && \"requestIdleCallback\" in window) {\n            if (!queued) {\n              queued = true;\n              requestIdleCallback(runTaskQueue);\n            }\n            queue.push(el as HTMLElement);\n          } else mountIsland(el as HTMLElement);\n        });\n      });\n    };\n    window._$HY.fe = window._$HY.hydrateIslands;\n\n    window._$HY.hydrateIslands();\n\n    return;\n  } else if (import.meta.env.START_ISLANDS_ROUTER) {\n    mountRouter();\n    return;\n  }\n\n  if (import.meta.env.START_SSR) {\n    code && element && hydrate(code, element);\n  } else {\n    code && element && render(code, element === document ? element.body : element);\n  }\n}\n"
+        ],
+        "mappings": "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",
+        "x_google_ignoreList": [
+          0
+        ]
+      }
+    },
+    {
+      "name": "vite:css",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "solid-start-server",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:client-inject",
+      "start": 1720943932263,
+      "end": 1720943932263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-analysis",
+      "result": "import { injectQuery as __vite__injectQuery } from \"/@vite/client\";import.meta.env = {\"BASE_URL\":\"/\",\"MODE\":\"development\",\"DEV\":true,\"PROD\":false,\"SSR\":false};import.meta.env.START_SSR = true;import.meta.env.START_ISLANDS = false;import.meta.env.START_ENTRY_CLIENT = \"/home/yongqi/Repositories/yonggqiii.github.io/src/entry-client.tsx\";import.meta.env.START_ENTRY_SERVER = \"/home/yongqi/Repositories/yonggqiii.github.io/src/entry-server.tsx\";import.meta.env.START_INDEX_HTML = false;import.meta.env.START_ISLANDS_ROUTER = false;import.meta.env.START_ADAPTER = \"static\";import { getOwner } from \"/node_modules/.vite/deps/solid-js.js?v=f4e4b3e8\";\nimport { createComponent, getNextElement, hydrate, render } from \"/node_modules/.vite/deps/solid-js_web.js?v=f4e4b3e8\";\nimport mountRouter from \"/node_modules/solid-start/islands/router.ts?v=f4e4b3e8\";\nif (import.meta.env.DEV) {\n  localStorage.setItem(\"debug\", import.meta.env.DEBUG ?? \"start*\");\n  // const { default: createDebugger } = await import(\"debug\");\n  // window._$DEBUG = createDebugger(\"start:client\");\n  window._$DEBUG = console.log;\n  _$DEBUG(`import.meta.env.DEV = ${import.meta.env.DEV}`);\n  _$DEBUG(`import.meta.env.PROD = ${import.meta.env.PROD}`);\n  _$DEBUG(`import.meta.env.START_SSR = ${import.meta.env.START_SSR}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS = ${import.meta.env.START_ISLANDS}`);\n  _$DEBUG(`import.meta.env.START_ISLANDS_ROUTER = ${import.meta.env.START_ISLANDS_ROUTER}`);\n  _$DEBUG(`import.meta.env.SSR = ${import.meta.env.SSR}`);\n  window.INSPECT = () => {\n    window.open(window.location.href.replace(window.location.pathname, \"/__inspect\"));\n  };\n}\nfunction lookupOwner(el) {\n  const parent = el.closest(\"solid-children\");\n  return parent && parent.__$owner;\n}\nexport default function mount(code, element) {\n  if (import.meta.env.START_ISLANDS) {\n    mountRouter();\n    async function mountIsland(el) {\n      let Component = el.dataset.island && window._$HY.islandMap[el.dataset.island];\n      if (!Component || !el.dataset.hk) return;\n      _$DEBUG(\"hydrating island\", el.dataset.island, el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`, el);\n      hydrate(() => !Component || typeof Component === \"string\" ? Component : createComponent(Component, {\n        ...JSON.parse(el.dataset.props || \"undefined\"),\n        get children() {\n          const el = getNextElement();\n          el.__$owner = getOwner();\n          return;\n        }\n      }), el, {\n        renderId: el.dataset.hk.slice(0, el.dataset.hk.length - 1) + `1-`,\n        owner: lookupOwner(el)\n      });\n      delete el.dataset.hk;\n    }\n    let queue = [];\n    let queued = false;\n    function runTaskQueue(info) {\n      while (info.timeRemaining() > 0 && queue.length) {\n        mountIsland(queue.shift());\n      }\n      if (queue.length) {\n        requestIdleCallback(runTaskQueue);\n      } else queued = false;\n    }\n    window._$HY.hydrateIslands = () => {\n      const islands = document.querySelectorAll(\"solid-island[data-hk]\");\n      const assets = new Set();\n      islands.forEach(el => assets.add(el.dataset.component || \"\"));\n      Promise.all([...assets].map(asset => import( /* @vite-ignore */__vite__injectQuery(asset, 'import')))).then(() => {\n        islands.forEach(el => {\n          if (el.dataset.when === \"idle\" && \"requestIdleCallback\" in window) {\n            if (!queued) {\n              queued = true;\n              requestIdleCallback(runTaskQueue);\n            }\n            queue.push(el);\n          } else mountIsland(el);\n        });\n      });\n    };\n    window._$HY.fe = window._$HY.hydrateIslands;\n    window._$HY.hydrateIslands();\n    return;\n  } else if (import.meta.env.START_ISLANDS_ROUTER) {\n    mountRouter();\n    return;\n  }\n  if (import.meta.env.START_SSR) {\n    code && element && hydrate(code, element);\n  } else {\n    code && element && render(code, element === document ? element.body : element);\n  }\n}",
+      "start": 1720943932263,
+      "end": 1720943932264,
+      "order": "normal",
+      "sourcemaps": null
+    }
+  ]
+}

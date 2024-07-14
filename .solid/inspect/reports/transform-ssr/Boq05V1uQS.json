@@ -4,32 +4,32 @@
     {
       "name": "__load__",
       "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n\n",
-      "start": 1720885728760,
-      "end": 1720885728760
+      "start": 1720943855235,
+      "end": 1720943855235
     },
     {
       "name": "solid-start-file-system-router",
-      "start": 1720885728760,
-      "end": 1720885728760,
+      "start": 1720943855235,
+      "end": 1720943855235,
       "order": "pre"
     },
     {
       "name": "solid",
-      "start": 1720885728761,
-      "end": 1720885728761,
+      "start": 1720943855235,
+      "end": 1720943855235,
       "order": "pre"
     },
     {
       "name": "vite:css",
-      "start": 1720885728761,
-      "end": 1720885728761,
+      "start": 1720943855235,
+      "end": 1720943855235,
       "order": "normal"
     },
     {
       "name": "vite:esbuild",
       "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n",
-      "start": 1720885728761,
-      "end": 1720885728784,
+      "start": 1720943855235,
+      "end": 1720943855270,
       "order": "normal",
       "sourcemaps": {
         "version": 3,
@@ -48,71 +48,71 @@
     },
     {
       "name": "vite:json",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:worker",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "solid-start-server",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:define",
       "result": "export { HttpHeader } from \"./components/HttpHeader\";\nexport { HttpStatusCode } from \"./components/HttpStatusCode\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"./data\";\nexport * from \"./responses\";\nexport * from \"./ServerContext\";\nexport * from \"./types\";\n",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal",
       "sourcemaps": null
     },
     {
       "name": "vite:css-post",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:worker-import-meta-url",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:asset-import-meta-url",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:dynamic-import-vars",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:import-glob",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:client-inject",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal"
     },
     {
       "name": "vite:import-analysis",
       "result": "export { HttpHeader } from \"/node_modules/solid-start/server/components/HttpHeader.tsx\";\nexport { HttpStatusCode } from \"/node_modules/solid-start/server/components/HttpStatusCode.tsx\";\nexport { createServerAction$, createServerData$, createServerMultiAction$, ServerError } from \"/node_modules/solid-start/server/data.ts\";\nexport * from \"/node_modules/solid-start/server/responses.ts\";\nexport * from \"/node_modules/solid-start/server/ServerContext.tsx\";\nexport * from \"/node_modules/solid-start/server/types.tsx\";\n",
-      "start": 1720885728784,
-      "end": 1720885728784,
+      "start": 1720943855270,
+      "end": 1720943855270,
       "order": "normal",
       "sourcemaps": null
     }

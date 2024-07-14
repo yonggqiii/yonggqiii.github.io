@@ -31,6 +31,7 @@
 strong {
   color: white;
 }
+
 .blinking {
   color: #FF204E;
   animation: blink-animation 1s steps(2, start) infinite;
@@ -45,6 +46,10 @@ strong {
   to {
     visibility: hidden;
   }
+}
+
+h3 {
+  color: white;
 }
 
 .flex-row {

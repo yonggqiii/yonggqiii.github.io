@@ -1,11 +1,10 @@
 import { Title } from "solid-start";
-import Card from "../components/Card";
 export default function Teaching() {
   return (
     <main>
       <Title>Teaching - Foo Yong Qi</Title>
       <div class="flex-row">
-        <div class="box left">
+        <div class="box left-box">
           <h2>IT5100A</h2>
           <p><strong>Industry Readiness: Typed Functional Programming</strong></p>
           <p>Typed functional programming are becoming more widely adopted in industry, as can be seen in the success of a number of advanced programming languages, such as OCaml, Haskell and Scala 3. These advanced languages offer a range of expressive features to allow robust, reusable and high-performing software codes to be safely and rapidly developed. This course will cover key programming techniques of typed functional programming that are becoming widely adopted, such as strong typing, code composition and abstraction, effect handlers, and safe techniques for asynchronous and concurrent programming.</p>
@@ -33,7 +32,7 @@ export default function Teaching() {
       </div>
 
       <div class="flex-row">
-        <div class="box left">
+        <div class="box left-box">
           <h2>IT5100E</h2>
           <p><strong>Industry Readiness: Security Best Practices</strong></p>
           <p>Malicious exploitation of vulnerable applications running on the web can have disastrous consequences. This module aims to introduce application security considerations and provide practical experience on secure coding practices, focusing on web-based applications. Topics covered include fundamental security concepts (e.g., encryption, authentication, authorization), secure coding practices (e.g., handling of cookies, passwords, errors), secure design and deployment principles (e.g., threat modelling, vulnerability scanning), along with industry standards (e.g., OWASP), tools, common threats and defense against them.</p>
@@ -48,7 +47,7 @@ export default function Teaching() {
       </div>
 
       <div class="flex-row">
-        <div class="box left">
+        <div class="box left-box">
           <h2>CS1010E</h2>
           <p><strong>Programming Methodology</strong></p>
           <p>This module introduces the fundamental concepts of problem solving by computing and programming using an imperative programming language. It is the first and foremost introductory course to computing. Topics covered include computational thinking and computational problem solving, designing and specifying an algorithm, basic problem formulation and problem solving approaches, program development, coding, testing and debugging, fundamental programming constructs (variables, types, expressions, assignments, functions, control structures, etc.), fundamental data structures (arrays, strings, composite data types), basic sorting, and recursion.</p>
@@ -63,7 +62,7 @@ export default function Teaching() {
       </div>
 
       <div class="flex-row">
-        <div class="box left">
+        <div class="box left-box">
           <h2>IT5003</h2>
           <p><strong>Data Structures & Algorithms</strong></p>
           <p>This module introduces non-computing students to efficient computational problem solving in an accelerated pace. Students will learn to formulate a computational problem, identify the data required and come up with appropriate data structures to represent them, and apply known strategies to design an algorithm to solve the problem. Students will also learn to quantify the space and time complexity of an algorithm, prove the correctness of an algorithm, and the limits of computation. Topics include common data structures and their algorithms (lists, hash tables, heap, trees, graphs), algorithmic problem solving paradigms (greedy, divide and conquer, dynamic programming), and NP-completeness.</p>
