@@ -85,12 +85,20 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
-    "/assets/_...404_-d24ee4a2.js"
+    "/assets/_...404_-fc15d88c.js"
   ],
   "node_modules/solid-start/server/types.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
     "/assets/Geist-Bold-a3b7c213.woff2",
     "/assets/Geist-Light-5c567234.woff2"
+  ],
+  "src/components/MyTable.css": [
+    "/assets/index-b9355bf7.js",
+    "/assets/index-1c76a864.css"
+  ],
+  "src/components/MyTable.tsx": [
+    "/assets/index-b9355bf7.js",
+    "/assets/index-1c76a864.css"
   ],
   "src/components/NavBar.css": [
     "/assets/Geist-Regular-b497f5ad.woff2",
@@ -101,6 +109,14 @@
     "/assets/Geist-Regular-b497f5ad.woff2",
     "/assets/Geist-Bold-a3b7c213.woff2",
     "/assets/Geist-Light-5c567234.woff2"
+  ],
+  "src/components/NewsItem.css": [
+    "/assets/index-b9355bf7.js",
+    "/assets/index-1c76a864.css"
+  ],
+  "src/components/NewsItem.tsx": [
+    "/assets/index-b9355bf7.js",
+    "/assets/index-1c76a864.css"
   ],
   "src/entry-client.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
@@ -118,26 +134,27 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_-d24ee4a2.js"
+    "/assets/_...404_-fc15d88c.js"
   ],
   "src/routes/cv/CV.css": [
-    "/assets/index-7dbe0ad7.js",
+    "/assets/index-1afa70b6.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/cv/index.tsx": [
-    "/assets/index-7dbe0ad7.js",
+    "/assets/index-1afa70b6.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/fun.tsx": [
-    "/assets/fun-a1b65ae8.js"
+    "/assets/fun-ffd7853c.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index-304c4fba.js"
+    "/assets/index-b9355bf7.js",
+    "/assets/index-1c76a864.css"
   ],
   "src/routes/research.tsx": [
-    "/assets/research-11f5065d.js"
+    "/assets/research-74817e0d.js"
   ],
   "src/routes/teaching.tsx": [
-    "/assets/teaching-5fecd6d0.js"
+    "/assets/teaching-57d90106.js"
   ]
 }

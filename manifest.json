@@ -1,6 +1,6 @@
 {
   "src/entry-client.css": {
-    "file": "assets/entry-client-32c44fec.css",
+    "file": "assets/entry-client-6149ff45.css",
     "src": "src/entry-client.css"
   },
   "src/entry-client.tsx": {
@@ -10,7 +10,7 @@
       "assets/Geist-Light-5c567234.woff2"
     ],
     "css": [
-      "assets/entry-client-32c44fec.css"
+      "assets/entry-client-6149ff45.css"
     ],
     "dynamicImports": [
       "src/routes/[...404].tsx",
@@ -20,7 +20,7 @@
       "src/routes/teaching.tsx",
       "src/routes/cv/index.tsx"
     ],
-    "file": "assets/entry-client-7fa7c878.js",
+    "file": "assets/entry-client-3aded2ed.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
   },
@@ -61,7 +61,7 @@
     "src": "src/fonts/Geist/Geist-UltraLight.woff2"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-d24ee4a2.js",
+    "file": "assets/_...404_-fc15d88c.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -76,7 +76,7 @@
     "css": [
       "assets/index-bfe03ba4.css"
     ],
-    "file": "assets/index-7dbe0ad7.js",
+    "file": "assets/index-1afa70b6.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -84,15 +84,22 @@
     "src": "src/routes/cv/index.tsx"
   },
   "src/routes/fun.tsx": {
-    "file": "assets/fun-a1b65ae8.js",
+    "file": "assets/fun-ffd7853c.js",
     "imports": [
       "src/entry-client.tsx"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/fun.tsx"
   },
+  "src/routes/index.css": {
+    "file": "assets/index-1c76a864.css",
+    "src": "src/routes/index.css"
+  },
   "src/routes/index.tsx": {
-    "file": "assets/index-304c4fba.js",
+    "css": [
+      "assets/index-1c76a864.css"
+    ],
+    "file": "assets/index-b9355bf7.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -100,7 +107,7 @@
     "src": "src/routes/index.tsx"
   },
   "src/routes/research.tsx": {
-    "file": "assets/research-11f5065d.js",
+    "file": "assets/research-74817e0d.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -108,7 +115,7 @@
     "src": "src/routes/research.tsx"
   },
   "src/routes/teaching.tsx": {
-    "file": "assets/teaching-5fecd6d0.js",
+    "file": "assets/teaching-57d90106.js",
     "imports": [
       "src/entry-client.tsx"
     ],
