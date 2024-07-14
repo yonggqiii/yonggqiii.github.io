@@ -7,7 +7,7 @@
 }
 
 #menuToggle {
-  position: absolute;
+  position: fixed;
   top: 25px;
   right: 25px;
   z-index: 5;
