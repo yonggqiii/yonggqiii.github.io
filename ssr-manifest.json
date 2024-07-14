@@ -85,7 +85,7 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
-    "/assets/_...404_-fc15d88c.js"
+    "/assets/_...404_-886ef50e.js"
   ],
   "node_modules/solid-start/server/types.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
@@ -93,11 +93,11 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "src/components/MyTable.css": [
-    "/assets/index-b9355bf7.js",
+    "/assets/index-cb6970c0.js",
     "/assets/index-1c76a864.css"
   ],
   "src/components/MyTable.tsx": [
-    "/assets/index-b9355bf7.js",
+    "/assets/index-cb6970c0.js",
     "/assets/index-1c76a864.css"
   ],
   "src/components/NavBar.css": [
@@ -111,11 +111,11 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "src/components/NewsItem.css": [
-    "/assets/index-b9355bf7.js",
+    "/assets/index-cb6970c0.js",
     "/assets/index-1c76a864.css"
   ],
   "src/components/NewsItem.tsx": [
-    "/assets/index-b9355bf7.js",
+    "/assets/index-cb6970c0.js",
     "/assets/index-1c76a864.css"
   ],
   "src/entry-client.tsx": [
@@ -134,27 +134,27 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_-fc15d88c.js"
+    "/assets/_...404_-886ef50e.js"
   ],
   "src/routes/cv/CV.css": [
-    "/assets/index-1afa70b6.js",
+    "/assets/index-87ae0dd4.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/cv/index.tsx": [
-    "/assets/index-1afa70b6.js",
+    "/assets/index-87ae0dd4.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/fun.tsx": [
-    "/assets/fun-ffd7853c.js"
+    "/assets/fun-3efd4e9a.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index-b9355bf7.js",
+    "/assets/index-cb6970c0.js",
     "/assets/index-1c76a864.css"
   ],
   "src/routes/research.tsx": [
-    "/assets/research-74817e0d.js"
+    "/assets/research-c46aa633.js"
   ],
   "src/routes/teaching.tsx": [
-    "/assets/teaching-57d90106.js"
+    "/assets/teaching-3ac3a49c.js"
   ]
 }

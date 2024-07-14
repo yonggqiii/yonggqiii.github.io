@@ -2,29 +2,29 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/assets/_...404_-fc15d88c.js"
+      "href": "/assets/_...404_-886ef50e.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-3aded2ed.js"
+      "href": "/assets/entry-client-274f9094.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client-6149ff45.css"
+      "href": "/assets/entry-client-f1baca8c.css"
     }
   ],
   "/cv/": [
     {
       "type": "script",
-      "href": "/assets/index-1afa70b6.js"
+      "href": "/assets/index-87ae0dd4.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-3aded2ed.js"
+      "href": "/assets/entry-client-274f9094.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client-6149ff45.css"
+      "href": "/assets/entry-client-f1baca8c.css"
     },
     {
       "type": "style",
@@ -34,29 +34,29 @@
   "/fun": [
     {
       "type": "script",
-      "href": "/assets/fun-ffd7853c.js"
+      "href": "/assets/fun-3efd4e9a.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-3aded2ed.js"
+      "href": "/assets/entry-client-274f9094.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client-6149ff45.css"
+      "href": "/assets/entry-client-f1baca8c.css"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/assets/index-b9355bf7.js"
+      "href": "/assets/index-cb6970c0.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-3aded2ed.js"
+      "href": "/assets/entry-client-274f9094.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client-6149ff45.css"
+      "href": "/assets/entry-client-f1baca8c.css"
     },
     {
       "type": "style",
@@ -66,39 +66,39 @@
   "/research": [
     {
       "type": "script",
-      "href": "/assets/research-74817e0d.js"
+      "href": "/assets/research-c46aa633.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-3aded2ed.js"
+      "href": "/assets/entry-client-274f9094.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client-6149ff45.css"
+      "href": "/assets/entry-client-f1baca8c.css"
     }
   ],
   "/teaching": [
     {
       "type": "script",
-      "href": "/assets/teaching-57d90106.js"
+      "href": "/assets/teaching-3ac3a49c.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-3aded2ed.js"
+      "href": "/assets/entry-client-274f9094.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client-6149ff45.css"
+      "href": "/assets/entry-client-f1baca8c.css"
     }
   ],
   "entry-client": [
     {
       "type": "script",
-      "href": "/assets/entry-client-3aded2ed.js"
+      "href": "/assets/entry-client-274f9094.js"
     },
     {
       "type": "style",
-      "href": "/assets/entry-client-6149ff45.css"
+      "href": "/assets/entry-client-f1baca8c.css"
     }
   ],
   "index.html": []

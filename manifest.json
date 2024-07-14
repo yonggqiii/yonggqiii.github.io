@@ -1,6 +1,6 @@
 {
   "src/entry-client.css": {
-    "file": "assets/entry-client-6149ff45.css",
+    "file": "assets/entry-client-f1baca8c.css",
     "src": "src/entry-client.css"
   },
   "src/entry-client.tsx": {
@@ -10,7 +10,7 @@
       "assets/Geist-Light-5c567234.woff2"
     ],
     "css": [
-      "assets/entry-client-6149ff45.css"
+      "assets/entry-client-f1baca8c.css"
     ],
     "dynamicImports": [
       "src/routes/[...404].tsx",
@@ -20,7 +20,7 @@
       "src/routes/teaching.tsx",
       "src/routes/cv/index.tsx"
     ],
-    "file": "assets/entry-client-3aded2ed.js",
+    "file": "assets/entry-client-274f9094.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
   },
@@ -61,7 +61,7 @@
     "src": "src/fonts/Geist/Geist-UltraLight.woff2"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-fc15d88c.js",
+    "file": "assets/_...404_-886ef50e.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -76,7 +76,7 @@
     "css": [
       "assets/index-bfe03ba4.css"
     ],
-    "file": "assets/index-1afa70b6.js",
+    "file": "assets/index-87ae0dd4.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -84,7 +84,7 @@
     "src": "src/routes/cv/index.tsx"
   },
   "src/routes/fun.tsx": {
-    "file": "assets/fun-ffd7853c.js",
+    "file": "assets/fun-3efd4e9a.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -99,7 +99,7 @@
     "css": [
       "assets/index-1c76a864.css"
     ],
-    "file": "assets/index-b9355bf7.js",
+    "file": "assets/index-cb6970c0.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -107,7 +107,7 @@
     "src": "src/routes/index.tsx"
   },
   "src/routes/research.tsx": {
-    "file": "assets/research-74817e0d.js",
+    "file": "assets/research-c46aa633.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -115,7 +115,7 @@
     "src": "src/routes/research.tsx"
   },
   "src/routes/teaching.tsx": {
-    "file": "assets/teaching-57d90106.js",
+    "file": "assets/teaching-3ac3a49c.js",
     "imports": [
       "src/entry-client.tsx"
     ],
