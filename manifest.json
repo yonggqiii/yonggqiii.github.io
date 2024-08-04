@@ -1,4 +1,17 @@
 {
+  "Tag.css": {
+    "file": "assets/Tag-174f632f.css",
+    "src": "Tag.css"
+  },
+  "_Tag-09e65a9a.js": {
+    "css": [
+      "assets/Tag-174f632f.css"
+    ],
+    "file": "assets/Tag-09e65a9a.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ]
+  },
   "src/entry-client.css": {
     "file": "assets/entry-client-f1baca8c.css",
     "src": "src/entry-client.css"
@@ -20,7 +33,7 @@
       "src/routes/teaching.tsx",
       "src/routes/cv/index.tsx"
     ],
-    "file": "assets/entry-client-274f9094.js",
+    "file": "assets/entry-client-10d3e3fa.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
   },
@@ -61,7 +74,7 @@
     "src": "src/fonts/Geist/Geist-UltraLight.woff2"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-886ef50e.js",
+    "file": "assets/_...404_-4506ddc3.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -76,7 +89,7 @@
     "css": [
       "assets/index-bfe03ba4.css"
     ],
-    "file": "assets/index-87ae0dd4.js",
+    "file": "assets/index-10af3e0f.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -84,7 +97,7 @@
     "src": "src/routes/cv/index.tsx"
   },
   "src/routes/fun.tsx": {
-    "file": "assets/fun-3efd4e9a.js",
+    "file": "assets/fun-d9945833.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -99,7 +112,7 @@
     "css": [
       "assets/index-1c76a864.css"
     ],
-    "file": "assets/index-cb6970c0.js",
+    "file": "assets/index-07d0bedb.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -107,17 +120,19 @@
     "src": "src/routes/index.tsx"
   },
   "src/routes/research.tsx": {
-    "file": "assets/research-c46aa633.js",
+    "file": "assets/research-f837771d.js",
     "imports": [
-      "src/entry-client.tsx"
+      "src/entry-client.tsx",
+      "_Tag-09e65a9a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/research.tsx"
   },
   "src/routes/teaching.tsx": {
-    "file": "assets/teaching-3ac3a49c.js",
+    "file": "assets/teaching-0ac38c14.js",
     "imports": [
-      "src/entry-client.tsx"
+      "src/entry-client.tsx",
+      "_Tag-09e65a9a.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/teaching.tsx"
