@@ -29,6 +29,12 @@ export default function Home() {
         <h2>News</h2>
         <h3>2024</h3>
         <MyTable>
+        <NewsItem date={Date.parse('04 Aug 2024 00:00:00 GMT+8')}>
+          [NUS] IT5000&mdash;Introduction to Computing Foundations starts tomorrow. I will be teaching the Pure Mathematics and Discrete Structures portion (Day 1, 5 Aug). See you there!
+        </NewsItem>
+        <NewsItem date={Date.parse('15 Jul 2024 00:00:00 GMT+8')}>
+          I will be trialing <em>Motivating Mathematics Study in Prospective Computer Scientists with Interactive Theorem Proving</em> during IT5000&mdash;Introduction to Computing Foundations.
+        </NewsItem>
         <NewsItem date={Date.parse('01 Jul 2024 00:00:00 GMT+8')}>
           [NUS] SoC Postgraduate department has launched a new initiative for prospective M.Comp. (General Track) and M.Sc. Digital Financial Technology students to be able to replace IT5001 with another course based on their performance in a proficiency test. More information can be found in the email you received. Email it5001pt@comp.nus.edu.sg for queries.
         </NewsItem>
