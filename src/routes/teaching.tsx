@@ -11,6 +11,7 @@ export default function Teaching() {
           <p><strong>Industry Readiness: Typed Functional Programming</strong></p>
           <p>Typed functional programming are becoming more widely adopted in industry, as can be seen in the success of a number of advanced programming languages, such as OCaml, Haskell and Scala 3. These advanced languages offer a range of expressive features to allow robust, reusable and high-performing software codes to be safely and rapidly developed. This course will cover key programming techniques of typed functional programming that are becoming widely adopted, such as strong typing, code composition and abstraction, effect handlers, and safe techniques for asynchronous and concurrent programming.</p>
           <p><strong>Semesters taught</strong>: AY24/25 Semester 1</p>
+          <p>Course notes available <a href="https://yongqi.foo/it5100a-notes">here</a>.</p>
         <Tags>
           <Tag>Programming Languages</Tag>
           <Tag>Functional Programming</Tag>
