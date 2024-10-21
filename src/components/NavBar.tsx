@@ -51,8 +51,8 @@ export default function NavBar() {
             <A class="navitem" href="/research">
               Research
             </A>
-            <A class="navitem" href="/fun">
-              Fun
+            <A class="navitem" href="https://yongqi.foo/blog">
+              Blog
             </A>
           </div>
         </label>
