@@ -25,9 +25,9 @@ export default function NavBar() {
               Research
             </button>
           </A>
-          <A href="/fun">
+          <A href="https://yongqi.foo/blog/">
             <button class="btn">
-              Fun
+              Blog
             </button>
           </A>
         </div>
