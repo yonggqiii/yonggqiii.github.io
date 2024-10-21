@@ -25,11 +25,11 @@ export default function NavBar() {
               Research
             </button>
           </A>
-          <A href="https://yongqi.foo/blog/">
+          <a style="color: #CCCCCC" href="https://yongqi.foo/blog/">
             <button class="btn">
               Blog
             </button>
-          </A>
+          </a>
         </div>
       </div>
       <div id="menuToggle">
@@ -51,9 +51,9 @@ export default function NavBar() {
             <A class="navitem" href="/research">
               Research
             </A>
-            <A class="navitem" href="https://yongqi.foo/blog">
+            <a style="color: #CCCCCC" class="navitem" href="https://yongqi.foo/blog">
               Blog
-            </A>
+            </a>
           </div>
         </label>
       </div>
