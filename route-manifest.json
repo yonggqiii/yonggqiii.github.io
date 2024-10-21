@@ -2,11 +2,11 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/assets/_...404_-eb12c588.js"
+      "href": "/assets/_...404_-866ff432.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-05dd3f75.js"
+      "href": "/assets/entry-client-607c56a3.js"
     },
     {
       "type": "style",
@@ -16,11 +16,11 @@
   "/cv/": [
     {
       "type": "script",
-      "href": "/assets/index-3a8c2ddd.js"
+      "href": "/assets/index-5b101c9b.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-05dd3f75.js"
+      "href": "/assets/entry-client-607c56a3.js"
     },
     {
       "type": "style",
@@ -34,11 +34,11 @@
   "/fun": [
     {
       "type": "script",
-      "href": "/assets/fun-fe2c9419.js"
+      "href": "/assets/fun-a056a4ea.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-05dd3f75.js"
+      "href": "/assets/entry-client-607c56a3.js"
     },
     {
       "type": "style",
@@ -48,11 +48,11 @@
   "/": [
     {
       "type": "script",
-      "href": "/assets/index-89352308.js"
+      "href": "/assets/index-e83ba2f8.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-05dd3f75.js"
+      "href": "/assets/entry-client-607c56a3.js"
     },
     {
       "type": "style",
@@ -66,11 +66,11 @@
   "/research": [
     {
       "type": "script",
-      "href": "/assets/research-ef31671c.js"
+      "href": "/assets/research-b57a9299.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-05dd3f75.js"
+      "href": "/assets/entry-client-607c56a3.js"
     },
     {
       "type": "style",
@@ -78,7 +78,7 @@
     },
     {
       "type": "script",
-      "href": "/assets/Tag-921e0359.js"
+      "href": "/assets/Tag-0b1bb610.js"
     },
     {
       "type": "style",
@@ -88,11 +88,11 @@
   "/teaching": [
     {
       "type": "script",
-      "href": "/assets/teaching-2a589dab.js"
+      "href": "/assets/teaching-5a539e1b.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-05dd3f75.js"
+      "href": "/assets/entry-client-607c56a3.js"
     },
     {
       "type": "style",
@@ -100,7 +100,7 @@
     },
     {
       "type": "script",
-      "href": "/assets/Tag-921e0359.js"
+      "href": "/assets/Tag-0b1bb610.js"
     },
     {
       "type": "style",
@@ -110,7 +110,7 @@
   "entry-client": [
     {
       "type": "script",
-      "href": "/assets/entry-client-05dd3f75.js"
+      "href": "/assets/entry-client-607c56a3.js"
     },
     {
       "type": "style",
