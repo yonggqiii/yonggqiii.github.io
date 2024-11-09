@@ -69,11 +69,25 @@ export default function CV() {
         <div class="box left-box">
           <h2>Projects</h2>
           <p>
-            <strong>Optimizing SYB Traversals via Specialization</strong> <br /> 
+            <strong>Optimization Tactics (Functional Pearl)</strong> <br /> 
             Ongoing<br/>
             National University of Singapore<br/>
             <strong>Advisor</strong>: Asst. Prof. Michael D. <strong>ADAMS</strong><br/>
-            Coercing the specializer to optimize SYB traversals
+            Developing a Lean 4 library for allowing users to specify their own optimizations
+          </p>
+          <p>
+            <strong>A Fixed-Point-Oriented Programming Language with User-Specified Optimization Strategies</strong> <br /> 
+            Ongoing<br/>
+            National University of Singapore<br/>
+            <strong>Advisor</strong>: Asst. Prof. Michael D. <strong>ADAMS</strong><br/>
+            Developing a new programming language for easily specifying fixed-point algorithms
+          </p>
+          <p>
+            <strong>Optimizing Rank-2 Polymorphic Functions</strong> <br /> 
+            Ongoing<br/>
+            National University of Singapore<br/>
+            <strong>Advisor</strong>: Asst. Prof. Michael D. <strong>ADAMS</strong><br/>
+            Proposed a novel optimization pass to induce speedups on programs containing uses of rank-2 polymorphic functions
           </p>
           <p>
             <strong>Compiling & Detecting Type Errors in Incomplete Java Programs with Generics</strong> <br /> 

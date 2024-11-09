@@ -29,6 +29,9 @@ export default function Home() {
         <h2>News</h2>
         <h3>2024</h3>
         <MyTable>
+        <NewsItem date={Date.parse('30 Oct 2024 23:59:00 GMT+8')}>
+          I have completed my PhD Qualifying Exams!
+        </NewsItem>
         <NewsItem date={Date.parse('30 Sep 2024 23:59:00 GMT+8')}>
           [NUS] IT5100A&mdash;Industry Readiness: Typed Functional Programming has started! Course notes are available <a href="https://yongqi.foo/it5100a-notes">here</a>.
         </NewsItem>
