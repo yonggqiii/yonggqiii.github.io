@@ -25,7 +25,7 @@ export default function Teaching() {
           </Tags>
         </div>
         <div class="box">
-          <h2>Optimizing Rank-2 Polymorphic Functions</h2>
+          <h2>Partial Evaluation of Rank-2 Polymorphic Functions</h2>
           <p>
             Rank-2 polymorphic functions are used in a variety of programs and libraries. However, such functions may be difficult to optimize by general-purpose optimizers, especially if they are recursive. General-purpose optimizers thus avoid optimizing these functions, leaving many missed opportunities for further program optimization. 
           </p>
