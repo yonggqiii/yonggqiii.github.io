@@ -82,16 +82,41 @@ In this project, we will develop a programming language providing such support. 
         </div>
       </div>
 
-      <div class="box solo">
-        <h2>Motivating Mathematics Study in Prospective Computer Scientists with Interactive Theorem Provers</h2>
-        <p>
-          The Curry-Howard correspondence shows that terms, types, programs and program evaluation correspond to witnesses, propositions, proofs and proof normalization in (intuitionistic) logic. This has spawned a large body of work in the literature known as <em>proof assistants</em> or <em>interactive theorem provers</em> that exploit this correspondence via a programming language with a type system that supports proof checking.
-        </p>
-        <p>On the other hand, the need to study mathematics may not be immediately apparent to budding software engineers, particularly those aiming to enter industry post-study. Our aim is motivate students to study mathematics by showing that the art of writing programs is the same as the art of writing a proof. We do so by writing both proofs and programs in Lean 4.</p>
-        <Tags>
-          <Tag>Education</Tag>
-          <Tag>In Progress (early)</Tag>
-        </Tags>
+      <div class="flex-row">
+        <div class="box left-box">
+          <h2>Improving the Bounds on Random-Access Lists</h2>
+          <p>
+            Accessing an arbitrary element of a traditional singly linked list
+            or <tt>cons</tt> list requires traversing up to a linear number of
+            pointers. A random-access list is a data structure that behaves like
+            a <tt>cons</tt> list except that accessing an arbitrary element requires
+            traversing only a logarithmic number of pointers. Specifically, in
+            a list of length n, an arbitrary element can be accessed by traversing
+            at most <tt>3 * ceil(log(n)) - 5</tt> pointers.
+          </p>
+          <p>
+            In this paper, we present a simple variation on Myers lists that improves
+            this bound and requires traversing at most <tt>2 * ceil(log(n + 1)) - 1</tt> pointers. We then present a more complicated variation that improves
+            this bound to <tt>(1 + 1 / s) * ceil(log(n)) + s + 9</tt> for any <tt>s &gt;= 2</tt>. This shows that it is possible to get asymptotically
+            close to the information-theoretically optimal bound of <tt>ceil(log(n + 1)) - 1</tt>.
+          </p>
+          <Tags>
+            <Tag>Data Structures</Tag>
+            <Tag>Functional Programming</Tag>
+            <Tag>In Progress (nearing completion)</Tag>
+          </Tags>
+        </div>
+        <div class="box">
+          <h2>Motivating Mathematics Study in Prospective Computer Scientists with Interactive Theorem Provers</h2>
+          <p>
+            The Curry-Howard correspondence shows that terms, types, programs and program evaluation correspond to witnesses, propositions, proofs and proof normalization in (intuitionistic) logic. This has spawned a large body of work in the literature known as <em>proof assistants</em> or <em>interactive theorem provers</em> that exploit this correspondence via a programming language with a type system that supports proof checking.
+          </p>
+          <p>On the other hand, the need to study mathematics may not be immediately apparent to budding software engineers, particularly those aiming to enter industry post-study. Our aim is motivate students to study mathematics by showing that the art of writing programs is the same as the art of writing a proof. We do so by writing both proofs and programs in Lean 4.</p>
+          <Tags>
+            <Tag>Education</Tag>
+            <Tag>In Progress (early)</Tag>
+          </Tags>
+        </div>
       </div>
     </main>
   );
