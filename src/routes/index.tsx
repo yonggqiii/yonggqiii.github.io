@@ -27,8 +27,24 @@ export default function Home() {
       </div>
       <div class="box solo">
         <h2>News</h2>
+        <h3>2025</h3>
+        <MyTable>
+        <NewsItem date={Date.parse('12 Jan 2025 23:59:00 GMT+8')}>
+          [NUS] IT5100B&mdash;Industry Readiness: Stream Processing starts tomorrow. Please contact me if you wish to audit this course. See you tomorrow!
+        </NewsItem>
+
+        <NewsItem date={Date.parse('06 Jan 2025 23:59:00 GMT+8')}>
+          [NUS] IT5000&mdash;Introduction to Computing Foundations starts tomorrow. I will be teaching the Discrete Structures portion (Day 1, 7 Jan). See you there!
+        </NewsItem>
+        <NewsItem date={Date.parse('1 Jan 2025 23:59:00 GMT+8')}>
+          Happy New Year to everyone!
+        </NewsItem>
+        </MyTable>
         <h3>2024</h3>
         <MyTable>
+        <NewsItem date={Date.parse('1 Dec 2024 23:59:00 GMT+8')}>
+          [NUS] Teaching Assistantship positions for IT5100B and IT5100E have closed. Thank you to all applicants!
+        </NewsItem>
         <NewsItem date={Date.parse('30 Oct 2024 23:59:00 GMT+8')}>
           I have completed my PhD Qualifying Exams!
         </NewsItem>
