@@ -29,6 +29,12 @@ export default function Home() {
         <h2>News</h2>
         <h3>2025</h3>
         <MyTable>
+        <NewsItem date={Date.parse('6 Mar 2025 23:59:00 GMT+8')}>
+          [NUS] IT5100E&mdash;Industry Readiness: Security Best Practices starts today. Please contact me if you wish to audit this course. See you!
+        </NewsItem>
+        <NewsItem date={Date.parse('28 Feb 2025 23:59:00 GMT+8')}>
+          [NUS] I have received the Faculty Teaching Excellence Awards!
+        </NewsItem>
         <NewsItem date={Date.parse('12 Jan 2025 23:59:00 GMT+8')}>
           [NUS] IT5100B&mdash;Industry Readiness: Stream Processing starts tomorrow. Please contact me if you wish to audit this course. See you tomorrow!
         </NewsItem>

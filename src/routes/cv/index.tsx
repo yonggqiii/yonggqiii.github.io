@@ -128,7 +128,7 @@ export default function CV() {
           <h2>Awards</h2>
           <p>
             <strong>Faculty Teaching Excellence Award</strong><br/> 
-            May 2025<br/>
+            Feb 2025<br/>
             <strong>National University of Singapore</strong><br/>
           </p>
           <p>
