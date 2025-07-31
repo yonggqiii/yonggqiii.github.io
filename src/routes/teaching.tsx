@@ -9,39 +9,39 @@ export default function Teaching() {
         <div class="box left-box">
           <h2>IT5100A</h2>
           <p><strong>Industry Readiness: Typed Functional Programming</strong></p>
-          <p>Typed functional programming are becoming more widely adopted in industry, as can be seen in the success of a number of advanced programming languages, such as OCaml, Haskell and Scala 3. These advanced languages offer a range of expressive features to allow robust, reusable and high-performing software codes to be safely and rapidly developed. This course will cover key programming techniques of typed functional programming that are becoming widely adopted, such as strong typing, code composition and abstraction, effect handlers, and safe techniques for asynchronous and concurrent programming.</p>
+          <p>Typed functional programming is becoming more widely adopted in industry, as can be seen in the success of a number of advanced programming languages, such as OCaml, Haskell and Scala 3. These advanced languages offer a range of expressive features to allow robust, reusable and high-performing software codes to be safely and rapidly developed. This course will cover key programming techniques of typed functional programming that are becoming widely adopted, such as strong typing, code composition and abstraction, effect handlers, and safe techniques for asynchronous and concurrent programming.</p>
           <p><strong>Semesters taught</strong>: AY24/25 Semester 1, AY25/26 Semester 1</p>
           <p>Course notes available <a href="https://yongqi.foo/it5100a-notes">here</a>.</p>
-        <Tags>
-          <Tag>Programming Languages</Tag>
-          <Tag>Functional Programming</Tag>
-          <Tag>Haskell</Tag>
-          <Tag>Python</Tag>
-        </Tags>
+          <Tags>
+            <Tag>Programming Languages</Tag>
+            <Tag>Functional Programming</Tag>
+            <Tag>Haskell</Tag>
+            <Tag>Python</Tag>
+          </Tags>
         </div>
         <div class="box">
           <h2>IT5100B</h2>
           <p><strong>Industry Readiness: Stream Processing</strong></p>
           <p>The global availability of data has reached a level where aggregating data into generic, general-purpose “stores” is no longer feasible. Having data collections statically available for querying by interested parties on demand is increasingly becoming the way of the past. Instead, a new paradigm, called Data Streaming, has emerged recently. In this paradigm, data is bundled into high-throughput "streams" that are sharded efficiently across a large number of network nodes. Consumers, sometimes counted in hundreds of thousands, or millions, "subscribe" to data subsets and are notified when new data becomes available, being under the obligation to process it immediately, or lose it. Consequently, data storage is no longer centralized, but rather distributed into many smaller-sized abstract collections. This new approach to "Big Data" requires a new set of tools, platforms, and solution patterns. In this course we propose to explore several facets of this new paradigm:</p>
-        <ul>
-          <li>The Stream paradigm introduced in Java 8.</li>
-          <li>
-            Platforms that implement Data Streaming, such as Kafka, and the Java
-            bindings in the library KafkaConnect.
-          </li>
-          <li>
-            Computing paradigms for stream processing, such as Reactive
-            Programming, and the library RxJava.
-          </li>
-          <li>High-performance stream computing platforms, such as Flink.</li>
-        </ul>
-        <p>The course will be using Java as the main vehicle for introducing concepts and showcasing examples.</p>
+          <ul>
+            <li>The Stream paradigm introduced in Java 8.</li>
+            <li>
+              Platforms that implement Data Streaming, such as Kafka, and the Java
+              bindings in the library KafkaConnect.
+            </li>
+            <li>
+              Computing paradigms for stream processing, such as Reactive
+              Programming, and the library RxJava.
+            </li>
+            <li>High-performance stream computing platforms, such as Flink.</li>
+          </ul>
+          <p>The course will be using Java as the main vehicle for introducing concepts and showcasing examples.</p>
           <p><strong>Semesters taught</strong>: AY23/24 Semester 2, AY24/25 Semester 2, AY25/26 Semester 1, AY25/26 Semester 2</p>
-        <Tags>
-          <Tag>Data Streaming</Tag>
-          <Tag>Apache Kafka</Tag>
-          <Tag>Apache Flink</Tag>
-        </Tags>
+          <Tags>
+            <Tag>Data Streaming</Tag>
+            <Tag>Apache Kafka</Tag>
+            <Tag>Apache Flink</Tag>
+          </Tags>
         </div>
       </div>
 
