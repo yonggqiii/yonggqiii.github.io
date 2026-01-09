@@ -14,7 +14,7 @@ export default function Teaching() {
             Published at ICFP 2025.
           </p>
 
-          <a href="../papers/myers.pdf">Pre-print </a> | <a href="https://doi.org/10.1145/3747536">DOI</a>
+          <a href="../papers/myers.pdf">Pre-print </a> | <a href="https://doi.org/10.1145/3747536">DOI</a> | <a href="https://youtu.be/-hHzYDa95Lg?si=JAvXLfY6ITUTxP0A">Talk</a>
 
           <h4>Abstract</h4>
           <p>
@@ -41,18 +41,23 @@ export default function Teaching() {
 
         </div>
         <div class="box">
-          <h2>Scrap your Rank-2 Polymorphic Functions</h2>
+          <h2>Class-Dictionary Specialization with Rank-2 Polymorphic Functions</h2>
+          <p><strong>Yong Qi Foo</strong>, Michael D. Adams</p>
+
+          <h4>Abstract</h4>
           <p>
-            <em>Scrap Your Boilerplate</em> (SYB) is one of the most widely used generic programming libraries in Haskell, enabling concise and reusable traversals over complex data structures. Its influence extends beyond Haskell, with successful adaptations in languages such as Java, Scala and OCaml. Over time, the SYB approach has been extended to support more modular and expressive traversals. Yet, SYB-style traversals&mdash;including both the original and its variants&mdash;are notoriously slow, often an order of magnitude slower than handwritten traversals. Prior efforts to improve their performance using general-purpose optimizations have yielded only moderate success, while prior domain-specific optimizations tend to be overly specific to SYB, fail to address SYB extensions and are brittle against the evolution of its dependencies and the SYB library itself.
+            Rank-2 polymorphism enables powerful abstractions and code reuse by allowing functions to accept arguments that are themselves polymorphic. Optimizing compilers like the Glasgow Haskell Compiler (GHC) use techniques like specialization and inlining for optimization. However, these techniques can falter in the presence of rank-2 polymorphism. Specializing the polymorphic arguments of recursive rank-2 polymorphic function applications requires inlining the applied function to expose type applications to the arguments, but the compiler's heuristic-driven inliner is reluctant to inline recursive functions, risking non-termination during compilation. This stalemate causes recursive rank-2 polymorphic functions to remain un-optimized and be left with a runtime penalty.
           </p>
-          <p> In this paper, we distill the essence of SYB-style traversals and present a new general-purpose optimization based on the partial evaluation of rank-2 polymorphic functions. Our approach synthesizes standard optimizing compiler techniques, is not tied to SYB-specific details, and is straightforward to implement, making it more amenable to direct integration into optimizing compilers than previous, more specialized techniques. We demonstrate that our approach is both efficient and broadly applicable, eliminating most (if not all) of the overhead associated with using SYB and its variants.
+          <p>
+            In this paper, we present a new optimization technique that breaks this stalemate and enables type specialization with recursive rank-2 polymorphic functions. Our approach was discovered and refined through the challenge of optimizing <strong>Scrap Your Boilerplate</strong> (SYB), one of Haskell's most widely used generic-programming libraries whose combinators are archetypal examples of this problematic pattern. We introduce a partial evaluator that strategically applies the standard transformations of inlining, β-reduction and memoization to applications of rank-2 polymorphic functions that are <strong>partially static</strong>, i.e., whose arguments have some information known statically. This process exposes type applications of its polymorphic arguments, which can be specialized by the standard compiler optimization pipeline. Additionally, we introduce a novel type-specialization strategy&mdash;type-constant folding&mdash;to evaluate run-time type-equality tests statically, to further leverage static type information gained from partial evaluation. We implement our technique as a GHC plugin and demonstrate its effectiveness by completely eliminating the overhead of SYB traversals, achieving speedups of 43× on average (up to 155×) to match the performance of their hand-written counterparts. The generality of our technique is shown with benchmarks on Scrap Your Boilerplate With Class library, the main variant of SYB, with speedups of 6.1× on average (up to 9.5×), and on the <tt>lens</tt> optics library, with speedups of 1.9× on average (up to 3.3×) on one of its modules.
           </p>
+
           <Tags>
             <Tag>Optimization</Tag>
             <Tag>Generic Programming</Tag>
             <Tag>Haskell</Tag>
             <Tag>Partial Evaluation</Tag>
-            <Tag>In Progress (nearing completion)</Tag>
+            <Tag>Submitted</Tag>
           </Tags>
         </div>
       </div>

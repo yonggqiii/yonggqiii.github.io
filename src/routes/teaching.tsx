@@ -10,7 +10,7 @@ export default function Teaching() {
           <h2>IT5100A</h2>
           <p><strong>Industry Readiness: Typed Functional Programming</strong></p>
           <p>Typed functional programming is becoming more widely adopted in industry, as can be seen in the success of a number of advanced programming languages, such as OCaml, Haskell and Scala 3. These advanced languages offer a range of expressive features to allow robust, reusable and high-performing software codes to be safely and rapidly developed. This course will cover key programming techniques of typed functional programming that are becoming widely adopted, such as strong typing, code composition and abstraction, effect handlers, and safe techniques for asynchronous and concurrent programming.</p>
-          <p><strong>Semesters taught</strong>: AY24/25 Semester 1, AY25/26 Semester 1</p>
+          <p><strong>Semesters taught</strong>: AY24/25 Semester 1, AY25/26 Semester 1, AY26/27 Semester 1</p>
           <p>Course notes available <a href="https://yongqi.foo/it5100a-notes">here</a>.</p>
           <Tags>
             <Tag>Programming Languages</Tag>
@@ -36,7 +36,7 @@ export default function Teaching() {
             <li>High-performance stream computing platforms, such as Flink.</li>
           </ul>
           <p>The course will be using Java as the main vehicle for introducing concepts and showcasing examples.</p>
-          <p><strong>Semesters taught</strong>: AY23/24 Semester 2, AY24/25 Semester 2, AY25/26 Semester 1, AY25/26 Semester 2</p>
+          <p><strong>Semesters taught</strong>: AY23/24 Semester 2, AY24/25 Semester 2, AY25/26 Semester 1, AY25/26 Semester 2, AY26/27 Semester 2</p>
           <Tags>
             <Tag>Data Streaming</Tag>
             <Tag>Apache Kafka</Tag>
@@ -50,7 +50,7 @@ export default function Teaching() {
           <h2>IT5100E</h2>
           <p><strong>Industry Readiness: Security Best Practices</strong></p>
           <p>Malicious exploitation of vulnerable applications running on the web can have disastrous consequences. This module aims to introduce application security considerations and provide practical experience on secure coding practices, focusing on web-based applications. Topics covered include fundamental security concepts (e.g., encryption, authentication, authorization), secure coding practices (e.g., handling of cookies, passwords, errors), secure design and deployment principles (e.g., threat modelling, vulnerability scanning), along with industry standards (e.g., OWASP), tools, common threats and defense against them.</p>
-          <p><strong>Semesters taught</strong>: AY23/24 Semester 1, AY24/25 Semester 2, AY25/26 Semester 2</p>
+          <p><strong>Semesters taught</strong>: AY23/24 Semester 1, AY24/25 Semester 2, AY25/26 Semester 2, AY26/27 Semester 1, AY26/27 Semester 2</p>
           <Tags>
             <Tag>Cybersecurity</Tag>
             <Tag>Web Application Security</Tag>
@@ -75,7 +75,7 @@ export default function Teaching() {
 
           <p>While on the surface, the purpose of this session is to introduce students to fundamental mathematics concepts, we hope to inspire further mathematics study by showing that the art of mathematics and the art of programming are, really, one and the same.</p>
 
-          <p><strong>Semesters taught</strong>: AY23/24 Semester 2, AY24/25 Semester 1</p>
+          <p><strong>Semesters taught</strong>: AY23/24 Semester 2, AY24/25 Semester 1, AY24/25 Semester 2, AY25/26 Semester 1, AY26/27 Semester 1</p>
           <Tags>
             <Tag>Pure Mathematics</Tag>
             <Tag>Discrete Structures</Tag>

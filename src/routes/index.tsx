@@ -27,16 +27,40 @@ export default function Home() {
       </div>
       <div class="box solo">
         <h2>News</h2>
+        <h3>2026</h3>
+        <MyTable>
+          <NewsItem date={Date.parse('8 Jan 2026 23:59:00 GMT+8')}>
+            [NUS] IT5100B&mdash;Industry Readiness: Stream Processing starts next week. See you there!
+          </NewsItem>
+          <NewsItem date={Date.parse('1 Jan 2026 23:59:00 GMT+8')}>
+            Happy New Year! Do I really turn 30 this year?
+          </NewsItem>
+        </MyTable>
         <h3>2025</h3>
         <MyTable>
+          <NewsItem date={Date.parse('24 Nov 2025 23:59:00 GMT+8')}>
+            I will be speaking on "Exploring Fixed-Point-Oriented Programming" at the <a href="https://sg-pl-summit.github.io/">SG PL Summit 2025</a>!
+          </NewsItem>
+          <NewsItem date={Date.parse('14 Oct 2025 23:59:00 GMT+8')}>
+            My presentation on "Fixed-Point-Oriented Programming with Orders" received the <a href="https://www.youtube.com/watch?v=jeqcNJA1qbI">first prize at the Student Research Competition at ICFP'25</a>!
+          </NewsItem>
+          <NewsItem date={Date.parse('13 Oct 2025 23:59:00 GMT+8')}>
+            I presented our paper on <a href="https://youtu.be/-hHzYDa95Lg?si=JAvXLfY6ITUTxP0A">"Pushing the Information Theoretic Limits of Random Access Lists"</a> at ICFP'25!
+          </NewsItem>
+          <NewsItem date={Date.parse('30 Sep 2025 23:59:00 GMT+8')}>
+            [NUS] IT5100B&mdash;Industry Readiness: Stream Processing starts today. See you there!
+          </NewsItem>
           <NewsItem date={Date.parse('12 Aug 2025 23:59:00 GMT+8')}>
             [NUS] IT5100A&mdash;Industry Readiness: Typed Functional Programming has started! Course notes are available <a href="https://yongqi.foo/it5100a-notes">here</a>. The notes are in the midst of a (visual) revamp; expect regular updates!
           </NewsItem>
           <NewsItem date={Date.parse('5 Aug 2025 23:59:00 GMT+8')}>
             [NUS] IT5000&mdash;Introduction to Computing Foundations starts today. I will be teaching the Discrete Structures portion (Day 1, 5 Aug). See you there!
           </NewsItem>
+          <NewsItem date={Date.parse('29 Jul 2025 23:59:00 GMT+8')}>
+            We published our <a href="https://arxiv.org/abs/2507.21439">white paper on Fixed-Point-Oriented Programming</a>.
+          </NewsItem>
           <NewsItem date={Date.parse('27 Jun 2025 23:59:00 GMT+8')}>
-            Our paper "Pushing the Information-Theoretic Limits of Random Access Lists" was accepted for publication at the International Conference on Functional Programming (ICFP) 2025.
+            Our paper <a href="https://dl.acm.org/doi/10.1145/3747536">"Pushing the Information-Theoretic Limits of Random Access Lists"</a> was accepted for publication at the International Conference on Functional Programming (ICFP) 2025.
           </NewsItem>
           <NewsItem date={Date.parse('22 Jun 2025 23:59:00 GMT+8')}>
             I am attending OPLSS 2025 at the University of Oregon!
