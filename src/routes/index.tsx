@@ -29,6 +29,9 @@ export default function Home() {
         <h2>News</h2>
         <h3>2026</h3>
         <MyTable>
+          <NewsItem date={Date.parse('17 Feb 2026 23:59:00 GMT+8')}>
+            Our paper on "Class-Dictionary Specialization With Rank-2 Polymorphic Functions" has been accepted for publication at OOPSLA 2026.
+          </NewsItem>
           <NewsItem date={Date.parse('8 Jan 2026 23:59:00 GMT+8')}>
             [NUS] IT5100B&mdash;Industry Readiness: Stream Processing starts next week. See you there!
           </NewsItem>
