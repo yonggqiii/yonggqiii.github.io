@@ -85,7 +85,7 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
-    "/assets/_...404_-dc4d5621.js"
+    "/assets/_...404_-2b80db04.js"
   ],
   "node_modules/solid-start/server/types.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
@@ -93,11 +93,11 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "src/components/MyTable.css": [
-    "/assets/index-11817e47.js",
+    "/assets/index-3b5ea69e.js",
     "/assets/index-1c76a864.css"
   ],
   "src/components/MyTable.tsx": [
-    "/assets/index-11817e47.js",
+    "/assets/index-3b5ea69e.js",
     "/assets/index-1c76a864.css"
   ],
   "src/components/NavBar.css": [
@@ -111,23 +111,23 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "src/components/NewsItem.css": [
-    "/assets/index-11817e47.js",
+    "/assets/index-3b5ea69e.js",
     "/assets/index-1c76a864.css"
   ],
   "src/components/NewsItem.tsx": [
-    "/assets/index-11817e47.js",
+    "/assets/index-3b5ea69e.js",
     "/assets/index-1c76a864.css"
   ],
   "src/components/Tag.tsx": [
-    "/assets/Tag-e4caaa38.js",
+    "/assets/Tag-3148052f.js",
     "/assets/Tag-7bb03d3d.css"
   ],
   "src/components/Tags.css": [
-    "/assets/Tag-e4caaa38.js",
+    "/assets/Tag-3148052f.js",
     "/assets/Tag-7bb03d3d.css"
   ],
   "src/components/Tags.tsx": [
-    "/assets/Tag-e4caaa38.js",
+    "/assets/Tag-3148052f.js",
     "/assets/Tag-7bb03d3d.css"
   ],
   "src/entry-client.tsx": [
@@ -146,27 +146,27 @@
     "/assets/Geist-Light-5c567234.woff2"
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_-dc4d5621.js"
+    "/assets/_...404_-2b80db04.js"
   ],
   "src/routes/cv/CV.css": [
-    "/assets/index-df024cf3.js",
+    "/assets/index-ac45d4f5.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/cv/index.tsx": [
-    "/assets/index-df024cf3.js",
+    "/assets/index-ac45d4f5.js",
     "/assets/index-bfe03ba4.css"
   ],
   "src/routes/fun.tsx": [
-    "/assets/fun-24d301db.js"
+    "/assets/fun-e25255a3.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index-11817e47.js",
+    "/assets/index-3b5ea69e.js",
     "/assets/index-1c76a864.css"
   ],
   "src/routes/research.tsx": [
-    "/assets/research-32ac70b3.js"
+    "/assets/research-c216a917.js"
   ],
   "src/routes/teaching.tsx": [
-    "/assets/teaching-4ace07b2.js"
+    "/assets/teaching-2763fca2.js"
   ]
 }
