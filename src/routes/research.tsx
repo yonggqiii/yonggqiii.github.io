@@ -47,6 +47,9 @@ export default function Teaching() {
           <p>
             Published at OOPSLA 2026.
           </p>
+
+          <a href="../papers/syb.pdf">Pre-print </a> | <a href="https://doi.org/10.1145/3798227">DOI</a>
+
           <h4>Abstract</h4>
           <p>
             Rank-2 polymorphism, when combined with type-class-constrained arguments, enables powerful abstractions and code reuse by allowing functions to accept arguments that are themselves ad-hoc polymorphic. Optimizing compilers like the Glasgow Haskell Compiler (GHC) use techniques like class-dictionary specialization and inlining for optimization. However, these techniques can falter when the rank-2 polymorphic functions are recursive. Specializing the polymorphic arguments of recursive rank-2 polymorphic function applications requires inlining the applied function to expose type and dictionary applications to the arguments, but the compiler's heuristic-driven inliner is reluctant to inline recursive functions, risking non-termination during compilation. This stalemate causes recursive rank-2 polymorphic functions to remain un-optimized and be left with a runtime penalty. Within the Haskell ecosystem, we identify this stalemate within three widely used libraries: the Scrap Your Boilerplate (SYB) and SYB With Class (SYB3) generic-programming libraries, and a fragment of the lens optics library. In these libraries, the combination of rank-2 polymorphism, type-class constraints and recursion is central to their implementation.
