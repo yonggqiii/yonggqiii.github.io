@@ -70,19 +70,20 @@ export default function Teaching() {
       </div>
       <div class="flex-row">
         <div class="box left-box">
-          <h2>A Fixed-Point-Oriented Programming Language with User-Specified Optimization Strategies</h2>
+          <h2>Fixen: A Fixed-Point-Oriented Programming Language with Subsumption, Priorities and Phases</h2>
           <p>
-            There are a wide range of problems that are easily solved using a fixed-point algorithm instead of the more common programming strategies of loops and recursions. Examples of these include parsing, static analysis, type-checking, graph algorithms, and automata manipulation.  Existing language paradigms, such as the imperative and functional paradigms, support loops and recursions well but support fixed-point algorithms rather poorly.
-          </p>
-          <p>
-            In this project, we will develop a programming language providing such support. In addition, by specifying problems at the abstraction-level of fixed points, our language can include mechanisms for the programmer to influence and optimize the solution strategy used by the implementation without the programmer having to modify the problem specification. This will allow users of the language to rapidly prototype and test a problem specification and to later specify optimizations while making only minimal changes to existing code, a task particularly difficult for fixed-point problems in existing languages.
+            <strong>Fixed-Point-Oriented Programming</strong> (FPOP) is an emerging programming paradigm that aims to simplify and generalize the implementation of <strong>work-queue</strong> or <strong>work-list</strong> algorithms, typically used to solve problems involving self-referential or cyclic computations. These are pervasive in areas like graph algorithms, static analysis, parsing and distributed systems. Though implementing work-queue algorithms with imperative or functional programming is often intricate, tedious and error-prone, doing so in FPOP is concise, maintainable and expressive.
+          </p><p>
+
+            In this paper, we introduce a new FPOP language, Fixen, that incorporates three novel FPOP language features: (1) <strong>generalized fact subsumption</strong>, which allows any relation argument to be partially ordered to discard redundant facts, (2) <strong>rule-instance priorities</strong> which provides control over evaluation order for algorithm-level optimizations and (3) <strong>phases of execution</strong> to stratify the program state and modularly compose sets of rules. We demonstrate Fixen by implementing variations of graph-distance algorithms and composing static analyses via a reduced product. A formal semantics specifies these features, and benchmarks on our implementation that compiles to Haskell shows that rule-instance priorities can improve performance by 7&times; on average (up to 30&times;).
           </p>
           <Tags>
             <Tag>Programming Paradigms</Tag>
             <Tag>Declarative Programming</Tag>
+            <Tag>Logic Programming</Tag>
             <Tag>Fixed-Point-Oriented Programming</Tag>
             <Tag>Optimization</Tag>
-            <Tag>In Progress (nearing completion)</Tag>
+            <Tag>Submitted (under review)</Tag>
           </Tags>
         </div>
         <div class="box">

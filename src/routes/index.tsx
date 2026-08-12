@@ -22,15 +22,30 @@ export default function Home() {
         </div>
         <div class="box">
           <h2>Contact</h2>
-          <p><strong>Email</strong>: yongqi@nus.edu.sg<br /><strong>DID</strong>: +6516 7960<br /><strong>Office</strong>: COM2-02-27, 15 Computing Drive, Singapore 117418</p>
+          <p><strong>Email</strong>: knockknock &lt;at&gt; yongqi &lt;dot&gt; foo<br /><strong>DID</strong>: +6516 7960<br /><strong>Office</strong>: COM2-02-27, 15 Computing Drive, Singapore 117418</p>
         </div>
       </div>
       <div class="box solo">
         <h2>News</h2>
         <h3>2026</h3>
         <MyTable>
+          <NewsItem date={Date.parse('11 Aug 2026 23:59:00 GMT+8')}>
+            [NUS] IT5100E&mdash;Industry Readiness: Security Best Practices starts today. See you there!
+          </NewsItem>
+          <NewsItem date={Date.parse('4 Aug 2026 23:59:00 GMT+8')}>
+            [NUS] IT5000&mdash;Introduction to Computing Foundations starts today. I will be teaching the Discrete Structures portion (Day 1, 4 Aug). See you there!
+          </NewsItem>
+          <NewsItem date={Date.parse('26 May 2026 23:59:00 GMT+8')}>
+            I am a ACM SRC grand finals candidate. Didn't win though. My paper is <a href="https://src.acm.org/binaries/content/assets/src/2026/new-icfp_-g_.pdf">here</a>.
+          </NewsItem>
+          <NewsItem date={Date.parse('11 Mar 2026 23:59:00 GMT+8')}>
+            [NUS] I will be speaking on cybersecurity and AI with NUS SoC Research Partnership today.
+          </NewsItem>
+          <NewsItem date={Date.parse('21 Feb 2026 23:59:00 GMT+8')}>
+            [NUS] IT5100E&mdash;Industry Readiness: Security Best Practices starts next week. See you there!
+          </NewsItem>
           <NewsItem date={Date.parse('17 Feb 2026 23:59:00 GMT+8')}>
-            Our paper on "Class-Dictionary Specialization With Rank-2 Polymorphic Functions" has been accepted for publication at OOPSLA 2026.
+            Our paper on <a href="https://doi.org/10.1145/3798227">Class-Dictionary Specialization With Rank-2 Polymorphic Functions</a> has been accepted for publication at OOPSLA 2026.
           </NewsItem>
           <NewsItem date={Date.parse('8 Jan 2026 23:59:00 GMT+8')}>
             [NUS] IT5100B&mdash;Industry Readiness: Stream Processing starts next week. See you there!
