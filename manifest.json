@@ -3,11 +3,11 @@
     "file": "assets/Tag-7bb03d3d.css",
     "src": "Tag.css"
   },
-  "_Tag-3148052f.js": {
+  "_Tag-83055b37.js": {
     "css": [
       "assets/Tag-7bb03d3d.css"
     ],
-    "file": "assets/Tag-3148052f.js",
+    "file": "assets/Tag-83055b37.js",
     "imports": [
       "src/entry-client.tsx"
     ]
@@ -33,7 +33,7 @@
       "src/routes/teaching.tsx",
       "src/routes/cv/index.tsx"
     ],
-    "file": "assets/entry-client-c8fdb362.js",
+    "file": "assets/entry-client-6f61c610.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
   },
@@ -74,7 +74,7 @@
     "src": "src/fonts/Geist/Geist-UltraLight.woff2"
   },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-2b80db04.js",
+    "file": "assets/_...404_-8225b323.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -89,7 +89,7 @@
     "css": [
       "assets/index-bfe03ba4.css"
     ],
-    "file": "assets/index-ac45d4f5.js",
+    "file": "assets/index-8e64f622.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -97,7 +97,7 @@
     "src": "src/routes/cv/index.tsx"
   },
   "src/routes/fun.tsx": {
-    "file": "assets/fun-e25255a3.js",
+    "file": "assets/fun-be112b58.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -112,7 +112,7 @@
     "css": [
       "assets/index-1c76a864.css"
     ],
-    "file": "assets/index-3b5ea69e.js",
+    "file": "assets/index-1991b313.js",
     "imports": [
       "src/entry-client.tsx"
     ],
@@ -120,19 +120,19 @@
     "src": "src/routes/index.tsx"
   },
   "src/routes/research.tsx": {
-    "file": "assets/research-c216a917.js",
+    "file": "assets/research-9035271c.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Tag-3148052f.js"
+      "_Tag-83055b37.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/research.tsx"
   },
   "src/routes/teaching.tsx": {
-    "file": "assets/teaching-2763fca2.js",
+    "file": "assets/teaching-3d13e305.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Tag-3148052f.js"
+      "_Tag-83055b37.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/teaching.tsx"
