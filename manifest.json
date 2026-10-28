@@ -1,57 +1,46 @@
 {
-  "Tag.css": {
-    "file": "assets/Tag-7bb03d3d.css",
-    "src": "Tag.css"
+  "_NewsItem-f47c36c9.js": {
+    "file": "assets/NewsItem-f47c36c9.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ]
   },
-  "_Tag-83055b37.js": {
-    "css": [
-      "assets/Tag-7bb03d3d.css"
-    ],
-    "file": "assets/Tag-83055b37.js",
+  "_PageHeader-b18deb45.js": {
+    "file": "assets/PageHeader-b18deb45.js",
+    "imports": [
+      "src/entry-client.tsx"
+    ]
+  },
+  "_research-46e752f1.js": {
+    "file": "assets/research-46e752f1.js",
     "imports": [
       "src/entry-client.tsx"
     ]
   },
   "src/entry-client.css": {
-    "file": "assets/entry-client-f1baca8c.css",
+    "file": "assets/entry-client-930b0c26.css",
     "src": "src/entry-client.css"
   },
   "src/entry-client.tsx": {
     "assets": [
       "assets/Geist-Regular-b497f5ad.woff2",
-      "assets/Geist-Bold-a3b7c213.woff2",
-      "assets/Geist-Light-5c567234.woff2"
+      "assets/Geist-SemiBold-45ab21f6.woff2"
     ],
     "css": [
-      "assets/entry-client-f1baca8c.css"
+      "assets/entry-client-930b0c26.css"
     ],
     "dynamicImports": [
       "src/routes/[...404].tsx",
       "src/routes/fun.tsx",
       "src/routes/index.tsx",
+      "src/routes/news.tsx",
       "src/routes/research.tsx",
       "src/routes/teaching.tsx",
       "src/routes/cv/index.tsx"
     ],
-    "file": "assets/entry-client-6f61c610.js",
+    "file": "assets/entry-client-98ff6375.js",
     "isEntry": true,
     "src": "src/entry-client.tsx"
-  },
-  "src/fonts/Geist/Geist-Black.woff2": {
-    "file": "assets/Geist-Black-ea9185d1.woff2",
-    "src": "src/fonts/Geist/Geist-Black.woff2"
-  },
-  "src/fonts/Geist/Geist-Bold.woff2": {
-    "file": "assets/Geist-Bold-a3b7c213.woff2",
-    "src": "src/fonts/Geist/Geist-Bold.woff2"
-  },
-  "src/fonts/Geist/Geist-Light.woff2": {
-    "file": "assets/Geist-Light-5c567234.woff2",
-    "src": "src/fonts/Geist/Geist-Light.woff2"
-  },
-  "src/fonts/Geist/Geist-Medium.woff2": {
-    "file": "assets/Geist-Medium-f9949589.woff2",
-    "src": "src/fonts/Geist/Geist-Medium.woff2"
   },
   "src/fonts/Geist/Geist-Regular.woff2": {
     "file": "assets/Geist-Regular-b497f5ad.woff2",
@@ -61,78 +50,67 @@
     "file": "assets/Geist-SemiBold-45ab21f6.woff2",
     "src": "src/fonts/Geist/Geist-SemiBold.woff2"
   },
-  "src/fonts/Geist/Geist-Thin.woff2": {
-    "file": "assets/Geist-Thin-9fc4e426.woff2",
-    "src": "src/fonts/Geist/Geist-Thin.woff2"
-  },
-  "src/fonts/Geist/Geist-UltraBlack.woff2": {
-    "file": "assets/Geist-UltraBlack-483899ab.woff2",
-    "src": "src/fonts/Geist/Geist-UltraBlack.woff2"
-  },
-  "src/fonts/Geist/Geist-UltraLight.woff2": {
-    "file": "assets/Geist-UltraLight-b036fd4d.woff2",
-    "src": "src/fonts/Geist/Geist-UltraLight.woff2"
-  },
   "src/routes/[...404].tsx": {
-    "file": "assets/_...404_-8225b323.js",
+    "file": "assets/_...404_-e0e1d7c3.js",
     "imports": [
       "src/entry-client.tsx"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/[...404].tsx"
   },
-  "src/routes/cv/index.css": {
-    "file": "assets/index-bfe03ba4.css",
-    "src": "src/routes/cv/index.css"
-  },
   "src/routes/cv/index.tsx": {
-    "css": [
-      "assets/index-bfe03ba4.css"
-    ],
-    "file": "assets/index-8e64f622.js",
+    "file": "assets/index-86addcd8.js",
     "imports": [
-      "src/entry-client.tsx"
+      "src/entry-client.tsx",
+      "_PageHeader-b18deb45.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/cv/index.tsx"
   },
   "src/routes/fun.tsx": {
-    "file": "assets/fun-be112b58.js",
+    "file": "assets/fun-b34c8116.js",
     "imports": [
-      "src/entry-client.tsx"
+      "src/entry-client.tsx",
+      "_PageHeader-b18deb45.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/fun.tsx"
   },
-  "src/routes/index.css": {
-    "file": "assets/index-1c76a864.css",
-    "src": "src/routes/index.css"
-  },
   "src/routes/index.tsx": {
-    "css": [
-      "assets/index-1c76a864.css"
-    ],
-    "file": "assets/index-1991b313.js",
+    "file": "assets/index-fb2577d8.js",
     "imports": [
-      "src/entry-client.tsx"
+      "src/entry-client.tsx",
+      "_NewsItem-f47c36c9.js",
+      "_research-46e752f1.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/index.tsx"
   },
-  "src/routes/research.tsx": {
-    "file": "assets/research-9035271c.js",
+  "src/routes/news.tsx": {
+    "file": "assets/news-bc214120.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Tag-83055b37.js"
+      "_NewsItem-f47c36c9.js",
+      "_PageHeader-b18deb45.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/routes/news.tsx"
+  },
+  "src/routes/research.tsx": {
+    "file": "assets/research-c9215295.js",
+    "imports": [
+      "src/entry-client.tsx",
+      "_PageHeader-b18deb45.js",
+      "_research-46e752f1.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/research.tsx"
   },
   "src/routes/teaching.tsx": {
-    "file": "assets/teaching-3d13e305.js",
+    "file": "assets/teaching-d4dd91a4.js",
     "imports": [
       "src/entry-client.tsx",
-      "_Tag-83055b37.js"
+      "_PageHeader-b18deb45.js"
     ],
     "isDynamicEntry": true,
     "src": "src/routes/teaching.tsx"

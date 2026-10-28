@@ -1,172 +1,163 @@
 {
   "\u0000vite/preload-helper": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/@solidjs/meta/dist/index.jsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/@solidjs/router/dist/components.jsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/@solidjs/router/dist/integration.js": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/@solidjs/router/dist/lifecycle.js": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/@solidjs/router/dist/routing.js": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/@solidjs/router/dist/utils.js": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-js/dist/solid.js": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-js/web/dist/web.js": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/entry-client/StartClient.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/entry-client/mount.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/error-boundary/ErrorBoundary.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/root/Document.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/root/FileRoutes.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/root/Scripts.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/router.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/server/ServerContext.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
-    "/assets/_...404_-8225b323.js"
+    "/assets/_...404_-e0e1d7c3.js"
   ],
   "node_modules/solid-start/server/types.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
-  "src/components/MyTable.css": [
-    "/assets/index-1991b313.js",
-    "/assets/index-1c76a864.css"
+  "src/components/DatalogFixedPoint.tsx": [
+    "/assets/index-fb2577d8.js"
   ],
-  "src/components/MyTable.tsx": [
-    "/assets/index-1991b313.js",
-    "/assets/index-1c76a864.css"
+  "src/components/FixedPoint.tsx": [
+    "/assets/index-fb2577d8.js"
+  ],
+  "src/components/FixedPointExplorations.tsx": [
+    "/assets/index-fb2577d8.js"
+  ],
+  "src/components/Footer.tsx": [
+    "/assets/Geist-Regular-b497f5ad.woff2",
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
+  ],
+  "src/components/Icon.tsx": [
+    "/assets/Geist-Regular-b497f5ad.woff2",
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/components/NavBar.css": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/components/NavBar.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
-  ],
-  "src/components/NewsItem.css": [
-    "/assets/index-1991b313.js",
-    "/assets/index-1c76a864.css"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/components/NewsItem.tsx": [
-    "/assets/index-1991b313.js",
-    "/assets/index-1c76a864.css"
+    "/assets/NewsItem-f47c36c9.js"
   ],
-  "src/components/Tag.tsx": [
-    "/assets/Tag-83055b37.js",
-    "/assets/Tag-7bb03d3d.css"
+  "src/components/PageHeader.tsx": [
+    "/assets/PageHeader-b18deb45.js"
   ],
-  "src/components/Tags.css": [
-    "/assets/Tag-83055b37.js",
-    "/assets/Tag-7bb03d3d.css"
+  "src/components/Publication.tsx": [
+    "/assets/research-46e752f1.js"
   ],
-  "src/components/Tags.tsx": [
-    "/assets/Tag-83055b37.js",
-    "/assets/Tag-7bb03d3d.css"
+  "src/components/ThemeToggle.tsx": [
+    "/assets/Geist-Regular-b497f5ad.woff2",
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
+  ],
+  "src/data/courses.ts": [
+    "/assets/teaching-d4dd91a4.js"
+  ],
+  "src/data/cv.ts": [
+    "/assets/index-86addcd8.js"
+  ],
+  "src/data/datalog.ts": [
+    "/assets/index-fb2577d8.js"
+  ],
+  "src/data/news.tsx": [
+    "/assets/NewsItem-f47c36c9.js"
+  ],
+  "src/data/research.ts": [
+    "/assets/research-46e752f1.js"
   ],
   "src/entry-client.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/root.css": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/root.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
-    "/assets/Geist-Bold-a3b7c213.woff2",
-    "/assets/Geist-Light-5c567234.woff2"
+    "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_-8225b323.js"
-  ],
-  "src/routes/cv/CV.css": [
-    "/assets/index-8e64f622.js",
-    "/assets/index-bfe03ba4.css"
+    "/assets/_...404_-e0e1d7c3.js"
   ],
   "src/routes/cv/index.tsx": [
-    "/assets/index-8e64f622.js",
-    "/assets/index-bfe03ba4.css"
+    "/assets/index-86addcd8.js"
   ],
   "src/routes/fun.tsx": [
-    "/assets/fun-be112b58.js"
+    "/assets/fun-b34c8116.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index-1991b313.js",
-    "/assets/index-1c76a864.css"
+    "/assets/index-fb2577d8.js"
+  ],
+  "src/routes/news.tsx": [
+    "/assets/news-bc214120.js"
   ],
   "src/routes/research.tsx": [
-    "/assets/research-9035271c.js"
+    "/assets/research-c9215295.js"
   ],
   "src/routes/teaching.tsx": [
-    "/assets/teaching-3d13e305.js"
+    "/assets/teaching-d4dd91a4.js"
   ]
 }
