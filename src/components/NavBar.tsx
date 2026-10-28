@@ -1,62 +1,59 @@
-import { A } from "solid-start";
+import { createEffect, createSignal, onCleanup, onMount } from "solid-js";
+import { A, useLocation } from "solid-start";
+import Icon from "./Icon";
+import ThemeToggle from "./ThemeToggle";
 import "./NavBar.css";
+
 export default function NavBar() {
+  const [open, setOpen] = createSignal(false);
+  const location = useLocation();
+  let menuButton: HTMLButtonElement | undefined;
+
+  createEffect(() => {
+    location.pathname;
+    setOpen(false);
+  });
+
+  onMount(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && open()) {
+        setOpen(false);
+        menuButton?.focus();
+      }
+    };
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      if (event.target instanceof Element && !event.target.closest(".site-header")) setOpen(false);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    document.addEventListener("click", closeOnOutsideClick);
+    onCleanup(() => {
+      document.removeEventListener("keydown", closeOnEscape);
+      document.removeEventListener("click", closeOnOutsideClick);
+    });
+  });
+
   return (
-    <nav>
-      <div class="nav-bar">
-        <A href="/">
-          <button class="btn home">
-  <svg class="home-svg" fill="currentColor" viewBox="0 0 75 65"><path d="M37.59.25l36.95 64H.64l36.95-64z"></path></svg>
-          </button>
+    <header class="site-header">
+      <div class="container header-inner">
+        <A href="/" class="wordmark" aria-label="Foo Yong Qi — home">
+          <span class="monogram" aria-hidden="true">f.</span>
+          <span>Foo Yong Qi<span class="wordmark-detail">Computer science · NUS</span></span>
         </A>
-        <div class="nav-grp">
-          <A href="/cv">
-            <button class="btn">
-              CV
-            </button>
-          </A>
-          <A href="/teaching">
-            <button class="btn">
-              Teaching
-            </button>
-          </A>
-          <A href="/research">
-            <button class="btn">
-              Research
-            </button>
-          </A>
-          <a style="color: #CCCCCC" href="https://yongqi.foo/blog/">
-            <button class="btn">
-              Blog
-            </button>
-          </a>
+        <nav id="primary-navigation" class="primary-navigation" classList={{ "is-open": open() }} aria-label="Main navigation">
+          <A href="/" end>About</A>
+          <A href="/research">Research</A>
+          <A href="/teaching">Teaching</A>
+          <a href="https://yongqi.foo/blog/">Blog <Icon name="external" /></a>
+          <A href="/cv">CV</A>
+          <a class="nav-contact" href="mailto:knockknock@yongqi.foo">Get in touch <Icon name="external" /></a>
+        </nav>
+        <div class="header-controls">
+          <ThemeToggle />
+          <button ref={menuButton} type="button" class="menu-toggle" aria-label={open() ? "Close navigation" : "Open navigation"} aria-expanded={open()} aria-controls="primary-navigation" onClick={() => setOpen(!open())}>
+            <Icon name={open() ? "close" : "menu"} />
+          </button>
         </div>
       </div>
-      <div id="menuToggle">
-        <input id="checkbox" type="checkbox" />
-        <label class="toggle" for="checkbox">
-          <div class="bar bar--top"></div>
-          <div class="bar bar--middle"></div>
-          <div class="bar bar--bottom"></div>
-          <div id="nav-pane">
-            <A class="navitem" href="/">
-              Home
-            </A>
-            <A class="navitem" href="/cv">
-              CV
-            </A>
-            <A class="navitem" href="/teaching">
-              Teaching
-            </A>
-            <A class="navitem" href="/research">
-              Research
-            </A>
-            <a style="color: #CCCCCC" class="navitem" href="https://yongqi.foo/blog">
-              Blog
-            </a>
-          </div>
-        </label>
-      </div>
-    </nav>
+    </header>
   );
 }

@@ -1,151 +1,32 @@
-import { Title } from "solid-start";
-import Tags from "../components/Tags.tsx"
-import Tag from "../components/Tag.tsx"
-export default function Teaching() {
+import { createMemo, createSignal, For } from "solid-js";
+import { Meta, Title } from "solid-start";
+import PageHeader from "../components/PageHeader";
+import Publication from "../components/Publication";
+import { research } from "../data/research";
+
+const filters = [{ value: "all", label: "All work" }, { value: "publication", label: "Publications" }, { value: "project", label: "Projects" }] as const;
+
+export default function Research() {
+  const [filter, setFilter] = createSignal<string>("all");
+  const filteredWork = createMemo(() => research.filter(work => filter() === "all" || work.category === filter()));
+
   return (
-    <main>
-      <Title>Research - Foo Yong Qi</Title>
-      <div class="flex-row">
-        <div class="box left-box">
-
-          <h2>Pushing the Information-Theoretic Limits of Random Access Lists</h2>
-          <p>Edward Peters, <strong>Yong Qi Foo</strong>, Michael D. Adams</p>
-          <p>
-            Published at ICFP 2025.
-          </p>
-
-          <a href="../papers/myers.pdf">Pre-print </a> | <a href="https://doi.org/10.1145/3747536">DOI</a> | <a href="https://youtu.be/-hHzYDa95Lg?si=JAvXLfY6ITUTxP0A">Talk</a>
-
-          <h4>Abstract</h4>
-          <p>
-            Accessing an arbitrary element of a traditional singly linked list
-            or <tt>cons</tt> list requires traversing up to a linear number of
-            pointers. A random-access list is a data structure that behaves like
-            a <tt>cons</tt> list except that accessing an arbitrary element requires
-            traversing only a logarithmic number of pointers. Specifically, in
-            a list of length n, an arbitrary element can be accessed by traversing
-            at most <tt>3 * ceil(log(n)) - 5</tt> pointers.
-          </p>
-          <p>
-            In this paper, we present a simple variation on Myers lists that improves
-            this bound and requires traversing at most <tt>2 * ceil(log(n + 1)) - 1</tt> pointers. We then present a more complicated variation that improves
-            this bound to <tt>(1 + 1 / s) * ceil(log(n)) + s + 9</tt> for any <tt>s &gt;= 2</tt>. This shows that it is possible to get asymptotically
-            close to the information-theoretically optimal bound of <tt>ceil(log(n + 1)) - 1</tt>.
-          </p>
-          <Tags>
-            <Tag>Data Structures</Tag>
-            <Tag>Functional Programming</Tag>
-            <Tag>Published</Tag>
-          </Tags>
-
-
-        </div>
-        <div class="box">
-          <h2>Class-Dictionary Specialization with Rank-2 Polymorphic Functions</h2>
-          <p><strong>Yong Qi Foo</strong>, Michael D. Adams</p>
-
-          <p>
-            Published at OOPSLA 2026.
-          </p>
-
-          <a href="../papers/syb.pdf">Pre-print </a> | <a href="https://doi.org/10.1145/3798227">DOI</a>
-
-          <h4>Abstract</h4>
-          <p>
-            Rank-2 polymorphism, when combined with type-class-constrained arguments, enables powerful abstractions and code reuse by allowing functions to accept arguments that are themselves ad-hoc polymorphic. Optimizing compilers like the Glasgow Haskell Compiler (GHC) use techniques like class-dictionary specialization and inlining for optimization. However, these techniques can falter when the rank-2 polymorphic functions are recursive. Specializing the polymorphic arguments of recursive rank-2 polymorphic function applications requires inlining the applied function to expose type and dictionary applications to the arguments, but the compiler's heuristic-driven inliner is reluctant to inline recursive functions, risking non-termination during compilation. This stalemate causes recursive rank-2 polymorphic functions to remain un-optimized and be left with a runtime penalty. Within the Haskell ecosystem, we identify this stalemate within three widely used libraries: the Scrap Your Boilerplate (SYB) and SYB With Class (SYB3) generic-programming libraries, and a fragment of the lens optics library. In these libraries, the combination of rank-2 polymorphism, type-class constraints and recursion is central to their implementation.
-
-          </p>
-          <p>
-            In this paper, we present a new optimization technique that breaks this stalemate and enables class-dictionary specialization with recursive rank-2 polymorphic functions. We introduce a partial evaluator that strategically applies the standard transformations of inlining, β-reduction and memoization to applications of rank-2 polymorphic functions that are partially static, i.e., whose arguments have some information known statically. This process exposes applications of its polymorphic arguments onto concrete types and dictionaries, which can be specialized by the standard compiler optimization pipeline. Additionally, we introduce type-constant folding to evaluate run-time type-equality tests statically, further leveraging static type information gained from partial evaluation. We implement our technique as a GHC plugin and demonstrate its effectiveness by resolving the performance bottlenecks in the aforementioned Haskell libraries. On SYB and SYB3 traversals, our technique achieves speedups of 43× on average (up to 155×) and 6.1× on average (up to 9.5×), respectively, matching the performance of their hand-written counterparts. On the fragment of the <tt>lens</tt> library containing the identified slowdowns, our technique achieves speedups of 1.6× on average (up to 2.1×).
-          </p>
-
-          <Tags>
-            <Tag>Optimization</Tag>
-            <Tag>Generic Programming</Tag>
-            <Tag>Haskell</Tag>
-            <Tag>Partial Evaluation</Tag>
-            <Tag>Published</Tag>
-          </Tags>
-        </div>
+    <main id="main-content" class="container page-content">
+      <Title>Research — Foo Yong Qi</Title>
+      <Meta name="description" content="Research in programming languages, fixed-point-oriented programming, compiler optimizations, and type systems by Foo Yong Qi." />
+      <PageHeader number="01" label="Research & projects" title="Expressiveness and efficiency">
+        <p>I work on programming languages and the tools that make them useful: better abstractions, efficient implementations, and ways to reason about programs. My PhD advisor at NUS is Michael D. Adams.</p>
+      </PageHeader>
+      <div class="research-context">
+        <div><h2>Programming with fixed points</h2><p>Languages that make iterative, cyclic computations easier to express and optimize.</p></div>
+        <div><h2>Abstraction without the overhead</h2><p>Compiler techniques that bring expressive functional programs closer to hand-written performance.</p></div>
+        <div><h2>Programs, types & proofs</h2><p>Using type systems and interactive theorem proving to build and understand software.</p></div>
       </div>
-      <div class="flex-row">
-        <div class="box left-box">
-          <h2>Fixen: A Fixed-Point-Oriented Programming Language with Subsumption, Priorities and Phases</h2>
-          <p>
-            <strong>Fixed-Point-Oriented Programming</strong> (FPOP) is an emerging programming paradigm that aims to simplify and generalize the implementation of <strong>work-queue</strong> or <strong>work-list</strong> algorithms, typically used to solve problems involving self-referential or cyclic computations. These are pervasive in areas like graph algorithms, static analysis, parsing and distributed systems. Though implementing work-queue algorithms with imperative or functional programming is often intricate, tedious and error-prone, doing so in FPOP is concise, maintainable and expressive.
-          </p><p>
-
-            In this paper, we introduce a new FPOP language, Fixen, that incorporates three novel FPOP language features: (1) <strong>generalized fact subsumption</strong>, which allows any relation argument to be partially ordered to discard redundant facts, (2) <strong>rule-instance priorities</strong> which provides control over evaluation order for algorithm-level optimizations and (3) <strong>phases of execution</strong> to stratify the program state and modularly compose sets of rules. We demonstrate Fixen by implementing variations of graph-distance algorithms and composing static analyses via a reduced product. A formal semantics specifies these features, and benchmarks on our implementation that compiles to Haskell shows that rule-instance priorities can improve performance by 7&times; on average (up to 30&times;).
-          </p>
-          <Tags>
-            <Tag>Programming Paradigms</Tag>
-            <Tag>Declarative Programming</Tag>
-            <Tag>Logic Programming</Tag>
-            <Tag>Fixed-Point-Oriented Programming</Tag>
-            <Tag>Optimization</Tag>
-            <Tag>Submitted (under review)</Tag>
-          </Tags>
-        </div>
-        <div class="box">
-          <h2>Optimization Tactics (Functional Pearl)</h2>
-          <p>
-            Program optimizations are frequently done by the compiler. These optimizations are general purpose, so as to extract the best performance out of as many programs as possible. However, general-purpose optimizations may not be well-suited for some specific programs.
-          </p>
-          <p>Thus, we present <strong>optimization tactics</strong>, a new construct that allows users to define their own optimization strategies and to apply optimizations at specific program points. The library for supporting optimization tactics is implemented with Lean 4's powerful metaprogramming and theorem proving facilities, which allows users to:
-          </p>
-          <ul>
-            <li>Easily define provably correctness-preserving optimization tactics as expression-to-expression transformation functions.</li>
-            <li>Apply an optimization wherever a program term occurs</li>
-            <li>Leverage Lean 4's interactive view to observe every step of the optimization</li>
-            <li>Separate algorithm from optimization.</li>
-          </ul>
-          <p>
-            Optimization tactics thus allows library authors to define domain-specific optimizations, and for library users to incorporate, extend and adapt optimization tactics to their specific use-case. We also propose that the interactivity of optimization tactics in Lean 4 allows researchers to explore new optimization techniques that can be applied to other functional programming languages.
-          </p>
-          <Tags>
-            <Tag>Optimization</Tag>
-            <Tag>Metaprogramming</Tag>
-            <Tag>Lean 4</Tag>
-            <Tag>In Progress (early)</Tag>
-          </Tags>
-        </div>
+      <div class="filter-bar" role="group" aria-label="Filter research">
+        <For each={filters}>{item => <button class="filter-button" type="button" aria-pressed={filter() === item.value} aria-controls="research-results" onClick={() => setFilter(item.value)}>{item.label}</button>}</For>
+        <span class="filter-count" role="status" aria-live="polite">{filteredWork().length} works</span>
       </div>
-
-      <div class="flex-row">
-        <div class="box left-box">
-
-
-          <h2>Reconstruction of Incomplete Polymorphic Programs</h2>
-          <p>
-            The ability to reconstruct the dependencies of incomplete programs to form complete and well-typed ones provides several benefits, including allowing static analysis tools to analyse incomplete programs where their surrounding dependencies are unavailable, and supporting stub generation and testing tools to work on snippets. However, earlier efforts to do so are unable to work with incomplete programs containing parametrically polymorphic types.
-          </p><p>
-            In this paper, we present a technique that receives an incomplete Java program that may contain parametrically polymorphic types, and reconstructs its surrounding dependencies to form a complete and well-typed program. We then present empirical results from our prototype implementation of this algorithm, JavaCIP, which outperforms prior works in this area.
-          </p>
-          <p>
-            <a href="../papers/javacip/Reconstruction of Incomplete Polymorphic Programs.pdf">Submitted Author's Copy (Under Review) </a> | <a href="../papers/javacip/Poster.pdf">Poster</a>
-          </p>
-          <Tags>
-            <Tag>Type Systems</Tag>
-            <Tag>Polymorphism</Tag>
-            <Tag>Program Analysis</Tag>
-            <Tag>Java</Tag>
-            <Tag>Submitted</Tag>
-          </Tags>
-
-
-        </div>
-        <div class="box">
-          <h2>Motivating Mathematics Study in Prospective Computer Scientists with Interactive Theorem Provers</h2>
-          <p>
-            The Curry-Howard correspondence shows that terms, types, programs and program evaluation correspond to witnesses, propositions, proofs and proof normalization in (intuitionistic) logic. This has spawned a large body of work in the literature known as <em>proof assistants</em> or <em>interactive theorem provers</em> that exploit this correspondence via a programming language with a type system that supports proof checking.
-          </p>
-          <p>On the other hand, the need to study mathematics may not be immediately apparent to budding software engineers, particularly those aiming to enter industry post-study. Our aim is motivate students to study mathematics by showing that the art of writing programs is the same as the art of writing a proof. We do so by writing both proofs and programs in Lean 4.</p>
-          <Tags>
-            <Tag>Education</Tag>
-            <Tag>In Progress (early)</Tag>
-          </Tags>
-        </div>
-      </div>
+      <div class="research-list" id="research-results"><For each={filteredWork()}>{work => <Publication work={work} />}</For></div>
     </main>
   );
 }
