@@ -19,8 +19,8 @@ export default function Research() {
       </PageHeader>
       <div class="research-context">
         <div><h2>Programming with fixed points</h2><p>Languages that make iterative, cyclic computations easier to express and optimize.</p></div>
-        <div><h2>Abstraction without the overhead</h2><p>Compiler techniques that bring expressive functional programs closer to hand-written performance.</p></div>
-        <div><h2>Programs, types & proofs</h2><p>Using type systems and interactive theorem proving to build and understand software.</p></div>
+        <div><h2>Abstraction without the overhead</h2><p>Compiler techniques that bring expressive functional/logic programs closer to hand-written performance.</p></div>
+        <div><h2>Programming language theory</h2><p>Functional data structures, parsing and abstract interpretation.</p></div>
       </div>
       <div class="filter-bar" role="group" aria-label="Filter research">
         <For each={filters}>{item => <button class="filter-button" type="button" aria-pressed={filter() === item.value} aria-controls="research-results" onClick={() => setFilter(item.value)}>{item.label}</button>}</For>

@@ -63,6 +63,7 @@ export const research: ResearchWork[] = [
     title: "LR Parsing Is An Abstract Interpretation of LL Parsing",
     venue: "Under review",
     category: "project",
+    authors: ["Brian Sze-Kai Cheong", "Yong Qi Foo", "Michael D. Adams"],
     summary: "We show that LR parsing (not recognition) is an abstract interpretation of LL parsing, and use these results to show the correspondence of (deterministic) LR parse traces and LL parse traces.",
     abstract: "    LR and LL parsing are traditionally presented as opposing strategies: LR parsers proceed bottom-up by shifting terminals and reducing completed right-hand sides, while LL parsers proceed top-down by predicting productions. This operational distinction obscures a deeper relationship between the two. We show that LR parsing is an abstract interpretation of LL parsing. LL parser configurations can be abstracted to LR parser configurations by forgetting the explicit top-down call structure and retaining the viable prefix tracked by LR parsing. Conversely, LR parser configurations can be concretized to the set of LL configurations that abstract to it. Lifting these functions to sets of configurations yields a Galois connection, making precise how LR configurations are abstractions of LL configurations. We further show that LL and LR parse traces correspond: LL calls are accounted for by LR closure, LL matches correspond to LR shifts, and LL returns (an operation in LL parsing and not LL recognition) correspond to LR reductions. This explains how LR parsers can defer production choices that LL parsers must make eagerly, while also recovering the top-down context hidden inside LR states. Besides clarifying the semantic relationship between LL and LR parsing, our framework provides a procedure for reconstructing LL-style explanations from LR parser states, which has applications to parser debugging and syntax-error reporting.",
     topics: ["Parsing", "Abstract Interpretation"],
@@ -71,14 +72,52 @@ export const research: ResearchWork[] = [
   {
     id: "fixen",
     title: "Fixen: A Fixed-Point-Oriented Programming Language with Subsumption, Priorities and Phases",
+    authors: ["Yong Qi Foo", "Luka Janjić", "Brian Sze-Kai Cheong", "Ken Jin Ooi", "Weili Fu", "Michael D. Adams"],
     venue: "Under review",
     category: "project",
     summary: "A language for expressing work-list algorithms concisely, with explicit control over redundant facts, evaluation order, and phases of computation.",
     abstract: "Fixed-point-oriented programming simplifies the work-queue algorithms that appear in graph algorithms, static analysis, parsing, and distributed systems. Fixen introduces generalized fact subsumption, rule-instance priorities, and phases of execution. We demonstrate these features through graph-distance algorithms and the composition of static analyses via a reduced product. A formal semantics specifies the language, and benchmarks of the implementation, which compiles to Haskell, show that priorities improve performance by 7× on average, and up to 30×.",
-    topics: ["Fixed-point programming", "Language design", "Declarative programming"],
+    topics: ["Fixed-Point-Oriented Programming", "Language design", "Logic programming"],
     links: [
       { label: "FPOP white paper", href: "https://arxiv.org/abs/2507.21439" },
       { label: "ACM SRC paper", href: "https://src.acm.org/binaries/content/assets/src/2026/new-icfp_-g_.pdf" },
+      { label: "Language Documentation", href: "https://fixen-lang.org/" }
+    ],
+  },
+  {
+    id: "magicsets",
+    title: "Cut to the Chase: Programmable Laziness with Fixed-Point-Oriented Programming",
+    authors: ["Yong Qi Foo", "Michael D. Adams"],
+    venue: "In progress",
+    category: "project",
+    summary: "Using programmable demand propagation and magic-sets transformations to express the full spectrum of precision-efficiency tradeoffs.",
+    abstract: "Bottom-up logic programming/fixed-point-oriented languages such as Datalog and Flix express recursive computations declaratively as least fixed points over relations and lattices. Their bottom-up evaluation strategy, however, ordinarily computes the entire model even when a client requires only a small part of the result. Existing demand transformations recover goal-directed evaluation, but determine demand propagation from fixed binding patterns and assume that demanded queries should reproduce eager evaluation. We present Fixen, a fixed-point-oriented programming (FPOP) language with programmable laziness. Programmable laziness reifies demand propagation as ordinary monotone rules, allowing programmers to customize how demands flow through a program and to stop propagation at explicit cut sets. Such cuts produce partial results whose missing facts cannot safely be interpreted as false. To recover completeness when domain knowledge permits, Fixen provides sealed summary rules: programmer-supplied contracts asserting that a locally produced summary absorbs every contribution omitted at a cut. We define eager and demand-directed semantics for Fixen and give a completion analysis that distinguishes supported facts, refuted facts, partial and over-approximate results. We prove monotonicity of demand-directed evaluation, soundness of arbitrary positive propagation policies, completeness of standard propagation, and over-approximation downstream of lawful sealed cuts.",
+    topics: ["Fixed-Point-Oriented Programming", "Language design", "Logic programming"],
+    links: [
+    ],
+  },
+  {
+    id: "trsa",
+    title: "Tiered Residual Static Analysis",
+    authors: ["Ken Jin Ooi", "Brian Sze-Kai Cheong", "Yong Qi Foo", "Jie Xiang Neo", "Michael D. Adams"],
+    venue: "In progress",
+    category: "project",
+    summary: "Tiers of domains of increasing expressive power without suffering the cost of precise domains at every program point",
+    abstract: "n this paper, we propose Tiered Residual Static Analysis (TRSA), a framework for composing abstract domains to reduce unneeded work in expensive analyses. TRSA organizes abstract domains into tiers of increasing expressive power. Lower tiers retain their facts, while higher tiers store residual information alongside them. When a lower tier cannot express certain facts, said facts are promoted to a higher tier (i.e., residuals). The reduced product and local factoring remove residual facts already implied by lower tiers. The proposed features allow for selective execution, where transfer functions only trigger on tiers that contain related information. Soundness and convergence contracts allow reusing an existing analysis' transfer functions to form a tier. To concretize our framework, we propose a novel static analysis called the Oct2InI, implemented as a TRSA of three reusable component domains in ascending tiering order: the Octagon, TVPI (Two Variable Per Inequality), and Polyhedra abstract domains. The tiers correspond to increasing analysis power but also increasing computational cost. For benchmarking, we measured Oct2InI against its constituent analyses. Our Polyhedra implementation uses the constraint representation form and LLVM/MLIR’s Fast Presburger Library, with modified Cousot-Halbwachs widening. On PolyBench/C 4.2.1, Oct2InI achieves a geometric-mean solver speedup of 3.43× over sole Polyhedra (range 1.82×–5.26×), while proving the same shared queries. On 350 tasks from the loop-directory subset of SV-COMP 2024, Oct2InI achieves a geometric-mean solver speedup of 1.57× over sole Polyhedra (range 0.015×–6.24×), gaining 43 shared queries over Polyhedra and losing 3 of the 24,546 queries proved by Polyhedra. We also measured analysis of real-world industrial code by running Oct2InI on a popular font rendering library’s (FreeType 2.14.3) rasterizer modules and found that Oct2InI matches Polyhedra’s shared queries, with a geometric-mean solver speedup of 1.12× over sole Polyhedra (range 0.91×–1.39×)",
+    topics: ["Static Analysis", "Abstract Interpretation"],
+    links: [
+    ],
+  },
+  {
+    id: "priority",
+    title: "Priority Inference for Datalog with Subsumption",
+    authors: ["Yong Qi Foo", "Michael D. Adams"],
+    venue: "In progress",
+    category: "project",
+    summary: "Automated inference of scheduling optimizations in Datalog-like languages incorporating subsumption",
+    abstract: "Subsumption lets a fixed-point engine discard an inferior fact, but it cannot recover the work that fact has already caused. A priority queue can avoid such work---provided its priorities are chosen well. We study how a compiler can infer these priorities from a program and reusable contracts for its ordered domains. The programmer supplies local size maps and monotone operations, not a global schedule. The compiler combines them using predicate-specific weights, offsets, and dependency phases. We give decidable synthesis procedures based on difference constraints and rational linear programming, with explicit soundness and relative-completeness results. Our correctness argument separates two obligations. A rank that strictly prefers subsuming facts and does not decrease across a rule establishes label setting: each productive insertion is already final. A further property, stability of maximal matches, yields an exact cost theorem. For a specified antichain worklist evaluator, every complete certified execution enqueues precisely the final maximal rule instances, attaining a lower bound shared by all schedules. A simple syntactic check establishes match stability. The same rank certifies completed prefixes and selected early-stopping conditions. We give detailed proofs, worked encodings beyond graph distances, and counterexamples that delimit the result. Implementation and empirical evaluation remain future work.",
+    topics: ["Fixed-Point-Oriented Programming", "Optimization"],
+    links: [
     ],
   },
   {
@@ -92,19 +131,6 @@ export const research: ResearchWork[] = [
     links: [],
   },
   {
-    id: "javacip",
-    title: "Reconstruction of Incomplete Polymorphic Programs",
-    venue: "Under review",
-    category: "project",
-    summary: "Reconstructing missing dependencies so that incomplete Java programs with generic types can be compiled and analyzed safely.",
-    abstract: "Static analysis, stub generation, and testing tools often need to work with code fragments whose dependencies are unavailable. Existing reconstruction techniques struggle with parametrically polymorphic types. Our technique reconstructs the surrounding dependencies of an incomplete Java program to produce a complete, well-typed program. The prototype implementation, JavaCIP, outperforms prior approaches in our empirical evaluation.",
-    topics: ["Type systems", "Program analysis", "Java"],
-    links: [
-      { label: "Author’s copy", href: "/papers/javacip/Reconstruction%20of%20Incomplete%20Polymorphic%20Programs.pdf" },
-      { label: "Poster", href: "/papers/javacip/Poster.pdf" },
-    ],
-  },
-  {
     id: "mathematics-and-proofs",
     title: "Motivating Mathematics Study in Prospective Computer Scientists with Interactive Theorem Provers",
     venue: "In progress",
@@ -113,5 +139,18 @@ export const research: ResearchWork[] = [
     abstract: "The Curry–Howard correspondence connects terms with witnesses, types with propositions, programs with proofs, and evaluation with proof normalization. This project uses interactive theorem proving to make that connection tangible for students who may not yet see the relevance of mathematics to software development. By writing both proofs and programs in Lean 4, students can explore the shared foundations of the two disciplines.",
     topics: ["Computing education", "Lean 4", "Interactive theorem proving"],
     links: [],
+  },
+  {
+    id: "javacip",
+    title: "Reconstruction of Incomplete Polymorphic Programs",
+    venue: "Complete",
+    category: "project",
+    summary: "Reconstructing missing dependencies so that incomplete Java programs with generic types can be compiled and analyzed safely.",
+    abstract: "Static analysis, stub generation, and testing tools often need to work with code fragments whose dependencies are unavailable. Existing reconstruction techniques struggle with parametrically polymorphic types. Our technique reconstructs the surrounding dependencies of an incomplete Java program to produce a complete, well-typed program. The prototype implementation, JavaCIP, outperforms prior approaches in our empirical evaluation.",
+    topics: ["Type systems", "Program analysis", "Java"],
+    links: [
+      { label: "Author’s copy", href: "/papers/javacip/Reconstruction%20of%20Incomplete%20Polymorphic%20Programs.pdf" },
+      { label: "Poster", href: "/papers/javacip/Poster.pdf" },
+    ],
   },
 ];
