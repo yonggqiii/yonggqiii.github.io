@@ -2,11 +2,11 @@
   "/*404": [
     {
       "type": "script",
-      "href": "/assets/_...404_-e0e1d7c3.js"
+      "href": "/assets/_...404_-7482bb67.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
@@ -16,11 +16,11 @@
   "/cv/": [
     {
       "type": "script",
-      "href": "/assets/index-86addcd8.js"
+      "href": "/assets/index-da0e9010.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
@@ -28,17 +28,17 @@
     },
     {
       "type": "script",
-      "href": "/assets/PageHeader-b18deb45.js"
+      "href": "/assets/PageHeader-1295c8ee.js"
     }
   ],
   "/fun": [
     {
       "type": "script",
-      "href": "/assets/fun-b34c8116.js"
+      "href": "/assets/fun-14bb3b05.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
@@ -46,17 +46,17 @@
     },
     {
       "type": "script",
-      "href": "/assets/PageHeader-b18deb45.js"
+      "href": "/assets/PageHeader-1295c8ee.js"
     }
   ],
   "/": [
     {
       "type": "script",
-      "href": "/assets/index-fb2577d8.js"
+      "href": "/assets/index-d4705f12.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
@@ -64,21 +64,21 @@
     },
     {
       "type": "script",
-      "href": "/assets/NewsItem-f47c36c9.js"
+      "href": "/assets/NewsItem-76afdfeb.js"
     },
     {
       "type": "script",
-      "href": "/assets/research-46e752f1.js"
+      "href": "/assets/research-09922041.js"
     }
   ],
   "/news": [
     {
       "type": "script",
-      "href": "/assets/news-bc214120.js"
+      "href": "/assets/news-b82b6880.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
@@ -86,21 +86,21 @@
     },
     {
       "type": "script",
-      "href": "/assets/NewsItem-f47c36c9.js"
+      "href": "/assets/NewsItem-76afdfeb.js"
     },
     {
       "type": "script",
-      "href": "/assets/PageHeader-b18deb45.js"
+      "href": "/assets/PageHeader-1295c8ee.js"
     }
   ],
   "/research": [
     {
       "type": "script",
-      "href": "/assets/research-c9215295.js"
+      "href": "/assets/research-7dcf1118.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
@@ -108,21 +108,21 @@
     },
     {
       "type": "script",
-      "href": "/assets/PageHeader-b18deb45.js"
+      "href": "/assets/PageHeader-1295c8ee.js"
     },
     {
       "type": "script",
-      "href": "/assets/research-46e752f1.js"
+      "href": "/assets/research-09922041.js"
     }
   ],
   "/teaching": [
     {
       "type": "script",
-      "href": "/assets/teaching-d4dd91a4.js"
+      "href": "/assets/teaching-e1ad75c8.js"
     },
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
@@ -130,13 +130,13 @@
     },
     {
       "type": "script",
-      "href": "/assets/PageHeader-b18deb45.js"
+      "href": "/assets/PageHeader-1295c8ee.js"
     }
   ],
   "entry-client": [
     {
       "type": "script",
-      "href": "/assets/entry-client-98ff6375.js"
+      "href": "/assets/entry-client-d3591705.js"
     },
     {
       "type": "style",
