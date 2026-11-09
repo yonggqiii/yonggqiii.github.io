@@ -68,20 +68,20 @@
     "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "node_modules/solid-start/server/components/HttpStatusCode.tsx": [
-    "/assets/_...404_-7482bb67.js"
+    "/assets/_...404_-724edbc8.js"
   ],
   "node_modules/solid-start/server/types.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
     "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/components/DatalogFixedPoint.tsx": [
-    "/assets/index-d4705f12.js"
+    "/assets/index-84aaa997.js"
   ],
   "src/components/FixedPoint.tsx": [
-    "/assets/index-d4705f12.js"
+    "/assets/index-84aaa997.js"
   ],
   "src/components/FixedPointExplorations.tsx": [
-    "/assets/index-d4705f12.js"
+    "/assets/index-84aaa997.js"
   ],
   "src/components/Footer.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
@@ -100,32 +100,32 @@
     "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/components/NewsItem.tsx": [
-    "/assets/NewsItem-76afdfeb.js"
+    "/assets/NewsItem-84103643.js"
   ],
   "src/components/PageHeader.tsx": [
-    "/assets/PageHeader-1295c8ee.js"
+    "/assets/PageHeader-ce49e4cd.js"
   ],
   "src/components/Publication.tsx": [
-    "/assets/research-09922041.js"
+    "/assets/research-b4e8e0e9.js"
   ],
   "src/components/ThemeToggle.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
     "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/data/courses.ts": [
-    "/assets/teaching-e1ad75c8.js"
+    "/assets/teaching-cf9c7a53.js"
   ],
   "src/data/cv.ts": [
-    "/assets/index-da0e9010.js"
+    "/assets/index-7a838c73.js"
   ],
   "src/data/datalog.ts": [
-    "/assets/index-d4705f12.js"
+    "/assets/index-84aaa997.js"
   ],
   "src/data/news.tsx": [
-    "/assets/NewsItem-76afdfeb.js"
+    "/assets/NewsItem-84103643.js"
   ],
   "src/data/research.ts": [
-    "/assets/research-09922041.js"
+    "/assets/research-b4e8e0e9.js"
   ],
   "src/entry-client.tsx": [
     "/assets/Geist-Regular-b497f5ad.woff2",
@@ -140,24 +140,24 @@
     "/assets/Geist-SemiBold-45ab21f6.woff2"
   ],
   "src/routes/[...404].tsx": [
-    "/assets/_...404_-7482bb67.js"
+    "/assets/_...404_-724edbc8.js"
   ],
   "src/routes/cv/index.tsx": [
-    "/assets/index-da0e9010.js"
+    "/assets/index-7a838c73.js"
   ],
   "src/routes/fun.tsx": [
-    "/assets/fun-14bb3b05.js"
+    "/assets/fun-174517d7.js"
   ],
   "src/routes/index.tsx": [
-    "/assets/index-d4705f12.js"
+    "/assets/index-84aaa997.js"
   ],
   "src/routes/news.tsx": [
-    "/assets/news-b82b6880.js"
+    "/assets/news-27c642b0.js"
   ],
   "src/routes/research.tsx": [
-    "/assets/research-7dcf1118.js"
+    "/assets/research-b02d35f5.js"
   ],
   "src/routes/teaching.tsx": [
-    "/assets/teaching-e1ad75c8.js"
+    "/assets/teaching-cf9c7a53.js"
   ]
 }
