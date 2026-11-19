@@ -14,11 +14,11 @@ export type ResearchWork = {
 export const research: ResearchWork[] = [
   {
     id: "lr-ai-ll",
-    title: "LR Parsing Is An Abstract Interpretation of LL Parsing",
+    title: "LR Parsing Is an Abstract Interpretation of LL Parsing",
     venue: "POPL",
     year: "2027",
     category: "publication",
-    authors: ["Brian Sze-Kai Cheong", "Yong Qi Foo", "Michael D. Adams"],
+    authors: ["Brian Sze Kai Cheong", "Yong Qi Foo", "Michael D. Adams"],
     summary: "We show that LR parsing (not recognition) is an abstract interpretation of LL parsing, and use these results to show the correspondence of (deterministic) LR parse traces and LL parse traces.",
     abstract: "LR and LL parsing are traditionally presented as opposing strategies: LR parsers proceed bottom-up by shifting terminals and reducing completed right-hand sides, while LL parsers proceed top-down by predicting productions. This operational distinction obscures a deeper relationship between the two. We show that LR parsing is an abstract interpretation of LL parsing. LL parser configurations can be abstracted to LR parser configurations by forgetting the explicit top-down call structure and retaining the viable prefix tracked by LR parsing. Conversely, LR parser configurations can be concretized to the set of LL configurations that abstract to it. Lifting these functions to sets of configurations yields a Galois connection, making precise how LR configurations are abstractions of LL configurations. We further show that LL and LR parse traces correspond: LL calls are accounted for by LR closure, LL matches correspond to LR shifts, and LL returns (an operation in LL parsing and not LL recognition) correspond to LR reductions. This explains how LR parsers can defer production choices that LL parsers must make eagerly, while also recovering the top-down context hidden inside LR states. Besides clarifying the semantic relationship between LL and LR parsing, our framework provides a procedure for reconstructing LL-style explanations from LR parser states, which has applications to parser debugging and syntax-error reporting.",
     topics: ["Parsing", "Abstract Interpretation"],

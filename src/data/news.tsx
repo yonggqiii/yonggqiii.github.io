@@ -4,6 +4,14 @@ export type NewsEntry = { date: string; content: () => JSX.Element };
 
 export const news: NewsEntry[] = [
   {
+    date: "2026-12-01",
+    content: () => <>I will be speaking on "Fun with Magic Sets" at the <a href="https://sg-pl-summit.github.io/">SG PL Summit 2026</a>!</>
+  },
+  {
+    date: "2026-11-10",
+    content: () => <>Our paper on LR Parsing Is an Abstract Interpretation of LL Parsing has been accepted for publication at POPL 2027.</>,
+  },
+  {
     date: "2026-10-06",
     content: () => <>I presented our work on "Class-Dictionary Specialization with Rank-2 Polymorphic Functions" at SPLASH/ISSTA 2026!</>,
   },
